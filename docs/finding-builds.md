@@ -124,6 +124,15 @@ inurl:survarium (014 OR v0.14) (exe OR 7z)
 ### d. Recover the dead torrent's infohash, then chase the swarm/DHT
 The file came from a torrent — its infohash is the strongest re-find key, and the
 swarm/DHT may still hold it even though the original poster left.
+
+> **Recovered infohash (the 0.14h torrent):** `356643b94eba52fee0a8e8b1ea6d88b22a6dd959`
+> `magnet:?xt=urn:btih:356643b94eba52fee0a8e8b1ea6d88b22a6dd959`
+>
+> This is the magnet for the original (incomplete) download. Re-add it and let DHT
+> find peers; look the hash up on the indexers below. A complete seeder of the same
+> torrent would carry the full `survarium.exe` **+ `survarium.pdb`** — verify any
+> result against the §3 fingerprint before trusting it.
+
 ```sh
 # look in the torrent client's leftovers for the .torrent / resume / fastresume
 find ~ -iname '*.torrent' 2>/dev/null | xargs -r grep -ilZ -e survarium -e 014 2>/dev/null
