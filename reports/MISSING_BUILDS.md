@@ -1,156 +1,88 @@
-# Missing builds — coverage vs. the canonical version list (≤ 0.23h)
+# Build catalog — what we have, what's missing
 
-Which numbered Survarium / Vostok Engine versions exist up to **0.23h**, and which
-we have ingested. Scope is capped at 0.23h per project remit; later versions
-(0.24a … 0.30a) are out of scope.
+Full coverage map of numbered **Vostok Engine / Survarium** builds and our holdings,
+across the whole life of the engine (**0.100b**, May 2013 → **0.69d0**, the last
+Steam build, 2022). Supersedes the old 0.23h-capped view.
 
-**Bottom line: we hold 9 of the 63 numbered versions the wiki records through
-0.23h. 54 are missing.** Almost the entire **0.12 → 0.19 era (Aug 2013 – Feb 2014)
-is absent** — and that era is the part archive.org never had (see
-[`docs/finding-builds.md`](../docs/finding-builds.md)).
+## Status legend
 
-## Source & method
+| tag | meaning | drives |
+|---|---|---|
+| **FULL+PDB** | full build with `survarium.pdb` → delink + **function diff** + deps | `versions.json`, the diff pipeline |
+| **exe** | `survarium.exe` lifted from a game-tree dump → **deps only** | `extra_builds.json` |
+| **pkg** | full game tree in hand **locally**, repackaged in `survarium-uploads/`, **pending archive.org upload** | `scripts/package_builds.sh` |
+| **🔒 .sup** | on archive.org **only** as the encrypted custom installer — not extractable | see `docs/extracting-exes.md` (Method C) |
+| **— missing** | no known source anywhere | — |
 
-The canonical list is the wiki's **Updates** category, pulled via the MediaWiki API
-(the rendered category/article pages 403 the fetcher; the API does not):
+## Bottom line
+
+- **FULL+PDB: 8** (+ **0.23h** present but PDB-stripped) — the delink/function-diff core.
+- **exe-only: 4** — 0.26e0, 0.26g0, 0.34a0, 0.69d0 (archive.org game-tree dumps).
+- **packaged & pending upload: 25** — the entire **0.25 → 0.31 era** (Nov 2014 – Oct
+  2015), recovered from a local `Survarium_archives.zip`. **This unlocks versions
+  archive.org only has as `.sup`** (0.27d, 0.28, 0.29a, 0.30a, 0.31a …).
+- **🔒 `.sup`-locked on archive.org (can't extract): ~29 items** — 0.25c0, 0.27d0,
+  0.30a3, and the **entire 0.32 → 0.69 line**.
+- **— never sourced anywhere:** the **0.12 → 0.19 era (~33 versions, Aug 2013 – Feb
+  2014)** + 0.22 / 0.24 + most early points of 0.20 / 0.21 / 0.23.
+
+## By era
+
+| era | dates | status | detail |
+|---|---|---|---|
+| **0.1 / 0.1.1** | May 2013 | **FULL+PDB** ×5 | 0.100b/802, 0.1.1a/816, 0.1.1b/826, 0.1.1c/870, 0.1.1e/884 |
+| **0.12 → 0.19** | Aug 2013 – Feb 2014 | **— missing (the hole)** | ~33 versions; never on archive.org, no dump found. See `docs/finding-builds.md` (0.14h salvage) |
+| **0.20 / 0.21** | Mar – Apr 2014 | **FULL+PDB** ×3 | 0.20e/1916, 0.20f/1923, 0.21d/2010 (early points 0.20a–d, 0.21a–c missing) |
+| **0.22** | May – Jun 2014 | **— missing** | no source |
+| **0.23** | Jun – Jul 2014 | **FULL** (no PDB) | 0.23h/2285 (string-only); 0.23a–g missing |
+| **0.24** | Jun 2014 | **— missing** | no source |
+| **0.25** | Oct – Nov 2014 | **pkg** 0.25d0 · 🔒 0.25c0 | local game tree for 0.25d0; archive.org 0.25c0 is `.sup` (`Survarium.iso`) |
+| **0.26** | Dec 2014 – Jan 2015 | **exe** 0.26e0/0.26g0 · **pkg** 0.26e0/f0/g0/i0 | archive.org has 0.26e0/g0 as extractable `.7z`; local zip adds 0.26f0/i0 |
+| **0.27** | Mar – Apr 2015 | **pkg** 0.27b1/c0/d2/d3 · 🔒 0.27d0 | local game trees; archive.org 0.27d0 is `.sup` |
+| **0.28** | Apr – Jun 2015 | **pkg** 0.28a2/b0/d0 · 🔒 0.28a2/d0 (items) | local game trees unlock the archive.org `.sup` items |
+| **0.29** | Jun – Jul 2015 | **pkg** 0.29a3/b0/c0 · 🔒 0.29a3 (item) | " |
+| **0.30** | Aug 2015 | **pkg** 0.30a4/b0/c0/d0/e0 · 🔒 0.30a3 (item) | " |
+| **0.31** | Sep – Oct 2015 | **pkg** 0.31a2/b0/c0/d0/e2 · 🔒 0.31a2 (item) | " |
+| **0.32 / 0.33** | Oct – Dec 2015 | **🔒 .sup** | archive.org 0.32a4, 0.33a5 — installer only |
+| **0.34** | Dec 2015 | **exe** 0.34a0 | archive.org `survarium_full_034a0.zip` (game-tree dump) |
+| **0.44 → 0.47** | 2016 – 2017 | **🔒 .sup** | 0.44a5, 0.45a6, 0.46c2, 0.46e7, 0.47b2 |
+| **0.50 → 0.56** | 2017 – 2018 | **🔒 .sup** | 0.50ac, 0.51c5, 0.54a5, 0.55ab, 0.56a0 |
+| **0.60 → 0.68** | 2019 – 2021 | **🔒 .sup** | 0.60a0, 0.61a2, 0.62a0, 0.63c0, 0.64a0, 0.65a0, 0.66a0, 0.68a0/a1, 0.69a0 |
+| **0.69d0** | 2022 (last Steam build) | **exe** | `survarium_202206/Survarium.zip` (x64) |
+
+## The 25 packaged builds (0.25 → 0.31), pending upload
+
+Repackaged from `Survarium_archives.zip` into `survarium-uploads/<identifier>.zip`
+(version+date names; build#/internal-id come from the Steam depot, not the exe — see
+the dependency report's sweep). Versions (exe-authoritative, folder names were loose):
+
+    0.25d0  0.26e0 0.26f0 0.26g0 0.26i0  0.27b1 0.27c0 0.27d2 0.27d3
+    0.28a2 0.28b0 0.28d0  0.29a3 0.29b0 0.29c0  0.30a4 0.30b0 0.30c0 0.30d0 0.30e0
+    0.31a2 0.31b0 0.31c0 0.31d0 0.31e2
+
+Once uploaded, each gets an `exe_url` row in `extra_builds.json` (then it's a
+first-class `nix build .#"<token>"` target and shows in the dependency report).
+
+## The two persistent holes
+
+1. **0.12 → 0.19 (the original hole):** never on archive.org under any uploader, no
+   dump surfaced anywhere — ~33 versions across Aug 2013 – Feb 2014. The 0.14h
+   torrent is a known dead end (partial, unrepairable). See `docs/finding-builds.md`.
+2. **0.32 → 0.68 (the `.sup` wall):** archive.org *has* these, but only as the
+   encrypted custom installer (`.sup`). A **game-tree dump** (like
+   `Survarium_archives.zip` provided for 0.25–0.31) is the practical unlock; the
+   installer route needs the Method-C work in `docs/extracting-exes.md`.
+
+## Source & method (canonical version list)
+
+The numbered-version list is the wiki's **Updates** category via the MediaWiki API
+(rendered pages 403 the fetcher; the API does not):
 
     https://survarium.fandom.com/api.php?action=query&list=categorymembers&cmtitle=Category:Updates&cmlimit=500&format=json
 
-Each version's release date was read from its page infobox `date` field, pulled in
-batches via `action=query&prop=revisions&rvprop=content` (multiple titles per call).
-
-### Naming: wiki labels = our labels
-
-The wiki writes the 0.1.x line with the middle dot dropped, but the tokens are
-otherwise identical to ours:
-
-| wiki page | our label | note |
-|---|---|---|
-| `0.100b` | `v0.100b` | build 802 |
-| `0.11a`  | `v0.1.1a` | i.e. 0.1.1a, build 816 |
-| `0.11e`  | `v0.1.1e` | build 884 |
-| `0.20e`  | `v0.20e`  | identical token, build 1916 |
-| `0.21d`  | `v0.21d`  | build 2010 |
-| `0.23h`  | `v0.23h`  | build 2285 |
-
-So from 0.20 onward the wiki and our labels are byte-for-byte the same.
-
-## What we have (9)
-
-All nine came from one archive.org uploader (`labx8net@gmail.com`); all are
-internal builds that shipped `survarium.exe` + `survarium.pdb` except the last.
-
-| version | build | date | PDB |
-|---|---|---|---|
-| v0.100b | 802  | 2013-05-09 | ✓ |
-| v0.1.1a | 816  | 2013-05-14 | ✓ |
-| v0.1.1b | 826  | 2013-05-14 | ✓ |
-| v0.1.1c | 870  | 2013-05-24 | ✓ |
-| v0.1.1e | 884  | 2013-05-28 | ✓ |
-| v0.20e  | 1916 | 2014-03-20 | ✓ |
-| v0.20f  | 1923 | 2014-04-01 | ✓ |
-| v0.21d  | 2010 | 2014-04-24 | ✓ |
-| v0.23h  | 2285 | 2014-07-17 | ✗ (stripped — out of the function-level diff) |
-
-## What we are missing (54)
-
-`·` = we have it · `✗` = missing · `—` = no wiki page (likely never a distinct
-public release). The `span` column is the series' first→last release date.
-
-| series | a | b | c | d | e | f | g | h | span |
-|---|---|---|---|---|---|---|---|---|---|
-| **0.1** (bare `0.1` page) | — | | | | | | | | 13 May 2013 (public alpha) |
-| **0.100b** | · | | | | | | | | 9 May 2013 |
-| **0.1.1 (`0.11x`)** | · | · | · | ✗ | · | | | | 14 May – 30 May 2013 |
-| **0.12 (`0.12x`)** | ✗ | — | — | ✗ | ✗ | ✗ | ✗ | | 14 Aug – 22 Aug 2013 |
-| **0.13 (`0.13x`)** | ✗ | ✗ | ✗ | ✗ | | | | | 11 Sep – 19 Sep 2013 |
-| **0.14 (`0.14x`)** | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | 25 Sep – 9 Oct 2013 |
-| **0.15 (`0.15x`)** | ✗ | ✗ | ✗ | | | | | | 23 Oct – 25 Oct 2013 |
-| **0.16 (`0.16x`)** | ✗ | ✗ | | | | | | | 4 Nov – 6 Nov 2013 |
-| **0.17 (`0.17x`)** | ✗ | | | | | | | | 25 Nov 2013 |
-| **0.18 (`0.18x`)** | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | | 20 Dec 2013 – 23 Jan 2014 |
-| **0.19 (`0.19x`)** | ✗ | ✗ | ✗ | | | | | | 5 Feb – 7 Feb 2014 |
-| **0.20 (`0.20x`)** | ✗ | ✗ | ✗ | ✗ | · | · | | | 17 Mar – 1 Apr 2014 |
-| **0.21 (`0.21x`)** | ✗ | ✗ | ✗ | · | | | | | 22 Apr – 24 Apr 2014 |
-| **0.22 (`0.22x`)** | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | | 30 May – 6 Jun 2014 |
-| **0.23 (`0.23x`)** | ✗ | ✗ | ✗ | — | ✗ | — | ✗ | · | 17 Jun – 17 Jul 2014 |
-
-### The 54 missing versions, with release dates
-
-Dates are the wiki's **public-update** release dates. A couple don't track our
-*internal-build* dates exactly: `0.1` is dated 13 May though internal build 802 is
-9 May, and `0.11d` (30 May) lands after the internal 0.1.1e build (28 May) — public
-patch letters and internal build numbers ran on slightly different clocks.
-
-| version | released | | version | released |
-|---|---|---|---|---|
-| 0.1    | 2013-05-13 | | 0.18a | 2013-12-20 |
-| 0.1.1d | 2013-05-30 | | 0.18b | 2013-12-20 |
-| 0.12a  | 2013-08-14 | | 0.18c | 2013-12-24 |
-| 0.12d  | 2013-08-20 | | 0.18d | 2013-12-27 |
-| 0.12e  | 2013-08-20 | | 0.18e | 2013-12-30 |
-| 0.12f  | 2013-08-21 | | 0.18f | 2014-01-20 |
-| 0.12g  | 2013-08-22 | | 0.18g | 2014-01-23 |
-| 0.13a  | 2013-09-11 | | 0.19a | 2014-02-05 |
-| 0.13b  | 2013-09-17 | | 0.19b | 2014-02-06 |
-| 0.13c  | 2013-09-19 | | 0.19c | 2014-02-07 |
-| 0.13d  | 2013-09-18 | | 0.20a | 2014-03-17 |
-| 0.14a  | 2013-09-25 | | 0.20b | 2014-03-17 |
-| 0.14b  | 2013-09-26 | | 0.20c | 2014-03-19 |
-| 0.14c  | 2013-09-27 | | 0.20d | 2014-03-19 |
-| 0.14d  | 2013-09-28 | | 0.21a | 2014-04-22 |
-| 0.14e  | 2013-09-29 | | 0.21b | 2014-04-23 |
-| 0.14f  | 2013-10-01 | | 0.21c | 2014-04-24 |
-| 0.14g  | 2013-10-03 | | 0.22a | 2014-05-30 |
-| 0.14h  | 2013-10-09 | | 0.22b | 2014-05-30 |
-| 0.15a  | 2013-10-23 | | 0.22c | 2014-05-30 |
-| 0.15b  | 2013-10-25 | | 0.22d | 2014-06-03 |
-| 0.15c  | 2013-10-25 | | 0.22e | 2014-06-03 |
-| 0.16a  | 2013-11-04 | | 0.22f | 2014-06-04 |
-| 0.16b  | 2013-11-06 | | 0.22g | 2014-06-06 |
-| 0.17a  | 2013-11-25 | | 0.23a | 2014-06-17 |
-|        |            | | 0.23b | 2014-06-18 |
-|        |            | | 0.23c | 2014-06-24 |
-|        |            | | 0.23e | 2014-06-30 |
-|        |            | | 0.23g | 2014-07-05 |
-
-Note `0.13d` (18 Sep) predates `0.13c` (19 Sep) on the wiki — letter order isn't
-strictly chronological there.
-
-## Gap analysis
-
-- **The 0.12 → 0.19 era is the whole hole (33 of the 54).** Our coverage jumps
-  from **0.1.1e (build 884, 28 May 2013)** straight to **0.20e (build 1916, 20 Mar
-  2014)** — a 10-month, ~1000-build leap that the cross-version diff has to bridge
-  in one step (see `CHANGES_NARRATIVE.md`, "the pivot"). Every version in that span
-  is missing, and per `docs/finding-builds.md` **no archive.org uploader has any of
-  it** — it has to be sourced off archive.org. **0.14h** is the worked re-sourcing
-  target (fingerprint + search guide already written; see the salvage notes).
-
-- **The 0.2x line is nearly within reach.** We have 0.20e/0.20f, 0.21d, 0.23h.
-  Missing there are the early points of each series (0.20a–d, 0.21a–c) and most of
-  0.22/0.23 — the same labx8net-style internal drops, so archive.org is the first
-  place to re-check for these specific tags.
-
-- **Wiki gaps (`—`)** — `0.12b`, `0.12c`, `0.23d`, `0.23f` have **no wiki page**, so
-  they were probably never distinct public numbered releases (folded hotfixes /
-  internal-only). Don't count them as targets unless evidence surfaces.
-
-- **PDB caveat.** Only internal builds that shipped `survarium.exe` **+
-  `survarium.pdb`** can enter the delink pipeline. Our 0.1.x and 0.20–0.21 sources
-  all carried a PDB; 0.23h did not. Whether any re-sourced missing build is usable
-  depends on it shipping a PDB too — verify per the recipe in
-  `docs/finding-builds.md` before ingesting.
-
-## Counts
-
-| | count |
-|---|---|
-| Numbered versions on the wiki, ≤ 0.23h | 63 |
-| Have | 9 |
-| Missing | 54 |
-| — of which in the 0.12–0.19 gap | 33 |
-| Wiki-listless tokens inside the range (`—`, not targets) | 4 |
-
-_Canonical list: Survarium Fandom **Category:Updates** (full set 0.1 … 0.30a;
-truncated here at 0.23h). Dates: page infoboxes + our `versions.json`._
+The archive.org availability/format split is from
+`archive.org/advancedsearch.php?q=creator:"Vostok Games"` (42 items), classified by
+each item's primary file (`survarium_full_*.7z`/`.zip` = extractable game tree;
+`survarium(-steam)?-installer-*`/`.sup`/`.iso` = sealed). Per-build versions + dates
+are read from each `survarium.exe` (`Vostok Engine v…` string + the `__DATE__`
+literal).

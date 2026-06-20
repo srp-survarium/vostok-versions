@@ -29,6 +29,19 @@
       # Single source of truth, shared with scripts/*.py (which read it as JSON).
       versions = builtins.fromJSON (builtins.readFile ./versions.json);
 
+      # Post-0.23 builds that are NOT in the delink registry (no PDB), but whose
+      # survarium.exe can still be lifted from a game-tree dump on archive.org.
+      # Each carries an `exe_url` (an archive.org `view_archive.php` member URL
+      # that streams just the exe) + `exe_sha256`, so the flake fetches ~13 MB
+      # instead of the multi-GB installer. Shared with scripts/deps_report.py.
+      extraBuilds = builtins.fromJSON (builtins.readFile ./extra_builds.json);
+
+      # All builds we can produce a survarium.exe for, keyed by bare version token
+      # ("v0.26g0-build2777" -> "0.26g0") for the `nix build .#"0.26g0"` UX.
+      allExeBuilds = versions ++ extraBuilds;
+      tokenOf = label:
+        builtins.head (nixpkgs.lib.splitString "-" (nixpkgs.lib.removePrefix "v" label));
+
       pkgsFor = system: import nixpkgs {
         inherit system;
         overlays = [ rust-overlay.overlays.default ];
@@ -144,9 +157,44 @@
             name = "version-${builtins.replaceStrings [ "." ] [ "_" ] v.label}";
             value = extract v;
           }) versions);
+
+          # ---------------------------------------------------------------------
+          # Exe-only packages, addressed by bare version token:
+          #     nix build .#"0.26g0"      -> result/0.26g0.exe
+          #     nix build .#all           -> result/ with every <token>.exe
+          # A build with an `exe_url` (post-0.23 game-tree dump) fetches just the
+          # exe; a registry build reuses its full innoextract (cached) and copies
+          # the exe out. Each package is a dir holding one `<token>.exe` so they
+          # merge cleanly into `all`.
+          # ---------------------------------------------------------------------
+          exeDir = v:
+            let
+              token = tokenOf v.label;
+              exeFile =
+                if v ? exe_url
+                then pkgs.fetchurl {
+                  name = "survarium-${token}.exe";
+                  url = v.exe_url;
+                  hash = v.exe_sha256;
+                }
+                else "${extract v}/survarium.exe";
+            in
+            pkgs.runCommand "survarium-exe-${token}" { } ''
+              mkdir -p "$out"
+              cp "${exeFile}" "$out/${token}.exe"
+            '';
+
+          exePkgs = builtins.listToAttrs
+            (map (v: { name = tokenOf v.label; value = exeDir v; }) allExeBuilds);
+
+          allExes = pkgs.symlinkJoin {
+            name = "survarium-all-exes";
+            paths = map exeDir allExeBuilds;
+          };
         in
-        versionPkgs // {
+        versionPkgs // exePkgs // {
           inherit vostok-delinker vostok-pdb-parser objdiff-cli;
+          all = allExes;
         }
       );
 
@@ -157,8 +205,33 @@
         let
           pkgs = pkgsFor system;
           p = self.packages.${system};
+
+          # `nix develop .#"0.26g0"` -> a shell with $SURV_EXE pointing at that
+          # build's survarium.exe (fetched/extracted on entry).
+          exeShells = builtins.listToAttrs (map (v:
+            let token = tokenOf v.label; in {
+              name = token;
+              value = pkgs.mkShell {
+                name = "survarium-${token}";
+                shellHook = ''
+                  export SURV_EXE="${p.${token}}/${token}.exe"
+                  echo "survarium ${token} exe -> $SURV_EXE"
+                '';
+              };
+            }) allExeBuilds);
+
+          # `nix develop .#all` -> $SURV_EXES is a dir with every <token>.exe.
+          allShell = pkgs.mkShell {
+            name = "survarium-all-exes";
+            shellHook = ''
+              export SURV_EXES="${p.all}"
+              echo "all survarium exes in: $SURV_EXES"
+              ls "$SURV_EXES"
+            '';
+          };
         in
-        {
+        exeShells // {
+          all = allShell;
           default = pkgs.mkShell {
             name = "vostok-versions";
             packages = [
@@ -167,6 +240,7 @@
               p.objdiff-cli
               pkgs.innoextract
               pkgs.p7zip
+              pkgs.binutils       # `strings` for deps_report.py / package_builds.sh
               pkgs.python3
               pkgs.ruff
               pkgs.ripgrep

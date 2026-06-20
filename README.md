@@ -1,93 +1,101 @@
 # vostok-versions
 
-Cross-version analysis of **Survarium** (Vostok Engine / X-Ray 2.0) builds: unpack
-several game versions, delink each into per-function COFF objects, and diff one
-version against another so we can see exactly how the engine binary evolved.
+Cross-version analysis of **Survarium** (Vostok Engine / X-Ray 2.0) builds —
+from the first archived dev build (**0.100b**, May 2013) to the last Steam build
+(**0.69d0**, 2022). Two things, at two levels of depth:
 
-The **oldest** build is the canonical **base** — every diff is computed
-base → newer. Diffs show which functions are unchanged, which churned, and which
-are new, so matching effort can be prioritized and forward-ported.
+1. **Function-level diffs** — for builds that shipped a **PDB**, delink each
+   `survarium.exe` into per-function COFF objects and diff version→version to see
+   exactly which functions are unchanged, churned, or new.
+2. **Dependency analysis** — for **any** `survarium.exe` (PDB or not), read which
+   third-party libraries are linked and at what version, straight from the binary.
 
-## Hard requirement: every build needs a PDB
+## Two tiers of builds
 
-This only works on builds that shipped **`survarium.exe` + `survarium.pdb`**
-(internal/dev builds — the publicly distributed closed-alpha builds archived on
-archive.org). The PDB gives
-`vostok-delinker` the symbol names and function boundaries it splits the EXE on;
-objdiff then matches functions by name across versions. A symbol-less retail
-`survarium.exe` cannot be processed this way.
+| tier | registry | what you can do | how to get it |
+|---|---|---|---|
+| **full + PDB** | `versions.json` | full delink + **function diff** + deps | `nix build .#version-<label>` (installer → `survarium.{exe,pdb}`) |
+| **exe-only** | `extra_builds.json` | **deps only** | `nix build .#"<token>"` (just the exe, via an archive.org `view_archive.php` member URL) |
 
-## Toolchain: the Nix devShell
+Both registries are plain JSON, read by *both* `flake.nix` and the Python scripts.
+What exists, what we hold, and what's still missing/locked is catalogued in
+[`reports/MISSING_BUILDS.md`](reports/MISSING_BUILDS.md).
 
-The binaries — `vostok-delinker`, `pdb_parser`, `objdiff-cli`, `innoextract` —
-are built by this repo's flake. `nix develop` puts them all on PATH:
+## Reports
 
-    nix develop      # puts the tools on PATH
+| report | what it answers |
+|---|---|
+| [`reports/DEPENDENCY_VERSIONS.md`](reports/DEPENDENCY_VERSIONS.md) | **what each exe brings** — every third-party lib + version across builds (0.100b → 2022), incl. the 0.25–0.31 sweep. `scripts/deps_report.py` |
+| [`reports/CHANGES_NARRATIVE.md`](reports/CHANGES_NARRATIVE.md) | the engine's evolution, interpreted (gameplay + deps) |
+| [`reports/CHAIN_REPORT.md`](reports/CHAIN_REPORT.md) + [`reports/builds/`](reports/builds/) | **function-level diffs** per consecutive PDB build. `scripts/chain_report.py`, `build_report.py` |
+| [`reports/BUILD_FLAGS.md`](reports/BUILD_FLAGS.md) | per-project `cl.exe` flags / LTCG state from each PDB. `scripts/flags_report.py` |
+| [`reports/MISSING_BUILDS.md`](reports/MISSING_BUILDS.md) | **what we have / what's missing / what's `.sup`-locked** |
+| [`docs/extracting-exes.md`](docs/extracting-exes.md) | how to pull a `survarium.exe` out of any archive.org item (+ the full format classification) |
+| [`docs/finding-builds.md`](docs/finding-builds.md) | how to hunt the still-missing builds |
 
-`vostok-delinker` and `vostok-pdb-parser` are built from their public source repos
-(`github:srp-survarium/*`); `objdiff-cli` is the upstream prebuilt binary;
-`innoextract`/`p7zip` come from nixpkgs. (Or point `VOSTOK_DELINKER` / `PDB_PARSER`
-/ `OBJDIFF_CLI` / `INNOEXTRACT` at binaries yourself.)
+## Getting builds with the flake
 
-## Where versions come from: `versions.json` + the flake
+`nix develop` puts the toolchain on PATH (`vostok-delinker`, `pdb_parser`,
+`objdiff-cli`, `innoextract`, `p7zip`, `binutils`, `python3`). Then:
 
-Versions are fetched from **archive.org**, not dropped in by hand.
-`versions.json` is the single registry (label, url, sha256, base, engine_path),
-read by *both* `flake.nix` (`builtins.fromJSON`) and the Python scripts (`json`).
-Each entry becomes a flake package `version-<label>` = the installer fetched and
-innoextracted to a dir with `survarium.{exe,pdb}`.
+    # full build (PDB tier) — fetch installer, innoextract to survarium.{exe,pdb}
+    nix build .#version-v0_100b-build802
 
-To add a new build: append its archive.org `url` + `sha256` to `versions.json`
-(get the hash with `nix-prefetch-url <url>`), then run `add_version.py <label>`.
+    # just the exe, by bare version token (quote the dots!)
+    nix build '.#"0.26g0"'     # -> result/0.26g0.exe
+    nix build '.#"0.69d0"'     # -> result/0.69d0.exe   (2022 x64)
+    nix build .#all            # -> result/ with every <token>.exe
 
-## Workflow
+    nix develop '.#"0.34a0"'   # shell with $SURV_EXE -> that exe
+    nix develop .#all          # shell with $SURV_EXES -> dir of all exes
 
-Add a version — with no source path it's fetched from the registry via the flake:
+Tokens: `0.100b 0.1.1a 0.1.1b 0.1.1c 0.1.1e 0.20e 0.20f 0.21d 0.23h` (PDB tier,
+extracted from their installer) + `0.26e0 0.26g0 0.34a0 0.69d0` (exe tier, ~13 MB
+member fetch). The `.sup`-locked 0.32–0.68 line can't be a target — see
+`MISSING_BUILDS.md` / `docs/extracting-exes.md`.
 
-    python3 scripts/add_version.py v0.100b-build802            # base (per versions.json)
+To add a build: append `url` + `sha256` (PDB tier, `nix-prefetch-url`) to
+`versions.json` and run `add_version.py`; or `exe_url` + `exe_sha256` (exe tier,
+`nix store prefetch-file '<member-url>'`) to `extra_builds.json`.
+
+## Function-diff workflow (PDB tier)
+
+    python3 scripts/add_version.py v0.100b-build802            # fetch -> delink
     python3 scripts/add_version.py v0.200 --align-to v0.100b-build802
+    python3 scripts/diff_versions.py v0.100b-build802 v0.200   # -> diffs/.../summary.md
 
-You can still pass an explicit installer `.exe` or an extracted dir as a second
-arg to bypass the registry. `--align-to <base>` reuses the base's folded-symbol
-names so version-to-version diffs stay stable.
+`--align-to <base>` reuses the base's folded-symbol names so diffs stay stable. A
+version diffed against itself must report 100% on every function — the end-to-end
+sanity check.
 
-Diff two versions (oldest = base):
+## Packaging builds for upload
 
-    python3 scripts/diff_versions.py v0.100b-build802 v0.200
-    python3 scripts/diff_versions.py v0.200            # base taken from config.json
-
-Read `diffs/v0.100b-build802__v0.200/summary.md`.
-
-### Identity sanity test
-
-Diffing a version against itself must report 100% on every function — a good
-end-to-end check of the delink + objdiff wiring before trusting real diffs:
-
-    python3 scripts/add_version.py v0.100b-build802
-    python3 scripts/diff_versions.py v0.100b-build802 v0.100b-build802
+`scripts/package_builds.sh <archive.zip> [out-dir]` repackages every game-tree
+build inside a big local archive into upload-ready `vostok_engine_v<ver>_<date>.zip`
+files (version + date read from each exe; build#/internal-id come from the Steam
+depot, not the binary). Output lands in `survarium-uploads/` (gitignored).
 
 ## Layout
 
+    versions.json          PDB-tier registry (label, url, sha256, base, engine_path)
+    extra_builds.json      exe-tier registry (label, exe_url, exe_sha256, date, arch)
+    config.json            { "base": <label>, "versions": [...] }  (diff chain)
+    flake.nix              version-<label> (full) + .#"<token>" / .#all (exes) + toolchain
     scripts/
-      common.py          shared helpers + tool resolution + vendored objdiff config bits
-      add_version.py      installer/dir -> delink -> objects + structure + meta.json
-      diff_versions.py    base,target -> objdiff project -> report.json + summary.{md,json}
-    versions/<label>/
-      objects/            per-function COFF .obj (the delinked build; committed)
-      structure/          pdb_parser readable stubs
-      symbol-map.tsv      folded-symbol naming for stable diffs
-      meta.json           build id, exe/pdb sha256 + sizes, object count
-    diffs/<base>__<target>/
-      objdiff.json  report.json  summary.md  summary.json
-    cache/                extracted exe/pdb (gitignored - large)
-    config.json           { "base": <label>, "versions": [...] }
+      common.py            shared helpers + tool resolution
+      add_version.py       installer/dir -> delink -> objects + structure + meta.json
+      diff_versions.py     base,target -> objdiff -> summary.{md,json}
+      build_report.py      per-build function report
+      chain_report.py      consecutive-build diff chain
+      flags_report.py      cl.exe flags / LTCG from PDBs
+      deps_report.py       third-party dependency versions from each exe
+      package_builds.sh    repackage local game trees for archive.org upload
+    versions/<label>/      objects/ (gitignored), structure/ (gitignored), symbol-map.tsv, meta.json
+    diffs/<base>__<target>/  objdiff.json, summary.{md,json}  (report.json gitignored)
+    cache/                 extracted exe/pdb + hand-pulled exes (gitignored)
 
 ## The base: v0.100b build 802 (May 2013)
 
-The oldest known PDB-bearing Survarium build (from archive.org) is version #1 /
-base, and the first entry in `versions.json`. Bootstrap it straight from the flake:
+The oldest known PDB-bearing build, version #1 in `versions.json`. Bootstrap it:
 
     python3 scripts/add_version.py v0.100b-build802
-
-(fetches the archive.org installer, extracts, delinks). You can also pass an
-explicit installer `.exe` or extracted dir as a second arg to bypass the registry.
