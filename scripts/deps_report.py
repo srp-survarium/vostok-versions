@@ -53,6 +53,17 @@ EXTRA_PATH = c.REPO_DIR / "extra_builds.json"
 def extra_registry() -> list[dict]:
     return json.loads(EXTRA_PATH.read_text()) if EXTRA_PATH.exists() else []
 
+
+def fetch_exe_via_flake(token: str) -> Path:
+    """`nix build .#"<token>"` -> the store dir holding `<token>.exe`. Lets the
+    report regenerate the exe-tier builds straight from `extra_builds.json`'s
+    `exe_url`, with no dependency on the (gitignored) cache."""
+    out = subprocess.run(
+        ["nix", "build", f'.#"{token}"', "--no-link", "--print-out-paths"],
+        cwd=c.REPO_DIR, stdout=subprocess.PIPE, text=True, check=True,
+    )
+    return Path(out.stdout.strip().splitlines()[-1]) / f"{token}.exe"
+
 # A bare version atom: a whole string that is just a dotted version with at least
 # three components (optionally a trailing letter, e.g. openssl "1.0.0g"). Three+
 # components keeps real versions (1.2.3, 1.5.13, 4.2.21) and rejects the swarm of
@@ -302,14 +313,14 @@ def main() -> None:
     # Merge the flake-fetched registry builds (≤0.23h, PDB-bearing) with the
     # hand-extracted post-0.23 exes, ordered chronologically by release date.
     reg = [{**v, "kind": "registry"} for v in c.registry()]
-    # extra exes live under cache/ (gitignored) — skip any not present locally so
-    # the report still builds from the registry alone on a fresh checkout.
+    # exe-tier builds: keep any with a local cached exe OR a flake-fetchable
+    # exe_url; drop only ones with neither source.
     extra = []
     for v in extra_registry():
-        if (c.REPO_DIR / v["exe"]).exists():
+        if (c.REPO_DIR / v["exe"]).exists() or v.get("exe_url"):
             extra.append({**v, "kind": "extra"})
         else:
-            c.log("deps", f"skip {v['label']}: {v['exe']} not present (see docs/extracting-exes.md)")
+            c.log("deps", f"skip {v['label']}: no local exe and no exe_url")
     entries = sorted(reg + extra, key=lambda v: v.get("date", "9999"))
     labels = [v["label"] for v in entries]
     meta = {v["label"]: v for v in entries}
@@ -330,9 +341,12 @@ def main() -> None:
             bdir = d
         else:
             exe = c.REPO_DIR / v["exe"]
-            if not exe.exists():
-                sys.exit(f"deps_report: missing extra exe {exe} (see docs/extracting-exes.md)")
-            c.log("deps", f"scanning {lab} ({v.get('arch', '?')}, hand-extracted exe)")
+            if exe.exists():
+                c.log("deps", f"scanning {lab} ({v.get('arch', '?')}, cached exe)")
+            else:
+                token = col(lab)
+                c.log("deps", f"fetching {lab} exe via flake .#\"{token}\"")
+                exe = fetch_exe_via_flake(token)
             bdir = exe.parent
         scans[lab] = scan(exe, bdir)
 
