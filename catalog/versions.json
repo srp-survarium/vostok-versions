@@ -5,46 +5,116 @@
     "date": "2013-05-09",
     "url": "https://archive.org/download/vostok_engine_v0.1_build_802_internal_id_489_may_9_2013/survarium_setup_v0100b.exe",
     "sha256": "16aassxvbbhqx9czfvsl3zynl41n2xa7xf9n0l1aip07qgfz2l24",
-    "bundle_url": "https://github.com/srp-survarium/vostok-versions/releases/download/binary-evidence-2026-09-12/v0.10b-build802-exe-pdb.zip",
+    "bundle_url": "https://github.com/srp-survarium/vostok-versions/releases/download/binary-evidence/v0.10b-build802-exe-pdb.zip",
     "bundle_sha256": "sha256-qmbrBmtbi3Jmd3Gm4tVWH+z63Bpsg/u1woOjf31ZFyM=",
     "base": true,
-    "engine_path": "c:/survarium/sources"
+    "engine_path": "c:/survarium/sources",
+    "binary_version": "0.10b",
+    "release": "0.10b",
+    "release_association": "candidate",
+    "exe": {
+      "name": "survarium.exe",
+      "size": 12235264,
+      "sha256": "6cde21fac0fc508c140814c83d8a9d0158c0bff8f99c322cd7454c3d3103f737"
+    },
+    "pdb": {
+      "name": "survarium.pdb",
+      "size": 101673984,
+      "sha256": "0ffe85c27f8b95f23a65d91866af3384ab24ca343b3865a57f71a08902d5a238"
+    },
+    "artifact_verification": "verified-release-bundle"
   },
   {
-    "label": "v0.1.1a-build816",
+    "label": "v0.11a-build816",
     "build": 816,
     "date": "2013-05-14",
     "url": "https://archive.org/download/vostok_engine_v0.1_build_816_internal_id_494_may_14_2013/survarium_alpha_setup_v0.1.1a.exe",
     "sha256": "1a26qavgqs4fx4n3wwhfm4fb95a84m2mdg81gnifakj3yz1r9648",
-    "bundle_url": "https://github.com/srp-survarium/vostok-versions/releases/download/binary-evidence-2026-09-12/v0.1.1a-build816-exe-pdb.zip",
+    "bundle_url": "https://github.com/srp-survarium/vostok-versions/releases/download/binary-evidence/v0.11a-build816-exe-pdb.zip",
     "bundle_sha256": "sha256-xrXzBTHlrNhOqrUi68HqZNiSDk5mXOD+zH8L1S5+7ig=",
-    "engine_path": "c:/survarium/sources"
+    "engine_path": "c:/survarium/sources",
+    "binary_version": "0.1.1a",
+    "release": "0.11a",
+    "release_association": "candidate",
+    "exe": {
+      "name": "survarium.exe",
+      "size": 12396544,
+      "sha256": "fd30e15c1a300df2bec6711074d98ad500e139f243c13e5924afd7c2ab994573"
+    },
+    "pdb": {
+      "name": "survarium.pdb",
+      "size": 102124544,
+      "sha256": "aec287e3157c87c51fde067e1db7aa208b9f040327b7196c645605ebb4f0e369"
+    },
+    "artifact_verification": "verified-release-bundle"
   },
   {
-    "label": "v0.1.1b-build826",
+    "label": "v0.11b-build826",
     "build": 826,
     "date": "2013-05-14",
     "url": "https://archive.org/download/vostok_engine_v0.1_build_826_internal_id_494_may_14_2013/survarium_setup_v011b.exe",
     "sha256": "10zvg9k9ylmqvmsz0lgb6fw0x9r7awd4nyk1q1z4ia1qv94rhag7",
-    "engine_path": "c:/survarium/sources"
+    "engine_path": "c:/survarium/sources",
+    "binary_version": "0.1.1b",
+    "release": "0.11b",
+    "release_association": "candidate",
+    "exe": {
+      "name": "survarium.exe",
+      "size": 12396544,
+      "sha256": "97a895b79f43c033f7655c80d028c91d91d0a9fed9f5011928d192b2eb951a2b"
+    },
+    "pdb": {
+      "name": "survarium.pdb",
+      "size": 102124544,
+      "sha256": "1918d05f8782a5e787c60d679f14cd082b60b151af03c06ccf4c9c454b1de2d0"
+    },
+    "artifact_verification": "historical-ingestion-record"
   },
   {
-    "label": "v0.1.1c-build870",
+    "label": "v0.11c-build870",
     "build": 870,
     "date": "2013-05-24",
     "url": "https://archive.org/download/vostok_engine_v0.1_build_870_internal_id_504_may_24_2013/survarium_alpha_setup_v0.1.1c.exe",
     "sha256": "0az8zskg6l0gg14v6hl3idl817rjrk0w99k0749q2ahn5mz5cm5p",
-    "bundle_url": "https://github.com/srp-survarium/vostok-versions/releases/download/binary-evidence-2026-09-12/v0.1.1c-build870-exe-pdb.zip",
+    "bundle_url": "https://github.com/srp-survarium/vostok-versions/releases/download/binary-evidence/v0.11c-build870-exe-pdb.zip",
     "bundle_sha256": "sha256-35lZQ02F1lROzJZdpwrQJDc/QQg4tcYSPFRKzaHaIsI=",
-    "engine_path": "c:/survarium/sources"
+    "engine_path": "c:/survarium/sources",
+    "binary_version": "0.1.1c",
+    "release": "0.11c",
+    "release_association": "candidate",
+    "exe": {
+      "name": "survarium.exe",
+      "size": 12389888,
+      "sha256": "7ba590edeeb2efe99fac73d433266d6ff9806c2db04707402feb745afa1d6ee4"
+    },
+    "pdb": {
+      "name": "survarium.pdb",
+      "size": 102476800,
+      "sha256": "28d6fc22ca895bc789db564b11ec4b7e55e5d119f3a9593c16a4549297f17e59"
+    },
+    "artifact_verification": "verified-release-bundle"
   },
   {
-    "label": "v0.1.1e-build884",
+    "label": "v0.11e-build884",
     "build": 884,
     "date": "2013-05-28",
     "url": "https://archive.org/download/vostok_engine_v0.1_build_884_internal_id_508_may_28_2013_202006/survarium_setup_v011e.exe",
     "sha256": "1q3p3c70vp2pb54dwxga9mqxw5dgn7kh9dpa9y60km0rirjx8lcw",
-    "engine_path": "c:/survarium/sources"
+    "engine_path": "c:/survarium/sources",
+    "binary_version": "0.1.1e",
+    "release": "0.11e",
+    "release_association": "candidate",
+    "exe": {
+      "name": "survarium.exe",
+      "size": 12374528,
+      "sha256": "83d6cd0728e3ab71acfa8507b9458c23373ac25ebace9ca4bf1539e53f9f2396"
+    },
+    "pdb": {
+      "name": "survarium.pdb",
+      "size": 102476800,
+      "sha256": "4356dd33618fc4c43d4da7a0dd61c8e04b5fd12f05fcfe38a75697d7ab456ef8"
+    },
+    "artifact_verification": "historical-ingestion-record"
   },
   {
     "label": "v0.20e-build1916",
@@ -52,9 +122,23 @@
     "date": "2014-03-20",
     "url": "https://archive.org/download/vostok_engine_v0.20e_build_1916_internal_id_804_mar_20_2014/survarium_full_020e.7z",
     "sha256": "0gz7mdr7b8gxdr44l6lqsli9rinjcqzll1d42sknwpl8sg7ymi1q",
-    "bundle_url": "https://github.com/srp-survarium/vostok-versions/releases/download/binary-evidence-2026-09-12/v0.20e-build1916-exe-pdb.zip",
+    "bundle_url": "https://github.com/srp-survarium/vostok-versions/releases/download/binary-evidence/v0.20e-build1916-exe-pdb.zip",
     "bundle_sha256": "sha256-cqfgiU0zhJ9Jh7/rZoALo6/CBbkRyUL0Ss0PHMwElAY=",
-    "engine_path": "c:/survarium.deploy/sources"
+    "engine_path": "c:/survarium.deploy/sources",
+    "binary_version": "0.20e",
+    "release": "0.20e",
+    "release_association": "candidate",
+    "exe": {
+      "name": "survarium.exe",
+      "size": 10443896,
+      "sha256": "ceee6e16b01e25bc8228c4335224eb78dd470f84672c94272907c68567347a87"
+    },
+    "pdb": {
+      "name": "survarium.pdb",
+      "size": 104852480,
+      "sha256": "eab7c2ac31c4b8ad56cbc2381c25bc954f30df6a367b05d59cf9f350633cf186"
+    },
+    "artifact_verification": "verified-release-bundle"
   },
   {
     "label": "v0.20f-build1923",
@@ -62,7 +146,21 @@
     "date": "2014-04-01",
     "url": "https://archive.org/download/vostok_engine_v0.20f_build_1923_internal_id_816_apr_1_2014/survarium_full_020f.7z",
     "sha256": "02ljr2b4cxjk92mm8kv46yp2xvm7zshrm9pbwcrjyydm14w03ryx",
-    "engine_path": "c:/survarium.deploy/sources"
+    "engine_path": "c:/survarium.deploy/sources",
+    "binary_version": "0.20f",
+    "release": "0.20f",
+    "release_association": "candidate",
+    "exe": {
+      "name": "survarium.exe",
+      "size": 10443896,
+      "sha256": "72ea3626086bea50e29a6580a3dd9d79e5f6b4d8e77af173b0611cba39c8df30"
+    },
+    "pdb": {
+      "name": "survarium.pdb",
+      "size": 104475648,
+      "sha256": "e68ddd6f88feda392d709927092511608d85f949e967637c4f4ef8b339cb02eb"
+    },
+    "artifact_verification": "historical-ingestion-record"
   },
   {
     "label": "v0.21d-build2010",
@@ -70,9 +168,23 @@
     "date": "2014-04-24",
     "url": "https://archive.org/download/vostok_engine_v0.21d_build_2010_internal_id_839_apr_24_2014/survarium_full_021d.7z",
     "sha256": "0xarrs6ncb49kajhny4726n0y8fly0g7607vyqlf5jpy1qzmiyr5",
-    "bundle_url": "https://github.com/srp-survarium/vostok-versions/releases/download/binary-evidence-2026-09-12/v0.21d-build2010-exe-pdb.zip",
+    "bundle_url": "https://github.com/srp-survarium/vostok-versions/releases/download/binary-evidence/v0.21d-build2010-exe-pdb.zip",
     "bundle_sha256": "sha256-PHq6eOB3jdnVyVNZ0yokLelBtGQZecpyhEmfhZUrbMg=",
-    "engine_path": "c:/survarium.deploy/sources"
+    "engine_path": "c:/survarium.deploy/sources",
+    "binary_version": "0.21d",
+    "release": "0.21d",
+    "release_association": "candidate",
+    "exe": {
+      "name": "survarium.exe",
+      "size": 10463352,
+      "sha256": "def82eeaed9d544b2e1c1e0ec971f7359c24a942dd52ace6b45e6d82e7c34a0a"
+    },
+    "pdb": {
+      "name": "survarium.pdb",
+      "size": 106081280,
+      "sha256": "7e3624e684d42a42468b0b27288a2a3167485f84ca4938a6b2cba856058a19ca"
+    },
+    "artifact_verification": "verified-release-bundle"
   },
   {
     "label": "v0.23h-build2285",
@@ -81,6 +193,10 @@
     "url": "https://archive.org/download/vostok_engine_v0.23h_build_2285_internal_id_923_jul_17_2014/survarium_full_023h.7z",
     "sha256": "0n5ivk3fgl32dsal66rshkp7y71gy1269xa3gwlxjhd4xl3dr9w4",
     "engine_path": "c:/survarium.deploy/sources",
-    "symbols": false
+    "symbols": false,
+    "binary_version": "0.23h",
+    "release": "0.23h",
+    "release_association": "candidate",
+    "artifact_verification": "cataloged-archive-symbols-absent"
   }
 ]

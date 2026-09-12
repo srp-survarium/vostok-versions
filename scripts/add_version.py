@@ -8,10 +8,10 @@ add_version.py - ingest one Survarium build into the version database.
 contains survarium.exe + survarium.pdb. Steps:
 
   1. resolve source -> a dir holding survarium.{exe,pdb}
-     (installer: innoextract into work/cache/<label>/; directory: used as-is)
-  2. vostok-delinker  -> work/versions/<label>/objects/   (per-function COFF .obj)
-  3. pdb_parser       -> work/versions/<label>/structure/  (readable stubs; --no-structure to skip)
-  4. write work/versions/<label>/meta.json (build hashes, sizes, object count, ...)
+     (installer: innoextract into .generated/downloads/<label>/; directory: used as-is)
+  2. vostok-delinker  -> .generated/builds/<label>/objects/   (per-function COFF .obj)
+  3. pdb_parser       -> .generated/builds/<label>/structure/  (readable stubs; --no-structure to skip)
+  4. write .generated/builds/<label>/meta.json (hashes, sizes, object count, ...)
 
 The comparison chain is maintained in catalog/chain.json. Passing --base updates
 its base label; ingestion does not append builds to the chain.
@@ -47,7 +47,7 @@ def resolve_source(label: str, source: Path, keep_cache: bool) -> tuple[Path, Pa
     if not source.is_file():
         sys.exit(f"error: source {source} is neither a file nor a directory")
 
-    # Installer: extract once into cache/<label>/ (gitignored).
+    # Installer: extract once into .generated/downloads/<label>/.
     c.require_tool(c.innoextract())
     dest = c.CACHE_DIR / label
     if dest.exists() and not keep_cache:
@@ -147,7 +147,8 @@ def main() -> None:
                     help="reuse this base version's folded-symbol map for stable diffs")
     ap.add_argument("--base", action="store_true", help="record this version as the matching base")
     ap.add_argument("--no-structure", action="store_true", help="skip pdb_parser structure stubs")
-    ap.add_argument("--keep-cache", action="store_true", help="reuse an existing cache/<label> extract")
+    ap.add_argument("--keep-cache", action="store_true",
+                    help="reuse an existing .generated/downloads/<label> extract")
     ap.add_argument("--force", action="store_true", help="re-ingest even if meta.json already exists")
     args = ap.parse_args()
     if args.align_to == args.label:
@@ -171,7 +172,7 @@ def main() -> None:
     if args.source is not None:
         exe, pdb = resolve_source(args.label, args.source, args.keep_cache)
     elif entry:
-        c.log("add", f"fetching {args.label!r} from archive.org via flake")
+        c.log("add", f"fetching {args.label!r} through the flake")
         src_dir = c.fetch_from_flake(args.label)
         exe, pdb = c.find_exe_pdb(src_dir)
     else:

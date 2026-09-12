@@ -1,0 +1,11 @@
+{
+  "label": "v0.34a0-build3545",
+  "release": "0.34a",
+  "binary_version": "0.34a0",
+  "date": "2015-12-25",
+  "architecture": "x86",
+  "exe_source": "https://archive.org/download/vostok_engine_v0.34a0_build_3545_internal_id_1431_dec_25_2015_z/survarium_full_034a0.zip/Survarium/game/binaries/x86/survarium.exe",
+  "exe_sha256": "sha256-nDQeKplRxggUqx+reGk1TRM467Cjdb+8fzHVL946Ppc=",
+  "source": "archive.org vostok_engine_v0.34a0_build_3545 (survarium_full_034a0.zip game tree, member binaries/x86/survarium.exe)",
+  "artifact_verification": "historical-executable-scan-record"
+}

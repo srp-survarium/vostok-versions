@@ -1,0 +1,220 @@
+# Build v0.11e-build884  —  what most likely changed
+
+_vs v0.11c-build870 · 2013-05-24 → 2013-05-28_
+
+From **added/deleted hand-written engine functions only** (+25 / −38), grouped by owning class/namespace. Added/deleted are clear non-drift signal; fuzzy `changed` is excluded.
+
+## Likely changes at a glance
+
+- **New (4):** `vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 616, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy>`, `vostok::intrusive_double_linked_list<class vostok::resources::query_result, class vostok::resources::query_result *, 624, 620, class vostok::threading::mutex, class vostok::no_size_policy, class vostok::debug_policy>`, `vostok::render::speedtree_data`, `vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 616, class vostok::threading::single_threading_policy, class vostok::size_policy, class vostok::no_debug_policy>`
+- **Removed (6):** `vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 600, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy>`, `vostok::intrusive_double_linked_list<class vostok::resources::query_result, class vostok::resources::query_result *, 616, 612, class vostok::threading::mutex, class vostok::no_size_policy, class vostok::debug_policy>`, `vostok::particle::lod_entry`, `vostok::render::render_target_instance`, `vostok::render::sun_cascade`, `vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 608, class vostok::threading::single_threading_policy, class vostok::size_policy, class vostok::no_debug_policy>`
+- **Reworked (19):** `survarium::medkit`, `vostok::render::renderer`, `vostok::render::stage_shadow_direct`, `vostok::render::culling::portal_sector_system`, `vostok::render`, `vostok::resources::allocate_functionality`, `vostok::resources::resources_manager`, `vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 608, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy>`, `vostok::resources::hdd_manager`, `(global)`, `vostok::fs_new::virtual_path_string`, `vostok::ai::selectors::sound_target_selector` _+7 more_
+
+---
+
+## 🟡 REWORKED · `survarium::medkit` (+9 / −5)
+
+- `+` `active_tick(unsigned int)`
+- `+` `find_damage_protection(char const *, char const *)`
+- `+` `holder_assigned(void)`
+- `+` `holder_removed(void)`
+- `+` `on_player_death(void)`
+- `+` `reduce_damage(char const *, char const *, float, float)`
+- `+` `remove(void)`
+- `+` `remove_affects(void)`
+- `+` `set_active(bool)`
+- `−` `active_tick(unsigned int)`
+- `−` `find_damage_protection(char const *, char const *)`
+- `−` `reduce_damage(char const *, char const *, float, float)`
+- `−` `remove_affects(void)`
+- `−` `set_active(bool)`
+
+---
+
+## 🟡 REWORKED · `vostok::render::renderer` (+1 / −5)
+
+- `+` `fill_opaque_models(unsigned int, unsigned int)`
+- `−` `draw_debug(class vostok::render::scene *, class vostok::render::scene_view *, float, struct vostok::ui::font const *)`
+- `−` `draw_frame_histogram(void) const`
+- `−` `draw_luminance_picker_info(struct vostok::ui::font const *)`
+- `−` `draw_stages_stats(struct vostok::ui::font const *)`
+- `−` `fill_opaque_models(void)`
+
+---
+
+## 🟡 REWORKED · `vostok::render::stage_shadow_direct` (+2 / −3)
+
+- `+` `execute_cascade(unsigned int, unsigned int, unsigned int, unsigned int)`
+- `+` `prepare_models(class vostok::render::vector<struct vostok::render::render_surface_instance *> &, class vostok::math::float4x4const &, unsigned int, unsigned int, class vostok::math::float3const &, unsigned int)`
+- `−` `draw_debug(unsigned int)`
+- `−` `execute_cascade(unsigned int, unsigned int, unsigned int)`
+- `−` `prepare_models(class vostok::render::vector<struct vostok::render::render_surface_instance *> &, class vostok::math::float4x4const &, unsigned int, unsigned int, class vostok::math::float3const &)`
+
+---
+
+## 🟡 REWORKED · `vostok::render::culling::portal_sector_system` (+0 / −3)
+
+- `−` `draw_portals(class vostok::render::system_renderer &, unsigned int)`
+- `−` `draw_quads(class vostok::render::system_renderer &)`
+- `−` `render(class vostok::render::system_renderer &, class vostok::math::float3const &, class vostok::math::float4x4const &)`
+
+---
+
+## 🟡 REWORKED · `vostok::render` (+0 / −3)
+
+- `−` `draw_text`
+- `−` `draw_text_shadowed`
+- `−` `make_ui_vertices`
+
+---
+
+## 🟡 REWORKED · `vostok::resources::allocate_functionality` (+1 / −1)
+
+- `+` `allocate_final_resources<class vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 616, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy> >(class vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 616, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy> &, bool)`
+- `−` `allocate_final_resources<class vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 608, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy> >(class vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 608, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy> &, bool)`
+
+---
+
+## 🟡 REWORKED · `vostok::resources::resources_manager` (+1 / −1)
+
+- `+` `create_resources<class vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 616, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy> >(class vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 616, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy> const &, class vostok::resources::query_result *, bool)`
+- `−` `create_resources<class vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 608, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy> >(class vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 608, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy> const &, class vostok::resources::query_result *, bool)`
+
+---
+
+## 🟡 REWORKED · `vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 608, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy>` (+1 / −1)
+
+- `+` `pop_front(void)`
+- `−` `pop_all_and_clear(unsigned int *)`
+
+---
+
+## 🟢 NEW · `vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 616, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy>` (+2)
+
+- `+` `pop_all_and_clear(unsigned int *)`
+- `+` `push_back(class vostok::resources::query_result *, bool *)`
+
+---
+
+## 🟡 REWORKED · `vostok::resources::hdd_manager` (+1 / −1)
+
+- `+` `grab_sorted_queries(class vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 616, class vostok::threading::single_threading_policy, class vostok::size_policy, class vostok::no_debug_policy> &)`
+- `−` `grab_sorted_queries(class vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 608, class vostok::threading::single_threading_policy, class vostok::size_policy, class vostok::no_debug_policy> &)`
+
+---
+
+## 🟢 NEW · `vostok::intrusive_double_linked_list<class vostok::resources::query_result, class vostok::resources::query_result *, 624, 620, class vostok::threading::mutex, class vostok::no_size_policy, class vostok::debug_policy>` (+2)
+
+- `+` `erase(class vostok::resources::query_result *)`
+- `+` `push_back(class vostok::resources::query_result *, bool *)`
+
+---
+
+## 🔴 REMOVED · `vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 600, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy>` (+0 / −2)
+
+- `−` `pop_front(void)`
+- `−` `push_back(class vostok::resources::query_result *, bool *)`
+
+---
+
+## 🔴 REMOVED · `vostok::intrusive_double_linked_list<class vostok::resources::query_result, class vostok::resources::query_result *, 616, 612, class vostok::threading::mutex, class vostok::no_size_policy, class vostok::debug_policy>` (+0 / −2)
+
+- `−` `erase(class vostok::resources::query_result *)`
+- `−` `push_back(class vostok::resources::query_result *, bool *)`
+
+---
+
+## 🟡 REWORKED · `(global)` (+1)
+
+- `+` `(void)> const &)`
+
+---
+
+## 🟡 REWORKED · `vostok::fs_new::virtual_path_string` (+1)
+
+- `+` `ctor<char *>(char *const &)`
+
+---
+
+## 🟢 NEW · `vostok::render::speedtree_data` (+1)
+
+- `+` `speedtree_data(void)`
+
+---
+
+## 🟡 REWORKED · `vostok::ai::selectors::sound_target_selector` (+1)
+
+- `+` `~sound_target_selector(void)`
+
+---
+
+## 🟢 NEW · `vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 616, class vostok::threading::single_threading_policy, class vostok::size_policy, class vostok::no_debug_policy>` (+1)
+
+- `+` `push_back(class vostok::resources::query_result *, bool *)`
+
+---
+
+## 🔴 REMOVED · `vostok::particle::lod_entry` (+0 / −1)
+
+- `−` `~lod_entry(void)`
+
+---
+
+## 🔴 REMOVED · `vostok::render::render_target_instance` (+0 / −1)
+
+- `−` `render_target_instance(void)`
+
+---
+
+## 🔴 REMOVED · `vostok::render::sun_cascade` (+0 / −1)
+
+- `−` `sun_cascade(struct vostok::render::sun_cascade const &)`
+
+---
+
+## 🟡 REWORKED · `vostok::resources::query_result_for_cook` (+0 / −1)
+
+- `−` `user_data(void) const`
+
+---
+
+## 🟡 REWORKED · `vostok::render::resource_manager` (+0 / −1)
+
+- `−` `get_texture_video_memory_size(void)`
+
+---
+
+## 🟡 REWORKED · `survarium::rifle_scope` (+0 / −1)
+
+- `−` `~rifle_scope(void)`
+
+---
+
+## 🟡 REWORKED · `vostok::particle::particle_system_instance` (+0 / −1)
+
+- `−` `~particle_system_instance(void)`
+
+---
+
+## 🔴 REMOVED · `vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 608, class vostok::threading::single_threading_policy, class vostok::size_policy, class vostok::no_debug_policy>` (+0 / −1)
+
+- `−` `push_back(class vostok::resources::query_result *, bool *)`
+
+---
+
+## 🟡 REWORKED · `vostok::render::culling::sector_double_query_preventer` (+0 / −1)
+
+- `−` `render(class vostok::render::system_renderer &)`
+
+---
+
+## 🟡 REWORKED · `vostok::render::grass_world` (+0 / −1)
+
+- `−` `render_debug(class vostok::render::renderer_context *)`
+
+---
+
+## 🟡 REWORKED · `vostok::render::scene` (+0 / −1)
+
+- `−` `draw_portal_system(class vostok::render::system_renderer &, class vostok::math::float3const &, class vostok::math::float4x4const &)`
+

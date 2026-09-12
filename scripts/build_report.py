@@ -5,7 +5,7 @@ build_report.py - per-build "what most likely changed" reports.
     python3 scripts/build_report.py
 
 For each new build (vs its predecessor in the chain) writes
-reports/builds/<label>.md, inferred ONLY from added/deleted hand-written engine
+.generated/analysis/builds/<label>.md, inferred ONLY from added/deleted hand-written engine
 functions - the unambiguous "a function appeared / vanished" signal, which
 unlike fuzzy `changed` %s doesn't blur with codegen/folding drift. Functions are
 grouped by owning class/namespace and each group is labelled:

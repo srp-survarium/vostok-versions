@@ -1,0 +1,555 @@
+{
+  "base": "v0.11c-build870",
+  "target": "v0.11e-build884",
+  "scope": {
+    "generated": false,
+    "third_party": false
+  },
+  "counts": {
+    "identical": {
+      "engine": 12289,
+      "generated": 1443,
+      "third_party": 10427
+    },
+    "changed": {
+      "engine": 463,
+      "generated": 1,
+      "third_party": 9
+    },
+    "new": {
+      "engine": 67,
+      "generated": 149,
+      "third_party": 440
+    }
+  },
+  "removed_units": {
+    "engine": [
+      "vostok/core/engine.h"
+    ],
+    "third_party": [
+      "boost/intrusive/detail/ebo_functor_holder.hpp"
+    ]
+  },
+  "top_changed": [
+    {
+      "pct": 2.050633,
+      "unit": "vostok/render/engine/sources/system_renderer.cpp",
+      "fn": "public: void __thiscall vostok::render::system_renderer::draw_screen_lines(class vostok::math::float3const *, unsigned int, class vostok::math::color const &, float, unsigned int, bool, bool)"
+    },
+    {
+      "pct": 12.0,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float4_pod,1>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 12.0,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float4_pod,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 12.0,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float3_pod,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 12.0,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<float,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 12.0,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float4_pod,1>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 12.0,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float4_pod,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 12.0,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float3_pod,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 12.0,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<float,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 12.772727,
+      "unit": "vostok/render/engine/sources/stage_shadow_direct.cpp",
+      "fn": "public: bool __thiscall vostok::render::remove_inappropriate_models::operator()(struct vostok::render::render_surface_instance *)"
+    },
+    {
+      "pct": 13.451327,
+      "unit": "vostok/render/engine/sources/renderer.cpp",
+      "fn": "vostok::render::screen_factor"
+    },
+    {
+      "pct": 28.2,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float4_pod,1>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 28.2,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float4_pod,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 28.2,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float3_pod,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 28.2,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<float,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 28.2,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float4_pod,1>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 28.2,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float4_pod,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 28.2,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float3_pod,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 28.2,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<float,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 33.663044,
+      "unit": "vostok/game_core/sources/medkit.cpp",
+      "fn": "private: __thiscall survarium::medkit::medkit(void)"
+    },
+    {
+      "pct": 53.737804,
+      "unit": "vostok/core/sources/resources_manager_new_queries.cpp",
+      "fn": "public: void __thiscall vostok::resources::resources_manager::init_new_query(class vostok::resources::query_result &)"
+    },
+    {
+      "pct": 57.5,
+      "unit": "vostok/intrusive_list_inline.h",
+      "fn": "public: void __thiscall vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 608, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy>::push_back(class vostok::resources::query_result *, bool *)"
+    },
+    {
+      "pct": 60.232143,
+      "unit": "vostok/core/sources/resources_query_result_finalization.cpp",
+      "fn": "public: virtual __thiscall vostok::resources::query_result_for_user::~query_result_for_user(void)"
+    },
+    {
+      "pct": 63.37143,
+      "unit": "vostok/game/sources/network_client_lobby.cpp",
+      "fn": "private: virtual void __thiscall survarium::network_client::close_current_match(enum vostok::network_core::disconnect_event_types_enum)"
+    },
+    {
+      "pct": 73.70053,
+      "unit": "vostok/game_core/sources/damage_zone_core.cpp",
+      "fn": "public: virtual float __thiscall survarium::dz_bone_data_contact_test_predicate::add_single_result(void *, enum vostok::physics::primitive_type, class vostok::math::float4x4const &, class vostok::math::float3const &, enum vostok::physics::primitive_type, class vostok::math::float4x4const &, class vostok::math::float3const &)"
+    },
+    {
+      "pct": 77.33857,
+      "unit": "vostok/render/core/dx11/sources/device.cpp",
+      "fn": "private: void __thiscall vostok::render::device::create_d3d(void)"
+    },
+    {
+      "pct": 79.82258,
+      "unit": "vostok/game/sources/lobby_menu_ui.cpp",
+      "fn": "public: void __thiscall survarium::lobby_menu::on_player_reputations_arrived(void)"
+    },
+    {
+      "pct": 83.82524,
+      "unit": "vostok/survarium/pc/sources/survarium_pc_application_win.cpp",
+      "fn": "private: void __thiscall survarium::application::preinitialize(void)"
+    },
+    {
+      "pct": 84.416306,
+      "unit": "vostok/render/engine/sources/stage_postprocess.cpp",
+      "fn": "public: virtual void __thiscall vostok::render::stage_postprocess::execute(void)"
+    },
+    {
+      "pct": 85.244896,
+      "unit": "vostok/render/engine/sources/stage_shadow_direct.cpp",
+      "fn": "public: virtual void __thiscall vostok::render::stage_shadow_direct::execute(void)"
+    },
+    {
+      "pct": 89.166664,
+      "unit": "vostok/core/sources/resources_query_result_initialization.cpp",
+      "fn": "public: __thiscall vostok::resources::query_result_for_user::query_result_for_user(void)"
+    },
+    {
+      "pct": 90.080925,
+      "unit": "vostok/render/engine/sources/render_engine_world_pc_dx11.cpp",
+      "fn": "public: __thiscall vostok::render::renderer_context::~renderer_context(void)"
+    },
+    {
+      "pct": 90.10204,
+      "unit": "vostok/render/core/dx11/sources/options.cpp",
+      "fn": "public: enum vostok::render::enum_options_changes_result __thiscall vostok::render::options::end_render_options_changing(class vostok::render::vector<class vostok::fs_new::virtual_path_string> &)"
+    },
+    {
+      "pct": 91.56579,
+      "unit": "vostok/render/facade/sources/game_renderer.cpp",
+      "fn": "private: void __thiscall vostok::render::game::renderer::draw_scene_impl(struct vostok::render::game::renderer::draw_scene_params const &)"
+    },
+    {
+      "pct": 92.67651,
+      "unit": "vostok/render/engine/sources/renderer_context.cpp",
+      "fn": "public: __thiscall vostok::render::renderer_context::renderer_context(void)"
+    },
+    {
+      "pct": 93.23684,
+      "unit": "vostok/game_core/sources/medkit.cpp",
+      "fn": "private: virtual __thiscall survarium::medkit::~medkit(void)"
+    },
+    {
+      "pct": 93.4,
+      "unit": "vostok/render/engine/sources/render_engine_world_pc_dx11.cpp",
+      "fn": "public: void __thiscall vostok::render::engine::world::draw_scene(class vostok::resources::resource_ptr<struct vostok::render::base_scene, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::resources::resource_ptr<struct vostok::render::base_scene_view, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::resources::resource_ptr<struct vostok::render::base_output_window, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::math::rectangle<class vostok::math::float2> const &, class boost::function<void __cdecl (bool)> const &, struct vostok::ui::font const *)"
+    },
+    {
+      "pct": 94.752945,
+      "unit": "vostok/render/engine/sources/renderer.cpp",
+      "fn": "public: void __thiscall vostok::render::renderer::render(class vostok::resources::resource_ptr<struct vostok::render::base_scene, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::resources::resource_ptr<struct vostok::render::base_scene_view, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::resources::resource_ptr<struct vostok::render::base_output_window, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::math::rectangle<class vostok::math::float2> const &, class boost::function<void __cdecl (bool)> const &, bool, struct vostok::ui::font const *)"
+    },
+    {
+      "pct": 95.082756,
+      "unit": "vostok/render/core/dx11/sources/options.cpp",
+      "fn": "public: void __thiscall vostok::render::options::set_default_values(void)"
+    },
+    {
+      "pct": 95.414474,
+      "unit": "vostok/game/sources/player.cpp",
+      "fn": "private: void __thiscall survarium::player::detect_usable_objects(unsigned int)"
+    },
+    {
+      "pct": 95.561035,
+      "unit": "vostok/render/core/dx11/sources/options.cpp",
+      "fn": "public: void __thiscall vostok::render::options::register_console_commands(void)"
+    },
+    {
+      "pct": 95.9901,
+      "unit": "vostok/render/engine/sources/system_renderer.cpp",
+      "fn": "public: void __thiscall vostok::render::system_renderer::draw_ui_vertices(struct vostok::render::vertex_formats::TL const *, unsigned int const &, int, int)"
+    },
+    {
+      "pct": 96.24647,
+      "unit": "vostok/render/engine/sources/render_particle_emitter_instance.cpp",
+      "fn": "public: void __thiscall vostok::render::render_particle_emitter_instance::draw_debug(class vostok::math::float4x4const &, enum vostok::particle::enum_particle_render_mode)"
+    },
+    {
+      "pct": 97.22727,
+      "unit": "vostok/core/sources/resources_manager_new_queries.cpp",
+      "fn": "public: void __thiscall vostok::resources::resources_manager::init_new_queries(class vostok::resources::query_result *)"
+    },
+    {
+      "pct": 98.57143,
+      "unit": "vostok/game/sources/game_world_ui.cpp",
+      "fn": "public: void __thiscall survarium::game_world_ui::set_match_time(unsigned int)"
+    },
+    {
+      "pct": 99.01242,
+      "unit": "vostok/render/core/dx11/sources/device.cpp",
+      "fn": "private: void __thiscall vostok::render::device::create(void)"
+    },
+    {
+      "pct": 99.375,
+      "unit": "vostok/render/engine/sources/renderer_context.cpp",
+      "fn": "private: void __thiscall vostok::render::renderer_context::update_near_far(void)"
+    },
+    {
+      "pct": 99.44,
+      "unit": "vostok/core/sources/resources_query_result_initialization.cpp",
+      "fn": "public: __thiscall vostok::resources::query_result_for_cook::query_result_for_cook(class vostok::resources::queries_result *)"
+    },
+    {
+      "pct": 99.5,
+      "unit": "vostok/core/sources/resources_query_result.cpp",
+      "fn": "private: void __thiscall vostok::resources::query_result::add_loaded_bytes(unsigned int)"
+    },
+    {
+      "pct": 99.5,
+      "unit": "vostok/render/engine/sources/renderer_context.cpp",
+      "fn": "public: void __thiscall vostok::render::renderer_context::set_scene(class vostok::render::scene *)"
+    }
+  ],
+  "new_or_rewritten": [
+    {
+      "unit": "vostok/ai/sources/animation_target_selector.h",
+      "fn": "public: virtual __thiscall vostok::ai::selectors::sound_target_selector::~sound_target_selector(void)"
+    },
+    {
+      "unit": "vostok/ai/sources/position_target_selector.h",
+      "fn": "public: virtual __thiscall vostok::ai::selectors::sound_target_selector::~sound_target_selector(void)"
+    },
+    {
+      "unit": "vostok/ai/sources/sound_target_selector.h",
+      "fn": "public: virtual __thiscall vostok::ai::selectors::sound_target_selector::~sound_target_selector(void)"
+    },
+    {
+      "unit": "vostok/animation/base_interpolator.h",
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>::~resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>(void)"
+    },
+    {
+      "unit": "vostok/animation/mixing_binary_operation_lexeme_inline.h",
+      "fn": "public: __thiscall vostok::animation::mixing::animation_interval::~animation_interval(void)"
+    },
+    {
+      "unit": "vostok/buffer_vector_inline.h",
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::render::material, class vostok::resources::unmanaged_intrusive_base>::~resource_ptr<class vostok::render::material, class vostok::resources::unmanaged_intrusive_base>(void)"
+    },
+    {
+      "unit": "vostok/console_command.h",
+      "fn": "public: virtual __thiscall vostok::console_commands::cc_u32::~cc_u32(void)"
+    },
+    {
+      "unit": "vostok/console_command.h",
+      "fn": "public: virtual __thiscall vostok::console_commands::cc_u32::~cc_u32(void)"
+    },
+    {
+      "unit": "vostok/core/sources/resources_hdd_manager.cpp",
+      "fn": "public: virtual void __thiscall vostok::resources::hdd_manager::grab_sorted_queries(class vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 616, class vostok::threading::single_threading_policy, class vostok::size_policy, class vostok::no_debug_policy> &)"
+    },
+    {
+      "unit": "vostok/core/sources/resources_manager_allocation.cpp",
+      "fn": "private: void __thiscall vostok::resources::allocate_functionality::allocate_final_resources<class vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 616, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy> >(class vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 616, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy> &, bool)"
+    },
+    {
+      "unit": "vostok/core/sources/resources_manager_cook.cpp",
+      "fn": "private: void __thiscall vostok::resources::resources_manager::create_resources<class vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 616, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy> >(class vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 616, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy> const &, class vostok::resources::query_result *, bool)"
+    },
+    {
+      "unit": "vostok/fixed_string_inline.h",
+      "fn": "public: __thiscall vostok::render::skeleton_combined_cook_data::~skeleton_combined_cook_data(void)"
+    },
+    {
+      "unit": "vostok/fixed_string_inline.h",
+      "fn": "public: class vostok::buffer_string const & __thiscall vostok::buffer_string::operator=(class vostok::buffer_string const &)"
+    },
+    {
+      "unit": "vostok/fixed_string_inline.h",
+      "fn": "public: class vostok::buffer_string const & __thiscall vostok::buffer_string::operator=(class vostok::buffer_string const &)"
+    },
+    {
+      "unit": "vostok/fs/path_string_impl.h",
+      "fn": "vec_begin"
+    },
+    {
+      "unit": "vostok/fs/path_string_impl.h",
+      "fn": "vec_begin"
+    },
+    {
+      "unit": "vostok/fs/path_string_impl.h",
+      "fn": "vec_begin"
+    },
+    {
+      "unit": "vostok/fs/virtual_path_string.h",
+      "fn": "public: __thiscall vostok::fs_new::virtual_path_string::ctor<char *>(char *const &)"
+    },
+    {
+      "unit": "vostok/game/sources/game_world.h",
+      "fn": "public: virtual void __thiscall survarium::game_camera::on_focus(bool)"
+    },
+    {
+      "unit": "vostok/game/sources/game_world.h",
+      "fn": "public: virtual void __thiscall survarium::game_camera::on_focus(bool)"
+    },
+    {
+      "unit": "vostok/game/sources/game_world.h",
+      "fn": "public: virtual void __thiscall survarium::game_camera::on_focus(bool)"
+    },
+    {
+      "unit": "vostok/game/sources/game_world.h",
+      "fn": "public: virtual void __thiscall survarium::game_camera::on_focus(bool)"
+    },
+    {
+      "unit": "vostok/game_core/player_death_subscriber.h",
+      "fn": "public: __thiscall survarium::player_death_subscriber::player_death_subscriber(class boost::function<void __cdecl (void)> const &)"
+    },
+    {
+      "unit": "vostok/game_core/sources/medkit.cpp",
+      "fn": "private: float __thiscall survarium::medkit::reduce_damage(char const *, char const *, float, float)"
+    },
+    {
+      "unit": "vostok/game_core/sources/medkit.cpp",
+      "fn": "private: struct survarium::medkit::damage_protection const * __thiscall survarium::medkit::find_damage_protection(char const *, char const *)"
+    },
+    {
+      "unit": "vostok/game_core/sources/medkit.cpp",
+      "fn": "private: void __thiscall survarium::medkit::active_tick(unsigned int)"
+    },
+    {
+      "unit": "vostok/game_core/sources/medkit.cpp",
+      "fn": "private: void __thiscall survarium::medkit::on_player_death(void)"
+    },
+    {
+      "unit": "vostok/game_core/sources/medkit.cpp",
+      "fn": "private: void __thiscall survarium::medkit::remove_affects(void)"
+    },
+    {
+      "unit": "vostok/game_core/sources/medkit.cpp",
+      "fn": "private: void __thiscall survarium::medkit::set_active(bool)"
+    },
+    {
+      "unit": "vostok/game_core/sources/medkit.cpp",
+      "fn": "public: virtual void __thiscall survarium::medkit::holder_assigned(void)"
+    },
+    {
+      "unit": "vostok/game_core/sources/medkit.cpp",
+      "fn": "public: virtual void __thiscall survarium::medkit::holder_removed(void)"
+    },
+    {
+      "unit": "vostok/game_core/sources/medkit.cpp",
+      "fn": "public: virtual void __thiscall survarium::medkit::remove(void)"
+    },
+    {
+      "unit": "vostok/intrusive_double_linked_list_inline.h",
+      "fn": "public: void __thiscall vostok::intrusive_double_linked_list<class vostok::resources::query_result, class vostok::resources::query_result *, 624, 620, class vostok::threading::mutex, class vostok::no_size_policy, class vostok::debug_policy>::erase(class vostok::resources::query_result *)"
+    },
+    {
+      "unit": "vostok/intrusive_double_linked_list_inline.h",
+      "fn": "public: void __thiscall vostok::intrusive_double_linked_list<class vostok::resources::query_result, class vostok::resources::query_result *, 624, 620, class vostok::threading::mutex, class vostok::no_size_policy, class vostok::debug_policy>::push_back(class vostok::resources::query_result *, bool *)"
+    },
+    {
+      "unit": "vostok/intrusive_list_inline.h",
+      "fn": "public: __thiscall vostok::intrusive_list<struct vostok::ai::percept_memory_object, struct vostok::ai::percept_memory_object *, 40, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy>::~intrusive_list<struct vostok::ai::percept_memory_object, struct vostok::ai::percept_memory_object *, 40, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy>(void)"
+    },
+    {
+      "unit": "vostok/intrusive_list_inline.h",
+      "fn": "public: class survarium::inventory & __thiscall survarium::inventory_holder::inventory(void)"
+    },
+    {
+      "unit": "vostok/intrusive_list_inline.h",
+      "fn": "public: class survarium::inventory & __thiscall survarium::inventory_holder::inventory(void)"
+    },
+    {
+      "unit": "vostok/intrusive_list_inline.h",
+      "fn": "public: class vostok::resources::query_result * __thiscall vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 608, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy>::pop_front(void)"
+    },
+    {
+      "unit": "vostok/intrusive_list_inline.h",
+      "fn": "public: class vostok::resources::query_result * __thiscall vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 616, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy>::pop_all_and_clear(unsigned int *)"
+    },
+    {
+      "unit": "vostok/intrusive_list_inline.h",
+      "fn": "public: void __thiscall vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 616, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy>::push_back(class vostok::resources::query_result *, bool *)"
+    },
+    {
+      "unit": "vostok/intrusive_list_inline.h",
+      "fn": "public: void __thiscall vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 616, class vostok::threading::single_threading_policy, class vostok::size_policy, class vostok::no_debug_policy>::push_back(class vostok::resources::query_result *, bool *)"
+    },
+    {
+      "unit": "vostok/intrusive_ptr_inline.h",
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>(class vostok::resources::unmanaged_resource *)"
+    },
+    {
+      "unit": "vostok/intrusive_ptr_inline.h",
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>(class vostok::resources::unmanaged_resource *)"
+    },
+    {
+      "unit": "vostok/intrusive_ptr_inline.h",
+      "fn": "public: __thiscall vostok::vectora<struct vostok::resources::request>::~vectora<struct vostok::resources::request>(void)"
+    },
+    {
+      "unit": "vostok/intrusive_spsc_queue_inline.h",
+      "fn": "public: __thiscall vostok::one_way_threads_channel<class vostok::intrusive_spsc_queue<class vostok::network::order, class vostok::network::order, 4>, class vostok::intrusive_spsc_queue<class vostok::network::order, class vostok::network::order, 4> >::~one_way_threads_channel<class vostok::intrusive_spsc_queue<class vostok::network::order, class vostok::network::order, 4>, class vostok::intrusive_spsc_queue<class vostok::network::order, class vostok::network::order, 4> >(void)"
+    },
+    {
+      "unit": "vostok/intrusive_spsc_queue_inline.h",
+      "fn": "public: __thiscall vostok::one_way_threads_channel<class vostok::intrusive_spsc_queue<class vostok::network::order, class vostok::network::order, 4>, class vostok::intrusive_spsc_queue<class vostok::network::order, class vostok::network::order, 4> >::~one_way_threads_channel<class vostok::intrusive_spsc_queue<class vostok::network::order, class vostok::network::order, 4>, class vostok::intrusive_spsc_queue<class vostok::network::order, class vostok::network::order, 4> >(void)"
+    },
+    {
+      "unit": "vostok/memory_allocator_helper_inline.h",
+      "fn": "public: __thiscall vostok::ai::pre_perceptors_filter::~pre_perceptors_filter(void)"
+    },
+    {
+      "unit": "vostok/network_core/http_client.h",
+      "fn": "public: __thiscall vostok::network::order::order(void)"
+    },
+    {
+      "unit": "vostok/platform_pointer.h",
+      "fn": "public: __thiscall vostok::vfs::query_mount_arguments::~query_mount_arguments(void)"
+    },
+    {
+      "unit": "vostok/platform_pointer.h",
+      "fn": "public: class vostok::vfs::query_mount_arguments & __thiscall vostok::vfs::query_mount_arguments::operator=(class vostok::vfs::query_mount_arguments const &)"
+    },
+    {
+      "unit": "vostok/render/engine/sources/renderer.cpp",
+      "fn": "public: void __thiscall vostok::render::renderer::fill_opaque_models(unsigned int, unsigned int)"
+    },
+    {
+      "unit": "vostok/render/engine/sources/stage_shadow_direct.cpp",
+      "fn": "public: void __thiscall vostok::render::stage_shadow_direct::execute_cascade(unsigned int, unsigned int, unsigned int, unsigned int)"
+    },
+    {
+      "unit": "vostok/render/engine/sources/stage_shadow_direct.cpp",
+      "fn": "public: void __thiscall vostok::render::stage_shadow_direct::prepare_models(class vostok::render::vector<struct vostok::render::render_surface_instance *> &, class vostok::math::float4x4const &, unsigned int, unsigned int, class vostok::math::float3const &, unsigned int)"
+    },
+    {
+      "unit": "vostok/render/facade/sources/scene_renderer.cpp",
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>(class vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base> const &)"
+    },
+    {
+      "unit": "vostok/resources_query_result.h",
+      "fn": "public: enum survarium::profile_slot_enum __thiscall survarium::inventory::get_active_slot(void) const"
+    },
+    {
+      "unit": "vostok/resources_resource_ptr.h",
+      "fn": "public: __thiscall vostok::render::speedtree_data::speedtree_data(void)"
+    },
+    {
+      "unit": "vostok/resources_resource_ptr_inline.h",
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>(class vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base> const &)"
+    },
+    {
+      "unit": "vostok/resources_resource_ptr_inline.h",
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>(class vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base> const &)"
+    },
+    {
+      "unit": "vostok/size_policies.h",
+      "fn": "public: __thiscall vostok::animation::mixing::animation_interval::~animation_interval(void)"
+    },
+    {
+      "unit": "vostok/threading_functions_win_inline.h",
+      "fn": "long __cdecl vostok::threading::interlocked_decrement(long volatile &)"
+    },
+    {
+      "unit": "vostok/threading_functions_win_inline.h",
+      "fn": "long __cdecl vostok::threading::interlocked_decrement(long volatile &)"
+    },
+    {
+      "unit": "vostok/threading_policies.h",
+      "fn": "long __cdecl vostok::threading::interlocked_increment(long volatile &)"
+    },
+    {
+      "unit": "vostok/threading_policies.h",
+      "fn": "long __cdecl vostok::threading::interlocked_increment(long volatile &)"
+    },
+    {
+      "unit": "vostok/type_variant_inline.h",
+      "fn": "public: virtual __thiscall survarium::inventory_cook::~inventory_cook(void)"
+    },
+    {
+      "unit": "vostok/type_variant_inline.h",
+      "fn": "public: virtual __thiscall survarium::inventory_cook::~inventory_cook(void)"
+    },
+    {
+      "unit": "vostok/type_variant_inline.h",
+      "fn": "public: virtual __thiscall survarium::inventory_cook::~inventory_cook(void)"
+    },
+    {
+      "unit": "vostok/vector_inline.h",
+      "fn": "public: __thiscall btSoftBody::Body::Body(void)"
+    }
+  ]
+}

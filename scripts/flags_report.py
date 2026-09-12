@@ -6,7 +6,7 @@ flags_report.py - compare per-project build flags across versions.
 
 Uses the project's `pdb_build_info` tool (from vostok-pdb-parser) to recover, per
 link-unit "project", the cl.exe compile flags / LTCG state from each version's
-PDB, and writes reports/BUILD_FLAGS.md:
+PDB, and writes .generated/analysis/BUILD_FLAGS.md:
 
   - per consecutive step: which projects changed flags (DIFF-FLAGS / PARTIAL),
   - an engine-lib (vostok_*) matrix of the libs whose flags/LTCG *vary* across
@@ -187,7 +187,7 @@ def main() -> None:
                    for lab in labels},
     }, indent=2) + "\n")
     c.log("flags", f"{len(varying)} libs with real flag changes "
-                   f"({len(eng_var)} engine, {len(other_var)} other) -> reports/BUILD_FLAGS.md")
+                   f"({len(eng_var)} engine, {len(other_var)} other) -> {REPORTS_DIR / 'BUILD_FLAGS.md'}")
 
 
 if __name__ == "__main__":

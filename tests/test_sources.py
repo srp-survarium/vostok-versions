@@ -69,19 +69,21 @@ class SourceTests(unittest.TestCase):
                     fetch.main()
                 self.assertEqual(json.loads((output / 'manifest.json').read_text()), manifest)
 
-    def test_preserved_research_snapshot_hashes(self):
-        snapshot = ROOT / 'reports/2026-06'
-        manifest = json.loads((snapshot / 'manifest.json').read_text())
-        for record in manifest['files']:
-            with self.subTest(path=record['path']):
-                self.assertEqual(hashlib.sha256((snapshot / record['path']).read_bytes()).hexdigest(),
-                                 record['sha256'])
+    def test_version_evidence_manifest_hashes_every_public_file(self):
+        root = ROOT / 'versions'
+        manifest = json.loads((root / 'manifest.json').read_text())
+        actual = {p.relative_to(root).as_posix() for p in root.rglob('*')
+                  if p.is_file() and p != root / 'manifest.json'}
+        self.assertEqual(set(manifest['files']), actual)
+        for path, digest in manifest['files'].items():
+            with self.subTest(path=path):
+                self.assertEqual(hashlib.sha256((root / path).read_bytes()).hexdigest(), digest)
 
     def test_wiki_snapshot_hashes_and_coverage(self):
-        snapshot = ROOT / 'sources/fandom-updates/2026-09-12'
-        manifest = json.loads((snapshot / 'manifest.json').read_text())
+        snapshot = ROOT
+        manifest = json.loads((ROOT / 'versions/wiki/manifest.json').read_text())
         records = {p['title']: p for p in manifest['pages']}
-        categories = json.loads((snapshot / 'categories.json').read_text())
+        categories = json.loads((ROOT / 'versions/wiki/categories.json').read_text())
         for members in categories.values():
             for member in members:
                 if member['ns'] in (0, 14):

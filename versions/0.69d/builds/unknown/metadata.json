@@ -1,0 +1,12 @@
+{
+  "label": "v0.69d0-2022",
+  "release": "0.69d",
+  "binary_version": "0.69d0",
+  "date": "2022-06-01",
+  "architecture": "x64",
+  "exe_source": "https://archive.org/download/survarium_202206/Survarium.zip/Survarium/game/binaries/x64/survarium.exe",
+  "exe_sha256": "sha256-HhrgTcmB/E9XNMVlWfsPLg50x4e8xT67/cIz9EDWVEg=",
+  "source": "archive.org survarium_202206 (Survarium.zip, the last Steam build; member game/binaries/x64/survarium.exe)",
+  "artifact_verification": "historical-executable-scan-record",
+  "local_path": ".generated/downloads/extra/v0.69d0-2022/survarium.exe"
+}

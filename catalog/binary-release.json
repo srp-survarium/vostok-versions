@@ -1,14 +1,14 @@
 {
   "schema": 1,
   "repository": "srp-survarium/vostok-versions",
-  "tag": "binary-evidence-2026-09-12",
-  "release_url": "https://github.com/srp-survarium/vostok-versions/releases/tag/binary-evidence-2026-09-12",
+  "tag": "binary-evidence",
+  "release_url": "https://github.com/srp-survarium/vostok-versions/releases/tag/binary-evidence",
   "purpose": "Compressed mirrors of the exact EXE/PDB pairs used by the published binary and source-file comparisons.",
   "assets": [
     {
       "label": "v0.10b-build802",
       "asset_name": "v0.10b-build802-exe-pdb.zip",
-      "url": "https://github.com/srp-survarium/vostok-versions/releases/download/binary-evidence-2026-09-12/v0.10b-build802-exe-pdb.zip",
+      "url": "https://github.com/srp-survarium/vostok-versions/releases/download/binary-evidence/v0.10b-build802-exe-pdb.zip",
       "size": 25200921,
       "sha256": "aa66eb066b5b8b72667771a6e2d5561fecfadc1a6c83fbb5c283a37f7d591723",
       "nix_hash": "sha256-qmbrBmtbi3Jmd3Gm4tVWH+z63Bpsg/u1woOjf31ZFyM=",
@@ -24,9 +24,9 @@
       }
     },
     {
-      "label": "v0.1.1a-build816",
-      "asset_name": "v0.1.1a-build816-exe-pdb.zip",
-      "url": "https://github.com/srp-survarium/vostok-versions/releases/download/binary-evidence-2026-09-12/v0.1.1a-build816-exe-pdb.zip",
+      "label": "v0.11a-build816",
+      "asset_name": "v0.11a-build816-exe-pdb.zip",
+      "url": "https://github.com/srp-survarium/vostok-versions/releases/download/binary-evidence/v0.11a-build816-exe-pdb.zip",
       "size": 25242842,
       "sha256": "c6b5f30531e5acd84eaab522ebc1ea64d8920e4e665ce0fecc7f0bd52e7eee28",
       "nix_hash": "sha256-xrXzBTHlrNhOqrUi68HqZNiSDk5mXOD+zH8L1S5+7ig=",
@@ -42,9 +42,9 @@
       }
     },
     {
-      "label": "v0.1.1c-build870",
-      "asset_name": "v0.1.1c-build870-exe-pdb.zip",
-      "url": "https://github.com/srp-survarium/vostok-versions/releases/download/binary-evidence-2026-09-12/v0.1.1c-build870-exe-pdb.zip",
+      "label": "v0.11c-build870",
+      "asset_name": "v0.11c-build870-exe-pdb.zip",
+      "url": "https://github.com/srp-survarium/vostok-versions/releases/download/binary-evidence/v0.11c-build870-exe-pdb.zip",
       "size": 25405929,
       "sha256": "df9959434d85d6544ecc965da70ad024373f410838b5c6123c544acda1da22c2",
       "nix_hash": "sha256-35lZQ02F1lROzJZdpwrQJDc/QQg4tcYSPFRKzaHaIsI=",
@@ -62,7 +62,7 @@
     {
       "label": "v0.20e-build1916",
       "asset_name": "v0.20e-build1916-exe-pdb.zip",
-      "url": "https://github.com/srp-survarium/vostok-versions/releases/download/binary-evidence-2026-09-12/v0.20e-build1916-exe-pdb.zip",
+      "url": "https://github.com/srp-survarium/vostok-versions/releases/download/binary-evidence/v0.20e-build1916-exe-pdb.zip",
       "size": 28314395,
       "sha256": "72a7e0894d33849f4987bfeb66800ba3afc205b911c942f44acd0f1ccc049406",
       "nix_hash": "sha256-cqfgiU0zhJ9Jh7/rZoALo6/CBbkRyUL0Ss0PHMwElAY=",
@@ -80,7 +80,7 @@
     {
       "label": "v0.21d-build2010",
       "asset_name": "v0.21d-build2010-exe-pdb.zip",
-      "url": "https://github.com/srp-survarium/vostok-versions/releases/download/binary-evidence-2026-09-12/v0.21d-build2010-exe-pdb.zip",
+      "url": "https://github.com/srp-survarium/vostok-versions/releases/download/binary-evidence/v0.21d-build2010-exe-pdb.zip",
       "size": 28545879,
       "sha256": "3c7aba78e0778dd9d5c95359d32a242de941b4641979ca7284499f85952b6cc8",
       "nix_hash": "sha256-PHq6eOB3jdnVyVNZ0yokLelBtGQZecpyhEmfhZUrbMg=",

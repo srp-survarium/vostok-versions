@@ -12,7 +12,7 @@ For each adjacent pair A -> B it reports, by demangled function name:
 
 objdiff is target-centric (it lists the target's functions), so deletions come
 from the reverse diff B -> A. Both directions are generated on demand and reused.
-Output: reports/CHAIN_REPORT.md (+ .json).
+Output: .generated/analysis/CHAIN_REPORT.md (+ .json).
 
 Run inside this repo's `nix develop` (needs objdiff-cli).
 """

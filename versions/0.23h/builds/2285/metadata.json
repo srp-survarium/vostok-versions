@@ -1,0 +1,10 @@
+{
+  "label": "v0.23h-build2285",
+  "release": "0.23h",
+  "binary_version": "0.23h",
+  "source": "https://archive.org/download/vostok_engine_v0.23h_build_2285_internal_id_923_jul_17_2014/survarium_full_023h.7z",
+  "source_archive_sha256": "0n5ivk3fgl32dsal66rshkp7y71gy1269xa3gwlxjhd4xl3dr9w4",
+  "engine_path": "c:/survarium.deploy/sources",
+  "symbols": false,
+  "artifact_verification": "cataloged-archive-symbols-absent"
+}

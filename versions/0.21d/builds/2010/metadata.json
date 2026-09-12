@@ -1,0 +1,21 @@
+{
+  "label": "v0.21d-build2010",
+  "source": "https://archive.org/download/vostok_engine_v0.21d_build_2010_internal_id_839_apr_24_2014/survarium_full_021d.7z",
+  "engine_path": "c:/survarium.deploy/sources",
+  "aligned_to": "v0.10b-build802",
+  "exe": {
+    "name": "survarium.exe",
+    "size": 10463352,
+    "sha256": "def82eeaed9d544b2e1c1e0ec971f7359c24a942dd52ace6b45e6d82e7c34a0a"
+  },
+  "pdb": {
+    "name": "survarium.pdb",
+    "size": 106081280,
+    "sha256": "7e3624e684d42a42468b0b27288a2a3167485f84ca4938a6b2cba856058a19ca"
+  },
+  "n_objects": 1915,
+  "release": "0.21d",
+  "binary_version": "0.21d",
+  "ingested_at": "2026-06-08T04:37:33",
+  "artifact_verification": "verified-release-bundle"
+}

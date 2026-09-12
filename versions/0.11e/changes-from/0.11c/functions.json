@@ -1,0 +1,1982 @@
+{
+  "base": {
+    "version": "0.11c",
+    "label": "v0.11c-build870",
+    "build": 870,
+    "date": "2013-05-24"
+  },
+  "target": {
+    "version": "0.11e",
+    "label": "v0.11e-build884",
+    "build": 884,
+    "date": "2013-05-28"
+  },
+  "scope": "hand-written engine functions under vostok/*; compiler-generated symbols excluded",
+  "counts": {
+    "added": 25,
+    "deleted": 38,
+    "changed": 473,
+    "identical": 11012
+  },
+  "added": [
+    "private: float __thiscall survarium::medkit::reduce_damage(char const *, char const *, float, float)",
+    "private: struct survarium::medkit::damage_protection const * __thiscall survarium::medkit::find_damage_protection(char const *, char const *)",
+    "private: void __thiscall survarium::medkit::active_tick(unsigned int)",
+    "private: void __thiscall survarium::medkit::on_player_death(void)",
+    "private: void __thiscall survarium::medkit::remove_affects(void)",
+    "private: void __thiscall survarium::medkit::set_active(bool)",
+    "private: void __thiscall vostok::resources::allocate_functionality::allocate_final_resources<class vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 616, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy> >(class vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 616, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy> &, bool)",
+    "private: void __thiscall vostok::resources::resources_manager::create_resources<class vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 616, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy> >(class vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 616, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy> const &, class vostok::resources::query_result *, bool)",
+    "public: __thiscall survarium::player_death_subscriber::player_death_subscriber(class boost::function<void __cdecl (void)> const &)",
+    "public: __thiscall vostok::fs_new::virtual_path_string::ctor<char *>(char *const &)",
+    "public: __thiscall vostok::render::speedtree_data::speedtree_data(void)",
+    "public: class vostok::resources::query_result * __thiscall vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 608, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy>::pop_front(void)",
+    "public: class vostok::resources::query_result * __thiscall vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 616, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy>::pop_all_and_clear(unsigned int *)",
+    "public: virtual __thiscall vostok::ai::selectors::sound_target_selector::~sound_target_selector(void)",
+    "public: virtual void __thiscall survarium::medkit::holder_assigned(void)",
+    "public: virtual void __thiscall survarium::medkit::holder_removed(void)",
+    "public: virtual void __thiscall survarium::medkit::remove(void)",
+    "public: virtual void __thiscall vostok::resources::hdd_manager::grab_sorted_queries(class vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 616, class vostok::threading::single_threading_policy, class vostok::size_policy, class vostok::no_debug_policy> &)",
+    "public: void __thiscall vostok::intrusive_double_linked_list<class vostok::resources::query_result, class vostok::resources::query_result *, 624, 620, class vostok::threading::mutex, class vostok::no_size_policy, class vostok::debug_policy>::erase(class vostok::resources::query_result *)",
+    "public: void __thiscall vostok::intrusive_double_linked_list<class vostok::resources::query_result, class vostok::resources::query_result *, 624, 620, class vostok::threading::mutex, class vostok::no_size_policy, class vostok::debug_policy>::push_back(class vostok::resources::query_result *, bool *)",
+    "public: void __thiscall vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 616, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy>::push_back(class vostok::resources::query_result *, bool *)",
+    "public: void __thiscall vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 616, class vostok::threading::single_threading_policy, class vostok::size_policy, class vostok::no_debug_policy>::push_back(class vostok::resources::query_result *, bool *)",
+    "public: void __thiscall vostok::render::renderer::fill_opaque_models(unsigned int, unsigned int)",
+    "public: void __thiscall vostok::render::stage_shadow_direct::execute_cascade(unsigned int, unsigned int, unsigned int, unsigned int)",
+    "public: void __thiscall vostok::render::stage_shadow_direct::prepare_models(class vostok::render::vector<struct vostok::render::render_surface_instance *> &, class vostok::math::float4x4const &, unsigned int, unsigned int, class vostok::math::float3const &, unsigned int)"
+  ],
+  "deleted": [
+    "private: void __thiscall vostok::render::culling::portal_sector_system::draw_portals(class vostok::render::system_renderer &, unsigned int)",
+    "private: void __thiscall vostok::render::culling::portal_sector_system::draw_quads(class vostok::render::system_renderer &)",
+    "private: void __thiscall vostok::render::renderer::draw_frame_histogram(void) const",
+    "private: void __thiscall vostok::render::renderer::draw_luminance_picker_info(struct vostok::ui::font const *)",
+    "private: void __thiscall vostok::render::renderer::draw_stages_stats(struct vostok::ui::font const *)",
+    "private: void __thiscall vostok::resources::allocate_functionality::allocate_final_resources<class vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 608, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy> >(class vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 608, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy> &, bool)",
+    "private: void __thiscall vostok::resources::resources_manager::create_resources<class vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 608, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy> >(class vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 608, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy> const &, class vostok::resources::query_result *, bool)",
+    "protected: float __thiscall survarium::medkit::reduce_damage(char const *, char const *, float, float)",
+    "protected: struct survarium::medkit::damage_protection const * __thiscall survarium::medkit::find_damage_protection(char const *, char const *)",
+    "protected: void __thiscall survarium::medkit::active_tick(unsigned int)",
+    "protected: void __thiscall survarium::medkit::remove_affects(void)",
+    "protected: void __thiscall survarium::medkit::set_active(bool)",
+    "public: __thiscall vostok::particle::lod_entry::~lod_entry(void)",
+    "public: __thiscall vostok::render::render_target_instance::render_target_instance(void)",
+    "public: __thiscall vostok::render::sun_cascade::sun_cascade(struct vostok::render::sun_cascade const &)",
+    "public: class vostok::resources::query_result * __thiscall vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 600, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy>::pop_front(void)",
+    "public: class vostok::resources::query_result * __thiscall vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 608, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy>::pop_all_and_clear(unsigned int *)",
+    "public: class vostok::variant<32> * __thiscall vostok::resources::query_result_for_cook::user_data(void) const",
+    "public: unsigned int __thiscall vostok::render::resource_manager::get_texture_video_memory_size(void)",
+    "public: virtual __thiscall survarium::rifle_scope::~rifle_scope(void)",
+    "public: virtual __thiscall vostok::particle::particle_system_instance::~particle_system_instance(void)",
+    "public: virtual void __thiscall vostok::resources::hdd_manager::grab_sorted_queries(class vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 608, class vostok::threading::single_threading_policy, class vostok::size_policy, class vostok::no_debug_policy> &)",
+    "public: void __thiscall vostok::intrusive_double_linked_list<class vostok::resources::query_result, class vostok::resources::query_result *, 616, 612, class vostok::threading::mutex, class vostok::no_size_policy, class vostok::debug_policy>::erase(class vostok::resources::query_result *)",
+    "public: void __thiscall vostok::intrusive_double_linked_list<class vostok::resources::query_result, class vostok::resources::query_result *, 616, 612, class vostok::threading::mutex, class vostok::no_size_policy, class vostok::debug_policy>::push_back(class vostok::resources::query_result *, bool *)",
+    "public: void __thiscall vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 600, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy>::push_back(class vostok::resources::query_result *, bool *)",
+    "public: void __thiscall vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 608, class vostok::threading::single_threading_policy, class vostok::size_policy, class vostok::no_debug_policy>::push_back(class vostok::resources::query_result *, bool *)",
+    "public: void __thiscall vostok::render::culling::portal_sector_system::render(class vostok::render::system_renderer &, class vostok::math::float3const &, class vostok::math::float4x4const &)",
+    "public: void __thiscall vostok::render::culling::sector_double_query_preventer::render(class vostok::render::system_renderer &)",
+    "public: void __thiscall vostok::render::grass_world::render_debug(class vostok::render::renderer_context *)",
+    "public: void __thiscall vostok::render::renderer::draw_debug(class vostok::render::scene *, class vostok::render::scene_view *, float, struct vostok::ui::font const *)",
+    "public: void __thiscall vostok::render::renderer::fill_opaque_models(void)",
+    "public: void __thiscall vostok::render::scene::draw_portal_system(class vostok::render::system_renderer &, class vostok::math::float3const &, class vostok::math::float4x4const &)",
+    "public: void __thiscall vostok::render::stage_shadow_direct::draw_debug(unsigned int)",
+    "public: void __thiscall vostok::render::stage_shadow_direct::execute_cascade(unsigned int, unsigned int, unsigned int)",
+    "public: void __thiscall vostok::render::stage_shadow_direct::prepare_models(class vostok::render::vector<struct vostok::render::render_surface_instance *> &, class vostok::math::float4x4const &, unsigned int, unsigned int, class vostok::math::float3const &)",
+    "vostok::render::draw_text",
+    "vostok::render::draw_text_shadowed",
+    "vostok::render::make_ui_vertices"
+  ],
+  "changed": [
+    {
+      "pct": 0.0,
+      "fn": "long __cdecl vostok::threading::interlocked_decrement(long volatile &)"
+    },
+    {
+      "pct": 0.0,
+      "fn": "long __cdecl vostok::threading::interlocked_increment(long volatile &)"
+    },
+    {
+      "pct": 0.0,
+      "fn": "public: __thiscall btSoftBody::Body::Body(void)"
+    },
+    {
+      "pct": 0.0,
+      "fn": "public: __thiscall vostok::ai::pre_perceptors_filter::~pre_perceptors_filter(void)"
+    },
+    {
+      "pct": 0.0,
+      "fn": "public: __thiscall vostok::animation::mixing::animation_interval::~animation_interval(void)"
+    },
+    {
+      "pct": 0.0,
+      "fn": "public: __thiscall vostok::intrusive_list<struct vostok::ai::percept_memory_object, struct vostok::ai::percept_memory_object *, 40, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy>::~intrusive_list<struct vostok::ai::percept_memory_object, struct vostok::ai::percept_memory_object *, 40, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy>(void)"
+    },
+    {
+      "pct": 0.0,
+      "fn": "public: __thiscall vostok::network::order::order(void)"
+    },
+    {
+      "pct": 0.0,
+      "fn": "public: __thiscall vostok::one_way_threads_channel<class vostok::intrusive_spsc_queue<class vostok::network::order, class vostok::network::order, 4>, class vostok::intrusive_spsc_queue<class vostok::network::order, class vostok::network::order, 4> >::~one_way_threads_channel<class vostok::intrusive_spsc_queue<class vostok::network::order, class vostok::network::order, 4>, class vostok::intrusive_spsc_queue<class vostok::network::order, class vostok::network::order, 4> >(void)"
+    },
+    {
+      "pct": 0.0,
+      "fn": "public: __thiscall vostok::render::skeleton_combined_cook_data::~skeleton_combined_cook_data(void)"
+    },
+    {
+      "pct": 0.0,
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::render::material, class vostok::resources::unmanaged_intrusive_base>::~resource_ptr<class vostok::render::material, class vostok::resources::unmanaged_intrusive_base>(void)"
+    },
+    {
+      "pct": 0.0,
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>(class vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base> const &)"
+    },
+    {
+      "pct": 0.0,
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>(class vostok::resources::unmanaged_resource *)"
+    },
+    {
+      "pct": 0.0,
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>::~resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>(void)"
+    },
+    {
+      "pct": 0.0,
+      "fn": "public: __thiscall vostok::vectora<struct vostok::resources::request>::~vectora<struct vostok::resources::request>(void)"
+    },
+    {
+      "pct": 0.0,
+      "fn": "public: __thiscall vostok::vfs::query_mount_arguments::~query_mount_arguments(void)"
+    },
+    {
+      "pct": 0.0,
+      "fn": "public: class survarium::inventory & __thiscall survarium::inventory_holder::inventory(void)"
+    },
+    {
+      "pct": 0.0,
+      "fn": "public: class vostok::buffer_string const & __thiscall vostok::buffer_string::operator=(class vostok::buffer_string const &)"
+    },
+    {
+      "pct": 0.0,
+      "fn": "public: class vostok::vfs::query_mount_arguments & __thiscall vostok::vfs::query_mount_arguments::operator=(class vostok::vfs::query_mount_arguments const &)"
+    },
+    {
+      "pct": 0.0,
+      "fn": "public: enum survarium::profile_slot_enum __thiscall survarium::inventory::get_active_slot(void) const"
+    },
+    {
+      "pct": 0.0,
+      "fn": "public: virtual __thiscall survarium::inventory_cook::~inventory_cook(void)"
+    },
+    {
+      "pct": 0.0,
+      "fn": "public: virtual __thiscall vostok::console_commands::cc_u32::~cc_u32(void)"
+    },
+    {
+      "pct": 0.0,
+      "fn": "public: virtual void __thiscall survarium::game_camera::on_focus(bool)"
+    },
+    {
+      "pct": 0.0,
+      "fn": "vec_begin"
+    },
+    {
+      "pct": 2.050633,
+      "fn": "public: void __thiscall vostok::render::system_renderer::draw_screen_lines(class vostok::math::float3const *, unsigned int, class vostok::math::color const &, float, unsigned int, bool, bool)"
+    },
+    {
+      "pct": 12.0,
+      "fn": "`vostok::math::curve_line_points<float,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 12.0,
+      "fn": "`vostok::math::curve_line_points<vostok::math::float3_pod,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 12.0,
+      "fn": "`vostok::math::curve_line_points<vostok::math::float4_pod,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 12.0,
+      "fn": "`vostok::math::curve_line_points<vostok::math::float4_pod,1>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 12.772727,
+      "fn": "public: bool __thiscall vostok::render::remove_inappropriate_models::operator()(struct vostok::render::render_surface_instance *)"
+    },
+    {
+      "pct": 13.451327,
+      "fn": "vostok::render::screen_factor"
+    },
+    {
+      "pct": 33.663044,
+      "fn": "private: __thiscall survarium::medkit::medkit(void)"
+    },
+    {
+      "pct": 53.737804,
+      "fn": "public: void __thiscall vostok::resources::resources_manager::init_new_query(class vostok::resources::query_result &)"
+    },
+    {
+      "pct": 57.5,
+      "fn": "public: void __thiscall vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 608, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy>::push_back(class vostok::resources::query_result *, bool *)"
+    },
+    {
+      "pct": 60.232143,
+      "fn": "public: virtual __thiscall vostok::resources::query_result_for_user::~query_result_for_user(void)"
+    },
+    {
+      "pct": 63.37143,
+      "fn": "private: virtual void __thiscall survarium::network_client::close_current_match(enum vostok::network_core::disconnect_event_types_enum)"
+    },
+    {
+      "pct": 73.70053,
+      "fn": "public: virtual float __thiscall survarium::dz_bone_data_contact_test_predicate::add_single_result(void *, enum vostok::physics::primitive_type, class vostok::math::float4x4const &, class vostok::math::float3const &, enum vostok::physics::primitive_type, class vostok::math::float4x4const &, class vostok::math::float3const &)"
+    },
+    {
+      "pct": 77.33857,
+      "fn": "private: void __thiscall vostok::render::device::create_d3d(void)"
+    },
+    {
+      "pct": 79.82258,
+      "fn": "public: void __thiscall survarium::lobby_menu::on_player_reputations_arrived(void)"
+    },
+    {
+      "pct": 83.82524,
+      "fn": "private: void __thiscall survarium::application::preinitialize(void)"
+    },
+    {
+      "pct": 84.416306,
+      "fn": "public: virtual void __thiscall vostok::render::stage_postprocess::execute(void)"
+    },
+    {
+      "pct": 85.244896,
+      "fn": "public: virtual void __thiscall vostok::render::stage_shadow_direct::execute(void)"
+    },
+    {
+      "pct": 89.166664,
+      "fn": "public: __thiscall vostok::resources::query_result_for_user::query_result_for_user(void)"
+    },
+    {
+      "pct": 90.080925,
+      "fn": "public: __thiscall vostok::render::renderer_context::~renderer_context(void)"
+    },
+    {
+      "pct": 90.10204,
+      "fn": "public: enum vostok::render::enum_options_changes_result __thiscall vostok::render::options::end_render_options_changing(class vostok::render::vector<class vostok::fs_new::virtual_path_string> &)"
+    },
+    {
+      "pct": 91.56579,
+      "fn": "private: void __thiscall vostok::render::game::renderer::draw_scene_impl(struct vostok::render::game::renderer::draw_scene_params const &)"
+    },
+    {
+      "pct": 92.67651,
+      "fn": "public: __thiscall vostok::render::renderer_context::renderer_context(void)"
+    },
+    {
+      "pct": 93.23684,
+      "fn": "private: virtual __thiscall survarium::medkit::~medkit(void)"
+    },
+    {
+      "pct": 93.4,
+      "fn": "public: void __thiscall vostok::render::engine::world::draw_scene(class vostok::resources::resource_ptr<struct vostok::render::base_scene, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::resources::resource_ptr<struct vostok::render::base_scene_view, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::resources::resource_ptr<struct vostok::render::base_output_window, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::math::rectangle<class vostok::math::float2> const &, class boost::function<void __cdecl (bool)> const &, struct vostok::ui::font const *)"
+    },
+    {
+      "pct": 94.752945,
+      "fn": "public: void __thiscall vostok::render::renderer::render(class vostok::resources::resource_ptr<struct vostok::render::base_scene, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::resources::resource_ptr<struct vostok::render::base_scene_view, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::resources::resource_ptr<struct vostok::render::base_output_window, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::math::rectangle<class vostok::math::float2> const &, class boost::function<void __cdecl (bool)> const &, bool, struct vostok::ui::font const *)"
+    },
+    {
+      "pct": 95.082756,
+      "fn": "public: void __thiscall vostok::render::options::set_default_values(void)"
+    },
+    {
+      "pct": 95.414474,
+      "fn": "private: void __thiscall survarium::player::detect_usable_objects(unsigned int)"
+    },
+    {
+      "pct": 95.561035,
+      "fn": "public: void __thiscall vostok::render::options::register_console_commands(void)"
+    },
+    {
+      "pct": 95.9901,
+      "fn": "public: void __thiscall vostok::render::system_renderer::draw_ui_vertices(struct vostok::render::vertex_formats::TL const *, unsigned int const &, int, int)"
+    },
+    {
+      "pct": 96.24647,
+      "fn": "public: void __thiscall vostok::render::render_particle_emitter_instance::draw_debug(class vostok::math::float4x4const &, enum vostok::particle::enum_particle_render_mode)"
+    },
+    {
+      "pct": 97.22727,
+      "fn": "public: void __thiscall vostok::resources::resources_manager::init_new_queries(class vostok::resources::query_result *)"
+    },
+    {
+      "pct": 98.57143,
+      "fn": "public: void __thiscall survarium::game_world_ui::set_match_time(unsigned int)"
+    },
+    {
+      "pct": 99.01242,
+      "fn": "private: void __thiscall vostok::render::device::create(void)"
+    },
+    {
+      "pct": 99.375,
+      "fn": "private: void __thiscall vostok::render::renderer_context::update_near_far(void)"
+    },
+    {
+      "pct": 99.44,
+      "fn": "public: __thiscall vostok::resources::query_result_for_cook::query_result_for_cook(class vostok::resources::queries_result *)"
+    },
+    {
+      "pct": 99.5,
+      "fn": "private: void __thiscall vostok::resources::query_result::add_loaded_bytes(unsigned int)"
+    },
+    {
+      "pct": 99.5,
+      "fn": "public: class vostok::render::scene_view * __thiscall vostok::render::renderer_context::get_scene_view(void)"
+    },
+    {
+      "pct": 99.5,
+      "fn": "public: class vostok::render::scene_view const * __thiscall vostok::render::renderer_context::scene_view(void) const"
+    },
+    {
+      "pct": 99.5,
+      "fn": "public: void __thiscall vostok::render::renderer_context::set_scene(class vostok::render::scene *)"
+    },
+    {
+      "pct": 99.5,
+      "fn": "public: void __thiscall vostok::resources::query_result_for_cook::set_out_of_memory(class vostok::resources::memory_type &, unsigned int)"
+    },
+    {
+      "pct": 99.53846,
+      "fn": "private: void __thiscall vostok::resources::query_result::clear_reference(void)"
+    },
+    {
+      "pct": 99.59524,
+      "fn": "public: void __thiscall vostok::render::renderer_context::reset_matrices(void)"
+    },
+    {
+      "pct": 99.625,
+      "fn": "public: __thiscall vostok::resources::query_result::query_result(unsigned short, class vostok::resources::queries_result *, class vostok::memory::base_allocator *, unsigned int, float, bool, unsigned int, enum vostok::resources::query_type_enum, enum vostok::resources::autoselect_quality_bool)"
+    },
+    {
+      "pct": 99.666664,
+      "fn": "public: class vostok::resources::query_result_for_cook * __thiscall vostok::resources::query_result_for_cook::get_parent_query(void) const"
+    },
+    {
+      "pct": 99.666664,
+      "fn": "public: class vostok::resources::query_result_for_user const & __thiscall vostok::resources::queries_result::operator[](unsigned int) const"
+    },
+    {
+      "pct": 99.675674,
+      "fn": "public: void __thiscall vostok::render::renderer_context::update_eye_rays(void)"
+    },
+    {
+      "pct": 99.68862,
+      "fn": "public: __thiscall vostok::render::stage_light_propagation_volumes::stage_light_propagation_volumes(class vostok::render::renderer *, class vostok::render::renderer_context *)"
+    },
+    {
+      "pct": 99.72727,
+      "fn": "private: void __thiscall vostok::resources::query_result::prepare_requery(void)"
+    },
+    {
+      "pct": 99.73333,
+      "fn": "public: class vostok::math::float4x4const & __thiscall vostok::render::renderer_context::get_view2shadow(unsigned int) const"
+    },
+    {
+      "pct": 99.75,
+      "fn": "private: void __thiscall vostok::resources::query_result::increase_query_end_guard(void)"
+    },
+    {
+      "pct": 99.75,
+      "fn": "private: void __thiscall vostok::resources::query_result::on_observed_resource_destroyed(char const *)"
+    },
+    {
+      "pct": 99.75,
+      "fn": "public: class vostok::resources::query_result_for_user & __thiscall vostok::resources::queries_result::operator[](unsigned int)"
+    },
+    {
+      "pct": 99.77778,
+      "fn": "private: bool __thiscall vostok::resources::query_result::ready_to_retry_action_that_caused_out_of_memory(void)"
+    },
+    {
+      "pct": 99.793106,
+      "fn": "public: __thiscall singletons_on_initialize::singletons_on_initialize(void)"
+    },
+    {
+      "pct": 99.8,
+      "fn": "private: unsigned int __thiscall vostok::resources::query_result::decrease_query_end_guard(void)"
+    },
+    {
+      "pct": 99.8,
+      "fn": "public: bool __thiscall vostok::resources::query_result_for_cook::is_autoselect_quality_query(void) const"
+    },
+    {
+      "pct": 99.8,
+      "fn": "public: virtual class vostok::mutable_buffer __thiscall vostok::resources::vfs_sub_fat_cook::allocate_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, bool)"
+    },
+    {
+      "pct": 99.8125,
+      "fn": "public: void __thiscall vostok::render::renderer_context::push_set_p(class vostok::math::float4x4const &)"
+    },
+    {
+      "pct": 99.82353,
+      "fn": "private: bool __thiscall vostok::resources::queries_result::quality_loaded(unsigned int)"
+    },
+    {
+      "pct": 99.82353,
+      "fn": "private: void __thiscall vostok::resources::query_result::requery(void)"
+    },
+    {
+      "pct": 99.82353,
+      "fn": "public: virtual void __thiscall vostok::resources::vfs_sub_fat_cook::create_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, class vostok::mutable_buffer)"
+    },
+    {
+      "pct": 99.833336,
+      "fn": "private: void __thiscall vostok::resources::query_result::observe_resource_destruction(class vostok::resources::resource_base *)"
+    },
+    {
+      "pct": 99.833336,
+      "fn": "private: void __thiscall vostok::resources::query_result::set_flag(unsigned int)"
+    },
+    {
+      "pct": 99.833336,
+      "fn": "public: bool __thiscall vostok::resources::query_result_for_cook::is_helper_query_for_mount(void) const"
+    },
+    {
+      "pct": 99.833336,
+      "fn": "public: void __thiscall vostok::render::renderer_context::clear_resources(void)"
+    },
+    {
+      "pct": 99.84615,
+      "fn": "public: void __thiscall vostok::render::temporal_projection_matrix_modifier::pop_jittering(void)"
+    },
+    {
+      "pct": 99.85714,
+      "fn": "private: bool __thiscall vostok::resources::game_resources_manager::try_reallocate_queue_front(class vostok::resources::memory_type *)"
+    },
+    {
+      "pct": 99.85714,
+      "fn": "public: void __thiscall vostok::render::renderer::clear_resources(void)"
+    },
+    {
+      "pct": 99.86667,
+      "fn": "private: void __thiscall vostok::resources::query_result::propogate_sub_fats_to_resources(void)"
+    },
+    {
+      "pct": 99.86957,
+      "fn": "private: void __thiscall vostok::resources::query_result::init_save(class vostok::resources::save_generated_data *, class vostok::resources::query_result *)"
+    },
+    {
+      "pct": 99.870804,
+      "fn": "public: void __thiscall vostok::render::renderer_context::set_v(class vostok::math::float4x4const &)"
+    },
+    {
+      "pct": 99.875,
+      "fn": "private: void __thiscall vostok::resources::query_result::unset_flag(unsigned int)"
+    },
+    {
+      "pct": 99.875,
+      "fn": "public: virtual __thiscall vostok::resources::query_result_for_cook::~query_result_for_cook(void)"
+    },
+    {
+      "pct": 99.875,
+      "fn": "public: void __thiscall vostok::render::engine::world::clear_resources(void)"
+    },
+    {
+      "pct": 99.876236,
+      "fn": "public: void __thiscall vostok::render::renderer_context::set_w(class vostok::math::float4x4const &)"
+    },
+    {
+      "pct": 99.88344,
+      "fn": "private: void __thiscall vostok::resources::query_result::on_refered_query_ended(class vostok::resources::query_result *)"
+    },
+    {
+      "pct": 99.88571,
+      "fn": "private: bool __thiscall vostok::resources::game_resources_manager::try_free_or_decrease_quality(class vostok::resources::query_result *, class vostok::resources::memory_type *)"
+    },
+    {
+      "pct": 99.88571,
+      "fn": "public: void __thiscall vostok::render::renderer_context::set_view2shadow(class vostok::math::float4x4const &, unsigned int)"
+    },
+    {
+      "pct": 99.888885,
+      "fn": "public: bool __thiscall vostok::render::ambient_volume::is_occluded(void) const"
+    },
+    {
+      "pct": 99.888885,
+      "fn": "public: bool __thiscall vostok::render::decal_instance::is_occluded(void) const"
+    },
+    {
+      "pct": 99.888885,
+      "fn": "public: bool __thiscall vostok::render::environment_probe::is_occluded(void) const"
+    },
+    {
+      "pct": 99.888885,
+      "fn": "public: bool __thiscall vostok::render::grass_patch::is_occluded(void) const"
+    },
+    {
+      "pct": 99.888885,
+      "fn": "public: bool __thiscall vostok::render::light::is_occluded(void) const"
+    },
+    {
+      "pct": 99.888885,
+      "fn": "public: bool __thiscall vostok::render::render_surface_instance::is_occluded(void) const"
+    },
+    {
+      "pct": 99.888885,
+      "fn": "public: enum assert_on_fail_bool __thiscall vostok::resources::query_result_for_cook::assert_on_fail(void) const"
+    },
+    {
+      "pct": 99.888885,
+      "fn": "public: virtual bool __thiscall vostok::render::render_particle_emitter_instance::is_occluded(void) const"
+    },
+    {
+      "pct": 99.888885,
+      "fn": "public: void __thiscall vostok::render::world::clear_resources(void)"
+    },
+    {
+      "pct": 99.89189,
+      "fn": "private: void __thiscall vostok::resources::resources_manager::dispatch_tasks_finished_callback(class vostok::resources::query_result *, bool)"
+    },
+    {
+      "pct": 99.89423,
+      "fn": "private: void __thiscall vostok::resources::query_result::on_create_resource_end(void)"
+    },
+    {
+      "pct": 99.89785,
+      "fn": "public: void __thiscall vostok::render::renderer_context::set_p(class vostok::math::float4x4const &)"
+    },
+    {
+      "pct": 99.9,
+      "fn": "private: bool __thiscall vostok::resources::query_result::end_query_might_destroy_this(void)"
+    },
+    {
+      "pct": 99.9,
+      "fn": "public: virtual bool __thiscall vostok::resources::fs_task_iterator::is_helper_query_for_mount(void) const"
+    },
+    {
+      "pct": 99.9,
+      "fn": "vostok::render::is_occluded_predicate<vostok::render::ambient_volume>"
+    },
+    {
+      "pct": 99.9,
+      "fn": "vostok::render::is_occluded_predicate<vostok::render::decal_instance>"
+    },
+    {
+      "pct": 99.9,
+      "fn": "vostok::render::is_occluded_predicate<vostok::render::environment_probe>"
+    },
+    {
+      "pct": 99.9,
+      "fn": "vostok::render::is_occluded_predicate<vostok::render::grass_patch>"
+    },
+    {
+      "pct": 99.9,
+      "fn": "vostok::render::is_occluded_predicate<vostok::render::render_surface_instance>"
+    },
+    {
+      "pct": 99.90278,
+      "fn": "private: void __thiscall vostok::resources::queries_result::mark_inconsistent_qualities_as_failed(void)"
+    },
+    {
+      "pct": 99.90741,
+      "fn": "private: void __thiscall vostok::resources::query_result::on_save_operation_end(void)"
+    },
+    {
+      "pct": 99.90909,
+      "fn": "private: void __thiscall vostok::render::stage_gbuffer::render_grass(bool)"
+    },
+    {
+      "pct": 99.90909,
+      "fn": "private: void __thiscall vostok::resources::query_result::set_create_resource_result(enum vostok::resources::cook_base::result_enum, enum vostok::resources::query_result_for_user::error_type_enum)"
+    },
+    {
+      "pct": 99.90909,
+      "fn": "public: void __thiscall vostok::resources::query_result_for_cook::clear_user_data(void)"
+    },
+    {
+      "pct": 99.90909,
+      "fn": "vostok::render::is_occluded_predicate_light"
+    },
+    {
+      "pct": 99.910255,
+      "fn": "public: virtual __thiscall vostok::resources::query_result::~query_result(void)"
+    },
+    {
+      "pct": 99.91139,
+      "fn": "private: void __thiscall vostok::render::speedtree_forest::cull_and_compute_lod(class vostok::render::renderer_context *, class vostok::math::float3const &, bool)"
+    },
+    {
+      "pct": 99.91304,
+      "fn": "private: void __thiscall vostok::resources::query_result::unpin_raw_file(class vostok::const_buffer const &)"
+    },
+    {
+      "pct": 99.916664,
+      "fn": "public: void __thiscall vostok::resources::resources_manager::push_new_query(class vostok::resources::query_result *)"
+    },
+    {
+      "pct": 99.91697,
+      "fn": "public: void __thiscall vostok::render::system_renderer::draw_particle_system_instance_selections(class vostok::render::vector<class vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base> > const &)"
+    },
+    {
+      "pct": 99.91803,
+      "fn": "private: bool __thiscall vostok::resources::game_resources_manager::try_reallocate_queue(class vostok::resources::memory_type *)"
+    },
+    {
+      "pct": 99.92036,
+      "fn": "private: void __thiscall vostok::render::stage_gbuffer::render_particles(bool)"
+    },
+    {
+      "pct": 99.92284,
+      "fn": "public: virtual void __thiscall vostok::render::stage_particles::execute(void)"
+    },
+    {
+      "pct": 99.92308,
+      "fn": "private: void __thiscall vostok::resources::query_result::bind_unmanaged_resource_buffer_to_creation_or_inline_data(void)"
+    },
+    {
+      "pct": 99.92308,
+      "fn": "private: void __thiscall vostok::resources::query_result::lock_fat_it(void)"
+    },
+    {
+      "pct": 99.92308,
+      "fn": "private: void __thiscall vostok::resources::query_result::unlock_fat_it(void)"
+    },
+    {
+      "pct": 99.92857,
+      "fn": "private: class vostok::vfs::vfs_iterator __thiscall vostok::resources::query_result::get_fat_it_zero_if_physical_path_it(void) const"
+    },
+    {
+      "pct": 99.92857,
+      "fn": "private: void __thiscall vostok::resources::resources_manager::remove_from_generate_if_no_file_queue(class vostok::resources::query_result &)"
+    },
+    {
+      "pct": 99.92857,
+      "fn": "public: virtual class vostok::mutable_buffer __thiscall survarium::weapon_core_inactive_state_cook::allocate_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, bool)"
+    },
+    {
+      "pct": 99.92857,
+      "fn": "public: virtual class vostok::mutable_buffer __thiscall survarium::weapon_core_shotgun_reload_state_cook::allocate_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, bool)"
+    },
+    {
+      "pct": 99.931564,
+      "fn": "private: void __thiscall vostok::render::stage_lights::render_particle_lighting(class vostok::render::render_particle_emitter_instance *, class vostok::render::light *, unsigned int)"
+    },
+    {
+      "pct": 99.931816,
+      "fn": "private: void __thiscall vostok::resources::query_result::on_request_iterator_ready(class vostok::vfs::vfs_iterator &, bool)"
+    },
+    {
+      "pct": 99.933334,
+      "fn": "private: bool __thiscall vostok::resources::query_result::need_create_resource_if_no_file(void)"
+    },
+    {
+      "pct": 99.933334,
+      "fn": "private: void __thiscall vostok::resources::query_result::on_decompressing_end(void)"
+    },
+    {
+      "pct": 99.933334,
+      "fn": "public: virtual float __thiscall vostok::resources::query_result_for_cook::satisfaction_with(unsigned int) const"
+    },
+    {
+      "pct": 99.934784,
+      "fn": "private: void __thiscall vostok::resources::query_result::finish_normal_query(enum vostok::resources::cook_base::result_enum)"
+    },
+    {
+      "pct": 99.9359,
+      "fn": "private: void __thiscall vostok::resources::query_result::free_unmanaged_buffer(void)"
+    },
+    {
+      "pct": 99.93617,
+      "fn": "public: virtual class vostok::mutable_buffer __thiscall vostok::particle::particle_system_cook::allocate_resource(class vostok::resources::query_result_for_cook &, unsigned int, unsigned int &, bool)"
+    },
+    {
+      "pct": 99.93617,
+      "fn": "vostok::render::fill_surface"
+    },
+    {
+      "pct": 99.936844,
+      "fn": "private: enum vostok::resources::allocation_result_enum __thiscall vostok::resources::query_result::allocate_compressed_resource_if_needed(void)"
+    },
+    {
+      "pct": 99.9375,
+      "fn": "private: void __thiscall vostok::resources::resources_manager::add_to_generate_if_no_file_queue(class vostok::resources::query_result &)"
+    },
+    {
+      "pct": 99.93793,
+      "fn": "private: bool __thiscall vostok::resources::query_result::retry_action_that_caused_out_of_memory(void)"
+    },
+    {
+      "pct": 99.94025,
+      "fn": "private: void __thiscall vostok::render::stage_lights::render_model_lighting(struct vostok::render::render_surface_instance *, class vostok::render::light *)"
+    },
+    {
+      "pct": 99.940704,
+      "fn": "private: void __thiscall vostok::render::stage_lights::render_speedtree_lighting(struct vostok::render::lod_entry const *, class SpeedTree::CInstance const *, struct SpeedTree::SInstanceLod const *, class vostok::render::speedtree_tree_component *, class vostok::render::light *)"
+    },
+    {
+      "pct": 99.94141,
+      "fn": "private: void __thiscall vostok::render::stage_lights::render_to_hw_shadowmap(class vostok::render::light *, unsigned int, float, unsigned int, unsigned int, class vostok::math::float4x4const &, class vostok::math::float4x4const &, unsigned int)"
+    },
+    {
+      "pct": 99.94231,
+      "fn": "private: void __thiscall vostok::resources::query_result::on_file_operation_end(class vostok::resources::query_result *)"
+    },
+    {
+      "pct": 99.942856,
+      "fn": "public: virtual class vostok::mutable_buffer __thiscall vostok::core::configs::binary_config_cook_impl::allocate_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, bool)"
+    },
+    {
+      "pct": 99.942856,
+      "fn": "public: void __thiscall vostok::render::temporal_projection_matrix_modifier::push_jittering(void)"
+    },
+    {
+      "pct": 99.944336,
+      "fn": "public: virtual void __thiscall vostok::render::stage_accumulate_distortion::execute(void)"
+    },
+    {
+      "pct": 99.94444,
+      "fn": "private: unsigned int __thiscall vostok::resources::queries_result::calculate_fs_iterator_requests_count(void)"
+    },
+    {
+      "pct": 99.94444,
+      "fn": "private: unsigned int __thiscall vostok::resources::query_result::allocate_thread_id(void) const"
+    },
+    {
+      "pct": 99.94444,
+      "fn": "private: unsigned int __thiscall vostok::resources::query_result::translate_thread_id(void) const"
+    },
+    {
+      "pct": 99.94444,
+      "fn": "vostok::render::is_not_occluded_predicate<vostok::render::ambient_volume>"
+    },
+    {
+      "pct": 99.94444,
+      "fn": "vostok::render::is_not_occluded_predicate<vostok::render::decal_instance>"
+    },
+    {
+      "pct": 99.94444,
+      "fn": "vostok::render::is_not_occluded_predicate<vostok::render::environment_probe>"
+    },
+    {
+      "pct": 99.94444,
+      "fn": "vostok::render::is_not_occluded_predicate<vostok::render::grass_patch>"
+    },
+    {
+      "pct": 99.94444,
+      "fn": "vostok::render::is_not_occluded_predicate<vostok::render::render_surface_instance>"
+    },
+    {
+      "pct": 99.94574,
+      "fn": "private: void __thiscall vostok::render::stage_lights::render_particle_probe_lighting(class vostok::render::render_particle_emitter_instance *, struct vostok::render::environment_probe *, unsigned int)"
+    },
+    {
+      "pct": 99.947365,
+      "fn": "private: void __thiscall vostok::resources::query_result::do_unmanaged_create_resource(class vostok::resources::unmanaged_cook *)"
+    },
+    {
+      "pct": 99.947365,
+      "fn": "private: void __thiscall vostok::resources::query_result::set_result_iterator(class vostok::vfs::vfs_locked_iterator const &)"
+    },
+    {
+      "pct": 99.947365,
+      "fn": "vostok::render::is_not_occluded_predicate_light"
+    },
+    {
+      "pct": 99.947525,
+      "fn": "private: void __thiscall survarium::medkit::load(class vostok::configs::binary_config_value)"
+    },
+    {
+      "pct": 99.94787,
+      "fn": "private: class vostok::math::float4x4 __thiscall vostok::render::stage_pre_rain::render_rain_shadow_map(void)"
+    },
+    {
+      "pct": 99.948715,
+      "fn": "public: void __thiscall vostok::render::speedtree_forest::tick(class vostok::render::renderer_context *)"
+    },
+    {
+      "pct": 99.94949,
+      "fn": "private: bool __thiscall vostok::resources::device_manager::pre_allocate(class vostok::resources::query_result *)"
+    },
+    {
+      "pct": 99.95,
+      "fn": "private: bool __thiscall vostok::resources::queries_result::calculate_result_from_children(void)"
+    },
+    {
+      "pct": 99.95131,
+      "fn": "private: void __thiscall vostok::render::stage_visibility::gather_statistics(void) const"
+    },
+    {
+      "pct": 99.951515,
+      "fn": "private: void __thiscall vostok::resources::query_result::do_inplace_unmanaged_create_resource(class vostok::resources::inplace_unmanaged_cook *)"
+    },
+    {
+      "pct": 99.95349,
+      "fn": "public: void __thiscall vostok::render::renderer::sort_models_by_distance(class vostok::render::vector<struct vostok::render::render_surface_instance *> &, bool)"
+    },
+    {
+      "pct": 99.954544,
+      "fn": "private: void __thiscall vostok::resources::query_result::set_deleter_object(class vostok::resources::unmanaged_resource *)"
+    },
+    {
+      "pct": 99.954956,
+      "fn": "private: void __thiscall vostok::resources::query_result::copy_data_to_resource(class vostok::const_buffer)"
+    },
+    {
+      "pct": 99.95522,
+      "fn": "private: void __thiscall vostok::resources::resources_manager::dispatch_decompressed_resources(void)"
+    },
+    {
+      "pct": 99.95522,
+      "fn": "public: void __thiscall vostok::resources::resource_freeing_functionality::free_collected(void)"
+    },
+    {
+      "pct": 99.95536,
+      "fn": "private: enum vostok::resources::allocation_result_enum __thiscall vostok::resources::query_result::allocate_raw_unmanaged_resource_if_needed(void)"
+    },
+    {
+      "pct": 99.95565,
+      "fn": "private: void __thiscall vostok::render::stage_lights::render_light(class vostok::render::light *, bool)"
+    },
+    {
+      "pct": 99.956894,
+      "fn": "private: void __thiscall vostok::resources::query_result::do_inplace_managed_create_resource(class vostok::resources::inplace_managed_cook *)"
+    },
+    {
+      "pct": 99.956985,
+      "fn": "private: void __thiscall vostok::resources::query_result::add_referrer(class vostok::resources::query_result *, bool)"
+    },
+    {
+      "pct": 99.958336,
+      "fn": "private: enum vostok::resources::allocation_result_enum __thiscall vostok::resources::query_result::allocate_final_managed_resource_if_needed(void)"
+    },
+    {
+      "pct": 99.958336,
+      "fn": "private: enum vostok::resources::resource_base::creation_source_enum __thiscall vostok::resources::query_result::creation_source_for_resource(void)"
+    },
+    {
+      "pct": 99.958336,
+      "fn": "private: void __thiscall vostok::resources::resources_manager::decompress_resource(class vostok::resources::query_result *)"
+    },
+    {
+      "pct": 99.95862,
+      "fn": "public: void __thiscall vostok::resources::game_resources_manager::out_of_memory_callback(class vostok::resources::query_result *)"
+    },
+    {
+      "pct": 99.958824,
+      "fn": "private: void __thiscall vostok::resources::query_result::end_query_might_destroy_this_impl(void)"
+    },
+    {
+      "pct": 99.95946,
+      "fn": "public: virtual void __thiscall vostok::sound::panning_lut_cook::translate_query(class vostok::resources::query_result_for_cook &)"
+    },
+    {
+      "pct": 99.95946,
+      "fn": "public: void __thiscall vostok::render::grass_world::render(class vostok::render::renderer_context *, class vostok::math::float3const &, enum vostok::render::enum_render_stage_type, unsigned int, float, bool, class vostok::render::res_effect *, bool, unsigned int)"
+    },
+    {
+      "pct": 99.96,
+      "fn": "private: enum vostok::resources::allocation_result_enum __thiscall vostok::resources::query_result::allocate_raw_managed_resource_if_needed(void)"
+    },
+    {
+      "pct": 99.96,
+      "fn": "private: void __thiscall vostok::resources::allocate_functionality::allocate_raw_resources(class vostok::resources::thread_local_data *, bool)"
+    },
+    {
+      "pct": 99.96,
+      "fn": "private: void __thiscall vostok::resources::query_result::requery_on_out_of_memory(void)"
+    },
+    {
+      "pct": 99.96,
+      "fn": "private: void __thiscall vostok::resources::query_result::unpin_compressed_file(class vostok::const_buffer const &)"
+    },
+    {
+      "pct": 99.96,
+      "fn": "private: void __thiscall vostok::resources::query_result::unpin_raw_buffer(class vostok::const_buffer const &)"
+    },
+    {
+      "pct": 99.96,
+      "fn": "public: void __thiscall vostok::render::radiance_volume::inject_camera_occluders(class vostok::render::renderer_context *)"
+    },
+    {
+      "pct": 99.960785,
+      "fn": "private: void __thiscall vostok::render::stage_light_propagation_volumes::render_to_sun_rms(class vostok::render::light *, unsigned int, class vostok::render::vector<class vostok::math::float4x4>)"
+    },
+    {
+      "pct": 99.960785,
+      "fn": "public: __thiscall vostok::render::engine::world::~world(void)"
+    },
+    {
+      "pct": 99.961426,
+      "fn": "public: long __thiscall vostok::resources::resources_manager::query_resources_impl(struct vostok::resources::query_resource_params const &)"
+    },
+    {
+      "pct": 99.96154,
+      "fn": "private: void __thiscall vostok::resources::query_result::propogate_sub_fats_to_resource<class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> >(class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> &)"
+    },
+    {
+      "pct": 99.96154,
+      "fn": "private: void __thiscall vostok::resources::query_result::propogate_sub_fats_to_resource<class vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base> >(class vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base> &)"
+    },
+    {
+      "pct": 99.96203,
+      "fn": "public: void __thiscall vostok::resources::resources_manager::continue_init_new_query(class vostok::resources::query_result &)"
+    },
+    {
+      "pct": 99.96296,
+      "fn": "public: bool __thiscall vostok::render::remove_model_if_not_lod_predicate::operator()(struct vostok::render::render_surface_instance *)"
+    },
+    {
+      "pct": 99.965515,
+      "fn": "private: void __thiscall vostok::resources::queries_result::translate_request_paths(void)"
+    },
+    {
+      "pct": 99.9661,
+      "fn": "private: void __thiscall vostok::resources::queries_result::push_to_grm_cache(void)"
+    },
+    {
+      "pct": 99.96667,
+      "fn": "private: void __thiscall vostok::resources::query_result::associate_created_resource_with_fat_or_name_registry(void)"
+    },
+    {
+      "pct": 99.96667,
+      "fn": "public: virtual void __thiscall survarium::medkit::action(bool)"
+    },
+    {
+      "pct": 99.96667,
+      "fn": "public: void __thiscall vostok::render::renderer_context::set_scene_view(class vostok::resources::resource_ptr<struct vostok::render::base_scene_view, class vostok::resources::unmanaged_intrusive_base>)"
+    },
+    {
+      "pct": 99.967476,
+      "fn": "private: enum vostok::resources::allocation_result_enum __thiscall vostok::resources::query_result::allocate_final_unmanaged_resource_if_needed(void)"
+    },
+    {
+      "pct": 99.96774,
+      "fn": "private: void __thiscall vostok::resources::query_result::translate_request_path(void)"
+    },
+    {
+      "pct": 99.96774,
+      "fn": "private: void __thiscall vostok::resources::resources_manager::save_generated_resources(void)"
+    },
+    {
+      "pct": 99.96774,
+      "fn": "protected: virtual void __thiscall vostok::resources::query_result_for_cook::increase_quality_to_target(class vostok::resources::query_result_for_cook *)"
+    },
+    {
+      "pct": 99.96809,
+      "fn": "private: void __thiscall vostok::resources::query_result::late_set_fat_it(class vostok::vfs::vfs_iterator)"
+    },
+    {
+      "pct": 99.96864,
+      "fn": "public: virtual void __thiscall vostok::render::stage_translucency::execute(void)"
+    },
+    {
+      "pct": 99.96939,
+      "fn": "private: void __thiscall vostok::resources::allocate_functionality::prepare_raw_resource_for_inplace_unmanaged_cook(class vostok::resources::query_result *)"
+    },
+    {
+      "pct": 99.96952,
+      "fn": "public: virtual void __thiscall vostok::render::stage_sun::execute(void)"
+    },
+    {
+      "pct": 99.96957,
+      "fn": "private: void __thiscall vostok::resources::resources_manager::init_query_with_no_fat_it(class vostok::resources::query_result &)"
+    },
+    {
+      "pct": 99.969696,
+      "fn": "private: class vostok::const_buffer __thiscall vostok::resources::query_result::pin_raw_buffer(void)"
+    },
+    {
+      "pct": 99.969696,
+      "fn": "public: bool __thiscall vostok::resources::hdd_manager_sorting_predicate::operator()(class vostok::resources::query_result *, class vostok::resources::query_result *)"
+    },
+    {
+      "pct": 99.970146,
+      "fn": "private: void __thiscall vostok::resources::query_result::on_load_operation_end(class vostok::resources::query_result *)"
+    },
+    {
+      "pct": 99.97143,
+      "fn": "private: void __thiscall vostok::resources::resources_manager::decompress_resources(void)"
+    },
+    {
+      "pct": 99.971565,
+      "fn": "public: void __thiscall vostok::render::grass_world::process_culling(class vostok::render::renderer_context *, float)"
+    },
+    {
+      "pct": 99.97222,
+      "fn": "private: void __thiscall vostok::render::stage_light_propagation_volumes::render_to_rms(class vostok::math::float3const &, float, class vostok::math::float4x4const &, class vostok::math::float4x4const &, class vostok::render::vector<class vostok::math::float4x4>, unsigned int)"
+    },
+    {
+      "pct": 99.9726,
+      "fn": "private: bool __thiscall vostok::resources::query_result::check_file_crc(void)"
+    },
+    {
+      "pct": 99.97268,
+      "fn": "private: enum vostok::resources::query_result::consider_with_name_registry_result_enum __thiscall vostok::resources::query_result::consider_with_name_registry_impl(char const *, enum vostok::resources::query_result::only_try_to_get_associated_resource_bool)"
+    },
+    {
+      "pct": 99.97298,
+      "fn": "private: bool __thiscall vostok::resources::query_result::try_push_created_resource_to_manager_might_destroy_this(void)"
+    },
+    {
+      "pct": 99.97298,
+      "fn": "private: class vostok::const_buffer __thiscall vostok::resources::query_result::pin_compressed_file(void)"
+    },
+    {
+      "pct": 99.97298,
+      "fn": "private: class vostok::const_buffer __thiscall vostok::resources::query_result::pin_raw_file(void)"
+    },
+    {
+      "pct": 99.97338,
+      "fn": "private: bool __thiscall vostok::resources::query_result::process_request_path(bool)"
+    },
+    {
+      "pct": 99.97369,
+      "fn": "private: bool __thiscall vostok::resources::device_manager::do_async_operation(void **, class vostok::resources::query_result *, class vostok::fs_new::synchronous_device_interface const &, class vostok::mutable_buffer, unsigned __int64, bool)"
+    },
+    {
+      "pct": 99.97369,
+      "fn": "public: virtual void __thiscall vostok::render::renderer_cook::create_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, class vostok::mutable_buffer)"
+    },
+    {
+      "pct": 99.97396,
+      "fn": "public: static class vostok::resources::queries_result * __cdecl vostok::resources::resources_manager::create_queries_result(struct vostok::resources::query_resource_params const &)"
+    },
+    {
+      "pct": 99.97403,
+      "fn": "public: virtual void __thiscall vostok::render::stage_volume_fog::execute(void)"
+    },
+    {
+      "pct": 99.974686,
+      "fn": "private: bool __thiscall vostok::resources::query_result::try_synchronous_cook_from_inline_data(void)"
+    },
+    {
+      "pct": 99.97479,
+      "fn": "private: void __thiscall vostok::animation::animation_collection_cook::sub_animations_loaded(class vostok::resources::queries_result &, class vostok::resources::resource_ptr<class vostok::configs::binary_config, class vostok::resources::unmanaged_intrusive_base>, class vostok::configs::binary_config_value const &)"
+    },
+    {
+      "pct": 99.97481,
+      "fn": "private: void __thiscall vostok::render::stage_lights::make_skin_scattering_texture(struct vostok::render::render_surface_instance *, class vostok::render::light *)"
+    },
+    {
+      "pct": 99.975,
+      "fn": "public: void __thiscall vostok::render::renderer_context::set_target_context(class vostok::render::renderer_context_targets const *, bool)"
+    },
+    {
+      "pct": 99.97561,
+      "fn": "private: class vostok::math::float4 __thiscall vostok::render::stage_postprocess::compute_luminance_parameters(unsigned int)"
+    },
+    {
+      "pct": 99.97581,
+      "fn": "public: virtual void __thiscall vostok::animation::animation_collection_cook::translate_query(class vostok::resources::query_result_for_cook &)"
+    },
+    {
+      "pct": 99.97619,
+      "fn": "private: void __thiscall vostok::render::stage_clouds::fill_cloud_texture(unsigned int)"
+    },
+    {
+      "pct": 99.97619,
+      "fn": "private: void __thiscall vostok::resources::device_manager::fill_pre_allocated(void)"
+    },
+    {
+      "pct": 99.97619,
+      "fn": "public: virtual void __thiscall vostok::render::skeleton_combined_render_model_instance_cook::translate_query(class vostok::resources::query_result_for_cook &)"
+    },
+    {
+      "pct": 99.97638,
+      "fn": "private: static void __cdecl vostok::animation::bi_spline_skeleton_animation_impl_cook::on_resources_ready(class vostok::resources::queries_result &, class vostok::resources::query_result_for_cook *const)"
+    },
+    {
+      "pct": 99.976746,
+      "fn": "public: void __thiscall vostok::resources::resources_manager::cooker_thread_tick(void)"
+    },
+    {
+      "pct": 99.97727,
+      "fn": "private: void __thiscall vostok::resources::queries_result::on_fs_iterator_ready(class vostok::vfs::vfs_locked_iterator const &, class vostok::resources::query_result *)"
+    },
+    {
+      "pct": 99.97732,
+      "fn": "private: void __thiscall survarium::weapon_cook::on_weapon_subresources_ready(class vostok::resources::queries_result &, class vostok::resources::resource_ptr<class vostok::configs::binary_config, class vostok::resources::unmanaged_intrusive_base>, class survarium::weapon_core *)"
+    },
+    {
+      "pct": 99.97769,
+      "fn": "public: virtual void __thiscall vostok::render::stage_rain::execute(void)"
+    },
+    {
+      "pct": 99.97817,
+      "fn": "public: virtual void __thiscall vostok::render::stage_ambient_occlusion::execute(void)"
+    },
+    {
+      "pct": 99.978264,
+      "fn": "private: void __thiscall vostok::resources::resources_manager::dispatch_allocated_raw_resources(void)"
+    },
+    {
+      "pct": 99.978264,
+      "fn": "private: void __thiscall vostok::resources::resources_manager::dispatch_created_resources(void)"
+    },
+    {
+      "pct": 99.978355,
+      "fn": "public: void __thiscall vostok::render::stage_light_propagation_volumes::execute_impl(void)"
+    },
+    {
+      "pct": 99.97872,
+      "fn": "private: __thiscall vostok::resources::queries_result::~queries_result(void)"
+    },
+    {
+      "pct": 99.97872,
+      "fn": "private: bool __thiscall vostok::resources::device_manager::process_query(class vostok::resources::query_result *, class vostok::fs_new::synchronous_device_interface const &)"
+    },
+    {
+      "pct": 99.97872,
+      "fn": "private: bool __thiscall vostok::resources::device_manager::process_read_query(void **, class vostok::resources::query_result *, class vostok::fs_new::synchronous_device_interface const &)"
+    },
+    {
+      "pct": 99.97872,
+      "fn": "public: virtual void __thiscall survarium::human_npc_cook::translate_query(class vostok::resources::query_result_for_cook &)"
+    },
+    {
+      "pct": 99.97888,
+      "fn": "public: virtual void __thiscall vostok::render::stage_lights::execute(void)"
+    },
+    {
+      "pct": 99.979164,
+      "fn": "private: bool __thiscall vostok::resources::device_manager::process_write_query(void **, class vostok::resources::query_result *, class vostok::fs_new::synchronous_device_interface const &)"
+    },
+    {
+      "pct": 99.979164,
+      "fn": "public: class vostok::fs_new::native_path_string __thiscall vostok::resources::query_result::absolute_physical_path(enum assert_on_fail_bool)"
+    },
+    {
+      "pct": 99.979195,
+      "fn": "private: void __thiscall vostok::render::stage_light_propagation_volumes::render_to_rms_smoothed2(class vostok::math::float3const &, float, class vostok::math::float4x4const &, class vostok::math::float4x4const &, class vostok::render::vector<class vostok::math::float4x4>, unsigned int, unsigned int, unsigned int)"
+    },
+    {
+      "pct": 99.979454,
+      "fn": "public: void __thiscall vostok::render::stage_forward::accumulate_local_reflections(void)"
+    },
+    {
+      "pct": 99.97959,
+      "fn": "private: bool __thiscall vostok::resources::query_result::check_fat_for_resource_reusage(void)"
+    },
+    {
+      "pct": 99.98026,
+      "fn": "protected: void __thiscall vostok::render::render_model_cook::on_subresources_loaded(class vostok::resources::queries_result &, struct vostok::render::cook_intermediate_data *)"
+    },
+    {
+      "pct": 99.98039,
+      "fn": "private: bool __thiscall vostok::resources::query_result::translate_query_if_needed(void)"
+    },
+    {
+      "pct": 99.98039,
+      "fn": "public: void __thiscall vostok::render::stage_debug::render_environment_probe_preview(void)"
+    },
+    {
+      "pct": 99.98058,
+      "fn": "private: void __thiscall vostok::resources::query_result::do_create_resource(bool *)"
+    },
+    {
+      "pct": 99.98077,
+      "fn": "public: void __thiscall vostok::resources::resources_manager::after_resource_deleted(class vostok::resources::cook_base *, bool, class vostok::resources::query_result *const, class vostok::resources::memory_usage_type const &, enum vostok::resources::class_id_enum, char const *)"
+    },
+    {
+      "pct": 99.98245,
+      "fn": "private: void __thiscall vostok::render::static_render_model_instance_cook::on_sub_resources_loaded(class vostok::resources::queries_result &)"
+    },
+    {
+      "pct": 99.98256,
+      "fn": "private: bool __thiscall vostok::resources::device_manager::open_file(void ***, class vostok::resources::query_result *, class vostok::fs_new::synchronous_device_interface const &)"
+    },
+    {
+      "pct": 99.98256,
+      "fn": "private: void __thiscall vostok::resources::query_result::replicate(void)"
+    },
+    {
+      "pct": 99.982605,
+      "fn": "private: void __thiscall survarium::player_cook::on_hit_params_loaded(class vostok::resources::queries_result &, struct survarium::player_creation_params *)"
+    },
+    {
+      "pct": 99.982925,
+      "fn": "public: virtual void __thiscall vostok::render::stage_clouds::execute(void)"
+    },
+    {
+      "pct": 99.983154,
+      "fn": "public: virtual void __thiscall vostok::render::stage_atmosphere::execute(void)"
+    },
+    {
+      "pct": 99.98316,
+      "fn": "public: void __thiscall vostok::render::speedtree_forest::get_visible_tree_components(class vostok::render::renderer_context *, class vostok::math::float3const &, bool, class vostok::render::vector<struct vostok::render::speedtree_forest::tree_render_info> &)"
+    },
+    {
+      "pct": 99.98326,
+      "fn": "private: void __thiscall vostok::resources::query_result::do_create_resource_end_part(void)"
+    },
+    {
+      "pct": 99.983406,
+      "fn": "private: void __thiscall survarium::profile_character::weapon_resources_ready(class vostok::resources::queries_result &)"
+    },
+    {
+      "pct": 99.98343,
+      "fn": "private: void __thiscall vostok::resources::device_manager::on_query_processed(class vostok::resources::query_result *, bool)"
+    },
+    {
+      "pct": 99.983475,
+      "fn": "public: void __thiscall vostok::animation::skeleton_cook::on_sub_resources_loaded(class vostok::resources::queries_result &)"
+    },
+    {
+      "pct": 99.98351,
+      "fn": "public: virtual void __thiscall vostok::render::stage_debug::execute(void)"
+    },
+    {
+      "pct": 99.983696,
+      "fn": "protected: void __thiscall vostok::resources::query_result_for_cook::finish_query_impl(enum vostok::resources::cook_base::result_enum, enum assert_on_fail_bool, enum vostok::resources::query_result_for_user::error_type_enum)"
+    },
+    {
+      "pct": 99.98401,
+      "fn": "protected: void __thiscall survarium::game_world::on_project_loaded(class vostok::resources::queries_result &, unsigned int, class boost::function<void __cdecl (class vostok::resources::queries_result &)> const &)"
+    },
+    {
+      "pct": 99.98412,
+      "fn": "private: void __thiscall survarium::project_cooker_simple::on_collision_and_visuals_loaded(class vostok::resources::queries_result &, class survarium::simple_game_project *)"
+    },
+    {
+      "pct": 99.98425,
+      "fn": "public: void __thiscall vostok::render::stage_light_propagation_volumes::execute_smoothed_impl(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)"
+    },
+    {
+      "pct": 99.98462,
+      "fn": "private: void __thiscall survarium::damage_zone_cook::on_sub_resources_loaded(class vostok::resources::queries_result &, class vostok::configs::binary_config_value const &)"
+    },
+    {
+      "pct": 99.98462,
+      "fn": "private: void __thiscall vostok::sound::sound_collection_cook::sub_sounds_loaded(class vostok::resources::queries_result &, class vostok::resources::resource_ptr<class vostok::configs::binary_config, class vostok::resources::unmanaged_intrusive_base>, class vostok::configs::binary_config_value const &)"
+    },
+    {
+      "pct": 99.98477,
+      "fn": "public: virtual void __thiscall vostok::render::stage_forward::execute(void)"
+    },
+    {
+      "pct": 99.98485,
+      "fn": "public: virtual void __thiscall vostok::render::render_output_window_cook::translate_query(class vostok::resources::query_result_for_cook &)"
+    },
+    {
+      "pct": 99.98485,
+      "fn": "public: void __thiscall vostok::render::stage_forward::render_forward_models(class vostok::render::vector<struct vostok::render::render_surface_instance *> &, unsigned int)"
+    },
+    {
+      "pct": 99.98529,
+      "fn": "private: void __thiscall vostok::resources::resources_manager::save_generated_resource(class vostok::resources::query_result *)"
+    },
+    {
+      "pct": 99.985504,
+      "fn": "private: void __thiscall survarium::human_npc_cook::on_subresources_loaded(class vostok::resources::queries_result &, class survarium::human_npc *const)"
+    },
+    {
+      "pct": 99.985504,
+      "fn": "public: virtual void __thiscall vostok::sound::sound_scene_cook::translate_query(class vostok::resources::query_result_for_cook &)"
+    },
+    {
+      "pct": 99.98558,
+      "fn": "public: virtual void __thiscall vostok::render::stage_pre_rain::execute(void)"
+    },
+    {
+      "pct": 99.98582,
+      "fn": "private: void __thiscall vostok::resources::query_result::send_to_create_resource(void)"
+    },
+    {
+      "pct": 99.98585,
+      "fn": "private: void __thiscall survarium::sound_player_cook::on_sounds_loaded(class vostok::resources::queries_result &, class vostok::resources::resource_ptr<class vostok::configs::binary_config, class vostok::resources::unmanaged_intrusive_base>)"
+    },
+    {
+      "pct": 99.985916,
+      "fn": "private: void __thiscall survarium::booby_trap_cook::on_models_ready(class vostok::resources::queries_result &, class survarium::booby_trap *)"
+    },
+    {
+      "pct": 99.985916,
+      "fn": "private: void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::double_barreled_weapon_core_aimed_fire_state> >::on_subresources_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::double_barreled_weapon_core_aimed_fire_state> >::config_params)"
+    },
+    {
+      "pct": 99.985916,
+      "fn": "private: void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::double_barreled_weapon_core_fire_state> >::on_subresources_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::double_barreled_weapon_core_fire_state> >::config_params)"
+    },
+    {
+      "pct": 99.985916,
+      "fn": "private: void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::double_barreled_weapon_core_hide_state> >::on_subresources_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::double_barreled_weapon_core_hide_state> >::config_params)"
+    },
+    {
+      "pct": 99.985916,
+      "fn": "private: void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::double_barreled_weapon_core_reload_state> >::on_subresources_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::double_barreled_weapon_core_reload_state> >::config_params)"
+    },
+    {
+      "pct": 99.985916,
+      "fn": "private: void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::double_barreled_weapon_core_show_state> >::on_subresources_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::double_barreled_weapon_core_show_state> >::config_params)"
+    },
+    {
+      "pct": 99.985916,
+      "fn": "private: void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::pistol_weapon_core_aimed_fire_state> >::on_subresources_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::pistol_weapon_core_aimed_fire_state> >::config_params)"
+    },
+    {
+      "pct": 99.985916,
+      "fn": "private: void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::pistol_weapon_core_fire_state> >::on_subresources_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::pistol_weapon_core_fire_state> >::config_params)"
+    },
+    {
+      "pct": 99.985916,
+      "fn": "private: void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::pistol_weapon_core_hide_state> >::on_subresources_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::pistol_weapon_core_hide_state> >::config_params)"
+    },
+    {
+      "pct": 99.985916,
+      "fn": "private: void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::pistol_weapon_core_reload_state> >::on_subresources_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::pistol_weapon_core_reload_state> >::config_params)"
+    },
+    {
+      "pct": 99.985916,
+      "fn": "private: void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::pistol_weapon_core_show_state> >::on_subresources_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::pistol_weapon_core_show_state> >::config_params)"
+    },
+    {
+      "pct": 99.985916,
+      "fn": "private: void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_aimed_fire_state> >::on_subresources_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_aimed_fire_state> >::config_params)"
+    },
+    {
+      "pct": 99.985916,
+      "fn": "private: void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_chamber_a_round_aimed_state> >::on_subresources_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_chamber_a_round_aimed_state> >::config_params)"
+    },
+    {
+      "pct": 99.985916,
+      "fn": "private: void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_chamber_a_round_state> >::on_subresources_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_chamber_a_round_state> >::config_params)"
+    },
+    {
+      "pct": 99.985916,
+      "fn": "private: void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_fire_state> >::on_subresources_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_fire_state> >::config_params)"
+    },
+    {
+      "pct": 99.985916,
+      "fn": "private: void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_hide_state> >::on_subresources_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_hide_state> >::config_params)"
+    },
+    {
+      "pct": 99.985916,
+      "fn": "private: void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_reload_state> >::on_subresources_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_reload_state> >::config_params)"
+    },
+    {
+      "pct": 99.985916,
+      "fn": "private: void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_shotgun_reload_finish_substate> >::on_subresources_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_shotgun_reload_finish_substate> >::config_params)"
+    },
+    {
+      "pct": 99.985916,
+      "fn": "private: void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_shotgun_reload_one_round_substate> >::on_subresources_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_shotgun_reload_one_round_substate> >::config_params)"
+    },
+    {
+      "pct": 99.985916,
+      "fn": "private: void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_shotgun_reload_start_substate> >::on_subresources_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_shotgun_reload_start_substate> >::config_params)"
+    },
+    {
+      "pct": 99.985916,
+      "fn": "private: void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_show_state> >::on_subresources_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_show_state> >::config_params)"
+    },
+    {
+      "pct": 99.9863,
+      "fn": "private: void __thiscall vostok::animation::single_animation_cook::on_sub_resources_loaded(class vostok::resources::queries_result &)"
+    },
+    {
+      "pct": 99.9863,
+      "fn": "public: virtual void __thiscall vostok::render::stage_resolve_lighting::execute(void)"
+    },
+    {
+      "pct": 99.98635,
+      "fn": "private: void __thiscall vostok::render::stage_light_propagation_volumes::render_to_sky_rms(class vostok::render::light *, unsigned int, unsigned int, class vostok::render::vector<class vostok::math::float4x4>)"
+    },
+    {
+      "pct": 99.98649,
+      "fn": "public: virtual void __thiscall vostok::render::stage_shadow_direct::execute_disabled(void)"
+    },
+    {
+      "pct": 99.9866,
+      "fn": "private: void __thiscall vostok::render::stage_visibility::frustum_culling(void)"
+    },
+    {
+      "pct": 99.98661,
+      "fn": "private: void __thiscall vostok::render::stage_gbuffer::z_only_pass(void)"
+    },
+    {
+      "pct": 99.98684,
+      "fn": "public: void __thiscall vostok::render::stage_forward::render_opaque_models(void)"
+    },
+    {
+      "pct": 99.98718,
+      "fn": "private: void __thiscall vostok::render::effect_manager::on_effects_recompiled(class vostok::vectora<struct vostok::render::effect_manager::effect_to_recompile_struct> *, class vostok::resources::queries_result &)"
+    },
+    {
+      "pct": 99.98718,
+      "fn": "public: virtual void __thiscall vostok::render::material_effects_instance_cook::translate_query(class vostok::resources::query_result_for_cook &)"
+    },
+    {
+      "pct": 99.98718,
+      "fn": "public: virtual void __thiscall vostok::render::stage_light_propagation_volumes::execute(void)"
+    },
+    {
+      "pct": 99.98734,
+      "fn": "private: void __thiscall survarium::shotgun_weapon_reload_state_cook::on_substates_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *)"
+    },
+    {
+      "pct": 99.98742,
+      "fn": "private: void __thiscall survarium::player_cook::on_subresources_loaded(class vostok::resources::queries_result &, struct survarium::player_creation_params *, struct survarium::inventory_cooker_data *, struct survarium::player_parameters_cooker_data *)"
+    },
+    {
+      "pct": 99.98755,
+      "fn": "private: void __thiscall survarium::items_cook::create_item_and_finish_query(enum survarium::item_types_enum, class vostok::resources::resource_ptr<class vostok::configs::binary_config, class vostok::resources::unmanaged_intrusive_base>, class vostok::resources::query_result_for_cook *)"
+    },
+    {
+      "pct": 99.987656,
+      "fn": "private: void __thiscall survarium::main_menu::on_resources_ready(class vostok::resources::queries_result &)"
+    },
+    {
+      "pct": 99.987656,
+      "fn": "private: void __thiscall survarium::project_cooker_simple::on_damage_zones_loaded(class survarium::simple_game_project *, class vostok::resources::queries_result &)"
+    },
+    {
+      "pct": 99.987656,
+      "fn": "private: void __thiscall survarium::project_cooker_simple::on_ladders_loaded(class survarium::simple_game_project *, class vostok::resources::queries_result &)"
+    },
+    {
+      "pct": 99.98795,
+      "fn": "private: void __thiscall vostok::render::stage_visibility::get_results_and_prepare_bounds_portals(class vostok::math::float4*&, unsigned int &)"
+    },
+    {
+      "pct": 99.98795,
+      "fn": "protected: void __thiscall vostok::render::render_model_cook::on_materials_loaded(class vostok::resources::queries_result &, struct vostok::render::cook_intermediate_data *)"
+    },
+    {
+      "pct": 99.988304,
+      "fn": "private: void __thiscall vostok::sound::ogg_encoded_sound_interface_cook::on_ogg_resources_loaded(class vostok::resources::queries_result &, class vostok::resources::query_result_for_cook *)"
+    },
+    {
+      "pct": 99.98837,
+      "fn": "private: void __thiscall vostok::resources::query_result::set_deleter_object_if_needed(bool *)"
+    },
+    {
+      "pct": 99.98837,
+      "fn": "public: void __thiscall vostok::resources::allocate_functionality::prepare_final_resource(class vostok::resources::query_result *)"
+    },
+    {
+      "pct": 99.98844,
+      "fn": "private: void __thiscall survarium::profile_character::character_animation_ready(class vostok::resources::queries_result &)"
+    },
+    {
+      "pct": 99.9885,
+      "fn": "private: void __thiscall vostok::resources::query_result::finish_translated_query(enum vostok::resources::cook_base::result_enum)"
+    },
+    {
+      "pct": 99.98864,
+      "fn": "public: void __thiscall vostok::render::batched_geometry<struct vostok::render::lpv_vertex>::for_each_batch_render(class vostok::render::renderer_context *, class boost::function<void __cdecl (struct vostok::render::geometry_batch const &)> const &, class boost::function<void __cdecl (struct vostok::render::geometry_batch const &)> const &)"
+    },
+    {
+      "pct": 99.98876,
+      "fn": "private: void __thiscall vostok::render::stage_visibility::get_results_and_prepare_bounds_models(class vostok::math::float4*&, unsigned int &)"
+    },
+    {
+      "pct": 99.98889,
+      "fn": "private: void __thiscall vostok::resources::queries_result::query_fs_iterators(void)"
+    },
+    {
+      "pct": 99.98889,
+      "fn": "protected: void __thiscall vostok::core::configs::binary_config_cook::on_fs_iterators_ready(class vostok::resources::queries_result &)"
+    },
+    {
+      "pct": 99.98913,
+      "fn": "public: void __thiscall vostok::render::stage_shadow_direct::render_models(class vostok::render::vector<struct vostok::render::render_surface_instance *> &, class vostok::math::float4x4const &, unsigned int, unsigned int, class vostok::math::float3const &, unsigned int, unsigned int)"
+    },
+    {
+      "pct": 99.989204,
+      "fn": "private: void __thiscall vostok::render::skeleton_combined_model_cook::on_resources_loaded(class vostok::resources::queries_result &, class vostok::resources::query_result_for_cook *, struct vostok::render::skeleton_combined_cook_data *)"
+    },
+    {
+      "pct": 99.98925,
+      "fn": "private: void __thiscall vostok::render::stage_visibility::get_results_and_prepare_bounds_particles(class vostok::math::float4*&, unsigned int &)"
+    },
+    {
+      "pct": 99.98947,
+      "fn": "private: void __thiscall vostok::render::speedtree_cook::on_speedtree_raw_data_loaded(class vostok::resources::queries_result &, struct vostok::render::speedtree_data *)"
+    },
+    {
+      "pct": 99.98947,
+      "fn": "private: void __thiscall vostok::render::stage_visibility::get_results_and_prepare_bounds_lights(class vostok::math::float4*&, unsigned int &)"
+    },
+    {
+      "pct": 99.98947,
+      "fn": "private: void __thiscall vostok::resources::resources_manager::init_new_autoselect_quality_queries(void)"
+    },
+    {
+      "pct": 99.98955,
+      "fn": "public: void __thiscall vostok::render::speedtree_billboard_parameters::set(class vostok::render::renderer_context *, class vostok::render::speedtree_tree_component *)"
+    },
+    {
+      "pct": 99.989586,
+      "fn": "private: void __thiscall vostok::render::stage_visibility::get_results_and_prepare_bounds_grass(class vostok::math::float4*&, unsigned int &)"
+    },
+    {
+      "pct": 99.989586,
+      "fn": "private: void __thiscall vostok::resources::allocate_functionality::prepare_raw_resource_for_managed_or_unmanaged_cook(class vostok::resources::query_result *, enum vostok::resources::reallocating_bool)"
+    },
+    {
+      "pct": 99.98965,
+      "fn": "private: void __thiscall vostok::render::stage_lights::render_shadowed_light(class vostok::render::light *)"
+    },
+    {
+      "pct": 99.98969,
+      "fn": "private: void __thiscall vostok::render::stage_visibility::get_results_and_prepare_bounds_ambient_volumes(class vostok::math::float4*&, unsigned int &)"
+    },
+    {
+      "pct": 99.98969,
+      "fn": "private: void __thiscall vostok::render::stage_visibility::get_results_and_prepare_bounds_decals(class vostok::math::float4*&, unsigned int &)"
+    },
+    {
+      "pct": 99.98969,
+      "fn": "private: void __thiscall vostok::render::stage_visibility::get_results_and_prepare_bounds_env_probes(class vostok::math::float4*&, unsigned int &)"
+    },
+    {
+      "pct": 99.989746,
+      "fn": "public: virtual void __thiscall vostok::render::static_model_instance_cook::translate_query(class vostok::resources::query_result_for_cook &)"
+    },
+    {
+      "pct": 99.9899,
+      "fn": "public: virtual void __thiscall vostok::render::material_cook::translate_query(class vostok::resources::query_result_for_cook &)"
+    },
+    {
+      "pct": 99.9901,
+      "fn": "private: void __thiscall vostok::resources::query_result::do_managed_create_resource(class vostok::resources::managed_cook *)"
+    },
+    {
+      "pct": 99.9901,
+      "fn": "private: void __thiscall vostok::sound::composite_sound_cook::on_sub_resources_loaded(class vostok::resources::queries_result &)"
+    },
+    {
+      "pct": 99.99026,
+      "fn": "private: void __thiscall survarium::login_menu::on_resources_ready(class vostok::resources::queries_result &)"
+    },
+    {
+      "pct": 99.99029,
+      "fn": "public: virtual void __thiscall vostok::render::skeleton_combined_model_cook::translate_query(class vostok::resources::query_result_for_cook &)"
+    },
+    {
+      "pct": 99.99029,
+      "fn": "public: virtual void __thiscall vostok::sound::sound_collection_cook::translate_query(class vostok::resources::query_result_for_cook &)"
+    },
+    {
+      "pct": 99.99039,
+      "fn": "private: void __thiscall vostok::render::stage_gbuffer::render_models(class vostok::render::vector<struct vostok::render::render_surface_instance *> &, unsigned int, unsigned int &, bool)"
+    },
+    {
+      "pct": 99.99048,
+      "fn": "private: void __thiscall vostok::render::grass_cook::on_layers_loaded(class vostok::resources::queries_result &, struct vostok::render::grass_cook_data *)"
+    },
+    {
+      "pct": 99.99056,
+      "fn": "public: void __thiscall vostok::render::decal_shader_constants_and_geometry::set(class vostok::render::renderer_context *, class vostok::math::float4x4const &, class vostok::math::float4x4const &, float, float, class vostok::math::float3const &, class vostok::math::float4x4const &)"
+    },
+    {
+      "pct": 99.990654,
+      "fn": "private: void __thiscall vostok::resources::query_result::do_create_resource_impl(void)"
+    },
+    {
+      "pct": 99.990906,
+      "fn": "public: virtual void __thiscall vostok::render::culling::portal_sector_structure_cook::translate_query(class vostok::resources::query_result_for_cook &)"
+    },
+    {
+      "pct": 99.99093,
+      "fn": "private: void __thiscall survarium::lobby_menu::on_render_scenes_ready(class vostok::resources::queries_result &)"
+    },
+    {
+      "pct": 99.99095,
+      "fn": "public: void __thiscall vostok::render::stage_resolve_lighting::render_models(class vostok::render::vector<struct vostok::render::render_surface_instance *> &, unsigned int &)"
+    },
+    {
+      "pct": 99.99099,
+      "fn": "public: virtual void __thiscall survarium::damage_zone_cook::translate_query(class vostok::resources::query_result_for_cook &)"
+    },
+    {
+      "pct": 99.99099,
+      "fn": "public: virtual void __thiscall vostok::render::stage_postprocess::execute_disabled(void)"
+    },
+    {
+      "pct": 99.99123,
+      "fn": "private: void __thiscall vostok::resources::allocate_functionality::prepare_raw_resource_for_inplace_managed_cook(class vostok::resources::query_result *, enum vostok::resources::reallocating_bool)"
+    },
+    {
+      "pct": 99.99123,
+      "fn": "public: virtual void __thiscall vostok::render::skeleton_combined_model_instance_cook::translate_query(class vostok::resources::query_result_for_cook &)"
+    },
+    {
+      "pct": 99.991455,
+      "fn": "public: void __thiscall vostok::resources::resources_manager::dispatch_callbacks(bool)"
+    },
+    {
+      "pct": 99.9916,
+      "fn": "public: class vostok::render::effect_compiler & __thiscall vostok::render::effect_compiler::set_texture(char const *, char const *, class vostok::intrusive_ptr<class vostok::render::res_texture, class vostok::render::resource_intrusive_base, class vostok::threading::single_threading_policy> *, bool, unsigned int)"
+    },
+    {
+      "pct": 99.99174,
+      "fn": "private: void __thiscall survarium::booby_trap_set_cook::on_models_ready(class vostok::resources::queries_result &, class survarium::booby_trap_set *)"
+    },
+    {
+      "pct": 99.991974,
+      "fn": "public: virtual void __thiscall vostok::render::stage_gbuffer::execute(void)"
+    },
+    {
+      "pct": 99.99198,
+      "fn": "public: virtual void __thiscall vostok::render::stage_ambient_lighting::execute(void)"
+    },
+    {
+      "pct": 99.992065,
+      "fn": "private: void __thiscall survarium::empty_hands_cook::on_empty_hands_animations_loaded(class vostok::resources::queries_result &)"
+    },
+    {
+      "pct": 99.992065,
+      "fn": "private: void __thiscall vostok::render::speedtree_cook::on_model_materials_loaded(class vostok::resources::queries_result &, struct vostok::render::speedtree_data *)"
+    },
+    {
+      "pct": 99.99225,
+      "fn": "private: __thiscall vostok::resources::queries_result::queries_result(unsigned int, class boost::function<void __cdecl (class vostok::resources::queries_result &)>, class vostok::memory::base_allocator *, unsigned int, class vostok::resources::query_result_for_cook *, float *, bool const *, unsigned int const *, enum vostok::resources::query_type_enum, enum vostok::resources::autoselect_quality_bool const *, enum assert_on_fail_bool)"
+    },
+    {
+      "pct": 99.99225,
+      "fn": "public: void __thiscall vostok::render::grass_patch::render(struct vostok::render::grass_world *, class vostok::render::renderer_context *, class vostok::math::float3const &, enum vostok::render::enum_render_stage_type, unsigned int, float, class vostok::render::res_effect *, unsigned int)"
+    },
+    {
+      "pct": 99.99234,
+      "fn": "private: void __thiscall vostok::sound::composite_sound_cook::on_sounds_loaded(class vostok::resources::queries_result &, class vostok::resources::resource_ptr<class vostok::configs::binary_config, class vostok::resources::unmanaged_intrusive_base>, class vostok::configs::binary_config_value const &)"
+    },
+    {
+      "pct": 99.99248,
+      "fn": "public: void __thiscall vostok::render::speedtree_common_parameters::set(class vostok::render::renderer_context *, class vostok::render::speedtree_tree_component *, class vostok::math::float3const &)"
+    },
+    {
+      "pct": 99.9925,
+      "fn": "private: void __thiscall vostok::physics::collision_shape_cook::on_collision_sources_loaded(class vostok::resources::queries_result &, struct vostok::physics::collision_shape_cook::cook_data *)"
+    },
+    {
+      "pct": 99.99254,
+      "fn": "private: void __thiscall survarium::weapon_core_state_cook_template<class survarium::double_barreled_weapon_core_aimed_idle_state>::on_subresources_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *)"
+    },
+    {
+      "pct": 99.99254,
+      "fn": "private: void __thiscall survarium::weapon_core_state_cook_template<class survarium::double_barreled_weapon_core_idle_state>::on_subresources_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *)"
+    },
+    {
+      "pct": 99.99254,
+      "fn": "private: void __thiscall survarium::weapon_core_state_cook_template<class survarium::pistol_weapon_core_aimed_idle_state>::on_subresources_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *)"
+    },
+    {
+      "pct": 99.99254,
+      "fn": "private: void __thiscall survarium::weapon_core_state_cook_template<class survarium::pistol_weapon_core_idle_state>::on_subresources_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *)"
+    },
+    {
+      "pct": 99.99254,
+      "fn": "private: void __thiscall survarium::weapon_core_state_cook_template<class survarium::weapon_core_aimed_state>::on_subresources_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *)"
+    },
+    {
+      "pct": 99.99254,
+      "fn": "private: void __thiscall survarium::weapon_core_state_cook_template<class survarium::weapon_core_idle_state>::on_subresources_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *)"
+    },
+    {
+      "pct": 99.99254,
+      "fn": "public: void __thiscall vostok::render::radiance_volume::prepare(class vostok::math::float3const &, class vostok::math::float3const &, float)"
+    },
+    {
+      "pct": 99.99275,
+      "fn": "public: virtual void __thiscall survarium::weapon_core_state_cook_template<class survarium::double_barreled_weapon_core_aimed_idle_state>::create_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, class vostok::mutable_buffer)"
+    },
+    {
+      "pct": 99.99275,
+      "fn": "public: virtual void __thiscall survarium::weapon_core_state_cook_template<class survarium::double_barreled_weapon_core_idle_state>::create_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, class vostok::mutable_buffer)"
+    },
+    {
+      "pct": 99.99275,
+      "fn": "public: virtual void __thiscall survarium::weapon_core_state_cook_template<class survarium::pistol_weapon_core_aimed_idle_state>::create_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, class vostok::mutable_buffer)"
+    },
+    {
+      "pct": 99.99275,
+      "fn": "public: virtual void __thiscall survarium::weapon_core_state_cook_template<class survarium::pistol_weapon_core_idle_state>::create_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, class vostok::mutable_buffer)"
+    },
+    {
+      "pct": 99.99275,
+      "fn": "public: virtual void __thiscall survarium::weapon_core_state_cook_template<class survarium::weapon_core_aimed_state>::create_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, class vostok::mutable_buffer)"
+    },
+    {
+      "pct": 99.99275,
+      "fn": "public: virtual void __thiscall survarium::weapon_core_state_cook_template<class survarium::weapon_core_idle_state>::create_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, class vostok::mutable_buffer)"
+    },
+    {
+      "pct": 99.992805,
+      "fn": "private: void __thiscall survarium::animated_model_instance_cook::on_subresources_loaded(class vostok::resources::queries_result &)"
+    },
+    {
+      "pct": 99.993195,
+      "fn": "private: void __thiscall vostok::collision::collision_cook::on_triangle_mesh_collision_loaded(class vostok::resources::queries_result &, class vostok::resources::query_result_for_cook *)"
+    },
+    {
+      "pct": 99.99324,
+      "fn": "public: virtual void __thiscall vostok::render::scene_cook::translate_query(class vostok::resources::query_result_for_cook &)"
+    },
+    {
+      "pct": 99.99351,
+      "fn": "private: void __thiscall vostok::render::static_model_instance_cook::on_subresources_loaded(class vostok::resources::queries_result &, class vostok::resources::query_result_for_cook *)"
+    },
+    {
+      "pct": 99.99351,
+      "fn": "public: void __thiscall vostok::render::radiance_volume::inject_occluders(class vostok::render::renderer_context *, class vostok::math::float3const &, class vostok::math::float3const &, unsigned int)"
+    },
+    {
+      "pct": 99.99379,
+      "fn": "private: void __thiscall survarium::animated_model_instance_cook::on_config_loaded(class vostok::resources::queries_result &)"
+    },
+    {
+      "pct": 99.993866,
+      "fn": "private: void __thiscall survarium::rifle_scope_cook::on_subresources_loaded(class vostok::resources::queries_result &, class vostok::resources::resource_ptr<class vostok::configs::binary_config, class vostok::resources::unmanaged_intrusive_base> const &)"
+    },
+    {
+      "pct": 99.993904,
+      "fn": "public: void __thiscall vostok::render::scene::select_models(class vostok::math::float4x4const &, class vostok::render::vector<struct vostok::render::render_surface_instance *> &, class vostok::math::float3const &, unsigned int, bool)"
+    },
+    {
+      "pct": 99.99392,
+      "fn": "public: void __thiscall vostok::render::system_renderer::draw_3D_point(class vostok::math::float3const &, float, class vostok::math::color const &, bool)"
+    },
+    {
+      "pct": 99.99408,
+      "fn": "private: void __thiscall vostok::render::animated_model_instance_cook::on_skeleton_config_loaded(class vostok::resources::queries_result &, class vostok::resources::resource_ptr<class vostok::configs::binary_config, class vostok::resources::unmanaged_intrusive_base>)"
+    },
+    {
+      "pct": 99.99415,
+      "fn": "public: virtual void __thiscall vostok::render::stage_visibility::execute(void)"
+    },
+    {
+      "pct": 99.99422,
+      "fn": "public: void __thiscall vostok::render::cloud_simulation::generate(struct vostok::render::cloud_key_parameters const &, class vostok::math::float3const &)"
+    },
+    {
+      "pct": 99.994255,
+      "fn": "private: void __thiscall vostok::render::stage_lights::render_model_probe_lighting(struct vostok::render::render_surface_instance *, struct vostok::render::environment_probe *, float)"
+    },
+    {
+      "pct": 99.994286,
+      "fn": "private: void __thiscall vostok::render::animated_model_instance_cook::on_subresources_loaded(class vostok::resources::queries_result &, class vostok::resources::resource_ptr<class vostok::configs::binary_config, class vostok::resources::unmanaged_intrusive_base>)"
+    },
+    {
+      "pct": 99.99435,
+      "fn": "public: virtual void __thiscall survarium::profile_skin_visual_cook::translate_query(class vostok::resources::query_result_for_cook &)"
+    },
+    {
+      "pct": 99.99435,
+      "fn": "public: void __thiscall vostok::resources::resources_manager::free_managed_resource(class vostok::resources::managed_resource *)"
+    },
+    {
+      "pct": 99.994415,
+      "fn": "private: void __thiscall survarium::game::on_configs_loaded(class vostok::resources::queries_result &)"
+    },
+    {
+      "pct": 99.99454,
+      "fn": "private: void __thiscall vostok::render::stage_postprocess::measure_per_pixel_luminance(class vostok::render::res_texture *, class vostok::math::float4&)"
+    },
+    {
+      "pct": 99.994705,
+      "fn": "public: virtual void __thiscall survarium::shotgun_weapon_reload_state_cook::create_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, class vostok::mutable_buffer)"
+    },
+    {
+      "pct": 99.99478,
+      "fn": "public: virtual void __thiscall vostok::render::stage_decals_accumulate::execute(void)"
+    },
+    {
+      "pct": 99.99484,
+      "fn": "private: void __thiscall survarium::game_options::on_resources_ready(class vostok::resources::queries_result &)"
+    },
+    {
+      "pct": 99.995094,
+      "fn": "private: void __thiscall vostok::render::skeleton_combined_model_instance_cook::on_resources_loaded(class vostok::resources::queries_result &, class vostok::resources::query_result_for_cook *)"
+    },
+    {
+      "pct": 99.99525,
+      "fn": "private: void __thiscall vostok::sound::sound_collection_cook::request_items(class vostok::resources::resource_ptr<class vostok::configs::binary_config, class vostok::resources::unmanaged_intrusive_base>, class vostok::configs::binary_config_value const &, class vostok::resources::query_result_for_cook *const)"
+    },
+    {
+      "pct": 99.99531,
+      "fn": "public: virtual void __thiscall vostok::render::stage_decals_accumulate::debug_render(void)"
+    },
+    {
+      "pct": 99.995636,
+      "fn": "private: void __thiscall vostok::render::stage_postprocess::compute_per_pixel_eye_adaptated_luminance(void)"
+    },
+    {
+      "pct": 99.995804,
+      "fn": "private: void __thiscall survarium::profile_skin_visual_cook::on_configs_loaded(class vostok::resources::queries_result &, class vostok::resources::query_result_for_cook *, struct survarium::player_profile const *)"
+    },
+    {
+      "pct": 99.99611,
+      "fn": "public: void __thiscall vostok::render::effect_cook::on_binary_shaders(class vostok::resources::query_result_for_cook *, class vostok::render::res_effect *, struct vostok::render::effect_compile_data *, class vostok::resources::queries_result &)"
+    },
+    {
+      "pct": 99.99614,
+      "fn": "public: virtual void __thiscall vostok::render::effect_cook::create_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, class vostok::mutable_buffer)"
+    },
+    {
+      "pct": 99.9962,
+      "fn": "private: void __thiscall survarium::animation_space_graph_cook::on_animations_loaded(class vostok::resources::queries_result &, class vostok::resources::resource_ptr<class vostok::configs::binary_config, class vostok::resources::unmanaged_intrusive_base>)"
+    },
+    {
+      "pct": 99.99636,
+      "fn": "public: void __thiscall vostok::render::stage_ambient_lighting::make_probe_indices_map(class vostok::render::vector<struct vostok::render::environment_probe *> &)"
+    },
+    {
+      "pct": 99.996414,
+      "fn": "private: void __thiscall survarium::network_client::on_players_ready(class vostok::resources::queries_result &, unsigned int)"
+    },
+    {
+      "pct": 99.996506,
+      "fn": "public: void __thiscall vostok::resources::resources_manager::resources_thread_tick(void)"
+    },
+    {
+      "pct": 99.996544,
+      "fn": "private: void __thiscall vostok::render::stage_postprocess::accumulate_motion_vectors(void)"
+    },
+    {
+      "pct": 99.9967,
+      "fn": "private: void __thiscall vostok::render::grass_world::grass_layer_resources_ready(class vostok::resources::queries_result &, struct vostok::render::grass_layer_desc *, struct vostok::render::grass_layer_data *, bool)"
+    },
+    {
+      "pct": 99.99671,
+      "fn": "private: virtual void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::double_barreled_weapon_core_aimed_fire_state> >::create_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, class vostok::mutable_buffer)"
+    },
+    {
+      "pct": 99.99671,
+      "fn": "private: virtual void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::double_barreled_weapon_core_fire_state> >::create_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, class vostok::mutable_buffer)"
+    },
+    {
+      "pct": 99.99671,
+      "fn": "private: virtual void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::double_barreled_weapon_core_hide_state> >::create_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, class vostok::mutable_buffer)"
+    },
+    {
+      "pct": 99.99671,
+      "fn": "private: virtual void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::double_barreled_weapon_core_reload_state> >::create_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, class vostok::mutable_buffer)"
+    },
+    {
+      "pct": 99.99671,
+      "fn": "private: virtual void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::double_barreled_weapon_core_show_state> >::create_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, class vostok::mutable_buffer)"
+    },
+    {
+      "pct": 99.99671,
+      "fn": "private: virtual void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::pistol_weapon_core_aimed_fire_state> >::create_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, class vostok::mutable_buffer)"
+    },
+    {
+      "pct": 99.99671,
+      "fn": "private: virtual void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::pistol_weapon_core_fire_state> >::create_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, class vostok::mutable_buffer)"
+    },
+    {
+      "pct": 99.99671,
+      "fn": "private: virtual void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::pistol_weapon_core_hide_state> >::create_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, class vostok::mutable_buffer)"
+    },
+    {
+      "pct": 99.99671,
+      "fn": "private: virtual void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::pistol_weapon_core_reload_state> >::create_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, class vostok::mutable_buffer)"
+    },
+    {
+      "pct": 99.99671,
+      "fn": "private: virtual void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::pistol_weapon_core_show_state> >::create_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, class vostok::mutable_buffer)"
+    },
+    {
+      "pct": 99.99671,
+      "fn": "private: virtual void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_aimed_fire_state> >::create_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, class vostok::mutable_buffer)"
+    },
+    {
+      "pct": 99.99671,
+      "fn": "private: virtual void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_chamber_a_round_aimed_state> >::create_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, class vostok::mutable_buffer)"
+    },
+    {
+      "pct": 99.99671,
+      "fn": "private: virtual void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_chamber_a_round_state> >::create_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, class vostok::mutable_buffer)"
+    },
+    {
+      "pct": 99.99671,
+      "fn": "private: virtual void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_fire_state> >::create_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, class vostok::mutable_buffer)"
+    },
+    {
+      "pct": 99.99671,
+      "fn": "private: virtual void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_hide_state> >::create_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, class vostok::mutable_buffer)"
+    },
+    {
+      "pct": 99.99671,
+      "fn": "private: virtual void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_reload_state> >::create_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, class vostok::mutable_buffer)"
+    },
+    {
+      "pct": 99.99671,
+      "fn": "private: virtual void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_shotgun_reload_finish_substate> >::create_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, class vostok::mutable_buffer)"
+    },
+    {
+      "pct": 99.99671,
+      "fn": "private: virtual void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_shotgun_reload_one_round_substate> >::create_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, class vostok::mutable_buffer)"
+    },
+    {
+      "pct": 99.99671,
+      "fn": "private: virtual void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_shotgun_reload_start_substate> >::create_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, class vostok::mutable_buffer)"
+    },
+    {
+      "pct": 99.99671,
+      "fn": "private: virtual void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_show_state> >::create_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, class vostok::mutable_buffer)"
+    },
+    {
+      "pct": 99.99675,
+      "fn": "private: void __thiscall survarium::game::on_base_resources_created(class vostok::resources::queries_result &)"
+    },
+    {
+      "pct": 99.996765,
+      "fn": "public: virtual void __thiscall vostok::render::stage_lights::debug_render(void)"
+    },
+    {
+      "pct": 99.996864,
+      "fn": "private: void __thiscall vostok::render::skeleton_combined_model_cook::on_material_effects_loaded(class vostok::resources::queries_result &, class vostok::resources::query_result_for_cook *, struct vostok::render::skeleton_combined_cook_data *)"
+    },
+    {
+      "pct": 99.997215,
+      "fn": "public: __thiscall vostok::render::stage_atmosphere::stage_atmosphere(class vostok::render::renderer *, class vostok::render::renderer_context *, enum vostok::render::stage_atmosphere::stage_type)"
+    },
+    {
+      "pct": 99.99731,
+      "fn": "public: __thiscall vostok::render::stage_volume_fog::stage_volume_fog(class vostok::render::renderer *, class vostok::render::renderer_context *)"
+    },
+    {
+      "pct": 99.99742,
+      "fn": "public: virtual void __thiscall vostok::render::shader_binary_source_cook::create_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, class vostok::mutable_buffer)"
+    },
+    {
+      "pct": 99.997444,
+      "fn": "protected: void __thiscall vostok::render::render_model_cook::finish_model_creation(class vostok::resources::queries_result &, struct vostok::render::cook_intermediate_data *)"
+    },
+    {
+      "pct": 99.99779,
+      "fn": "private: void __thiscall survarium::player_cook::on_config_loaded(class vostok::resources::queries_result &)"
+    },
+    {
+      "pct": 99.99825,
+      "fn": "public: virtual void __thiscall vostok::render::grass_cook::translate_query(class vostok::resources::query_result_for_cook &)"
+    },
+    {
+      "pct": 99.99859,
+      "fn": "public: __thiscall vostok::render::stage_clouds::stage_clouds(class vostok::render::renderer *, struct vostok::render::cloud_interp_textures &, class vostok::render::cloud_simulation &, class vostok::render::renderer_context *)"
+    },
+    {
+      "pct": 99.99874,
+      "fn": "public: void __thiscall vostok::render::material_effects_instance_cook::on_effect_ready(class vostok::resources::queries_result &, struct vostok::render::material_effects_instance_cook_data *)"
+    },
+    {
+      "pct": 99.99906,
+      "fn": "private: void __thiscall vostok::render::renderer_context_targets::create_targets(class vostok::math::uint2, bool)"
+    },
+    {
+      "pct": 99.999084,
+      "fn": "private: void __thiscall vostok::render::stage_postprocess::advanced_bloom(void)"
+    },
+    {
+      "pct": 99.999275,
+      "fn": "public: void __thiscall vostok::engine::engine_world::finalize(void)"
+    },
+    {
+      "pct": 99.99934,
+      "fn": "public: __thiscall vostok::render::stage_lights::stage_lights(class vostok::render::renderer *, class vostok::render::renderer_context *, bool)"
+    },
+    {
+      "pct": 99.999435,
+      "fn": "private: void __thiscall survarium::project_cooker_simple::create_game_objects(class vostok::resources::resource_ptr<class vostok::configs::binary_config, class vostok::resources::unmanaged_intrusive_base>, class vostok::resources::query_result_for_cook *)"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "label": "v0.11c-build870",
+  "source": "https://archive.org/download/vostok_engine_v0.1_build_870_internal_id_504_may_24_2013/survarium_alpha_setup_v0.1.1c.exe",
+  "engine_path": "c:/survarium/sources",
+  "aligned_to": "v0.10b-build802",
+  "exe": {
+    "name": "survarium.exe",
+    "size": 12389888,
+    "sha256": "7ba590edeeb2efe99fac73d433266d6ff9806c2db04707402feb745afa1d6ee4"
+  },
+  "pdb": {
+    "name": "survarium.pdb",
+    "size": 102476800,
+    "sha256": "28d6fc22ca895bc789db564b11ec4b7e55e5d119f3a9593c16a4549297f17e59"
+  },
+  "n_objects": 1988,
+  "release": "0.11c",
+  "binary_version": "0.1.1c",
+  "ingested_at": "2026-06-07T22:53:59",
+  "artifact_verification": "verified-release-bundle"
+}

@@ -89,14 +89,7 @@ def counts(rows: list[dict]) -> dict:
 
 
 def expected_pdb_hash(entry: dict) -> str | None:
-    snapshot = c.REPO_DIR / "reports/2026-06"
-    historical = json.loads((snapshot / "provenance/versions.json").read_text())
-    original = next((v for v in historical
-                     if v["build"] == entry.get("build") and v["url"] == entry.get("url")), None)
-    if original is None:
-        return None
-    meta = snapshot / "versions" / original["label"] / "meta.json"
-    return json.loads(meta.read_text())["pdb"]["sha256"] if meta.exists() else None
+    return entry.get("pdb", {}).get("sha256")
 
 
 def write_pair(output: Path, base: str, target: str, rows: list[dict]) -> dict:
@@ -186,7 +179,7 @@ def main() -> None:
         digest = c.sha256_file(pdb)
         expected = expected_pdb_hash(entry)
         if expected and digest != expected:
-            sys.exit(f"error: PDB hash does not match preserved metadata for {label}: {pdb}")
+            sys.exit(f"error: PDB hash does not match catalog metadata for {label}: {pdb}")
         prefix = entry["engine_path"]
         c.log("sources", f"reading every checksum under {prefix}: {label}")
         result = subprocess.run([args.tool, "--target-pdb", str(pdb), "--target-engine-path", prefix,
@@ -198,7 +191,7 @@ def main() -> None:
         table_path = output / "builds" / f"{label}.tsv"
         table_path.write_text(table)
         builds[label] = {"pdb_path": str(pdb), "pdb_sha256": digest,
-                         "matches_preserved_pdb": digest == expected if expected else None,
+                         "matches_catalog_pdb": digest == expected if expected else None,
                          "catalog_entry": entry, "source_root": prefix,
                          "records": len(records), "algorithms": dict(Counter(r["algorithm"] for r in records.values())),
                          "engine_records": sum(p.startswith("vostok/") for p in records),
@@ -247,10 +240,10 @@ def main() -> None:
         md.append(f"| {pair['base']} → {pair['target']} | " + " | ".join(
             str(pair[k]["changed"]) for k in ("engine_source", "engine_header", "engine_other", "third_party")) + " |")
     md += ["", "## Per-build checksum coverage", "",
-           "| Build | All files | Engine files | Checksum kinds | Matches historical PDB SHA-256 |",
+          "| Build | All files | Engine files | Checksum kinds | Matches catalog PDB SHA-256 |",
            "| --- | ---: | ---: | --- | --- |"]
     for label, build in builds.items():
-        verified = {True: "yes", False: "no", None: "no historical reference"}[build["matches_preserved_pdb"]]
+        verified = {True: "yes", False: "no", None: "no catalog reference"}[build["matches_catalog_pdb"]]
         md.append(f"| [{label}]({build['table']}) | {build['records']} | {build['engine_records']} | "
                   f"{', '.join(build['algorithms'])} | {verified} |")
     if manifest["unselected_builds"]:

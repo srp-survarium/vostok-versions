@@ -28,9 +28,9 @@ class WorkflowTests(unittest.TestCase):
         self.root = Path(self.tmp.name)
         self.catalog = self.root / 'catalog'
         self.catalog.mkdir()
-        self.versions = self.root / 'work/versions'
-        self.reports = self.root / 'work/reports'
-        self.diffs = self.root / 'work/diffs'
+        self.versions = self.root / '.generated/builds'
+        self.reports = self.root / '.generated/analysis'
+        self.diffs = self.root / '.generated/comparisons'
         self.entries = [{'label': label, 'build': i} for i, label in enumerate(['a', 'b', 'c'])]
         (self.catalog / 'versions.json').write_text(json.dumps(self.entries))
         (self.catalog / 'chain.json').write_text(json.dumps({'base': 'a', 'versions': ['a', 'b', 'c']}))
@@ -170,7 +170,7 @@ class WorkflowTests(unittest.TestCase):
             cr.ensure_report('a', 'b')
             run.assert_called_once()
 
-    def test_diff_writes_provenance_and_only_work_outputs(self):
+    def test_diff_writes_provenance_and_only_generated_outputs(self):
         self.ingest_fixture('a')
         self.ingest_fixture('b')
         def run(args, **kwargs):

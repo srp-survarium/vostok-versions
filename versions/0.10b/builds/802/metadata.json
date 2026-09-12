@@ -1,0 +1,21 @@
+{
+  "label": "v0.10b-build802",
+  "source": "https://archive.org/download/vostok_engine_v0.1_build_802_internal_id_489_may_9_2013/survarium_setup_v0100b.exe",
+  "engine_path": "c:/survarium/sources",
+  "aligned_to": null,
+  "exe": {
+    "name": "survarium.exe",
+    "size": 12235264,
+    "sha256": "6cde21fac0fc508c140814c83d8a9d0158c0bff8f99c322cd7454c3d3103f737"
+  },
+  "pdb": {
+    "name": "survarium.pdb",
+    "size": 101673984,
+    "sha256": "0ffe85c27f8b95f23a65d91866af3384ab24ca343b3865a57f71a08902d5a238"
+  },
+  "n_objects": 1995,
+  "release": "0.10b",
+  "binary_version": "0.10b",
+  "ingested_at": "2026-06-07T22:29:51",
+  "artifact_verification": "verified-release-bundle"
+}

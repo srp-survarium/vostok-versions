@@ -11,7 +11,7 @@
 # build at a time and deletes it after zipping, so peak disk ≈ output + one build.
 set -euo pipefail
 SRC=$(realpath -- "${1:?usage: package_builds.sh <source-archive> [out-dir]}")
-OUT=${2:-./survarium-uploads}
+OUT=${2:-./.generated/packages}
 WORK=$(mktemp -d)
 trap 'rm -rf "$WORK"' EXIT
 mkdir -p "$OUT"

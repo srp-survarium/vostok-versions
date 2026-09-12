@@ -1,29 +1,12 @@
-# Extracted installers: survarium.exe (tens of MB) + survarium.pdb (hundreds of MB).
-cache/
+# Downloads and all regenerated analysis state.
+/.generated/
 
-# All downloads and analysis output from the maintained workflow.
-/work/
-
-# Repackaged full builds staged for archive.org upload (tens of GB) - output of
-# scripts/package_builds.sh. Never committed.
-survarium-uploads/
-
-# Raw installers dropped into the repo.
+# Local packaging inputs.
 /installers/
 *.exe
 !scripts/**
 
+# Python tooling.
 __pycache__/
 *.pyc
 .ruff_cache/
-
-# Delinked objects + structure stubs: large and deterministically
-# regenerable from the pinned installers (flake + vostok-delinker), so the
-# repo keeps the lean ledger (meta, symbol-map, diffs) and not the objects.
-versions/*/objects/
-versions/*/structure/
-
-# Heavy/regenerable diff artifacts; keep the distilled summary.{md,json}.
-diffs/*/objdiff.json
-diffs/*/report.json
-diffs/*/dummy.obj

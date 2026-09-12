@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Report dependency markers from cataloged executables into work/reports/.
+"""Report dependency markers into .generated/analysis/.
 
 String/RTTI matches are observations, not proof of linked libraries or parsed
 imports. Version-looking atoms are candidates; declared source versions remain
-separate. Historical commentary lives in observations/ and reports/2026-06/.
+separate. Published cross-version evidence lives in versions/dependencies.md.
 """
 from __future__ import annotations
 
@@ -201,7 +201,7 @@ def main() -> None:
           "observed in the selected files. A missing marker is not proof of absence. "
           "DLL-name strings are not a parsed PE import table.", "",
           "Declared source versions are recorded separately in the JSON evidence. "
-          "Historical interpretations and the manually recorded 25-build sweep are in observations/.", "",
+          "Published interpretations and the manually recorded 25-build sweep are in versions/dependencies.md.", "",
           "| Dependency | " + " | ".join(scans) + " |",
           "| --- | " + " | ".join("---" for _ in scans) + " |"]
     rules = json.loads(MARKER_PATH.read_text())["rules"]

@@ -1,0 +1,988 @@
+{
+  "base": "v0.10b-build802",
+  "target": "v0.11a-build816",
+  "scope": {
+    "generated": false,
+    "third_party": false
+  },
+  "counts": {
+    "identical": {
+      "engine": 12280,
+      "generated": 1444,
+      "third_party": 10528
+    },
+    "changed": {
+      "engine": 393,
+      "generated": 14,
+      "third_party": 12
+    },
+    "new": {
+      "engine": 174,
+      "generated": 103,
+      "third_party": 473
+    }
+  },
+  "removed_units": {
+    "engine": [
+      "vostok/core_debug_engine.h",
+      "vostok/detail_noncopyable.h",
+      "vostok/network/sources/functor_response.h",
+      "vostok/sound/sources/sound_rms.cpp",
+      "vostok/sound/sources/sound_rms_cook.cpp"
+    ],
+    "third_party": [
+      "boost/noncopyable.hpp",
+      "bullet/bulletcollision/broadphasecollision/btbroadphaseinterface.h"
+    ]
+  },
+  "top_changed": [
+    {
+      "pct": 12.0,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float4_pod,1>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 12.0,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float4_pod,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 12.0,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float3_pod,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 12.0,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<float,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 12.0,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float4_pod,1>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 12.0,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float4_pod,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 12.0,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float3_pod,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 12.0,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<float,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 12.0,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float4_pod,1>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 12.0,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float4_pod,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 12.0,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float3_pod,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 12.0,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<float,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 21.120878,
+      "unit": "vostok/game_core/sources/weapon_core_aimed_fire_state_base.cpp",
+      "fn": "protected: virtual void __thiscall survarium::weapon_core_aimed_fire_state_base::initialize(void)"
+    },
+    {
+      "pct": 28.2,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float4_pod,1>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 28.2,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float4_pod,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 28.2,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float3_pod,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 28.2,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<float,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 28.2,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float4_pod,1>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 28.2,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float4_pod,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 28.2,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float3_pod,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 28.2,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<float,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 28.2,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float4_pod,1>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 28.2,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float4_pod,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 28.2,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float3_pod,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 28.2,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<float,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 39.68182,
+      "unit": "vostok/game_core/sources/weapon_core_aimed_fire_state_base.cpp",
+      "fn": "protected: virtual void __thiscall survarium::weapon_core_aimed_fire_state_base::finalize(void)"
+    },
+    {
+      "pct": 40.127518,
+      "unit": "vostok/game/sources/swf_input_translator.cpp",
+      "fn": "public: bool __thiscall survarium::swf_input_translator::process_keyboard(struct vostok::input::world *, enum vostok::input::enum_keyboard, enum vostok::input::enum_keyboard_action, struct survarium::flash_movie *, unsigned int)"
+    },
+    {
+      "pct": 40.6,
+      "unit": "vostok/game_core/sources/weapon_core_aimed_fire_state_base.cpp",
+      "fn": "private: virtual void __thiscall survarium::weapon_core_aimed_fire_state_base::on_animation_end_impl(bool &)"
+    },
+    {
+      "pct": 40.6,
+      "unit": "vostok/game_core/sources/weapon_core_fire_state_base.cpp",
+      "fn": "protected: virtual void __thiscall survarium::weapon_core_fire_state_base::on_animation_end_impl(bool &)"
+    },
+    {
+      "pct": 48.57143,
+      "unit": "vostok/game_core/sources/weapon_core_idle_state_base.cpp",
+      "fn": "private: virtual void __thiscall survarium::weapon_core_idle_state_base::finalize(void)"
+    },
+    {
+      "pct": 51.733334,
+      "unit": "vostok/game_core/sources/weapon_core_fire_state_base.cpp",
+      "fn": "protected: virtual void __thiscall survarium::weapon_core_fire_state_base::finalize(void)"
+    },
+    {
+      "pct": 59.612904,
+      "unit": "vostok/game_core/sources/weapon_core_shotgun_reload_state.cpp",
+      "fn": "private: void __thiscall survarium::weapon_core_shotgun_reload_state::initialize_logic(class survarium::weapon_core_shotgun_reload_base_substate *, class survarium::weapon_core_shotgun_reload_base_substate *, class survarium::weapon_core_shotgun_reload_base_substate *)"
+    },
+    {
+      "pct": 59.9,
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "public: virtual void __thiscall survarium::weapon_core::instant_aim_start(void)"
+    },
+    {
+      "pct": 60.0,
+      "unit": "vostok/game_core/sources/weapon_core_hide_state_base.cpp",
+      "fn": "protected: virtual void __thiscall survarium::weapon_core_hide_state_base::finalize(void)"
+    },
+    {
+      "pct": 60.0,
+      "unit": "vostok/game_core/sources/weapon_core_show_state_base.cpp",
+      "fn": "protected: virtual void __thiscall survarium::weapon_core_show_state_base::finalize(void)"
+    },
+    {
+      "pct": 65.95349,
+      "unit": "vostok/game/sources/weapon.cpp",
+      "fn": "private: virtual void __thiscall survarium::weapon::deactivate(void)"
+    },
+    {
+      "pct": 65.95744,
+      "unit": "vostok/game_core/sources/weapon_core_shotgun_reload_finish_substate.cpp",
+      "fn": "private: enum vostok::animation::callback_return_type_enum __thiscall survarium::weapon_core_shotgun_reload_finish_substate::on_animation_end(struct vostok::animation::animation_callback_params &)"
+    },
+    {
+      "pct": 65.97591,
+      "unit": "vostok/game_core/sources/weapon_core_fire_state_base.cpp",
+      "fn": "protected: virtual void __thiscall survarium::weapon_core_fire_state_base::initialize(void)"
+    },
+    {
+      "pct": 67.045456,
+      "unit": "vostok/game_core/game_net_defines.h",
+      "fn": "public: __thiscall survarium::player_profile::player_profile(void)"
+    },
+    {
+      "pct": 69.82491,
+      "unit": "vostok/game/sources/lobby_menu_ui.cpp",
+      "fn": "public: virtual void __thiscall survarium::relocate_item_func::call(struct survarium::flash_function_handler_params &)"
+    },
+    {
+      "pct": 70.0,
+      "unit": "vostok/game_core/sources/weapon_core_hide_state_base.cpp",
+      "fn": "protected: virtual void __thiscall survarium::weapon_core_hide_state_base::initialize(void)"
+    },
+    {
+      "pct": 70.0,
+      "unit": "vostok/game_core/sources/weapon_core_show_state_base.cpp",
+      "fn": "protected: virtual void __thiscall survarium::weapon_core_show_state_base::initialize(void)"
+    },
+    {
+      "pct": 70.888885,
+      "unit": "vostok/sound/sources/single_sound_cook.cpp",
+      "fn": "private: void __thiscall vostok::sound::single_sound_cook::on_sub_resources_loaded(class vostok::resources::queries_result &)"
+    },
+    {
+      "pct": 70.92308,
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "public: void __thiscall survarium::weapon_core::instant_idle_start(void)"
+    },
+    {
+      "pct": 71.111115,
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "public: virtual void __thiscall survarium::weapon_core::instant_aim_end(void)"
+    },
+    {
+      "pct": 73.207794,
+      "unit": "vostok/game_core/sources/weapon_core_shotgun_reload_state.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_core_shotgun_reload_state::finish_reload_predicate(void) const"
+    },
+    {
+      "pct": 76.91443,
+      "unit": "vostok/render/engine/sources/lights_db.cpp",
+      "fn": "vostok::render::fill_light"
+    },
+    {
+      "pct": 80.29695,
+      "unit": "vostok/render/engine/sources/register_samplers.cpp",
+      "fn": "void __cdecl vostok::render::register_samplers(void)"
+    },
+    {
+      "pct": 80.35714,
+      "unit": "vostok/network/sources/match_client.cpp",
+      "fn": "private: void __thiscall vostok::network::match_client::on_packet_received_impl(unsigned char, class vostok::network_core::packet_reader &)"
+    },
+    {
+      "pct": 80.69822,
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "private: void __thiscall survarium::weapon_core::initialize_weapon_logic(class vostok::resources::resource_ptr<class survarium::weapon_core_base_state, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::resources::resource_ptr<class survarium::weapon_core_base_state, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::resources::resource_ptr<class survarium::weapon_core_base_state, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::resources::resource_ptr<class survarium::weapon_core_base_state, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::resources::resource_ptr<class survarium::weapon_core_base_state, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::resources::resource_ptr<class survarium::weapon_core_base_state, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::resources::resource_ptr<class survarium::weapon_core_base_state, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::resources::resource_ptr<class survarium::weapon_core_base_state, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::resources::resource_ptr<class survarium::weapon_core_base_state, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::resources::resource_ptr<class survarium::weapon_core_base_state, class vostok::resources::unmanaged_intrusive_base> const &)"
+    }
+  ],
+  "new_or_rewritten": [
+    {
+      "unit": "vostok/ai/npc.h",
+      "fn": "public: __thiscall vostok::ai::brain_unit_cook_params::~brain_unit_cook_params(void)"
+    },
+    {
+      "unit": "vostok/ai/sources/enemy_target_selector.h",
+      "fn": "public: virtual __thiscall vostok::ai::selectors::enemy_target_selector::~enemy_target_selector(void)"
+    },
+    {
+      "unit": "vostok/ai/sources/weapon_target_selector.h",
+      "fn": "public: virtual __thiscall vostok::ai::selectors::enemy_target_selector::~enemy_target_selector(void)"
+    },
+    {
+      "unit": "vostok/animation/mixing_animation_lexeme_parameters_inline.h",
+      "fn": "public: __thiscall vostok::animation::mixing::animation_interval::~animation_interval(void)"
+    },
+    {
+      "unit": "vostok/buffer_string_inline.h",
+      "fn": "public: __thiscall vostok::animation::mixing::animation_interval::~animation_interval(void)"
+    },
+    {
+      "unit": "vostok/buffer_string_inline.h",
+      "fn": "vec_begin"
+    },
+    {
+      "unit": "vostok/buffer_string_inline.h",
+      "fn": "vec_begin"
+    },
+    {
+      "unit": "vostok/buffer_string_inline.h",
+      "fn": "vec_begin"
+    },
+    {
+      "unit": "vostok/buffer_string_inline.h",
+      "fn": "vec_begin"
+    },
+    {
+      "unit": "vostok/buffer_string_inline.h",
+      "fn": "vec_begin"
+    },
+    {
+      "unit": "vostok/buffer_string_inline.h",
+      "fn": "vec_begin"
+    },
+    {
+      "unit": "vostok/buffer_string_inline.h",
+      "fn": "vec_begin"
+    },
+    {
+      "unit": "vostok/buffer_string_inline.h",
+      "fn": "vec_begin"
+    },
+    {
+      "unit": "vostok/buffer_string_inline.h",
+      "fn": "vec_begin"
+    },
+    {
+      "unit": "vostok/buffer_vector_inline.h",
+      "fn": "public: __thiscall vostok::ai::planning::plan_tracker::~plan_tracker(void)"
+    },
+    {
+      "unit": "vostok/c_array_functions.h",
+      "fn": "public: virtual __thiscall survarium::inventory_cook::~inventory_cook(void)"
+    },
+    {
+      "unit": "vostok/configs_binary_config_value_inline.h",
+      "fn": "public: __thiscall survarium::game_scene::~game_scene(void)"
+    },
+    {
+      "unit": "vostok/configs_binary_config_value_inline.h",
+      "fn": "public: __thiscall survarium::game_scene::~game_scene(void)"
+    },
+    {
+      "unit": "vostok/configs_binary_config_value_inline.h",
+      "fn": "public: __thiscall survarium::game_scene::~game_scene(void)"
+    },
+    {
+      "unit": "vostok/configs_binary_config_value_inline.h",
+      "fn": "public: __thiscall survarium::game_scene::~game_scene(void)"
+    },
+    {
+      "unit": "vostok/configs_binary_config_value_inline.h",
+      "fn": "public: __thiscall survarium::game_scene::~game_scene(void)"
+    },
+    {
+      "unit": "vostok/configs_binary_config_value_inline.h",
+      "fn": "public: __thiscall survarium::game_scene::~game_scene(void)"
+    },
+    {
+      "unit": "vostok/console_command.h",
+      "fn": "public: virtual __thiscall vostok::console_commands::cc_u32::~cc_u32(void)"
+    },
+    {
+      "unit": "vostok/console_command.h",
+      "fn": "public: virtual __thiscall vostok::console_commands::cc_u32::~cc_u32(void)"
+    },
+    {
+      "unit": "vostok/core/engine.h",
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::render::material, class vostok::resources::unmanaged_intrusive_base>::~resource_ptr<class vostok::render::material, class vostok::resources::unmanaged_intrusive_base>(void)"
+    },
+    {
+      "unit": "vostok/core/engine.h",
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::render::material, class vostok::resources::unmanaged_intrusive_base>::~resource_ptr<class vostok::render::material, class vostok::resources::unmanaged_intrusive_base>(void)"
+    },
+    {
+      "unit": "vostok/fs/virtual_path_string.h",
+      "fn": "public: __thiscall vostok::vfs::query_mount_arguments::~query_mount_arguments(void)"
+    },
+    {
+      "unit": "vostok/fs/virtual_path_string.h",
+      "fn": "public: class vostok::vfs::query_mount_arguments & __thiscall vostok::vfs::query_mount_arguments::operator=(class vostok::vfs::query_mount_arguments const &)"
+    },
+    {
+      "unit": "vostok/game/sources/game_world.h",
+      "fn": "public: virtual __thiscall survarium::inventory_cook::~inventory_cook(void)"
+    },
+    {
+      "unit": "vostok/game/sources/game_world.h",
+      "fn": "public: virtual __thiscall survarium::inventory_cook::~inventory_cook(void)"
+    },
+    {
+      "unit": "vostok/game/sources/game_world.h",
+      "fn": "public: virtual __thiscall survarium::inventory_cook::~inventory_cook(void)"
+    },
+    {
+      "unit": "vostok/game/sources/swf_input_translator.cpp",
+      "fn": "protected: void __thiscall survarium::swf_input_translator::register_char_bind(enum vostok::input::enum_keyboard, int, bool, bool)"
+    },
+    {
+      "unit": "vostok/game/sources/swf_input_translator.cpp",
+      "fn": "protected: void __thiscall survarium::swf_input_translator::register_char_bind(enum vostok::input::enum_keyboard, wchar_t, wchar_t, int, bool, bool)"
+    },
+    {
+      "unit": "vostok/game/sources/swf_input_translator.cpp",
+      "fn": "protected: wchar_t __thiscall survarium::swf_input_translator::translate_key_action(struct vostok::input::world *, bool, bool, struct survarium::dik_to_swf_bind &)"
+    },
+    {
+      "unit": "vostok/game/sources/weapon.cpp",
+      "fn": "private: virtual void __thiscall survarium::weapon::on_fire_state_end(void)"
+    },
+    {
+      "unit": "vostok/game/sources/weapon.cpp",
+      "fn": "private: virtual void __thiscall survarium::weapon::on_fire_state_start(void)"
+    },
+    {
+      "unit": "vostok/game/sources/weapon.cpp",
+      "fn": "private: void __thiscall survarium::weapon::add_weapon_fire_light(void)"
+    },
+    {
+      "unit": "vostok/game/sources/weapon.cpp",
+      "fn": "private: void __thiscall survarium::weapon::remove_weapon_fire_light(void)"
+    },
+    {
+      "unit": "vostok/game_core/base_project.h",
+      "fn": "public: __thiscall survarium::vector<class vostok::variant<32> const *>::~vector<class vostok::variant<32> const *>(void)"
+    },
+    {
+      "unit": "vostok/game_core/base_project.h",
+      "fn": "public: __thiscall survarium::vector<class vostok::variant<32> const *>::~vector<class vostok::variant<32> const *>(void)"
+    },
+    {
+      "unit": "vostok/game_core/inventory_item.h",
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::render::material, class vostok::resources::unmanaged_intrusive_base>::~resource_ptr<class vostok::render::material, class vostok::resources::unmanaged_intrusive_base>(void)"
+    },
+    {
+      "unit": "vostok/game_core/inventory_item.h",
+      "fn": "public: virtual void __thiscall survarium::game_camera::on_focus(bool)"
+    },
+    {
+      "unit": "vostok/game_core/inventory_item.h",
+      "fn": "public: virtual void __thiscall survarium::game_camera::on_focus(bool)"
+    },
+    {
+      "unit": "vostok/game_core/inventory_item.h",
+      "fn": "public: virtual void __thiscall survarium::game_camera::on_focus(bool)"
+    },
+    {
+      "unit": "vostok/game_core/items_dictionary_cook.h",
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::render::material, class vostok::resources::unmanaged_intrusive_base>::~resource_ptr<class vostok::render::material, class vostok::resources::unmanaged_intrusive_base>(void)"
+    },
+    {
+      "unit": "vostok/game_core/items_dictionary_cook.h",
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::render::material, class vostok::resources::unmanaged_intrusive_base>::~resource_ptr<class vostok::render::material, class vostok::resources::unmanaged_intrusive_base>(void)"
+    },
+    {
+      "unit": "vostok/game_core/sources/base_player.cpp",
+      "fn": "public: virtual void __thiscall survarium::base_player::on_fire(void)"
+    },
+    {
+      "unit": "vostok/game_core/sources/character_dispersion_calculator.cpp",
+      "fn": "private: float __thiscall survarium::character_dispersion_calculator::get_skill_coef(enum survarium::weapon_user_state_enum, bool, bool) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/character_dispersion_calculator.cpp",
+      "fn": "public: void __thiscall survarium::character_dispersion_calculator::set_character_dispersion_skill_influence(struct survarium::character_dispersion_skill_influence const *)"
+    },
+    {
+      "unit": "vostok/game_core/sources/character_dispersion_skill_influence.cpp",
+      "fn": "public: __thiscall survarium::character_dispersion_skill_influence::character_dispersion_skill_influence(void)"
+    },
+    {
+      "unit": "vostok/game_core/sources/character_dispersion_skill_influence.cpp",
+      "fn": "public: void __thiscall survarium::character_dispersion_skill_influence::load(class vostok::configs::binary_config_value const &)"
+    },
+    {
+      "unit": "vostok/game_core/sources/damage_model.cpp",
+      "fn": "public: void __thiscall survarium::damage_model::reset(unsigned int)"
+    },
+    {
+      "unit": "vostok/game_core/sources/player_logic_sprint_state.h",
+      "fn": "public: virtual __thiscall survarium::player_logic_sprint_state::~player_logic_sprint_state(void)"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_core::AE_pred(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_core::AE_pred(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_core::aimed_fire_AE_pred(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_core::aimed_fire_pred(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_core::aimed_fire_transfer_pred(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_core::aimed_idle_AE_not_fire_pred(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_core::aimed_idle_AE_pred(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_core::aimed_idle_transfer_pred(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_core::auto_reload_AE_not_fire_pred(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_core::auto_reload_AE_pred(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_core::can_reload(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_core::chamber_a_round_AE_pred(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_core::chamber_a_round_aimed_AE_pred(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_core::chamber_a_round_aimed_pred(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_core::chamber_a_round_aimed_transfer_pred(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_core::chamber_a_round_on_reload_break_pred(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_core::chamber_a_round_pred(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_core::chamber_a_round_transfer_pred(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_core::fire_AE_pred(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_core::fire_pred(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_core::fire_transfer_pred(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_core::hide_AE_pred(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_core::hide_pred(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_core::idle_AE_not_fire_pred(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_core::idle_AE_or_reload_break_pred(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_core::idle_transfer_pred(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_core::inactive_pred(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_core::is_aiming(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_core::is_aiming_and_will_not_break(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_core::is_trying_to_reload(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_core::not_inactive_pred(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_core::reload_AE_pred(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_core::reload_pred(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "private: void __thiscall survarium::weapon_core::check_for_fire_mode_or_ammunition_or_fire_queue_resetting(void)"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "private: void __thiscall survarium::weapon_core::check_for_forcing_not_to_aim(void)"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "private: void __thiscall survarium::weapon_core::check_for_no_ammo_message(void)"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "private: void __thiscall survarium::weapon_core::check_for_sprint_transition(void)"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "public: bool __thiscall survarium::weapon_core::can_jump(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "public: bool __thiscall survarium::weapon_core::can_sprint(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "public: bool __thiscall survarium::weapon_core::is_chambering_a_round(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "public: bool __thiscall survarium::weapon_core::is_firing(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "public: bool __thiscall survarium::weapon_core::is_idle(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "public: bool __thiscall survarium::weapon_core::is_reloading(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "public: bool __thiscall survarium::weapon_core::tick_in_cycle_fire(bool) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "public: virtual void __thiscall survarium::weapon_core::tick(void)"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core_base_state.cpp",
+      "fn": "protected: __thiscall survarium::weapon_core_base_state::weapon_core_base_state(class survarium::weapon_core &, bool, enum survarium::weapon_state_id_enum)"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core_shotgun_reload_finish_substate.cpp",
+      "fn": "protected: virtual void __thiscall survarium::weapon_core_shotgun_reload_finish_substate::finalize(void)"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_core_shotgun_reload_state.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_core_shotgun_reload_state::player_wants_to_fire_predicate(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_user_animations_selector.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_user_animations_selector::is_trying_to_jump(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_user_animations_selector.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_user_animations_selector::is_trying_to_sprint(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_user_animations_selector.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_user_animations_selector::is_weapon_allowing_to_jump(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_user_animations_selector.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_user_animations_selector::is_weapon_allowing_to_sprint(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_user_animations_selector.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_user_animations_selector::jump_predicate(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_user_animations_selector.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_user_animations_selector::not_sprint_predicate(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_user_animations_selector.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_user_animations_selector::sprint_predicate(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_user_animations_selector.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_user_animations_selector::stand_from_crouch_predicate(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_user_animations_selector.cpp",
+      "fn": "public: bool __thiscall survarium::weapon_user_animations_selector::is_crouching(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_user_animations_selector.cpp",
+      "fn": "public: bool __thiscall survarium::weapon_user_animations_selector::is_going_to_jump(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_user_animations_selector.cpp",
+      "fn": "public: bool __thiscall survarium::weapon_user_animations_selector::is_going_to_sprint(void) const"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_user_animations_selector.cpp",
+      "fn": "public: void __thiscall survarium::weapon_user_animations_selector::on_sprint_start(void)"
+    },
+    {
+      "unit": "vostok/game_core/sources/weapon_user_animations_selector.cpp",
+      "fn": "survarium::true_predicate"
+    },
+    {
+      "unit": "vostok/game_core/weapon_core.h",
+      "fn": "private: virtual void __thiscall survarium::medkit::tick(void)"
+    },
+    {
+      "unit": "vostok/game_core/weapon_core.h",
+      "fn": "public: bool __thiscall survarium::weapon_core::ready_to_fire(void) const"
+    },
+    {
+      "unit": "vostok/input/sources/receiver_keyboard.cpp",
+      "fn": "public: virtual bool __thiscall vostok::input::receiver::keyboard::get_scan_unicode(int, wchar_t *, unsigned int) const"
+    },
+    {
+      "unit": "vostok/input/sources/receiver_keyboard_win.cpp",
+      "fn": "public: virtual bool __thiscall vostok::input::receiver::keyboard::caps_lock_state(void) const"
+    },
+    {
+      "unit": "vostok/intrusive_ptr_inline.h",
+      "fn": "public: __thiscall vostok::intrusive_ptr<class vostok::sound::encoded_sound_interface, class vostok::resources::unmanaged_intrusive_base, class vostok::threading::simple_lock>::intrusive_ptr<class vostok::sound::encoded_sound_interface, class vostok::resources::unmanaged_intrusive_base, class vostok::threading::simple_lock>(class vostok::sound::encoded_sound_interface *)"
+    },
+    {
+      "unit": "vostok/intrusive_ptr_inline.h",
+      "fn": "public: __thiscall vostok::render::stage_lights::lights_instance::lights_instance(void)"
+    },
+    {
+      "unit": "vostok/intrusive_ptr_inline.h",
+      "fn": "public: __thiscall vostok::render::stage_lights::lights_instance::lights_instance(void)"
+    },
+    {
+      "unit": "vostok/intrusive_ptr_inline.h",
+      "fn": "public: __thiscall vostok::render::stage_lights::lights_instance::lights_instance(void)"
+    },
+    {
+      "unit": "vostok/intrusive_ptr_inline.h",
+      "fn": "public: __thiscall vostok::render::stage_lights::lights_instance::lights_instance(void)"
+    },
+    {
+      "unit": "vostok/intrusive_ptr_inline.h",
+      "fn": "public: __thiscall vostok::render::stage_lights::lights_instance::lights_instance(void)"
+    },
+    {
+      "unit": "vostok/intrusive_ptr_inline.h",
+      "fn": "public: __thiscall vostok::render::stage_lights::lights_instance::lights_instance(void)"
+    },
+    {
+      "unit": "vostok/intrusive_ptr_inline.h",
+      "fn": "public: __thiscall vostok::render::stage_lights::lights_instance::lights_instance(void)"
+    },
+    {
+      "unit": "vostok/intrusive_ptr_inline.h",
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base>::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base>(class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const &)"
+    },
+    {
+      "unit": "vostok/intrusive_ptr_inline.h",
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base>::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base>(class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const &)"
+    },
+    {
+      "unit": "vostok/intrusive_ptr_inline.h",
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>(class vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base> const &)"
+    },
+    {
+      "unit": "vostok/intrusive_ptr_inline.h",
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>(class vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base> const &)"
+    },
+    {
+      "unit": "vostok/intrusive_ptr_inline.h",
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>(class vostok::resources::unmanaged_resource *)"
+    },
+    {
+      "unit": "vostok/intrusive_ptr_inline.h",
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>(class vostok::resources::unmanaged_resource *)"
+    },
+    {
+      "unit": "vostok/intrusive_ptr_inline.h",
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>::~resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>(void)"
+    },
+    {
+      "unit": "vostok/intrusive_ptr_inline.h",
+      "fn": "public: class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> & __thiscall vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base>::operator=(class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const &)"
+    },
+    {
+      "unit": "vostok/intrusive_ptr_inline.h",
+      "fn": "public: class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> & __thiscall vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base>::operator=(class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const &)"
+    },
+    {
+      "unit": "vostok/math_float2_inline.h",
+      "fn": "public: __thiscall vostok::render::box_geometry::~box_geometry(void)"
+    },
+    {
+      "unit": "vostok/math_float3_inline.h",
+      "fn": "public: __thiscall vostok::math::float3::float3(void)"
+    },
+    {
+      "unit": "vostok/math_float3_inline.h",
+      "fn": "public: __thiscall vostok::math::float3::float3(void)"
+    },
+    {
+      "unit": "vostok/math_float3_inline.h",
+      "fn": "public: __thiscall vostok::math::float3::float3(void)"
+    },
+    {
+      "unit": "vostok/math_float3_inline.h",
+      "fn": "public: __thiscall vostok::math::float3::float3(void)"
+    },
+    {
+      "unit": "vostok/math_float4x4_inline.h",
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::render::material, class vostok::resources::unmanaged_intrusive_base>::~resource_ptr<class vostok::render::material, class vostok::resources::unmanaged_intrusive_base>(void)"
+    },
+    {
+      "unit": "vostok/math_float4x4_inline.h",
+      "fn": "public: virtual __thiscall vostok::render::functor_command::~functor_command(void)"
+    },
+    {
+      "unit": "vostok/math_float4x4_inline.h",
+      "fn": "public: virtual __thiscall vostok::render::functor_command::~functor_command(void)"
+    },
+    {
+      "unit": "vostok/math_float4x4_inline.h",
+      "fn": "public: virtual __thiscall vostok::render::functor_command::~functor_command(void)"
+    },
+    {
+      "unit": "vostok/math_float4x4_inline.h",
+      "fn": "public: virtual __thiscall vostok::render::functor_command::~functor_command(void)"
+    },
+    {
+      "unit": "vostok/math_float4x4_inline.h",
+      "fn": "public: virtual __thiscall vostok::render::functor_command::~functor_command(void)"
+    },
+    {
+      "unit": "vostok/math_float4x4_inline.h",
+      "fn": "public: virtual __thiscall vostok::render::functor_command::~functor_command(void)"
+    },
+    {
+      "unit": "vostok/memory_allocator_helper_inline.h",
+      "fn": "public: __thiscall vostok::one_way_threads_channel<class vostok::intrusive_spsc_queue<class vostok::network::order, class vostok::network::order, 4>, class vostok::intrusive_spsc_queue<class vostok::network::order, class vostok::network::order, 4> >::~one_way_threads_channel<class vostok::intrusive_spsc_queue<class vostok::network::order, class vostok::network::order, 4>, class vostok::intrusive_spsc_queue<class vostok::network::order, class vostok::network::order, 4> >(void)"
+    },
+    {
+      "unit": "vostok/memory_allocator_helper_inline.h",
+      "fn": "public: __thiscall vostok::one_way_threads_channel<class vostok::intrusive_spsc_queue<class vostok::network::order, class vostok::network::order, 4>, class vostok::intrusive_spsc_queue<class vostok::network::order, class vostok::network::order, 4> >::~one_way_threads_channel<class vostok::intrusive_spsc_queue<class vostok::network::order, class vostok::network::order, 4>, class vostok::intrusive_spsc_queue<class vostok::network::order, class vostok::network::order, 4> >(void)"
+    },
+    {
+      "unit": "vostok/memory_allocator_helper_inline.h",
+      "fn": "public: __thiscall vostok::vfs::vfs_mount::~vfs_mount(void)"
+    },
+    {
+      "unit": "vostok/network/sources/functor_order.h",
+      "fn": "public: __thiscall vostok::network::order::order(void)"
+    },
+    {
+      "unit": "vostok/network/sources/functor_order.h",
+      "fn": "public: virtual void __thiscall vostok::network::functor_order::execute(void)"
+    },
+    {
+      "unit": "vostok/network/sources/functor_order.h",
+      "fn": "public: virtual void __thiscall vostok::network::functor_order::execute(void)"
+    },
+    {
+      "unit": "vostok/render/core/dx11/backend_handlers_inline.h",
+      "fn": "public: __thiscall vostok::render::sun_cascade::sun_cascade(struct vostok::render::sun_cascade const &)"
+    },
+    {
+      "unit": "vostok/render/core/dx11/effect_manager_inline.h",
+      "fn": "public: __thiscall vostok::render::box_geometry::~box_geometry(void)"
+    },
+    {
+      "unit": "vostok/render/engine/sources/capsule_light_effect.h",
+      "fn": "public: __thiscall vostok::render::stage_lights::lights_instance::lights_instance(void)"
+    },
+    {
+      "unit": "vostok/render/engine/sources/lights_db.cpp",
+      "fn": "vostok::render::index_to_shadow_size"
+    },
+    {
+      "unit": "vostok/resources_resource_ptr_inline.h",
+      "fn": "public: __thiscall vostok::render::speedtree_data::speedtree_data(void)"
+    },
+    {
+      "unit": "vostok/resources_resource_ptr_inline.h",
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::render::material, class vostok::resources::unmanaged_intrusive_base>::~resource_ptr<class vostok::render::material, class vostok::resources::unmanaged_intrusive_base>(void)"
+    },
+    {
+      "unit": "vostok/sound/sources/single_sound.cpp",
+      "fn": "public: __thiscall vostok::sound::single_sound::single_sound(class vostok::resources::resource_ptr<class vostok::sound::encoded_sound_with_qualities, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::resources::resource_ptr<class vostok::configs::binary_config, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::resources::resource_ptr<class vostok::sound::sound_spl, class vostok::resources::unmanaged_intrusive_base> const &)"
+    },
+    {
+      "unit": "vostok/threading_policies.h",
+      "fn": "long __cdecl vostok::threading::interlocked_decrement(long volatile &)"
+    },
+    {
+      "unit": "vostok/threading_policies.h",
+      "fn": "long __cdecl vostok::threading::interlocked_decrement(long volatile &)"
+    },
+    {
+      "unit": "vostok/type_variant_inline.h",
+      "fn": "public: __thiscall vostok::detail::abstract_type_helper::abstract_type_helper(void)"
+    },
+    {
+      "unit": "vostok/type_variant_inline.h",
+      "fn": "public: __thiscall vostok::detail::abstract_type_helper::abstract_type_helper(void)"
+    },
+    {
+      "unit": "vostok/type_variant_inline.h",
+      "fn": "public: virtual __thiscall survarium::animated_model_instance::~animated_model_instance(void)"
+    },
+    {
+      "unit": "vostok/type_variant_inline.h",
+      "fn": "public: virtual void __thiscall survarium::game_camera::on_focus(bool)"
+    },
+    {
+      "unit": "vostok/type_variant_inline.h",
+      "fn": "public: virtual void __thiscall survarium::game_camera::on_focus(bool)"
+    },
+    {
+      "unit": "vostok/type_variant_inline.h",
+      "fn": "public: virtual void __thiscall survarium::game_camera::on_focus(bool)"
+    },
+    {
+      "unit": "vostok/type_variant_inline.h",
+      "fn": "public: virtual void __thiscall survarium::game_camera::on_focus(bool)"
+    },
+    {
+      "unit": "vostok/vectora.h",
+      "fn": "public: __thiscall vostok::render::geometry_batch::~geometry_batch(void)"
+    },
+    {
+      "unit": "vostok/vectora.h",
+      "fn": "public: __thiscall vostok::render::requested_streamable_texture::requested_streamable_texture(struct vostok::render::requested_streamable_texture const &)"
+    },
+    {
+      "unit": "vostok/vectora.h",
+      "fn": "public: __thiscall vostok::render::streamable_texture_info::streamable_texture_info(struct vostok::render::streamable_texture_info const &)"
+    },
+    {
+      "unit": "vostok/vectora.h",
+      "fn": "public: __thiscall vostok::render::streaming_ready_texture::streaming_ready_texture(struct vostok::render::streaming_ready_texture const &)"
+    },
+    {
+      "unit": "vostok/vectora.h",
+      "fn": "public: struct vostok::render::streaming_ready_texture & __thiscall vostok::render::streaming_ready_texture::operator=(struct vostok::render::streaming_ready_texture const &)"
+    }
+  ]
+}

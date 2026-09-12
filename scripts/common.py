@@ -28,11 +28,11 @@ from pathlib import Path
 SCRIPTS_DIR = Path(__file__).resolve().parent
 REPO_DIR = SCRIPTS_DIR.parent
 CATALOG_DIR = REPO_DIR / "catalog"
-WORK_DIR = REPO_DIR / "work"
-VERSIONS_DIR = WORK_DIR / "versions"
-DIFFS_DIR = WORK_DIR / "diffs"
-REPORTS_DIR = WORK_DIR / "reports"
-CACHE_DIR = WORK_DIR / "cache"
+GENERATED_DIR = REPO_DIR / ".generated"
+VERSIONS_DIR = GENERATED_DIR / "builds"
+DIFFS_DIR = GENERATED_DIR / "comparisons"
+REPORTS_DIR = GENERATED_DIR / "analysis"
+CACHE_DIR = GENERATED_DIR / "downloads"
 CONFIG_PATH = CATALOG_DIR / "chain.json"
 
 # Real shipped Survarium PDBs record source paths under this prefix; the delinker

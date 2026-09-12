@@ -1,0 +1,21 @@
+{
+  "label": "v0.20f-build1923",
+  "source": "https://archive.org/download/vostok_engine_v0.20f_build_1923_internal_id_816_apr_1_2014/survarium_full_020f.7z",
+  "engine_path": "c:/survarium.deploy/sources",
+  "aligned_to": "v0.10b-build802",
+  "exe": {
+    "name": "survarium.exe",
+    "size": 10443896,
+    "sha256": "72ea3626086bea50e29a6580a3dd9d79e5f6b4d8e77af173b0611cba39c8df30"
+  },
+  "pdb": {
+    "name": "survarium.pdb",
+    "size": 104475648,
+    "sha256": "e68ddd6f88feda392d709927092511608d85f949e967637c4f4ef8b339cb02eb"
+  },
+  "n_objects": 1871,
+  "release": "0.20f",
+  "binary_version": "0.20f",
+  "ingested_at": "2026-06-07T23:57:30",
+  "artifact_verification": "historical-ingestion-record"
+}

@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "function_comparisons": {
+    "configured_chain": [
+      "v0.10b-build802",
+      "v0.11a-build816",
+      "v0.11b-build826",
+      "v0.11c-build870",
+      "v0.11e-build884",
+      "v0.20e-build1916",
+      "v0.20f-build1923",
+      "v0.21d-build2010"
+    ],
+    "method": "PDB-guided COFF object extraction followed by bidirectional objdiff matching; source-oriented lists exclude compiler-generated and third-party-owned symbols.",
+    "lineage_commit": "4621fd37df9db5d778be9cbf982d51b4ae252d7e",
+    "tool_version": "objdiff-cli 3.7.1",
+    "validation": "All seven configured transitions retain complete added, deleted, and changed function lists; counts are checked against those lists and transition narratives.",
+    "limitation": "Historical alignment metadata was retained from the original ingestion and was not recreated for this layout migration."
+  },
+  "source_file_checksums": {
+    "selected_chain": [
+      "v0.10b-build802",
+      "v0.11a-build816",
+      "v0.11c-build870",
+      "v0.20e-build1916",
+      "v0.21d-build2010"
+    ],
+    "unavailable_configured_builds": [
+      "v0.11b-build826",
+      "v0.11e-build884",
+      "v0.20f-build1923"
+    ],
+    "method": "All PDB file checksum records below each catalog source root, including headers.",
+    "normalization": "Case-insensitive Windows paths with slash separators and each build's catalog source root stripped independently.",
+    "tool": {
+      "sha256": "e7908fbe4c8088152c91ae65eed11c71205a343194789d48fbd940dd3a1532a7"
+    },
+    "generation_script_sha256": "337339aad8dc6450610c712b39fc983adddaee9e09f83ac224ece56c9afbf99e",
+    "generation_flake_lock_sha256": "492727f3ad0fd2df3ca49cae034eb1d309d4b8658f638e79eacfb50cce74becb",
+    "tool_patch_sha256": "89cf4b00c3b14f960d20209016f0eade831b2979666095dab80ca9f56beb9443",
+    "validation": "Every included PDB matched its catalog SHA-256 identity; all records used comparable MD5 checksums and therefore produced zero unknown paths.",
+    "limitation": "Intervals crossing unavailable configured builds identify endpoint differences and cannot assign a change to the skipped release."
+  },
+  "wiki_updates": {
+    "manifest": "wiki/manifest.json",
+    "captured_update_pages": 91,
+    "missing_linked_pages": [
+      "0.28d"
+    ]
+  }
+}

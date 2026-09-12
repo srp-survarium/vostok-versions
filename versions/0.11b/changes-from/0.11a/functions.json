@@ -1,0 +1,1088 @@
+{
+  "base": {
+    "version": "0.11a",
+    "label": "v0.11a-build816",
+    "build": 816,
+    "date": "2013-05-14"
+  },
+  "target": {
+    "version": "0.11b",
+    "label": "v0.11b-build826",
+    "build": 826,
+    "date": "2013-05-14"
+  },
+  "scope": "hand-written engine functions under vostok/*; compiler-generated symbols excluded",
+  "counts": {
+    "added": 19,
+    "deleted": 26,
+    "changed": 254,
+    "identical": 11268
+  },
+  "added": [
+    "bool __cdecl vostok::console_commands::execute_console_commands(class vostok::fs_new::native_path_string, enum vostok::console_commands::execution_filter, bool)",
+    "private: bool __thiscall survarium::weapon_core::idle_AE_or_chamber_a_round_break_pred(void) const",
+    "private: bool __thiscall survarium::weapon_core::reload_break_pred(void) const",
+    "public: __thiscall vostok::particle::lod_entry::~lod_entry(void)",
+    "public: __thiscall vostok::vectora<struct vostok::resources::request>::~vectora<struct vostok::resources::request>(void)",
+    "public: virtual __thiscall vostok::ai::selectors::sound_target_selector::~sound_target_selector(void)",
+    "public: virtual __thiscall vostok::particle::particle_system_instance::~particle_system_instance(void)",
+    "public: virtual __thiscall vostok::render::stage_postprocess::~stage_postprocess(void)",
+    "public: virtual __thiscall vostok::resources::fs_task_unmount::~fs_task_unmount(void)",
+    "public: void __thiscall survarium::game::load_cc_script(class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base>, bool, bool)",
+    "public: void __thiscall survarium::game::load_config_query(char const *, bool, bool)",
+    "public: void __thiscall survarium::game::on_config_loaded(class vostok::resources::queries_result &, bool, bool)",
+    "public: void __thiscall vostok::render::backend::set_gs_constant<float>(class vostok::render::shader_constant_host const *, float const &)",
+    "public: void __thiscall vostok::render::backend::set_ps_constant<class vostok::math::float4>(class vostok::render::shader_constant_host const *, class vostok::math::float4const *, unsigned int)",
+    "public: void __thiscall vostok::render::backend::set_vs_constant<float>(class vostok::render::shader_constant_host const *, float const &)",
+    "public: void __thiscall vostok::render::shader_constant_buffer::set_typed<class vostok::math::float4>(class vostok::render::shader_constant_slot const &, class vostok::math::float4const *, unsigned int)",
+    "public: void __thiscall vostok::render::shader_constant_buffer::set_typed<int>(class vostok::render::shader_constant_slot const &, int const &)",
+    "void __cdecl vostok::console_commands::execute(char const *, enum vostok::console_commands::execution_filter, bool)",
+    "void __cdecl vostok::console_commands::load(class vostok::memory::reader &, enum vostok::console_commands::execution_filter, bool)"
+  ],
+  "deleted": [
+    "bool __cdecl vostok::console_commands::execute_console_commands(class vostok::fs_new::native_path_string, enum vostok::console_commands::execution_filter)",
+    "private: void __thiscall survarium::game::load_cmd(char const *)",
+    "private: void __thiscall survarium::game::unload_cmd(char const *)",
+    "private: void __thiscall vostok::render::constants_handler<0>::set_constant<class vostok::math::float3>(class vostok::render::shader_constant_host const &, class vostok::math::float3const &)",
+    "private: void __thiscall vostok::render::constants_handler<0>::set_constant_array<class vostok::math::float4>(class vostok::render::shader_constant_host const &, class vostok::math::float4const *, unsigned int)",
+    "private: void __thiscall vostok::render::constants_handler<1>::set_constant<int>(class vostok::render::shader_constant_host const &, int const &)",
+    "private: void __thiscall vostok::render::constants_handler<1>::set_constant_array<class vostok::math::float4>(class vostok::render::shader_constant_host const &, class vostok::math::float4const *, unsigned int)",
+    "private: void __thiscall vostok::render::constants_handler<2>::set_constant<class vostok::math::float3>(class vostok::render::shader_constant_host const &, class vostok::math::float3const &)",
+    "private: void __thiscall vostok::render::shader_constant_buffer::set_memory(unsigned int, char const *, unsigned int)",
+    "public: __thiscall vostok::detail::abstract_type_helper::abstract_type_helper(void)",
+    "public: __thiscall vostok::render::geometry_batch::~geometry_batch(void)",
+    "public: __thiscall vostok::render::render_target_instance::render_target_instance(void)",
+    "public: __thiscall vostok::render::requested_streamable_texture::requested_streamable_texture(struct vostok::render::requested_streamable_texture const &)",
+    "public: __thiscall vostok::render::speedtree_data::speedtree_data(void)",
+    "public: __thiscall vostok::render::streamable_texture_info::streamable_texture_info(struct vostok::render::streamable_texture_info const &)",
+    "public: __thiscall vostok::render::streaming_ready_texture::streaming_ready_texture(struct vostok::render::streaming_ready_texture const &)",
+    "public: __thiscall vostok::threading::mutex::~mutex(void)",
+    "public: struct vostok::render::streaming_ready_texture & __thiscall vostok::render::streaming_ready_texture::operator=(struct vostok::render::streaming_ready_texture const &)",
+    "public: virtual __thiscall survarium::animated_model_instance::~animated_model_instance(void)",
+    "public: virtual __thiscall survarium::player_logic_sprint_state::~player_logic_sprint_state(void)",
+    "public: void __thiscall survarium::game::load_cc_script(class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base>, bool)",
+    "public: void __thiscall survarium::game::load_config_query(char const *, bool)",
+    "public: void __thiscall survarium::game::on_config_loaded(class vostok::resources::queries_result &, bool)",
+    "public: void __thiscall vostok::render::backend::set_vs_constant<class vostok::math::float4>(class vostok::render::shader_constant_host const *, class vostok::math::float4const &)",
+    "void __cdecl vostok::console_commands::execute(char const *, enum vostok::console_commands::execution_filter)",
+    "void __cdecl vostok::console_commands::load(class vostok::memory::reader &, enum vostok::console_commands::execution_filter)"
+  ],
+  "changed": [
+    {
+      "pct": 0.0,
+      "fn": "long __cdecl vostok::threading::interlocked_increment(long volatile &)"
+    },
+    {
+      "pct": 0.0,
+      "fn": "private: void __thiscall vostok::render::stage_lights::draw_geometry(class vostok::render::light *)"
+    },
+    {
+      "pct": 0.0,
+      "fn": "public: __thiscall survarium::game_scene::~game_scene(void)"
+    },
+    {
+      "pct": 0.0,
+      "fn": "public: __thiscall vostok::ai::brain_unit_cook_params::~brain_unit_cook_params(void)"
+    },
+    {
+      "pct": 0.0,
+      "fn": "public: __thiscall vostok::animation::mixing::animation_interval::~animation_interval(void)"
+    },
+    {
+      "pct": 0.0,
+      "fn": "public: __thiscall vostok::intrusive_list<struct vostok::ai::percept_memory_object, struct vostok::ai::percept_memory_object *, 40, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy>::~intrusive_list<struct vostok::ai::percept_memory_object, struct vostok::ai::percept_memory_object *, 40, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy>(void)"
+    },
+    {
+      "pct": 0.0,
+      "fn": "public: __thiscall vostok::one_way_threads_channel<class vostok::intrusive_spsc_queue<class vostok::network::order, class vostok::network::order, 4>, class vostok::intrusive_spsc_queue<class vostok::network::order, class vostok::network::order, 4> >::~one_way_threads_channel<class vostok::intrusive_spsc_queue<class vostok::network::order, class vostok::network::order, 4>, class vostok::intrusive_spsc_queue<class vostok::network::order, class vostok::network::order, 4> >(void)"
+    },
+    {
+      "pct": 0.0,
+      "fn": "public: __thiscall vostok::render::skeleton_combined_cook_data::~skeleton_combined_cook_data(void)"
+    },
+    {
+      "pct": 0.0,
+      "fn": "public: __thiscall vostok::render::stage_lights::lights_instance::lights_instance(void)"
+    },
+    {
+      "pct": 0.0,
+      "fn": "public: __thiscall vostok::render::sun_cascade::sun_cascade(struct vostok::render::sun_cascade const &)"
+    },
+    {
+      "pct": 0.0,
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::render::material, class vostok::resources::unmanaged_intrusive_base>::~resource_ptr<class vostok::render::material, class vostok::resources::unmanaged_intrusive_base>(void)"
+    },
+    {
+      "pct": 0.0,
+      "fn": "public: __thiscall vostok::vfs::vfs_mount::~vfs_mount(void)"
+    },
+    {
+      "pct": 0.0,
+      "fn": "public: virtual __thiscall survarium::inventory_cook::~inventory_cook(void)"
+    },
+    {
+      "pct": 0.0,
+      "fn": "public: virtual __thiscall vostok::console_commands::cc_u32::~cc_u32(void)"
+    },
+    {
+      "pct": 0.0,
+      "fn": "public: virtual __thiscall vostok::render::functor_command::~functor_command(void)"
+    },
+    {
+      "pct": 0.0,
+      "fn": "public: virtual void __thiscall survarium::game_camera::on_focus(bool)"
+    },
+    {
+      "pct": 0.0,
+      "fn": "public: void __thiscall vostok::render::backend::set_ps_constant<unsigned int>(class vostok::render::shader_constant_host const *, unsigned int const &)"
+    },
+    {
+      "pct": 0.0,
+      "fn": "vec_begin"
+    },
+    {
+      "pct": 6.0753427,
+      "fn": "public: class survarium::victory_items_container_core * __thiscall survarium::simple_game_project::get_items_container(unsigned char)"
+    },
+    {
+      "pct": 9.958333,
+      "fn": "private: void __thiscall survarium::game::register_console_commands(void)"
+    },
+    {
+      "pct": 12.0,
+      "fn": "`vostok::math::curve_line_points<float,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 12.0,
+      "fn": "`vostok::math::curve_line_points<vostok::math::float3_pod,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 12.0,
+      "fn": "`vostok::math::curve_line_points<vostok::math::float4_pod,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 12.0,
+      "fn": "`vostok::math::curve_line_points<vostok::math::float4_pod,1>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 16.086956,
+      "fn": "private: void __thiscall vostok::render::constants_handler<1>::update_buffers(void)"
+    },
+    {
+      "pct": 23.9,
+      "fn": "public: void __thiscall vostok::render::shader_constant_buffer::update(void)"
+    },
+    {
+      "pct": 24.991621,
+      "fn": "private: void __thiscall vostok::render::stage_lights::render_particle_lighting(class vostok::render::render_particle_emitter_instance *, class vostok::render::light *, unsigned int)"
+    },
+    {
+      "pct": 28.38,
+      "fn": "public: void __thiscall vostok::render::radiance_volume::inject_camera_occluders(class vostok::render::renderer_context *)"
+    },
+    {
+      "pct": 29.47979,
+      "fn": "private: void __thiscall vostok::render::stage_lights::render_model_lighting(struct vostok::render::render_surface_instance *, class vostok::render::light *)"
+    },
+    {
+      "pct": 34.197117,
+      "fn": "private: void __thiscall vostok::render::stage_lights::render_speedtree_lighting(struct vostok::render::lod_entry const *, class SpeedTree::CInstance const *, struct SpeedTree::SInstanceLod const *, class vostok::render::speedtree_tree_component *, class vostok::render::light *)"
+    },
+    {
+      "pct": 34.68182,
+      "fn": "public: void __thiscall vostok::render::grass_world::set_trample_parameters(struct vostok::render::trample_desc &)"
+    },
+    {
+      "pct": 35.78626,
+      "fn": "public: void __thiscall vostok::render::system_renderer::draw_triangles(struct vostok::render::vertex_colored const *const, struct vostok::render::vertex_colored const *const, unsigned short const *const, unsigned short const *const, bool)"
+    },
+    {
+      "pct": 37.904762,
+      "fn": "private: bool __thiscall survarium::weapon_core::chamber_a_round_on_reload_break_pred(void) const"
+    },
+    {
+      "pct": 38.31541,
+      "fn": "public: void __thiscall vostok::render::radiance_volume::propagate_lighting_iter(unsigned int, unsigned int)"
+    },
+    {
+      "pct": 40.289356,
+      "fn": "private: void __thiscall vostok::render::stage_lights::render_light(class vostok::render::light *, bool)"
+    },
+    {
+      "pct": 42.340908,
+      "fn": "public: virtual void __thiscall vostok::render::skeleton_render_model_instance::set_constants(void)"
+    },
+    {
+      "pct": 42.726936,
+      "fn": "public: virtual void __thiscall vostok::render::stage_ambient_lighting::execute(void)"
+    },
+    {
+      "pct": 45.139442,
+      "fn": "public: void __thiscall vostok::render::scene_shader_constants::set(class vostok::render::renderer_context *, class vostok::math::float3const &, class vostok::math::float3const &, class vostok::math::float3const &, class vostok::math::float3const &, float, float, float, class vostok::math::float4const &, struct vostok::render::post_process_parameters const &)"
+    },
+    {
+      "pct": 46.132076,
+      "fn": "public: void __thiscall vostok::render::decal_shader_constants_and_geometry::set(class vostok::render::renderer_context *, class vostok::math::float4x4const &, class vostok::math::float4x4const &, float, float, class vostok::math::float3const &, class vostok::math::float4x4const &)"
+    },
+    {
+      "pct": 50.521965,
+      "fn": "public: void __thiscall vostok::render::renderer_context::set_v(class vostok::math::float4x4const &)"
+    },
+    {
+      "pct": 50.88889,
+      "fn": "public: void __thiscall vostok::render::particle_shader_constants::set_time(float)"
+    },
+    {
+      "pct": 52.50495,
+      "fn": "public: void __thiscall vostok::render::renderer_context::set_w(class vostok::math::float4x4const &)"
+    },
+    {
+      "pct": 52.826088,
+      "fn": "private: void __thiscall vostok::render::stage_light_propagation_volumes::set_rsm_contants(class vostok::math::float3const &, class vostok::math::float3const &, float)"
+    },
+    {
+      "pct": 52.95062,
+      "fn": "private: void __thiscall vostok::render::stage_light_propagation_volumes::pre_lpv_batch_render(class vostok::math::float3const &, float, struct vostok::render::geometry_batch const &)"
+    },
+    {
+      "pct": 53.1771,
+      "fn": "private: void __thiscall vostok::render::stage_lights::make_skin_scattering_texture(struct vostok::render::render_surface_instance *, class vostok::render::light *)"
+    },
+    {
+      "pct": 54.071857,
+      "fn": "public: void __thiscall vostok::render::dof_shader_constants::set(class vostok::math::float3const &, float, float, float, float, float, float, float)"
+    },
+    {
+      "pct": 54.666668,
+      "fn": "public: void __thiscall vostok::render::grass_world::set_shadow_parameters(unsigned int)"
+    },
+    {
+      "pct": 54.75862,
+      "fn": "private: bool __thiscall survarium::weapon_core::idle_AE_or_reload_break_pred(void) const"
+    },
+    {
+      "pct": 54.78909,
+      "fn": "public: void __thiscall vostok::render::particle_shader_constants::set(class vostok::math::float3, class vostok::math::float3, class vostok::math::float3, enum vostok::particle::enum_particle_locked_axis, enum vostok::particle::enum_particle_screen_alignment)"
+    },
+    {
+      "pct": 54.9717,
+      "fn": "public: void __thiscall vostok::render::speedtree_tree_parameters::set(class vostok::render::speedtree_tree_component *, class SpeedTree::CInstance const *, struct SpeedTree::SInstanceLod const *)"
+    },
+    {
+      "pct": 56.584133,
+      "fn": "public: virtual void __thiscall vostok::render::stage_atmosphere::execute(void)"
+    },
+    {
+      "pct": 58.296207,
+      "fn": "public: void __thiscall vostok::render::speedtree_wind_parameters::set(class SpeedTree::CWind const &)"
+    },
+    {
+      "pct": 58.72043,
+      "fn": "public: void __thiscall vostok::render::renderer_context::set_p(class vostok::math::float4x4const &)"
+    },
+    {
+      "pct": 60.666668,
+      "fn": "public: void __thiscall vostok::render::grass_world::set_wind_parameters(class vostok::math::float2const &, float)"
+    },
+    {
+      "pct": 60.741802,
+      "fn": "public: void __thiscall vostok::render::radiance_volume::inject_lighting(class vostok::math::float3const &, class vostok::math::float3const &, float, unsigned int)"
+    },
+    {
+      "pct": 61.39785,
+      "fn": "public: void __thiscall vostok::render::bloom_shader_constants::set(float, float, class vostok::math::float3const &)"
+    },
+    {
+      "pct": 62.135887,
+      "fn": "public: void __thiscall vostok::render::speedtree_billboard_parameters::set(class vostok::render::renderer_context *, class vostok::render::speedtree_tree_component *)"
+    },
+    {
+      "pct": 62.234043,
+      "fn": "public: void __thiscall vostok::render::grass_world::set_patch_parameters(struct vostok::render::grass_patch *)"
+    },
+    {
+      "pct": 63.24717,
+      "fn": "private: void __thiscall vostok::render::stage_lights::render_shadowed_light(class vostok::render::light *)"
+    },
+    {
+      "pct": 63.422855,
+      "fn": "public: virtual void __thiscall vostok::render::stage_sun::execute(void)"
+    },
+    {
+      "pct": 63.789474,
+      "fn": "public: void __thiscall vostok::render::speedtree_common_parameters::set(class vostok::render::renderer_context *, class vostok::render::speedtree_tree_component *, class vostok::math::float3const &)"
+    },
+    {
+      "pct": 64.790695,
+      "fn": "private: void __thiscall vostok::render::stage_light_propagation_volumes::inject_occluders(unsigned int, class vostok::math::float3const &, class vostok::math::float3const &, class vostok::render::vector<class vostok::math::float4x4>)"
+    },
+    {
+      "pct": 65.40909,
+      "fn": "public: void __thiscall vostok::render::stage_forward::render_forward_models(class vostok::render::vector<struct vostok::render::render_surface_instance *> &, unsigned int)"
+    },
+    {
+      "pct": 65.65385,
+      "fn": "private: void __thiscall vostok::render::stage_gbuffer::render_models(class vostok::render::vector<struct vostok::render::render_surface_instance *> &, unsigned int, unsigned int &, bool)"
+    },
+    {
+      "pct": 67.38461,
+      "fn": "public: void __thiscall vostok::render::radiance_volume::inject_occluder_geometry(class vostok::render::renderer_context *, class vostok::math::float3const &, class vostok::math::float3const &, class vostok::render::vector<class vostok::math::float4x4> const &)"
+    },
+    {
+      "pct": 67.63211,
+      "fn": "private: void __thiscall vostok::render::stage_lights::render_to_hw_shadowmap(class vostok::render::light *, unsigned int, float, unsigned int, unsigned int, class vostok::math::float4x4const &, class vostok::math::float4x4const &, unsigned int)"
+    },
+    {
+      "pct": 68.50649,
+      "fn": "public: void __thiscall vostok::render::radiance_volume::inject_occluders(class vostok::render::renderer_context *, class vostok::math::float3const &, class vostok::math::float3const &, unsigned int)"
+    },
+    {
+      "pct": 70.44827,
+      "fn": "public: void __thiscall vostok::render::radiance_volume::propagate_lighting(unsigned int)"
+    },
+    {
+      "pct": 71.007935,
+      "fn": "private: void __thiscall vostok::render::stage_light_propagation_volumes::render_to_rms(class vostok::math::float3const &, float, class vostok::math::float4x4const &, class vostok::math::float4x4const &, class vostok::render::vector<class vostok::math::float4x4>, unsigned int)"
+    },
+    {
+      "pct": 72.87215,
+      "fn": "public: void __thiscall vostok::render::stage_forward::accumulate_local_reflections(void)"
+    },
+    {
+      "pct": 73.75,
+      "fn": "private: void __thiscall vostok::render::constants_handler<0>::assign(class vostok::render::shader_constant_table const *)"
+    },
+    {
+      "pct": 73.75,
+      "fn": "private: void __thiscall vostok::render::constants_handler<1>::assign(class vostok::render::shader_constant_table const *)"
+    },
+    {
+      "pct": 73.75,
+      "fn": "private: void __thiscall vostok::render::constants_handler<2>::assign(class vostok::render::shader_constant_table const *)"
+    },
+    {
+      "pct": 75.84091,
+      "fn": "public: virtual void __thiscall vostok::render::stage_volume_fog::execute(void)"
+    },
+    {
+      "pct": 75.97059,
+      "fn": "public: void __thiscall vostok::render::stage_debug::render_environment_probe_preview(void)"
+    },
+    {
+      "pct": 76.85366,
+      "fn": "public: virtual void __thiscall vostok::render::stage_translucency::execute(void)"
+    },
+    {
+      "pct": 77.11881,
+      "fn": "public: void __thiscall vostok::render::hw_hiz_occlusion_manager::render_debug(class vostok::render::renderer_context *, class vostok::math::float4const *, unsigned char const *, unsigned int)"
+    },
+    {
+      "pct": 77.15278,
+      "fn": "public: virtual void __thiscall vostok::render::stage_postprocess::execute(void)"
+    },
+    {
+      "pct": 77.464745,
+      "fn": "public: __thiscall vostok::render::backend::~backend(void)"
+    },
+    {
+      "pct": 78.54934,
+      "fn": "public: virtual void __thiscall vostok::render::stage_clouds::execute(void)"
+    },
+    {
+      "pct": 78.856,
+      "fn": "public: void __thiscall vostok::render::grass_patch::try_accumulate_trample(struct vostok::render::trample_desc &, struct vostok::render::grass_world *, class vostok::render::renderer *, class vostok::render::renderer_context *)"
+    },
+    {
+      "pct": 79.545975,
+      "fn": "private: void __thiscall vostok::render::stage_lights::render_model_probe_lighting(struct vostok::render::render_surface_instance *, struct vostok::render::environment_probe *, float)"
+    },
+    {
+      "pct": 80.42857,
+      "fn": "private: bool __thiscall survarium::weapon_core::chamber_a_round_aimed_transfer_pred(void) const"
+    },
+    {
+      "pct": 80.42857,
+      "fn": "private: bool __thiscall survarium::weapon_core::chamber_a_round_transfer_pred(void) const"
+    },
+    {
+      "pct": 81.02439,
+      "fn": "public: void __thiscall vostok::render::res_render_output::set_size(unsigned int, unsigned int, bool, bool)"
+    },
+    {
+      "pct": 81.39649,
+      "fn": "public: void __thiscall vostok::render::render_particle_emitter_instance::render_sprites(void)"
+    },
+    {
+      "pct": 81.48649,
+      "fn": "private: bool __thiscall survarium::weapon_core::chamber_a_round_pred(void) const"
+    },
+    {
+      "pct": 81.5942,
+      "fn": "public: void __thiscall vostok::render::stage_shadow_direct::render_models(class vostok::render::vector<struct vostok::render::render_surface_instance *> &, class vostok::math::float4x4const &, unsigned int, unsigned int, class vostok::math::float3const &, unsigned int, unsigned int)"
+    },
+    {
+      "pct": 81.8443,
+      "fn": "public: virtual void __thiscall vostok::render::stage_gbuffer::execute(void)"
+    },
+    {
+      "pct": 82.64227,
+      "fn": "private: void __thiscall vostok::render::speedtree_billboard_parameters::set_billboard_tangents(float)"
+    },
+    {
+      "pct": 82.88372,
+      "fn": "private: void __thiscall vostok::render::stage_lights::render_particle_probe_lighting(class vostok::render::render_particle_emitter_instance *, struct vostok::render::environment_probe *, unsigned int)"
+    },
+    {
+      "pct": 83.31222,
+      "fn": "private: void __thiscall vostok::render::hw_hiz_occlusion_manager::render_model_bounds(class vostok::render::renderer_context *, class vostok::math::float4const *, unsigned int)"
+    },
+    {
+      "pct": 83.36558,
+      "fn": "public: void __thiscall vostok::render::stage_light_propagation_volumes::execute_smoothed_impl(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)"
+    },
+    {
+      "pct": 83.36882,
+      "fn": "public: void __thiscall vostok::render::system_renderer::draw_screen_lines(class vostok::math::float3const *, unsigned int, class vostok::math::color const &, float, unsigned int, bool, bool)"
+    },
+    {
+      "pct": 83.50218,
+      "fn": "private: void __thiscall vostok::render::stage_postprocess::compute_per_pixel_eye_adaptated_luminance(void)"
+    },
+    {
+      "pct": 84.10699,
+      "fn": "private: void __thiscall vostok::render::stage_light_propagation_volumes::render_to_rms_smoothed2(class vostok::math::float3const &, float, class vostok::math::float4x4const &, class vostok::math::float4x4const &, class vostok::render::vector<class vostok::math::float4x4>, unsigned int, unsigned int, unsigned int)"
+    },
+    {
+      "pct": 84.22172,
+      "fn": "public: void __thiscall vostok::render::stage_resolve_lighting::render_models(class vostok::render::vector<struct vostok::render::render_surface_instance *> &, unsigned int &)"
+    },
+    {
+      "pct": 85.308,
+      "fn": "private: void __thiscall survarium::network_client::process_victory_item_take_or_put(class vostok::network_core::packet_reader &)"
+    },
+    {
+      "pct": 86.0,
+      "fn": "public: virtual void __thiscall vostok::render::stage_postprocess::execute_disabled(void)"
+    },
+    {
+      "pct": 86.3995,
+      "fn": "private: void __thiscall vostok::render::hw_hiz_occlusion_manager::downsample_occlusion_buffer(void)"
+    },
+    {
+      "pct": 86.45498,
+      "fn": "private: class vostok::math::float4x4 __thiscall vostok::render::stage_pre_rain::render_rain_shadow_map(void)"
+    },
+    {
+      "pct": 86.632126,
+      "fn": "private: void __thiscall vostok::render::stage_postprocess::accumulate_motion_vectors(void)"
+    },
+    {
+      "pct": 87.18132,
+      "fn": "private: void __thiscall vostok::render::stage_postprocess::advanced_bloom(void)"
+    },
+    {
+      "pct": 87.18987,
+      "fn": "public: virtual void __thiscall survarium::respawn_point_core::load(class vostok::configs::binary_config_value const &)"
+    },
+    {
+      "pct": 87.655174,
+      "fn": "public: __thiscall vostok::render::render_cc_bool::render_cc_bool(char const *, enum vostok::render::enum_options_changes_result, char const *, bool &, bool &, bool, enum vostok::console_commands::command_type)"
+    },
+    {
+      "pct": 87.752945,
+      "fn": "protected: __thiscall vostok::render::shader_constant_buffer::shader_constant_buffer(class vostok::fixed_string<64> const &, enum vostok::render::enum_shader_type, enum _D3D_CBUFFER_TYPE, unsigned int)"
+    },
+    {
+      "pct": 88.19145,
+      "fn": "public: virtual void __thiscall vostok::render::stage_rain::execute(void)"
+    },
+    {
+      "pct": 89.672134,
+      "fn": "private: bool __thiscall survarium::weapon_core::is_aiming(void) const"
+    },
+    {
+      "pct": 89.7403,
+      "fn": "public: void __thiscall vostok::render::stage_light_propagation_volumes::execute_impl(void)"
+    },
+    {
+      "pct": 91.13736,
+      "fn": "private: void __thiscall vostok::render::stage_postprocess::process_blur(class vostok::render::render_target *, class vostok::render::res_texture *, class vostok::render::render_target *, class vostok::render::res_texture *, unsigned int)"
+    },
+    {
+      "pct": 91.443634,
+      "fn": "public: void __thiscall vostok::render::render_particle_emitter_instance::render_subuv_sprites(void)"
+    },
+    {
+      "pct": 91.975464,
+      "fn": "public: __thiscall vostok::render::backend::backend(void)"
+    },
+    {
+      "pct": 92.653336,
+      "fn": "public: void __thiscall vostok::render::render_output_window::set_size(unsigned int, unsigned int, bool, bool)"
+    },
+    {
+      "pct": 92.755104,
+      "fn": "bool __cdecl vostok::render::set_client_rect(struct HWND__*, int, int, int, int)"
+    },
+    {
+      "pct": 92.818184,
+      "fn": "private: void __thiscall survarium::network_client::process_initialize_victory_items(class vostok::network_core::packet_reader &)"
+    },
+    {
+      "pct": 93.00798,
+      "fn": "public: virtual void __thiscall vostok::render::stage_ambient_occlusion::execute(void)"
+    },
+    {
+      "pct": 93.1,
+      "fn": "private: void __thiscall vostok::render::options::load_impl(class vostok::memory::reader &)"
+    },
+    {
+      "pct": 93.2,
+      "fn": "public: void __thiscall vostok::render::options::set_default_values(void)"
+    },
+    {
+      "pct": 93.63158,
+      "fn": "public: virtual void __thiscall vostok::render::effect_god_rays::compile(class vostok::render::effect_compiler &, class vostok::render::custom_config_value const &)"
+    },
+    {
+      "pct": 93.70253,
+      "fn": "private: bool __thiscall survarium::weapon_core::can_reload(void) const"
+    },
+    {
+      "pct": 94.459435,
+      "fn": "public: void __thiscall vostok::render::options::register_console_commands(void)"
+    },
+    {
+      "pct": 94.49039,
+      "fn": "public: virtual void __thiscall vostok::render::stage_pre_rain::execute(void)"
+    },
+    {
+      "pct": 94.54386,
+      "fn": "private: void __thiscall vostok::render::decal_instance::render(class vostok::render::renderer_context *, enum vostok::render::enum_render_stage_type)"
+    },
+    {
+      "pct": 95.314964,
+      "fn": "private: void __thiscall vostok::render::stage_light_propagation_volumes::downsample_rsm(class vostok::math::float3const &, class vostok::math::float3const &, float, unsigned int)"
+    },
+    {
+      "pct": 96.141174,
+      "fn": "public: virtual bool __thiscall survarium::free_fly_camera::on_keyboard_action(struct vostok::input::world *, enum vostok::input::enum_keyboard, enum vostok::input::enum_keyboard_action)"
+    },
+    {
+      "pct": 96.583336,
+      "fn": "private: virtual bool __thiscall survarium::player_input_handler::on_keyboard_action(struct vostok::input::world *, enum vostok::input::enum_keyboard, enum vostok::input::enum_keyboard_action)"
+    },
+    {
+      "pct": 97.561646,
+      "fn": "public: virtual void __thiscall vostok::render::stage_resolve_lighting::execute(void)"
+    },
+    {
+      "pct": 97.61404,
+      "fn": "public: void __thiscall vostok::render::grass_world::accumulate_trample(class vostok::render::renderer *, class vostok::render::renderer_context *)"
+    },
+    {
+      "pct": 98.49056,
+      "fn": "private: void __thiscall vostok::render::shader_macros::register_available_macros(void)"
+    },
+    {
+      "pct": 98.8771,
+      "fn": "private: void __thiscall survarium::game::on_configs_loaded(class vostok::resources::queries_result &)"
+    },
+    {
+      "pct": 98.91503,
+      "fn": "private: bool __thiscall vostok::console_impl::on_text_commit(struct vostok::ui::window *, int, int)"
+    },
+    {
+      "pct": 99.333336,
+      "fn": "public: void __thiscall vostok::render::backend::reset_depth_stencil_target(void)"
+    },
+    {
+      "pct": 99.5,
+      "fn": "public: void __thiscall vostok::render::backend::set_vb(class vostok::render::untyped_buffer *, unsigned int, unsigned int)"
+    },
+    {
+      "pct": 99.5,
+      "fn": "public: void __thiscall vostok::render::backend::set_vb_stream_1(class vostok::render::untyped_buffer *, unsigned int, unsigned int)"
+    },
+    {
+      "pct": 99.5,
+      "fn": "public: void __thiscall vostok::render::res_state::apply(void) const"
+    },
+    {
+      "pct": 99.53582,
+      "fn": "private: void __thiscall survarium::player_input_handler::process_first_person_mode(bool)"
+    },
+    {
+      "pct": 99.560974,
+      "fn": "public: void __thiscall vostok::render::res_geometry::apply(void)"
+    },
+    {
+      "pct": 99.57143,
+      "fn": "private: void __thiscall vostok::render::backend::flush_rt(void)"
+    },
+    {
+      "pct": 99.57143,
+      "fn": "public: virtual void __thiscall vostok::render::stage_debug::execute(void)"
+    },
+    {
+      "pct": 99.58472,
+      "fn": "public: void __thiscall vostok::render::backend::reset(void)"
+    },
+    {
+      "pct": 99.625,
+      "fn": "public: void __thiscall vostok::render::grass_patch::remove_trample(void)"
+    },
+    {
+      "pct": 99.63636,
+      "fn": "public: void __thiscall vostok::render::hw_hiz_point_list::render(unsigned int)"
+    },
+    {
+      "pct": 99.65714,
+      "fn": "public: void __thiscall vostok::render::injection_geometry::draw(void)"
+    },
+    {
+      "pct": 99.666664,
+      "fn": "public: void __thiscall vostok::render::backend::set_render_target(enum vostok::render::enum_render_target_enum, class vostok::render::render_target const *)"
+    },
+    {
+      "pct": 99.68421,
+      "fn": "public: void __thiscall vostok::render::radiance_volume::prepare_gv(void)"
+    },
+    {
+      "pct": 99.68519,
+      "fn": "public: void __thiscall vostok::render::res_xs<struct vostok::render::vs_data>::apply(void) const"
+    },
+    {
+      "pct": 99.69231,
+      "fn": "public: void __thiscall vostok::render::backend::set_render_targets(class vostok::render::render_target const *, class vostok::render::render_target const *, class vostok::render::render_target const *, class vostok::render::render_target const *)"
+    },
+    {
+      "pct": 99.7,
+      "fn": "public: void __thiscall vostok::render::backend::on_device_destroy(void)"
+    },
+    {
+      "pct": 99.7,
+      "fn": "public: void __thiscall vostok::render::backend::reset_render_targets(bool)"
+    },
+    {
+      "pct": 99.710846,
+      "fn": "public: void __thiscall vostok::render::box_geometry::draw(void)"
+    },
+    {
+      "pct": 99.710846,
+      "fn": "public: void __thiscall vostok::render::sky_dome_geometry::draw(void)"
+    },
+    {
+      "pct": 99.710846,
+      "fn": "public: void __thiscall vostok::render::sphere_geometry::draw(void)"
+    },
+    {
+      "pct": 99.71739,
+      "fn": "public: void __thiscall vostok::render::res_xs<struct vostok::render::ps_data>::apply(void) const"
+    },
+    {
+      "pct": 99.71764,
+      "fn": "public: void __thiscall vostok::render::sliced_cube_geometry::draw(void)"
+    },
+    {
+      "pct": 99.71803,
+      "fn": "public: virtual void __thiscall vostok::render::stage_lights::execute(void)"
+    },
+    {
+      "pct": 99.72093,
+      "fn": "private: void __thiscall vostok::render::stage_postprocess::clear_surface(class vostok::intrusive_ptr<class vostok::render::render_target, class vostok::render::resource_intrusive_base, class vostok::threading::single_threading_policy>)"
+    },
+    {
+      "pct": 99.72727,
+      "fn": "private: void __thiscall vostok::render::backend::update_input_layout(void)"
+    },
+    {
+      "pct": 99.73604,
+      "fn": "public: virtual void __thiscall vostok::render::stage_forward::execute(void)"
+    },
+    {
+      "pct": 99.747826,
+      "fn": "public: void __thiscall vostok::render::res_xs<struct vostok::render::gs_data>::apply(void) const"
+    },
+    {
+      "pct": 99.755104,
+      "fn": "private: virtual void __thiscall vostok::render::stage_light_propagation_volumes::execute_disabled(void)"
+    },
+    {
+      "pct": 99.77778,
+      "fn": "public: void __thiscall vostok::render::backend::set_ps_texture(char const *, class vostok::render::res_texture *)"
+    },
+    {
+      "pct": 99.778625,
+      "fn": "public: void __thiscall vostok::render::backend::flush(void)"
+    },
+    {
+      "pct": 99.78571,
+      "fn": "public: virtual void __thiscall vostok::render::stage_decals_accumulate::execute_disabled(void)"
+    },
+    {
+      "pct": 99.797295,
+      "fn": "public: virtual void __thiscall vostok::render::stage_shadow_direct::execute_disabled(void)"
+    },
+    {
+      "pct": 99.80645,
+      "fn": "public: void __thiscall vostok::render::backend::set_render_output(class vostok::render::res_render_output const *)"
+    },
+    {
+      "pct": 99.809525,
+      "fn": "private: void __thiscall vostok::render::radiance_volume::end_render_to_cells(void)"
+    },
+    {
+      "pct": 99.818184,
+      "fn": "public: virtual void __thiscall vostok::render::stage_ambient_occlusion::execute_disabled(void)"
+    },
+    {
+      "pct": 99.84,
+      "fn": "public: void __thiscall vostok::render::backend::render(enum D3D_PRIMITIVE_TOPOLOGY, unsigned int, unsigned int)"
+    },
+    {
+      "pct": 99.84314,
+      "fn": "public: virtual void __thiscall vostok::render::stage_lights::execute_disabled(void)"
+    },
+    {
+      "pct": 99.84762,
+      "fn": "public: virtual void __thiscall vostok::render::stage_pre_lighting::execute(void)"
+    },
+    {
+      "pct": 99.84869,
+      "fn": "public: void __thiscall vostok::render::stage_forward::render_opaque_models(void)"
+    },
+    {
+      "pct": 99.86014,
+      "fn": "private: void __thiscall vostok::render::hw_hiz_occlusion_manager::render_occluders(class vostok::render::renderer_context *)"
+    },
+    {
+      "pct": 99.86029,
+      "fn": "public: virtual void __thiscall vostok::render::stage_shadow_direct::execute(void)"
+    },
+    {
+      "pct": 99.86667,
+      "fn": "public: void __thiscall vostok::render::engine::world::begin_render_options_changing(long volatile *)"
+    },
+    {
+      "pct": 99.870964,
+      "fn": "public: void __thiscall vostok::render::statistics::start(void)"
+    },
+    {
+      "pct": 99.87931,
+      "fn": "private: void __thiscall vostok::render::stage_lights::fill_surface(class vostok::intrusive_ptr<class vostok::render::render_target, class vostok::render::resource_intrusive_base, class vostok::threading::single_threading_policy>)"
+    },
+    {
+      "pct": 99.88,
+      "fn": "public: void __thiscall vostok::render::fog_box_geometry::render(void)"
+    },
+    {
+      "pct": 99.88,
+      "fn": "public: void __thiscall vostok::render::sphere_occluder_geometry::render(void)"
+    },
+    {
+      "pct": 99.882355,
+      "fn": "private: void __thiscall vostok::render::decal_instance::render_geometry(void)"
+    },
+    {
+      "pct": 99.88268,
+      "fn": "private: void __thiscall vostok::render::stage_postprocess::fill_surface(class vostok::intrusive_ptr<class vostok::render::render_target, class vostok::render::resource_intrusive_base, class vostok::threading::single_threading_policy>, class vostok::intrusive_ptr<class vostok::render::render_target, class vostok::render::resource_intrusive_base, class vostok::threading::single_threading_policy>)"
+    },
+    {
+      "pct": 99.884056,
+      "fn": "public: void __thiscall vostok::render::scene::flush(class boost::function<void __cdecl (bool)> const &, bool, bool)"
+    },
+    {
+      "pct": 99.88732,
+      "fn": "public: void __thiscall vostok::render::backend::render_indexed(enum D3D_PRIMITIVE_TOPOLOGY, unsigned int, unsigned int, unsigned int)"
+    },
+    {
+      "pct": 99.887596,
+      "fn": "public: void __thiscall vostok::render::stage_atmosphere::fill_surfaces(class vostok::intrusive_ptr<class vostok::render::render_target, class vostok::render::resource_intrusive_base, class vostok::threading::single_threading_policy>, class vostok::intrusive_ptr<class vostok::render::render_target, class vostok::render::resource_intrusive_base, class vostok::threading::single_threading_policy>, bool)"
+    },
+    {
+      "pct": 99.8883,
+      "fn": "vostok::render::fill_surface"
+    },
+    {
+      "pct": 99.888885,
+      "fn": "public: bool __thiscall vostok::render::ambient_volume::is_occluded(void) const"
+    },
+    {
+      "pct": 99.888885,
+      "fn": "public: bool __thiscall vostok::render::decal_instance::is_occluded(void) const"
+    },
+    {
+      "pct": 99.888885,
+      "fn": "public: bool __thiscall vostok::render::environment_probe::is_occluded(void) const"
+    },
+    {
+      "pct": 99.888885,
+      "fn": "public: bool __thiscall vostok::render::grass_patch::is_occluded(void) const"
+    },
+    {
+      "pct": 99.888885,
+      "fn": "public: bool __thiscall vostok::render::light::is_occluded(void) const"
+    },
+    {
+      "pct": 99.888885,
+      "fn": "public: bool __thiscall vostok::render::render_surface_instance::is_occluded(void) const"
+    },
+    {
+      "pct": 99.888885,
+      "fn": "public: virtual bool __thiscall vostok::render::render_particle_emitter_instance::is_occluded(void) const"
+    },
+    {
+      "pct": 99.89286,
+      "fn": "public: enum vostok::render::enum_options_changes_result __thiscall vostok::render::options::end_render_options_changing(class vostok::render::vector<class vostok::fs_new::virtual_path_string> &)"
+    },
+    {
+      "pct": 99.893166,
+      "fn": "public: void __thiscall vostok::render::renderer::draw_debug(class vostok::render::scene *, class vostok::render::scene_view *, float, struct vostok::ui::font const *)"
+    },
+    {
+      "pct": 99.9,
+      "fn": "vostok::render::is_occluded_predicate<vostok::render::ambient_volume>"
+    },
+    {
+      "pct": 99.9,
+      "fn": "vostok::render::is_occluded_predicate<vostok::render::decal_instance>"
+    },
+    {
+      "pct": 99.9,
+      "fn": "vostok::render::is_occluded_predicate<vostok::render::environment_probe>"
+    },
+    {
+      "pct": 99.9,
+      "fn": "vostok::render::is_occluded_predicate<vostok::render::grass_patch>"
+    },
+    {
+      "pct": 99.9,
+      "fn": "vostok::render::is_occluded_predicate<vostok::render::render_surface_instance>"
+    },
+    {
+      "pct": 99.90551,
+      "fn": "public: __thiscall vostok::render::render_output_window::render_output_window(struct vostok::render::output_window_configuration const &)"
+    },
+    {
+      "pct": 99.90643,
+      "fn": "public: void __thiscall vostok::render::stage_screen_image::execute(class vostok::intrusive_ptr<class vostok::render::res_texture, class vostok::render::resource_intrusive_base, class vostok::threading::single_threading_policy>)"
+    },
+    {
+      "pct": 99.907486,
+      "fn": "private: void __thiscall vostok::render::stage_postprocess::fill_surface2(class vostok::intrusive_ptr<class vostok::render::render_target, class vostok::render::resource_intrusive_base, class vostok::threading::single_threading_policy>)"
+    },
+    {
+      "pct": 99.90909,
+      "fn": "vostok::render::is_occluded_predicate_light"
+    },
+    {
+      "pct": 99.925,
+      "fn": "public: void __thiscall vostok::render::radiance_volume::prepare_final(void)"
+    },
+    {
+      "pct": 99.92683,
+      "fn": "private: void __thiscall vostok::render::radiance_volume::begin_render_to_cells(void)"
+    },
+    {
+      "pct": 99.92742,
+      "fn": "public: void __thiscall vostok::render::renderer::setup_render_output_window(class vostok::resources::resource_ptr<struct vostok::render::base_output_window, class vostok::resources::unmanaged_intrusive_base>, class vostok::math::rectangle<class vostok::math::float2> const &)"
+    },
+    {
+      "pct": 99.931816,
+      "fn": "public: void __thiscall vostok::render::batched_geometry<struct vostok::render::lpv_vertex>::for_each_batch_render(class vostok::render::renderer_context *, class boost::function<void __cdecl (struct vostok::render::geometry_batch const &)> const &, class boost::function<void __cdecl (struct vostok::render::geometry_batch const &)> const &)"
+    },
+    {
+      "pct": 99.932205,
+      "fn": "public: __thiscall singletons_on_preinitialize::singletons_on_preinitialize(class vostok::resources::resource_ptr<class vostok::configs::binary_config, class vostok::resources::unmanaged_intrusive_base> const &, bool)"
+    },
+    {
+      "pct": 99.93827,
+      "fn": "public: virtual void __thiscall vostok::render::stage_particles::execute(void)"
+    },
+    {
+      "pct": 99.942055,
+      "fn": "public: void __thiscall vostok::render::renderer::render(class vostok::resources::resource_ptr<struct vostok::render::base_scene, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::resources::resource_ptr<struct vostok::render::base_scene_view, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::resources::resource_ptr<struct vostok::render::base_output_window, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::math::rectangle<class vostok::math::float2> const &, class boost::function<void __cdecl (bool)> const &, bool, struct vostok::ui::font const *)"
+    },
+    {
+      "pct": 99.94444,
+      "fn": "public: void __thiscall vostok::render::backend::clear_depth_stencil(unsigned int, float, unsigned char)"
+    },
+    {
+      "pct": 99.94444,
+      "fn": "vostok::render::is_not_occluded_predicate<vostok::render::ambient_volume>"
+    },
+    {
+      "pct": 99.94444,
+      "fn": "vostok::render::is_not_occluded_predicate<vostok::render::decal_instance>"
+    },
+    {
+      "pct": 99.94444,
+      "fn": "vostok::render::is_not_occluded_predicate<vostok::render::environment_probe>"
+    },
+    {
+      "pct": 99.94444,
+      "fn": "vostok::render::is_not_occluded_predicate<vostok::render::grass_patch>"
+    },
+    {
+      "pct": 99.94444,
+      "fn": "vostok::render::is_not_occluded_predicate<vostok::render::render_surface_instance>"
+    },
+    {
+      "pct": 99.947365,
+      "fn": "vostok::render::is_not_occluded_predicate_light"
+    },
+    {
+      "pct": 99.94831,
+      "fn": "public: virtual void __thiscall vostok::render::stage_accumulate_distortion::execute(void)"
+    },
+    {
+      "pct": 99.95049,
+      "fn": "public: void __thiscall vostok::render::system_renderer::draw_ui_vertices(struct vostok::render::vertex_formats::TL const *, unsigned int const &, int, int)"
+    },
+    {
+      "pct": 99.95209,
+      "fn": "private: void __thiscall vostok::render::renderer_context_targets::create_targets(class vostok::math::uint2, bool)"
+    },
+    {
+      "pct": 99.954544,
+      "fn": "public: class vostok::render::shader_constant_host * __thiscall vostok::render::backend::register_constant_host(class vostok::shared_string const &, enum vostok::render::enum_constant_type)"
+    },
+    {
+      "pct": 99.954544,
+      "fn": "public: void __thiscall vostok::render::hw_hiz_occlusion_manager::process_culling(class vostok::render::renderer_context *, class vostok::math::float4const *, unsigned int)"
+    },
+    {
+      "pct": 99.955055,
+      "fn": "private: void __thiscall vostok::render::stage_visibility::gather_statistics(void) const"
+    },
+    {
+      "pct": 99.95588,
+      "fn": "private: void __thiscall vostok::render::stage_light_propagation_volumes::render_quad(void)"
+    },
+    {
+      "pct": 99.96014,
+      "fn": "public: void __thiscall vostok::render::system_renderer::fill_surface(class vostok::intrusive_ptr<class vostok::render::render_target, class vostok::render::resource_intrusive_base, class vostok::threading::single_threading_policy>, class vostok::intrusive_ptr<class vostok::render::render_target, class vostok::render::resource_intrusive_base, class vostok::threading::single_threading_policy>, class vostok::intrusive_ptr<class vostok::render::render_target, class vostok::render::resource_intrusive_base, class vostok::threading::single_threading_policy>, class vostok::intrusive_ptr<class vostok::render::render_target, class vostok::render::resource_intrusive_base, class vostok::threading::single_threading_policy>, class vostok::intrusive_ptr<class vostok::render::render_target, class vostok::render::resource_intrusive_base, class vostok::threading::single_threading_policy>, bool, struct D3D11_VIEWPORT *, float, float, float, float)"
+    },
+    {
+      "pct": 99.96117,
+      "fn": "public: virtual void __thiscall vostok::render::stage_lights::debug_render(void)"
+    },
+    {
+      "pct": 99.96296,
+      "fn": "public: bool __thiscall vostok::render::remove_model_if_not_lod_predicate::operator()(struct vostok::render::render_surface_instance *)"
+    },
+    {
+      "pct": 99.96722,
+      "fn": "private: void __thiscall vostok::render::stage_postprocess::measure_per_pixel_luminance(class vostok::render::res_texture *, class vostok::math::float4&)"
+    },
+    {
+      "pct": 99.967476,
+      "fn": "public: virtual void __thiscall vostok::render::stage_apply_distortion::execute(void)"
+    },
+    {
+      "pct": 99.97222,
+      "fn": "public: void __thiscall vostok::render::backend::clear_render_targets(float, float, float, float)"
+    },
+    {
+      "pct": 99.97298,
+      "fn": "public: void __thiscall vostok::render::grass_world::render(class vostok::render::renderer_context *, class vostok::math::float3const &, enum vostok::render::enum_render_stage_type, unsigned int, float, bool, class vostok::render::res_effect *, bool, unsigned int)"
+    },
+    {
+      "pct": 99.974846,
+      "fn": "private: void __thiscall vostok::render::renderer::draw_frame_histogram(void) const"
+    },
+    {
+      "pct": 99.97753,
+      "fn": "public: void __thiscall vostok::render::backend::clear_render_targets(class vostok::math::color, class vostok::math::color, class vostok::math::color, class vostok::math::color)"
+    },
+    {
+      "pct": 99.97802,
+      "fn": "public: void __thiscall vostok::render::engine::world::initialize(bool)"
+    },
+    {
+      "pct": 99.97849,
+      "fn": "private: void __thiscall vostok::render::renderer::execute_stages(void)"
+    },
+    {
+      "pct": 99.97911,
+      "fn": "public: virtual void __thiscall vostok::render::stage_decals_accumulate::execute(void)"
+    },
+    {
+      "pct": 99.979454,
+      "fn": "public: void __thiscall vostok::render::grass_patch::render(struct vostok::render::grass_world *, class vostok::render::renderer_context *, class vostok::math::float3const &, enum vostok::render::enum_render_stage_type, unsigned int, float, class vostok::render::res_effect *, unsigned int)"
+    },
+    {
+      "pct": 99.98182,
+      "fn": "public: void __thiscall vostok::render::backend::flush_rt_shader_resources(void)"
+    },
+    {
+      "pct": 99.98333,
+      "fn": "public: void __thiscall vostok::render::backend::clear_render_targets(class vostok::math::color)"
+    },
+    {
+      "pct": 99.9875,
+      "fn": "public: bool __thiscall vostok::render::remove_inappropriate_models::operator()(struct vostok::render::render_surface_instance *)"
+    },
+    {
+      "pct": 99.987656,
+      "fn": "vostok::render::get_format_block_size"
+    },
+    {
+      "pct": 99.98901,
+      "fn": "void __cdecl vostok::console_commands::show_help(char const *)"
+    },
+    {
+      "pct": 99.99024,
+      "fn": "public: void __thiscall vostok::render::render_particle_emitter_instance::render_trails(class vostok::math::float3const &, struct vostok::particle::base_particle *, unsigned int)"
+    },
+    {
+      "pct": 99.99088,
+      "fn": "public: void __thiscall vostok::render::system_renderer::draw_3D_point(class vostok::math::float3const &, float, class vostok::math::color const &, bool)"
+    },
+    {
+      "pct": 99.9916,
+      "fn": "public: class vostok::render::effect_compiler & __thiscall vostok::render::effect_compiler::set_texture(char const *, char const *, class vostok::intrusive_ptr<class vostok::render::res_texture, class vostok::render::resource_intrusive_base, class vostok::threading::single_threading_policy> *, bool, unsigned int)"
+    },
+    {
+      "pct": 99.99254,
+      "fn": "public: void __thiscall vostok::render::radiance_volume::prepare(class vostok::math::float3const &, class vostok::math::float3const &, float)"
+    },
+    {
+      "pct": 99.993866,
+      "fn": "public: __thiscall vostok::render::grass_patch::grass_patch(struct vostok::collision::space_partitioning_tree *const, struct vostok::render::grass_template *, class vostok::math::float3const &, float)"
+    },
+    {
+      "pct": 99.993904,
+      "fn": "public: void __thiscall vostok::render::scene::select_models(class vostok::math::float4x4const &, class vostok::render::vector<struct vostok::render::render_surface_instance *> &, class vostok::math::float3const &, unsigned int, bool)"
+    },
+    {
+      "pct": 99.994026,
+      "fn": "public: void __thiscall vostok::render::stage_shadow_direct::execute_cascade(unsigned int, unsigned int, unsigned int)"
+    },
+    {
+      "pct": 99.99422,
+      "fn": "public: void __thiscall vostok::render::cloud_simulation::generate(struct vostok::render::cloud_key_parameters const &, class vostok::math::float3const &)"
+    },
+    {
+      "pct": 99.9966,
+      "fn": "public: __thiscall vostok::render::system_renderer::system_renderer(class vostok::render::renderer_context *)"
+    },
+    {
+      "pct": 99.99708,
+      "fn": "public: virtual void __thiscall vostok::render::stage_visibility::execute(void)"
+    },
+    {
+      "pct": 99.997215,
+      "fn": "public: __thiscall vostok::render::stage_atmosphere::stage_atmosphere(class vostok::render::renderer *, class vostok::render::renderer_context *, enum vostok::render::stage_atmosphere::stage_type)"
+    },
+    {
+      "pct": 99.99731,
+      "fn": "public: __thiscall vostok::render::stage_volume_fog::stage_volume_fog(class vostok::render::renderer *, class vostok::render::renderer_context *)"
+    },
+    {
+      "pct": 99.998215,
+      "fn": "public: void __thiscall vostok::render::renderer::fill_opaque_models(void)"
+    }
+  ]
+}

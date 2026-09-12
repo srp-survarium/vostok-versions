@@ -1,10 +1,6 @@
-# Preserve source bytes, including original line endings and whitespace.
-sources/**/*.wiki -text -whitespace
-reports/2026-06/** -text
-reports/2026-09-12-source-files/** -text
-reports/2026-09-12-source-files-expanded/** -text
-# Empty trailing TSV columns are meaningful fields.
-reports/2026-09-12-source-files/**/*.tsv -whitespace
-reports/2026-09-12-source-files-expanded/**/*.tsv -whitespace
+# Archived MediaWiki source and machine evidence retain exact bytes.
+versions/**/*.wiki -text -whitespace
+versions/**/*.tsv -whitespace
+
 # A unified diff's blank context lines intentionally contain one space.
 patches/*.patch -text -whitespace

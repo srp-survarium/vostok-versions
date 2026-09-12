@@ -1,0 +1,11 @@
+{
+  "label": "v0.26e0-build2727",
+  "release": "0.26e",
+  "binary_version": "0.26e0",
+  "date": "2014-12-24",
+  "architecture": "x86",
+  "exe_source": "https://archive.org/download/vostok_engine_v0.26e0_build_2727_internal_id_1083_dec_24_2014/survarium_full_026e0.7z/Survarium/game/binaries/x86/survarium.exe",
+  "exe_sha256": "sha256-UiOp+hWJ3SMYYdbVymFZIdUg1vexrJ5+IbIYqSfhKg0=",
+  "source": "archive.org vostok_engine_v0.26e0_build_2727 (survarium_full_026e0.7z game tree, member binaries/x86/survarium.exe); identical to local FTP-SRP/Builds/survarium_v026e0.7z",
+  "artifact_verification": "historical-executable-scan-record"
+}

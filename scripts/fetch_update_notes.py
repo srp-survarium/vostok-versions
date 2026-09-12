@@ -86,8 +86,8 @@ def main() -> None:
     parser.add_argument("--output", type=Path, help="new snapshot directory (must not exist)")
     args = parser.parse_args()
     started = datetime.datetime.now(datetime.timezone.utc).isoformat()
-    output = args.output or (Path(__file__).resolve().parents[1] / "sources" /
-                             "fandom-updates" / started[:10])
+    output = args.output or (Path(__file__).resolve().parents[1] / ".generated" /
+                             "wiki" / started[:10])
     if output.exists():
         parser.error(f"snapshot already exists: {output}; choose a new --output")
     output.mkdir(parents=True)
