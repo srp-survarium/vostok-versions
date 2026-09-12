@@ -21,5 +21,6 @@ versions/*/objects/
 versions/*/structure/
 
 # Heavy/regenerable diff artifacts; keep the distilled summary.{md,json}.
+diffs/*/objdiff.json
 diffs/*/report.json
 diffs/*/dummy.obj

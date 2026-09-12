@@ -10,14 +10,21 @@ from the first archived dev build (**0.100b**, May 2013) to the last Steam build
 2. **Dependency analysis** — for **any** `survarium.exe` (PDB or not), read which
    third-party libraries are linked and at what version, straight from the binary.
 
+The committed reports record investigations from June 2026. Build availability,
+local holdings, and tool output may have changed since then. See
+[`reports/README.md`](reports/README.md) for their scope and how to reproduce them.
+
 ## Two tiers of builds
 
 | tier | registry | what you can do | how to get it |
 |---|---|---|---|
-| **full + PDB** | `versions.json` | full delink + **function diff** + deps | `nix build .#version-<label>` (installer → `survarium.{exe,pdb}`) |
+| **installer** | `versions.json` | **function diff** when a PDB is present; deps for all builds | `nix build .#version-<label>` (extract `survarium.exe` and any PDB) |
 | **exe-only** | `extra_builds.json` | **deps only** | `nix build .#"<token>"` (just the exe, via an archive.org `view_archive.php` member URL) |
 
 Both registries are plain JSON, read by *both* `flake.nix` and the Python scripts.
+The installer registry contains eight PDB-bearing builds and the stripped
+`v0.23h-build2285` (`symbols: false`); that last build supports dependency analysis
+only. `config.json` records the eight-build function-diff chain.
 What exists, what we hold, and what's still missing/locked is catalogued in
 [`reports/MISSING_BUILDS.md`](reports/MISSING_BUILDS.md).
 
@@ -60,13 +67,18 @@ To add a build: append `url` + `sha256` (PDB tier, `nix-prefetch-url`) to
 
 ## Function-diff workflow (PDB tier)
 
-    python3 scripts/add_version.py v0.100b-build802            # fetch -> delink
-    python3 scripts/add_version.py v0.200 --align-to v0.100b-build802
-    python3 scripts/diff_versions.py v0.100b-build802 v0.200   # -> diffs/.../summary.md
+    python3 scripts/add_version.py v0.100b-build802 --force
+    python3 scripts/add_version.py v0.1.1a-build816 --force --align-to v0.100b-build802
+    python3 scripts/diff_versions.py v0.100b-build802 v0.1.1a-build816
 
 `--align-to <base>` reuses the base's folded-symbol names so diffs stay stable. A
 version diffed against itself must report 100% on every function — the end-to-end
 sanity check.
+
+The examples use `--force` because this repository tracks `meta.json`, but ignores
+the delinked objects. Without it, `add_version.py` sees the existing metadata and
+skips ingestion even on a fresh clone. Diffing regenerates `objdiff.json` and the
+dummy object automatically; those files only describe the local object layout.
 
 ## Packaging builds for upload
 
@@ -77,7 +89,7 @@ depot, not the binary). Output lands in `survarium-uploads/` (gitignored).
 
 ## Layout
 
-    versions.json          PDB-tier registry (label, url, sha256, base, engine_path)
+    versions.json          installer registry (label, url, sha256, base, engine_path, symbols)
     extra_builds.json      exe-tier registry (label, exe_url, exe_sha256, date, arch)
     config.json            { "base": <label>, "versions": [...] }  (diff chain)
     flake.nix              version-<label> (full) + .#"<token>" / .#all (exes) + toolchain
@@ -91,11 +103,11 @@ depot, not the binary). Output lands in `survarium-uploads/` (gitignored).
       deps_report.py       third-party dependency versions from each exe
       package_builds.sh    repackage local game trees for archive.org upload
     versions/<label>/      objects/ (gitignored), structure/ (gitignored), symbol-map.tsv, meta.json
-    diffs/<base>__<target>/  objdiff.json, summary.{md,json}  (report.json gitignored)
+    diffs/<base>__<target>/  summary.{md,json} (objdiff.json, report.json, dummy.obj gitignored)
     cache/                 extracted exe/pdb + hand-pulled exes (gitignored)
 
 ## The base: v0.100b build 802 (May 2013)
 
 The oldest known PDB-bearing build, version #1 in `versions.json`. Bootstrap it:
 
-    python3 scripts/add_version.py v0.100b-build802
+    python3 scripts/add_version.py v0.100b-build802 --force
