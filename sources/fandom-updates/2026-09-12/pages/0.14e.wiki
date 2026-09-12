@@ -1,0 +1,15 @@
+{{Infobox version
+|date = September 29, 2013
+|stage = Teamplay Closed Alpha
+|prevparent = 0.14a
+|prev = 0.14d
+|next = 0.14f
+|nextparent = 0.15a}}
+'''0.14e''' is a minor update for [[Survarium]] that fixed the "parallel worlds" synchronization bug.
+
+==Changelog==
+* Parallel Worlds error
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

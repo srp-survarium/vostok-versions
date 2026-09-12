@@ -1,0 +1,16 @@
+{{Infobox version
+|date = April 1, 2014
+|stage = Teamplay Closed Beta
+|prevparent = 0.20a
+|prev = 0.20e
+|nextparent = 0.21a}}
+'''0.20f''' is a minor update for [[Survarium]] that improved synchronization when the system is under stress.
+
+==Changelog==
+* Synchronization for players with big ping considerably improved
+* Synchronization on low-end computers and low performance improved
+* Synchronization under a large number of active actions by player improved
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

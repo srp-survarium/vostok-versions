@@ -1,0 +1,39 @@
+{{Infobox version
+|image = Survarium_alpha_version.jpg
+|date = September 11, 2013
+|stage = Teamplay Closed Alpha
+|link = 
+|prevparent = 0.12a
+|prev = 0.12g
+|next = 0.13b
+|nextparent = 0.14a}}
+'''0.13a''' is a major update for [[Survarium]] that added a player ranking system and improved client synchronization.
+
+==Changelog==
+* Made some fixes aimed to, on the one hand, reduce the frequency of out of sync errors, and on the other hand - to minimize the negative effect of out of sync
+* Players ratings. More detailed description will be in a special subject
+* Changed the matchmaking algorithm. Now it considers player ranking. If it is impossible to form the match with players of approximately equal ranking, the match is made from any of the players
+* A window with statistics on the player results of the match
+* Added ability to equip your character by dragging the item on to the character model
+* Added UI sounds
+* Added the ability to invite friends by clicking RMB on the character's name in chat
+* Optimization of the game when working on graphics cards with small amounts of memory (1.5GB or less)
+* Added a flash of light when weapon is fired, and when electrical anomalies are triggered
+* Optimization of translucent object rendering
+* Changed the animations for pistols
+
+===Bug fixes===
+* Fixed a bug that caused a lack of audio on Windows 8
+* Fixed shadows on objects near to the player
+* Fixed lighting of translucent objects
+* Fixed a bug with clipping an object casting a shadow
+* Fixed a number of errors which caused a critical error in the loader
+* Fixed a desync that occurs when one player activates the oxygen tank
+* Fixed a bug that caused an inability to fire a weapon if you sprint and fall into a trap
+* Fixed bug causing incorrect calculation an anomalies area of effect
+* Fixed a bug where the key item is not in the place where it actually is
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Major updates]]
+[[Category:Updates]]

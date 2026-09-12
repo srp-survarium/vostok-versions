@@ -1,6 +1,9 @@
 # Extracted installers: survarium.exe (tens of MB) + survarium.pdb (hundreds of MB).
 cache/
 
+# All downloads and analysis output from the maintained workflow.
+/work/
+
 # Repackaged full builds staged for archive.org upload (tens of GB) - output of
 # scripts/package_builds.sh. Never committed.
 survarium-uploads/

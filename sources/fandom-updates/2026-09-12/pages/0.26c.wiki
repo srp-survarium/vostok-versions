@@ -1,0 +1,32 @@
+{{Infobox version
+|date = December 17, 2014
+|stage = Teamplay Closed Beta
+|prevparent = 0.26a
+|prev = 0.26b
+|next = 0.26d
+|nextparent = 0.27a}}
+'''0.26c''' is a minor update for [[Survarium]] that adjusted the rules and spawning conditions for [[Team Deathmatch]].
+
+==Changelog==
+===Gameplay===
+* Increased the number of respawn locations on all maps for [[TDM]] mode
+* The number of points in [[Team Deathmatch]] reduced to 100 on all locations except [[Tarakanovsky Fort]] and [[Cologne Bridge]]
+* Removed damage from the water on [[Vostok Radar Station]]
+
+===Equipment and weapons===
+* 9x39 SP-5 ammo: level of equipment changed from 14 to 12;
+* 7.62x54 7N1 is on sale at the [[Renaissance Army]] store on the 7th level of reputation (Captain)
+
+===User Interface===
+* Fixed the display of the clan team
+* Redesigned clan window
+* Fixed displaying of chance to find the object in the victory screen
+* Fixed displaying time of repair
+
+===Bug Fixes===
+* Fixed render error which led to frequent game crashes during battle
+* Fixed some synchronization errors
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

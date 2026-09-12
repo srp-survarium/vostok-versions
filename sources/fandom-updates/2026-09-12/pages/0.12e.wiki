@@ -1,0 +1,18 @@
+{{Infobox version
+|date = August 20, 2013
+|stage = Teamplay Closed Alpha
+|prevparent = 0.12a
+|prev = 0.12d
+|next = 0.12f
+|nextparent = 0.13a}}
+'''0.12e''' is a minor update for [[Survarium]] that temporarily comprised FPS to decrease desynchronization errors and fixed some crashes associated with combat actions.
+
+==Changelog==
+* ~10-fold reduction in desynchronization frequency by reducing the FPS (still working on it)
+* Fixed crash after making a kill
+* Fixed a crash when placing 3 or more traps
+* Fixed crash when an item is attempting to be lifted by two players simultaneously
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

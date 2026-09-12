@@ -1,0 +1,19 @@
+{{Infobox version
+|date = November 6, 2013
+|stage = Teamplay Closed Alpha
+|prevparent = 0.16a
+|nextparent = 0.17a}}
+'''0.16b''' is a minor update for [[Survarium]] that changed [[Teamplay]] to be 10v10 and adjusted some [[ammunition]] and [[Weapons|weapon]] stats.
+
+==Changelog==
+* 10 vs. 10 gameplay implemented
+* Reduced the weight of some ammunition: [[Ammunition#5.45x39|5.45x39]], [[Ammunition#12x70|12x70]], [[Ammunition#.357|.357]]
+* Reduced the damage from buckshot over distance
+* Changed the recoil in the following weapons: [[TT-33]], [[Fort 17]], [[AKS-74U]], [[Vityaz]] and [[Uzi]]
+
+===Bug fixes===
+* Critical error leading to crash on anomalous zones buffer overfill fixed
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

@@ -1,0 +1,19 @@
+{{Infobox version
+|date = August 22, 2014
+|stage = Teamplay Closed Beta
+|prevparent = 0.24a
+|prev = 0.24c
+|nextparent = 0.25a}}
+'''0.24d''' is a minor update for [[Survarium]] that included some general fixes.
+
+==Changelog==
+===Gameplay===
+* Changed the prices of some items
+
+===Bug Fixes===
+* Fixed bug when selling items
+* Removed debug logging, which increased the FPS on some computer configurations
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

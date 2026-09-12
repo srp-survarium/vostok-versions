@@ -1,0 +1,39 @@
+{{Infobox version
+|image = 0.19_wip_3.jpg
+|date = February 5, 2014
+|stage = Teamplay Closed Beta
+|link = http://survarium.com/en/news/survarium-updated-version-019a
+|prevparent = 0.18a
+|prev = 0.18g
+|next = 0.19b
+|nextparent = 0.20a}}
+'''0.19a''' is a major update for [[Survarium]] that added [[artifacts]], [[Factions|faction]] [[missions]] and redesigned the lobby interface.
+
+==Changelog==
+* [[Artifacts]] have been added to the game. To raise an artifact, you need to be equipped with an artifact container
+* Lobby interface redesigned completely. Part of the secondary windows still remain in the old form (e.g. the "Options")
+* Game [[missions|tasks]] added for the [[factions]]. By accomplishing quests you gain reputation with the appropriate faction and move up the career ladder within it
+* Now the game items in the store require a certain reputation with the faction selling the item
+* The auto-refill mechanism of equipment has been changed. Now this is an option that affects all the replenished items equipped on the player (ammo, first aid kits, grenades, traps, etc.)
+* License Agreement window added when you enter the game first time
+* Sounds of hitting the opponent added. If your bullet pierced the body armor of the enemy, the hit sound will differ
+* Changed spawn locations on "[[Tarakanovsky Fort]]" map
+* The [[anomalies]] on [[School]] and [[Vostok Radar Station]] changed
+* The formula for damage calculation when wounded with fire arms changed. If the bullet does not pierce the body armor, the minimum damage is applied ("protection" parameter in the body armor). Maximum damage is applied if the armor piercing parameter of the bullet is twice higher than the armor vest’s
+* Complete rebalance of weapons and armor with the new formula changes
+* The effectiveness of the respirator and the oxygen container reduced
+* Reduced the damage from falling
+* Parameters for piercing and ricochet of level elements
+
+===Bug fixes===
+* Fixed a bug that caused the resyncs when using grenades
+* Fixed some bugs that caused resyncs when jumping
+* Fixed a game freeze bug at the splash screen stage when loading the game
+* Fixed a critical error occurring if you do not assign a key to use the quick access slots
+* Fixed a bug that caused the death of a character when staying in crouch for a long time
+* Fixed the player getting stuck on complex geometry
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Major updates]]
+[[Category:Updates]]

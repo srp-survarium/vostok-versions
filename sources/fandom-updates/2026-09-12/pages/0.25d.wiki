@@ -1,0 +1,22 @@
+{{Infobox version
+|date = November 13, 2014
+|stage = Teamplay Closed Beta
+|prevparent = 0.25a
+|prev = 0.25c
+|nextparent = 0.26a}}
+'''0.25d''' is a minor update for [[Survarium]] that added support and decals for the upcoming Polish Teamplay Open Beta.
+
+==Changelog==
+===Equipment and weapons===
+* Added new decals (flags and coats of arms)
+
+===User Interface===
+* Added Polish localization<noinclude>
+
+===Bug Fixes===
+* Fixed bug in use of antitoxins(the player became almost invulnerable)
+* Fixed many bugs of game client installation
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

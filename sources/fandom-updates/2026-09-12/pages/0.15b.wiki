@@ -1,0 +1,16 @@
+{{Infobox version
+|date = October 25, 2013
+|stage = Teamplay Closed Alpha
+|prevparent = 0.15a
+|next = 0.15c
+|nextparent = 0.16a}}
+'''0.15b''' is a minor update for [[Survarium]] that fixed various critical errors.
+
+==Changelog==
+* Fixed a critical error during the disconnection from a game server
+* Fixed a critical error during the completion of the match, in the presence of set traps
+* Fixed a bug related to an overflow in the number of total traps set in a level
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

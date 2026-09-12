@@ -1,0 +1,239 @@
+{
+  "source_commit": "4621fd37df9db5d778be9cbf982d51b4ae252d7e",
+  "reference": "Declared versions were transcribed from the source snapshot during the June investigation; they are not measured versions for each executable.",
+  "rules": [
+    {
+      "key": "scaleform",
+      "display": "Scaleform GFx",
+      "declared_version": null,
+      "markers": [
+        "@Scaleform@@",
+        "Scaleform ",
+        "vostok_scaleform",
+        "Scaleform textures"
+      ]
+    },
+    {
+      "key": "zlib",
+      "display": "zlib (engine)",
+      "declared_version": "1.2.3",
+      "markers": [
+        "inflate 1.2.3",
+        "deflate 1.2.3",
+        "bio_zlib_new",
+        "zlib compression"
+      ]
+    },
+    {
+      "key": "openssl",
+      "display": "OpenSSL",
+      "declared_version": "1.0.0g",
+      "markers": [
+        "part of OpenSSL",
+        "OpenSSL 1.0",
+        "CRYPTOGAMS",
+        "engines-1_1"
+      ]
+    },
+    {
+      "key": "libpng",
+      "display": "libpng (Scaleform)",
+      "declared_version": null,
+      "markers": [
+        "libpng"
+      ]
+    },
+    {
+      "key": "libjpeg",
+      "display": "libjpeg (Scaleform)",
+      "declared_version": null,
+      "markers": [
+        "Thomas G. Lane",
+        "JPEG library version"
+      ]
+    },
+    {
+      "key": "expat",
+      "display": "Expat (XML)",
+      "declared_version": null,
+      "markers": [
+        "XML_DTD support in Expat",
+        "expat_"
+      ]
+    },
+    {
+      "key": "boost",
+      "display": "Boost",
+      "declared_version": "1.48.0",
+      "markers": [
+        "@boost@@",
+        "@gregorian@boost@@"
+      ]
+    },
+    {
+      "key": "stlport",
+      "display": "STLport",
+      "declared_version": "5.2.1",
+      "markers": [
+        "@stlp_std@@",
+        "STLPORT_"
+      ]
+    },
+    {
+      "key": "bullet",
+      "display": "Bullet",
+      "declared_version": null,
+      "markers": [
+        "btCollisionWorld",
+        "btCollisionObject"
+      ]
+    },
+    {
+      "key": "opcode",
+      "display": "OPCODE",
+      "declared_version": "1.3",
+      "markers": [
+        "@Opcode@@"
+      ]
+    },
+    {
+      "key": "wildmagic",
+      "display": "WildMagic",
+      "declared_version": "4.9",
+      "markers": [
+        "@Wm4@@"
+      ]
+    },
+    {
+      "key": "vorbis",
+      "display": "libVorbis",
+      "declared_version": "1.2.3",
+      "markers": [
+        "OggVorbis_File",
+        "vorbis bitstream"
+      ]
+    },
+    {
+      "key": "ogg",
+      "display": "libogg",
+      "declared_version": "1.1.4",
+      "markers": [
+        "OggVorbis_File"
+      ]
+    },
+    {
+      "key": "bugtrap",
+      "display": "BugTrap",
+      "declared_version": "1.3.3291.42976",
+      "markers": [
+        "BugTrap.dll",
+        "BugTrapN.dll"
+      ]
+    },
+    {
+      "key": "speedtree",
+      "display": "SpeedTree",
+      "declared_version": "5.2.1",
+      "markers": [
+        "SpeedTree",
+        "speedtree"
+      ]
+    },
+    {
+      "key": "ode",
+      "display": "ODE",
+      "declared_version": "0.11.1",
+      "markers": [
+        "dxBody",
+        "dWorldStep",
+        "@dxGeom"
+      ]
+    },
+    {
+      "key": "freeimage",
+      "display": "FreeImage",
+      "declared_version": "3.12.0",
+      "markers": [
+        "FreeImage",
+        "fipImage"
+      ]
+    },
+    {
+      "key": "theora",
+      "display": "libtheora",
+      "declared_version": "1.1.1",
+      "markers": [
+        "libtheora",
+        "Xiph.Org libtheora",
+        "@theora"
+      ]
+    },
+    {
+      "key": "mysql",
+      "display": "MySQL client",
+      "declared_version": "6.02",
+      "markers": [
+        "mysql_real_connect",
+        "libmysql",
+        "@mysql"
+      ]
+    },
+    {
+      "key": "minizip",
+      "display": "minizip",
+      "declared_version": "1.01",
+      "markers": [
+        "unzReadCurrentFile",
+        "Version made by"
+      ]
+    },
+    {
+      "key": "lua",
+      "display": "Lua / LuaJIT",
+      "declared_version": null,
+      "markers": [
+        "LuaJIT",
+        "Lua 5.1",
+        "Mike Pall",
+        "PUC-Rio"
+      ]
+    },
+    {
+      "key": "steam",
+      "display": "Steam API",
+      "declared_version": null,
+      "markers": [
+        "steam_api",
+        "SteamAPI_",
+        "@steam@@",
+        "@CSteam"
+      ]
+    },
+    {
+      "key": "battleye",
+      "display": "BattlEye",
+      "declared_version": null,
+      "markers": [
+        "BattlEye",
+        "BEClient",
+        "BEService"
+      ]
+    }
+  ],
+  "dll_names": [
+    "d3d11.dll",
+    "d3dx11_43.dll",
+    "dxgi.dll",
+    "D3DCOMPILER_43.dll",
+    "d3dx9_43.dll",
+    "X3DAudio1_7.dll",
+    "d3d9.dll",
+    "ddraw.dll",
+    "XINPUT1_3.dll",
+    "DINPUT8.dll",
+    "nvapi.dll",
+    "nvpowerapi.dll",
+    "atiadlxx.dll",
+    "iphlpapi.dll"
+  ]
+}

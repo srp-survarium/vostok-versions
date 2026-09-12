@@ -1,0 +1,41 @@
+{{Infobox version
+|image = 
+|date = May 13, 2013
+|stage = Teamplay Closed Alpha
+|link = 
+|prevparent = 0.1
+|prev = 0.100b
+|next = 0.11b
+|nextparent = 0.12a}}
+'''0.11a''' is a major update for [[Survarium]] that adjusted automatic weapon recoil and various [[Weapons|weapon]] statistics.
+
+==Changelog==
+* Reduced recoil of the gun “[[TT-33|TT]]”
+* Changed the recoil of automatic weapons
+* Introduced invulnerability upon spawning of Character (2 seconds)
+* Decreased weapon accuracy when firing from the hip
+* Reduce the effects of the skill level of "weapons training" on the accuracy of the hip, as well as the accuracy when moving
+* [[Remington 700]] sniper rifle now much less accurate when firing from the hip.
+* Reduced damage of the [[Remington 870]] pump-action shotgun
+* Improved damage model character. Now the helmet does not protect a shot to the face.
+* On the location "[[Radar]]" fixed rules of spawning for the team, who will begin in the automotive hangar. Now, if the opponent is in any room in the hangar, you will spawn in the barracks.
+* Added a source of light when shooting
+* Now while waiting for the start of the match the players' names are displayed
+* Added the ability to download the game using a torrent
+* Optimized loading file
+
+===Bug fixes===
+* Game crashing when using HD audio through GFX cards
+* Fixed errors which caused the player to fall through the ground
+* Fixed a bug with that prevented the player from entering the game with a long e-mail address (greater than 32 characters)
+* Slightly improved synchronization of characters on the network
+* Fixed a bug prevented the CAPS LOCK key from working
+* Fixed bug which caused the player to continually reload the shotgun
+* Fixed scope for rifle [[Remington 700]]
+* Fixed the tooltip for traps and Drug Administration in the inventory
+* The names of the dead characters are no longer displayed
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Major updates]]
+[[Category:Updates]]

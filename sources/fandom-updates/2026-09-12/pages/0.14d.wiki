@@ -1,0 +1,18 @@
+{{Infobox version
+|date = September 28, 2013
+|stage = Teamplay Closed Alpha
+|prevparent = 0.14a
+|prev = 0.14c
+|next = 0.14e
+|nextparent = 0.15a}}
+'''0.14d''' is a minor update for [[Survarium]] that transitioned the client to a production version (as opposed to debugging) and fixed some connection crashes.
+
+==Changelog==
+* Game launch files compiled into "master gold" version. Increased productivity. Debugging console commands are no longer available.
+
+===Bug fixes===
+* Fixed game crashes part that occurred when connecting to a new match
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

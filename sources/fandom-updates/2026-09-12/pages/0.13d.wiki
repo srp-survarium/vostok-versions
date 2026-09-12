@@ -1,0 +1,18 @@
+{{Infobox version
+|date = September 18, 2013
+|stage = Teamplay Closed Alpha
+|prevparent = 0.13a
+|prev = 0.13c
+|nextparent = 0.14a}}
+'''0.13d''' is a minor update for [[Survarium]] that incorporated the unappalied changes of [[0.13c]] as well as changing [[Teamplay]] to be 5v5 matches.
+
+==Changelog==
+Due to a bug in the installer patch selector, 0.13c does not contain the declared changes. This patch contains all the changes that were to be in version 0.13c, as well as the following changes:
+
+* Fixed a bug in the initialization of the game client when connecting to the server
+* Fixed wheezing at the beginning of playing sounds
+* The format of the match changed to 5 vs 5, games of 15 minutes
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

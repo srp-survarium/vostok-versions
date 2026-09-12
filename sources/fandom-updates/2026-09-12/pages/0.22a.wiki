@@ -1,0 +1,93 @@
+{{Infobox version
+|image = Ammo2.jpg
+|date = May 30, 2014
+|stage = Teamplay Closed Beta
+|link = 
+|prevparent = 0.21a
+|prev = 0.21d
+|next = 0.22b
+|nextparent = 0.23a}}
+'''0.22a''' is a major update for [[Survarium]] that added the [[Camouflage & decals|camouflage]] system, ammo boxes for bases in [[Teamplay]] and significantly rebalanced weapon and armor damage.
+
+==Changelog==
+===Gameplay===
+* Camouflages for armor and pants have been added to the game. Camouflage can either be found after the battle or purchased in the game store. Only one camouflage can be used on one item at a time
+* The possibility to refill ammo at the players base has been added. To enable that you need to come up to the dedicated equipment box and press the 'Use' button
+* Damage calculation formula has been changed, as well as complete rebalancing of weapons and armor. The effectiveness gap between the low-level weapons and high-end armor has been narrowed
+* Enemy grenades markers have been removed
+* Enemy highlighting possibility removed
+* Maps of stashes have been added to the game. Use of the map allows the player to find more items after the battle; Stash maps can be both found after the battle and bought in the store
+* The possibility to change your character's nickname added to the game
+* The mechanism of gear breakdown during the battle has been activated. Items wear out after being actively used in battles. At the item's condition lower than 80% increases the chances of malfunction which will lower the effectiveness of your weapons and gear
+* Smallshot scatter broadened, while its short-distance effectiveness has been considerably increased
+* Bonus of damage and armor-piercing for 9x19, 7N21 and 9x18 PBM lowered to 20%
+* Financial reward for enemy killing reduced from 50 to 15 rubles
+* Enemy killing experience bonus reduced from 10 to 3
+
+===Tasks===
+* Tasks system modified. Now the player can only accept tasks from one faction. Completing missions for the faction will give you a reputation increase and increase the faction's loyalty towards you. Mission failures decrease loyalty, while change of faction nullifies it completely
+* Number of tasks simultaneously given by a faction increased to 3
+* Requirements for accuracy and headshots quests lowered
+
+===Locations===
+* One of the bases on [[Mamayev Kurgan]] has been moved
+* Damage for most of the in-game anomalies modified
+
+===Black Market===
+* From-the-hip shooting damage accuracy for [[AKS-74U]] decreased, recoil increased
+
+===Renaissance Army===
+* New gear added: [[RPD]]
+* New gear added: 'Storm' amror set
+
+===Fringe Settlers===
+* Added a new weapon: [[SV-98]] (another sight has been temporarily installed instead of 1P69 "Hyperion")
+* Added new gear: Stalker armor set
+* Significantly reduced recoil of [[APS]]
+* Weight of Hunter’s Boots reduced to 0.6kg
+* Hunter’s Boots and Hunter’s Pants speed bonus reduced to 2%
+* Weight of Hunter’s Jacket reduced to 6kg
+
+===User Interface===
+* Changed interface of the matchmaking window Now it shows a range of levels of matches which the player is ready to join, and the number of people in the queue for each level. This change will allow players to better understand the reasons why it takes some time to find a match. It will also help players to see what equipment to wear in order to speed up the matchmaking
+* The item level is displayed now
+* The average level of the worn equipment considering the modifier of ELO rating is now displayed in the character window
+* Added detailed statistics on the received rating, experience, reputation and money in the match results window
+
+===Graphics===
+* Optimized the use of memory
+* Added support of the reflection of visible objects on the screen
+* Improved algorithm of materials mixing
+* Changed the algorithm of fog effects
+* Improved clouds lighting
+
+===Loader and installer===
+* Fixed a bug when time remained to finish installation wasn’t displayed correctly
+* Fixed checking compliance to the minimum configuration in the installer
+* The installer now requires the proper amount of disk space, not a minimal installation
+* Disk space occupied by the game is now updated after each patch
+* Version of the game that is displayed in the control panel is now updated after each patch
+* Added support for user-defined ports when using torrent
+* If upon installing a patch an error occurs (not enough disk space, can’t open file, etc.), then a dialog window with a request to repeat the action appears. Installation failed before now
+* Fixed the progress of updates installation
+* Installing updates now can’t interrupt the installation: you can always repeat the installation process now
+* Accelerated download speed when using HTTP
+
+===Security===
+* Copying user.cfg to another computer with stored authorization information will not lead to a loss of account
+* Updates are digitally signed to prevent malicious software from getting into users’ computers in case the servers were hacked
+* Table of the resources archive files is digitally signed and is verified upon connection; every resource is checked for integrity at launch
+
+===Network===
+* We use Windows Quality of Service to ensure the stability of game messages channel; with appropriate support it prevents a scenario when copying files through a local network results in a loss of connection to match the server because of displacing UDP protocol packets by TCP protocol packets
+* Network traffic was significantly optimization
+* Fixed a crash when using network statistics
+
+===Problems with starting the game===
+* Fixed detection of video memory amount
+* Fixed a “not enough memory“ bug upon starting a match modifiers
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Major updates]]
+[[Category:Updates]]

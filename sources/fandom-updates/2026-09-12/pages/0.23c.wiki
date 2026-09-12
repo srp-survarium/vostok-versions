@@ -1,0 +1,29 @@
+{{Infobox version
+|date = June 24, 2014
+|stage = Teamplay Closed Beta
+|prevparent = 0.23a
+|prev = 0.23b
+|next = 0.23e
+|nextparent = 0.24a}}
+'''0.23c''' is a minor update for [[Survarium]] that added a log for recently played matches and adjusted the economy for consumables.
+
+==Changelog==
+===Gameplay===
+* Added a log of played matches in a current session
+* Fixed a bug in the item search algorithm after a match, due to which too few items of standard quality were dropped
+* Reduced cost of grenades to 50 rubles
+* Reduced cost of repair equipment twice
+* Increased cost of ammunition by 2-3 times
+
+===User Interface===
+* Extended profanity filter’s vocabulary
+
+===Graphics===
+* Fixed lighting bugs that made some of the rooms look too dark
+
+===Optimization===
+* Fixed algorithm of identifying available video memory
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

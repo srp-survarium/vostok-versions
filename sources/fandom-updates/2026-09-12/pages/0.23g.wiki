@@ -1,0 +1,32 @@
+{{Infobox version
+|date = July 5, 2014
+|stage = Teamplay Closed Beta
+|prevparent = 0.23a
+|prev = 0.23e
+|next = 0.23h
+|nextparent = 0.24a}}
+'''0.23g''' is a minor update for [[Survarium]] that changed [[factions|faction]] loyalty to not reset after failing a quest.
+
+==Changelog==
+===Gameplay===
+* Mission failure results in [[Factions|faction]] loyalty drop by 10%, instead of complete zeroing
+* Task accomplishment mechanism for "win with no containers stolen by the enemy" fixed
+* The level of ammunition applied is taken into account in match-making
+* Spam filter for messages in public chat channels added
+
+===Item properties change===
+* [[AKM]] damage increased from 42 to 45
+
+===User Interface===
+* Kill indicator re-enabled, with an option to disable in options. Now the kill indicator works with the delay equal to your ping rate to ensure less false notifications
+
+===Bug Fixes===
+* Some texture streaming bugs fixed
+* Automatic match-making cancellation bug fixed
+* Temporary lobby-server inaccessibility bug fixed
+* Server performance considerably improved, in-game lags caused by game server overload reduced
+* Bug causing some players not to receive the message about the match start and not letting them into the match fixed
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

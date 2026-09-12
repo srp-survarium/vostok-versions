@@ -1,0 +1,21 @@
+{{Infobox version
+|date = December 20, 2013
+|stage = Teamplay Closed Beta
+|prevparent = 0.18a
+|next = 0.18c
+|nextparent = 0.19a}}
+'''0.18b''' is a minor update for [[Survarium]] that updated the splash screen and fixed some security-related bugs.
+
+==Changelog==
+* New splash screen
+
+===Bug fixes===
+* Fixed a bug that caused the player to fall through the ground
+* Rendering optimization
+* Fixed a bug in the firewall rules
+* Fixed some bugs to do with the sound
+* Fixed bug with Antivirus
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

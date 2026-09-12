@@ -1,0 +1,27 @@
+{{Infobox version
+|date = May 30, 2013
+|stage = Teamplay Closed Alpha
+|prevparent = 0.11a
+|prev = 0.11c
+|next = 0.11e
+|nextparent = 0.12a}}
+'''0.11d''' is a minor update for [[Survarium]] that added support for [[wikipedia:DirectX|DirectX 9]] and added HDR audio support.
+
+==Changelog==
+* The “crouch” position animation has been changed
+* Game sounds changed (HDR audio adaptation)
+* The minimum system requirements compatibility check integrated into the download/installer
+* DirectX 9 support added (DX9 video cards under Windows Vista and Windows 7 should work)
+* Lighting fixed on [[Chemical Plant]] and [[Radar]] locations
+* The possibility of using objects through a wall has been removed
+
+===Bug fixes===
+* Bug causing the match to end prematurely, prior to the level loading, has been fixed
+* Crash occurring when dying in a trap left from a “server-disconnected” player has been fixed.
+* HDAO error to causing an FPS drop has been fixed
+* Game interface error fixed (shop items were unavailable to purchase)
+* Cylindrical collision on objects has been fixed
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

@@ -1,0 +1,16 @@
+{{Infobox version
+|date = January 23, 2014
+|stage = Teamplay Closed Beta
+|prevparent = 0.18a
+|prev = 0.18f
+|nextparent = 0.19a}}
+'''0.18g''' is a minor update for [[Survarium]] that fixed various bugs.
+
+==Changelog==
+* Crash when reconnecting has been fixed
+* Updater bug leading to incorrect application data has been fixed
+* Network logging on clients and servers has been disabled
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

@@ -1,0 +1,3 @@
+# Preserve source bytes, including original line endings and whitespace.
+sources/**/*.wiki -text -whitespace
+reports/2026-06/** -text

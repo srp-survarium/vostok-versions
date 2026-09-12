@@ -1,0 +1,40 @@
+{{Infobox version
+|date = March 19, 2014
+|stage = Teamplay Closed Beta
+|prevparent = 0.20a
+|prev = 0.20b
+|next = 0.20d
+|nextparent = 0.21a}}
+'''0.20c''' is a minor update for [[Survarium]] that fixed a bug that improved player identification in the HUD and adjusted various stats and UI elements.
+
+==Changelog==
+* Biker helmet is now only available for the elite [[Black Market]]
+* The game no longer gives unranked players a job to search for an artifact
+* Changed the display of minimap so that allies should be more visible
+* Changed the visual style of player indicators. Snipers displayed with triangles, stormtroopers with squares, etc.
+
+* Increased font size for combat chat
+* Increased font size for combat log
+* Increased size of the icons of items in battle
+* Increased the size of the mini-map
+* Slightly repositioned chat combat log and quick access items in battle
+
+* Reduced the value of all weapons in the game by 2-4 times
+* Reduced sound dispersion of machine gun pistol
+* Increased buckshot damage, reduced damage of buckshot with distance
+* Increased armour of the vest for [[Renaissance Army]]
+* Reduced ammunition effect when hit
+
+===Bug fixes===
+* Accelerated the procedure of loading character when connecting to the lobby server
+* Fixed bug with hanging lobby
+* Fixed out of sync error in the calculation of recoil
+* Optimization of server lobby
+* Fixed bug in the mechanism of match selection
+* Fixed display of character model damage
+* Fixed some text
+* Fixed hanging in the lobby with a large quantity of messages in game chat
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

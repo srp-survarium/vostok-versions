@@ -1,0 +1,81 @@
+{{Infobox version
+|image = Preview-0.27-1.jpg
+|date = March 2nd, 2015
+|stage = Teamplay Open Beta
+|link = http://survarium.com/en/news/survarium-updated-version-027a
+|prevparent = 0.26a
+|prev = 0.26i
+|next = 0.27b
+|nextparent = 0.28a}}
+'''0.27a''' is a major update for [[Survarium]] that added the [[Research]] [[Teamplay|game mode]] and changed the way that players were rewarded during and after battle.
+
+==Changelog==
+ATTENTION: Due to the massive change in the value of experience and reputation, we also changed the amount of experience and reputation required to achieve certain levels. The current experience and reputation of existing players was recalculated so that progress towards achieving the next level remained unchanged.
+We have also significantly changed the mechanics of the expenditure of ammunition in combat. There is no concept of "storage", which defined the maximum amount of ammo that you can use in one battle. But there is a limit to how of much ammo you can carry in a backpack. The cost of emptied cartridges is automatically removed after a battle. If after a battle there’s a negative balance on your account you will be able to fight using only free equipment. Due to this change we automatically sold all cartridges that have already been purchased by the players for the purchase price.
+
+===Gameplay===
+* Added new game mode - "[[Research]]"
+* Changed factions [[missions]] system. Now players are offered three random missions a day. The award received depends on the medal the player got for completing a mission: i.e. bronze, silver or gold
+* Added rewards for successful actions in battle
+* Changed the amount of experience, reputation and [[silver]] given to the player for actions in battle
+* Added the ability to select the desired [[Game modes|game mode]] for random battles
+* Bonus for achieving first three wins in a day removed from the game
+* Added a bleeding effect to critical damage of the torso
+* Gunshot wounds and [[trap]]s can cause bleeding. The chance depends on worn [[equipment]] and type of [[ammunition]]
+* Now equipment can have a random modifier "protection from bleeding"
+* [[Artifacts#Artifacts|Onyx Artifact]]: the force of the active effect reduced from 95% to 50% damage absorption
+* Reduced damage drop over distance for all sniper weapons
+* Reduced chance of critical failure with low durability equipment
+* Changed the mechanics of piercing of surfaces: now the chance of piercing and damage depends on the angle of entry of the bullet
+* Changed damage and armor-piercing modifiers for ammo to balance the change in the mechanics of piercing
+* Revised the formula for calculating the chance of finding an item during [[Team Deathmatch]]
+* Repair cost increased to 20% of the base value of the item
+* Equipment sale cost in the shop is reduced to 15% of the base value of the item
+
+===Equipment and weapons===
+* Added new premium shotgun [[NeoStead 2000]], [[AKS-74U "Corsair"]], [[AK-74N '82]], [[AKM '65]], [[Vepr-12 Molot]], [[AK-12 M1]], [[SKS-MF]], [[Vepr "Wanderer"]], " [[Saiga-12C]], the [[VSK-94 "Guardian"]]
+* Added new types of medicines
+* Purchase of ammunition no longer requires reputation. All types of ammunition are available immediately
+* [[VSS]]: distance increased to 100
+* [[IZH-27 Lancaster]]: damage increased to 110, aiming increased to 0.35
+* [[SOCOM 16]]: damage reduced to 65, fire rate reduced to 250, magazine size increased to 20
+* [[SR-3M Vikhr]]: magazine size increased to 30
+* A Scavengers' chemical protection set moved to equipment tier 3 and now requires "Experienced" rank of reputation
+* SOCOM moved to the 13th level of equipment, damage increased to 75
+* Antitoxin is now available for sale only from The Fringe Settlers
+* [[PP-19-01 "Vityaz"]] moved to 5th level of equipment. Damage increased to 45
+* The [[Renaissance Army]]'s assault armor set moved to 10th level of equipment and now requires the rank of "Warrant Officer"
+* The [[Fringe Settlers]]' stalker armor set moved to 10th level of equipment and now requires the rank "Devoted"
+* Due to the change in level of equipment the basic cost of some items also changed
+
+===Black Market===
+* [[AKS-74U]]: damage reduced to 45
+
+===Fringe Settlers===
+* New weapon: [[Saiga-12]] (12 level)
+* [[SKS]]: damage reduced to 60
+* [[ASh-12]]: fire rate increased to 600, stopping power increased to 80%
+* [[9A-91]]: distance increased to 50
+* Bulletproof Vest "Pilgrim": added pockets capacity +2
+* Pants "Pilgrim": slot for items replaced with artifact container, modifier added to reduce power consumption
+
+===Renaissance Army===
+* New weapon: [[PKP Pecheneg]] (15 level)
+* New weapon: [[Vepr-12]] (12 level)
+* New weapon: [[SOK-94]] (level 6)
+* [[AK-12]]: damage reduced to 50, marksmanship to 40
+
+===User Interface===
+* Added a percentage display of the General state of health
+* Added a window that displays the distribution of weapons and equipment on the reputation levels of the groups
+* Removed display of ammunition from shop and storage (this change is part of a more global change with ammunition that will be available in future updates of the test server)
+* Now when accomplishing actions that reward experience, reputation or money, the player will receive a short text message (can be disabled in the game settings)
+* Added display of how much experience and reputation you need to get the next level in the results window of the battle
+
+===Bug Fix:===
+* Fixed numerous resync issues and crashes
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Major updates]]
+[[Category:Updates]]

@@ -1,0 +1,17 @@
+{{Infobox version
+|date = October 3, 2013
+|stage = Teamplay Closed Alpha
+|prevparent = 0.14a
+|prev = 0.14f
+|next = 0.14h
+|nextparent = 0.15a}}
+'''0.14g''' is a minor update for [[Survarium]] that fixed various small issues.
+
+==Changelog==
+* Fixed out of sync physics while jumping out of a sprint on an incline
+* Fixed disappearance of the names of teammates after several games in a row
+* Fixed a crash when disconnecting from the game as a dead player
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

@@ -1,0 +1,33 @@
+{{Infobox version
+|image = Survarium_calendar_2013-10_en.jpg
+|date = September 25, 2013
+|stage = Teamplay Closed Alpha
+|link = 
+|prevparent = 0.13a
+|prev = 0.13d
+|next = 0.14b
+|nextparent = 0.15a}}
+'''0.14a''' is a major update for [[Survarium]] that added the long-awaited [[Rudnya]] [[Locations|location]] and redesigned the shot dispersion mechanics for [[weapons]].
+
+==Changelog==
+* Added a new level, "[[Rudnya]]"
+* Reworked the dispersion mechanic of weapons. Now, when aiming down the sights of a weapon, it always shoots from the base variance (not considering a penalty for shaking hands and the state of the crosshair). Also included in the aiming mode is a barrel swaying mechanic, the amount of sway depends on the penalty for shaking hands and the state of the shooter. So after sprinting, weapon sway will be stronger than usual. The player may momentarily hold their breath (default key SHIFT)
+* To reduce "spawn camping", we redesigned the spawn points for fighters at "Radar"
+* Now the player can not use first aid kits and traps when moving a crate
+* Added new death animations and idling animation in the lobby
+* Now the system of match selection is guaranteed to gather a match of queued players after 10 minutes of waiting. Even if you are the only player in the queue
+* Optimization of data sent across the network. Now increasing the number of players in the match does not affect performance as much
+* Added sounds for breaking limbs
+* Added sounds for wheezing
+
+===Bug fixes===
+* Fixed a bug that caused an increase in de-sync over the course of a match
+* Fixed a bug where players with weak computers or with high ping cause lag for all players in the match
+* Fixed an issue where players were in "parallel realities". Each of them seeing the actions of other players
+* Fixed falling speed of characters
+* Fixed bug with shooting while running
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Major updates]]
+[[Category:Updates]]

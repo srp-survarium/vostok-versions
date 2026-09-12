@@ -1,0 +1,16 @@
+{{Infobox version
+|date = April 25, 2014
+|stage = Teamplay Closed Beta
+|prevparent = 0.21a
+|prev = 0.21c
+|nextparent = 0.22a}}
+'''0.21d''' is a minor update for [[Survarium]] that made the matchmaking process more strict and fixed some crashes.
+
+==Changelog==
+* Match making algorithm has been changed: works better, but players may wait longer
+* Fixed crash after playing several matches in a row
+* Fixed crash during visualization of player in squad with items with modifiers
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

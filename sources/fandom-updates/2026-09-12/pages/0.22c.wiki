@@ -1,0 +1,15 @@
+{{Infobox version
+|date = May 30, 2014
+|stage = Teamplay Closed Beta
+|prevparent = 0.22a
+|prev = 0.22b
+|next = 0.22d
+|nextparent = 0.23a}}
+'''0.22c''' is a minor update for [[Survarium]] that fixed a [[Camouflage & decals|camouflage]] baking error in the [[0.22a]] release.
+
+==Changelog==
+* Fixed camouflage baking during match loading
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

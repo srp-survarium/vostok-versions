@@ -1,0 +1,41 @@
+{{Infobox version
+|image = Survarium_beta_version.jpg
+|date = December 20, 2013
+|stage = Teamplay Closed Beta
+|link = http://survarium.com/en/news/closed-beta-testing-and-invites-lottery
+|prevparent = 0.17a
+|next = 0.18b
+|nextparent = 0.19a}}
+'''0.18a''' is a major update for [[Survarium]] that added the [[Tarakanovsky Fort]] location and English localization. It signified the start of the Closed Beta for [[Teamplay]] and opened up access to international players.
+
+==Changelog==
+* Added a new location “[[Tarakanovsky Fort]]" 
+* Added [[RGD-5]] grenades
+* Using a faster torrent client and change the mechanism for applying patches
+* Added English and Ukrainian localization
+* Poisoning “thermometer" was removed from the interface
+* When spawning the player is completely invulnerable. When you exit the base invulnerability decreases (total time: 4 seconds)
+* Changed the base at the ATP area on the map “[[Rudnya]]”
+* Changed the base on the map “[[School]]”
+* Modified the base on the map “[[Chemical Plant]]”
+* Introduced a new algorithm for selection of players in the match; Depending on the items worn by the character. High ELO rating can change this level of combat. For every minute spent in the queue waiting for a match the limits of permissible fights are constantly expanding. Now new players have much less chance of being in a match with fully equipped characters
+* Changed the character jump animation
+* Improved game performance on minimum settings
+* Allies indicators now decrease in size with distance
+* Temporarily disable all the perks of the character
+* Temporarily disabled support for multiple characters on your account 
+* Reduced rate of fire for [[Vityaz]] (from 750 to 700)
+* Change cartridges 9x19. HP is now the patron base and does not give any bonuses. FMJ cartridge has a 10% bonus to penetration and a 10% penalty to the damage
+* Changed the settings for shotguns to strengthen their close-range and weaken their long-range
+* Removed buckshot from the game (12x70, 3/0)
+* Reduced the bonus damage when hit in the head
+
+===Bug fixes===
+* Fixed a bug causing a crash associated with a large number of simultaneous sound playbacks
+* Fixed a bug causing a crash while selling items
+* Fixed a bug causing a crash during installation of trap
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Major updates]]
+[[Category:Updates]]

@@ -1,0 +1,17 @@
+{{Infobox version
+|date = December 26, 2014
+|stage = Teamplay Closed Beta
+|prevparent = 0.26a
+|prev = 0.26d
+|next = 0.26f
+|nextparent = 0.27a}}
+'''0.26e''' is a minor update for [[Survarium]] that added special Christmas-themed features to the lobby and game.
+
+==Changelog==
+* Added Christmas tree to lobby
+* Basic sweater will now be decorated with deers
+* Every player logging in until the 7th of January, 23:00 GMT+2 will receive a holiday camouflage
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

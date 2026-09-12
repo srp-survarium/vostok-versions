@@ -1,0 +1,26 @@
+{{Infobox version
+|date = April 29, 2015
+|stage = Teamplay Open Beta
+|prevparent = 0.28a
+|next = 0.28c
+|nextparent = 0.29a}}
+'''0.28b''' is a minor update for [[Survarium]] that made active participation in matches more rewarding and increased the effects of equipment damage.
+
+==Changelog==
+===Gameplay===
+* Victory bonus reduced to 25%
+* Reward for killing enemies increased by 25%
+* Now when participating in match equipment breaks down 50% faster
+
+===User Interface===
+* Fixed localization errors
+
+===Bug Fixes===
+* Fixed bug in installer, not the client to update under certain proxy settings
+* Optimized firing effects, which should reduce the performance drop when firing
+* Removed smoke from shot when using a telescopic sight
+* Fixed bug when trying to add funds from the search screen
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

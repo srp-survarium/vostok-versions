@@ -1,0 +1,17 @@
+{{Infobox version
+|date = October 9, 2013
+|stage = Teamplay Closed Alpha
+|prevparent = 0.14a
+|prev = 0.14g
+|nextparent = 0.15a}}
+'''0.14h''' is a minor update for [[Survarium]] that improved stability and connectivity.
+
+==Changelog==
+* Fixed a number of errors which caused the game to crash
+* Fixed a bug when buying ammunition causing a loss of connection to the server
+* Fixed sync error when reloading a shotgun and a sniper rifle
+* Fixed a bug with the sound system (hissing at login menu
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

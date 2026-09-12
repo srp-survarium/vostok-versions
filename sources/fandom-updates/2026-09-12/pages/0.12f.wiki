@@ -1,0 +1,18 @@
+{{Infobox version
+|date = August 21, 2013
+|stage = Teamplay Closed Alpha
+|prevparent = 0.12a
+|prev = 0.12e
+|next = 0.12g
+|nextparent = 0.13a}}
+'''0.12f''' is a minor update for [[Survarium]] that fixed some issues with third-person weapon sounds, shaders and materials.
+
+==Changelog==
+* Fixed weapon sounds from a third person perspective
+* Added English localization
+* Fixed some bugs in the shaders and materials
+* Refined animations
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

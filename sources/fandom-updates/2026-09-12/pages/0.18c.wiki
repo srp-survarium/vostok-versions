@@ -1,0 +1,19 @@
+{{Infobox version
+|date = December 24, 2013
+|stage = Teamplay Closed Beta
+|prevparent = 0.18a
+|prev = 0.18b
+|next = 0.18d
+|nextparent = 0.19a}}
+'''0.18c''' is a minor update for [[Survarium]] that adjusted the maximum height an avatar can reach and fixed some issues.
+
+==Changelog==
+* Launcher now loads correctly even if http site is not available
+* Maximum height which can be reached by moving characters has been changed
+
+===Bug fixes===
+* Fixed stalls in memory which were the cause of most re-syncs
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

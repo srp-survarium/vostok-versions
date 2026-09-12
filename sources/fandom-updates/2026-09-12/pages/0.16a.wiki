@@ -1,0 +1,48 @@
+{{Infobox version
+|image = 0.16a_comparison_new.jpg
+|date = November 4, 2013
+|stage = Teamplay Closed Alpha
+|link = 
+|prevparent = 0.15a
+|prev = 0.15c
+|next = 0.16b
+|nextparent = 0.17a}}
+'''0.16a''' is a major update for [[Survarium]] that added [[anomalies]] to various [[locations]] and rebalanced the recoil mechanics for [[weapons]].
+
+==Changelog==
+* Added anomaly effects to "[[Rudnya]]", "[[School]]" and "[[Radar]]" locations
+* Added support for multiple characters per account. Added the ability to purchase a new character
+* Added additional checks when changing gear if the character is in the matchmaking queue. Thus preventing usage of any restricted weapons or performing any other actions that violate the  character validity
+* Added toggle settings for "sprint", "aiming" and "crouch" actions
+* Improved weapon sounds
+* Optimization of the lighting algorithm
+* Changed the mechanics of recoil. In addition to changes in the algorithm, recoil has been rebalanced. Now different weapons have different values. The value of automatic weapons has been increased slightly
+* The weight at which the movement speed penalty begins has been increased to 15 kg
+* Reduced movement speed penalty from encumbrance weight
+* Reduced movement speed penalty when carrying a box
+* The character dies more quickly from injuries to limbs
+* Changed the statistics of bullet damage drop-off over distance (on average, damage has been increased in medium to long range)
+* Reduced the number of cartridges in packs. Increased the number of cartridge packs which a character can take into battle without equipment
+* Increased the rate of fire and damage of the [[Remington 870]] and [[TOZ-122]]
+* Increased damage and fire rate of [[Colt Python|.357 magnum]]
+* Increased fire rate of [[Fort 17]] and [[TT-33]]
+* Increased speed of changing[?] / putting away all guns
+* Changed the number of Remington 700 cartridges in the store from 6 to 5
+
+Included a draft of the new UI in the lobby. This option is designed to test whether it is practical. Graphical improvements will come later. Key changes:
+* Changed the chat, now new dialogue channels are opened in separate windows. Each window can be moved and resized
+* Changed the character model and mechanics to outfit your character for battle
+* Added a screen when loading levels
+
+===Bug fixes===
+* Fixed a bug causing a hang during loading when clients are behind a symmetric NAT
+* Fixed a bug causing a crash after a long game
+* Fixed "hovering" tracers
+* Fixed death animation
+* Fixed a bug in setting a trap, if the action is assigned to mouse click
+* Fixed a bug with the display of weapons statistics in the lobby
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Major updates]]
+[[Category:Updates]]

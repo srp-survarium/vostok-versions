@@ -1,0 +1,17 @@
+{{Infobox version
+|date = January 22, 2015
+|stage = Teamplay Open Beta
+|prevparent = 0.26a
+|prev = 0.26g
+|next = 0.26i
+|nextparent = 0.27a}}
+'''0.26h''' is a minor update for [[Survarium]] that fixed some bugs and crashes.
+
+==Changelog==
+* Fixed the display of messages from administrators
+* Improved application stability, fixed some crashes related to lack of memory
+* Fixed a bug which caused a transition to the login menu from within the game
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

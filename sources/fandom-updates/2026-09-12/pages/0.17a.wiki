@@ -1,0 +1,44 @@
+{{Infobox version
+|image = Survarium-screenshot12.jpg
+|date = November 25, 2013
+|stage = Teamplay Closed Alpha
+|link = 
+|prevparent = 0.16a
+|prev = 0.16b
+|nextparent = 0.18a}}
+'''0.17a''' is a major update for [[Survarium]] that added varying weather to [[locations]] and completely rebalanced all [[weapons]], [[equipment]] and [[ammunition]].
+
+==Changelog==
+* Fixed the text description when trying to enter the game with a completely new character - now a more clear description
+* Fixed display parameters for all subjects
+* Reduced delay when pressing the jump key while on the move , jumping on the spot will be corrected in the next patch 
+* Recycled spawn ( spawn ) and location of the database on all maps
+* Invulnerability after Spawn increased to 4.5 seconds (depending on base)
+* Added animation effects when hit by other characters
+* Added ability to change weapons with the mouse wheel
+* Now all game levels will load with varying weather
+* Changed effects and the sound of gunfire
+* Added the display of points earned in the statistics of the match
+* Redesigned game chat : opponents names appear in red, added display of the latest messages
+* Added icons above other players in your team
+* The head of the character has become 25% more resistant to damage received
+* Reduced the damage of bullet-drop when increasing the shooting distance
+* Changed the formula for calculating damage depending on armour - armour now more efficient
+* Made a complete readjustment of all weapons , ammunition and body armour
+* Increased rate of fire for the [[TOZ-66]]
+* Weapon [[TOZ-122]] is added to the fine accuracy when firing from the hip
+* Reduced recoil of the [[Vityaz|Knight]]
+* Increased efficiency of the [[Uzi]]
+* Changed the algorithm for the player who carries the box, theft or return box. Now the player who has carried the box further will get more points, not the one who delivers it
+
+===Bug fixes===
+* Restored portable display boxes on the minimap - Only the boxes found by your team will be displayed
+* Fixed a bug which caused the weight carried to have no effect on the speed of movement
+* Fixed crash at end of the match, if it occurred at the time of delivery to the base of the box
+* Fixed creation of characters with empty names 
+* Fixed display of progress neutralization trap
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Major updates]]
+[[Category:Updates]]

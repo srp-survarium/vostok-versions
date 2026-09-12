@@ -1,0 +1,17 @@
+{{Infobox version
+|date = March 17, 2014
+|stage = Teamplay Closed Beta
+|prevparent = 0.20a
+|next = 0.20c
+|nextparent = 0.21a}}
+'''0.20b''' is a minor update for [[Survarium]] that fixed various bugs with the [[0.20a]] update.
+
+==Changelog==
+* Fixed bugs when entering the game
+* Fixed bug in the mechanics of changing jobs, causing the server to hang
+* Fixed quest text for the Russian version
+* Fixed bug in text for the English version
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

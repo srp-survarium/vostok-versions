@@ -1,0 +1,65 @@
+{{Infobox version
+|image = renarmy_render.jpg
+|date = March 17, 2014
+|stage = Teamplay Closed Beta
+|link = http://survarium.com/en/news/forthcoming-v020a-update
+|prevparent = 0.19a
+|prev = 0.19c
+|next = 0.20b
+|nextparent = 0.21a}}
+'''0.20a''' is a major update for [[Survarium]] that added the [[Renaissance Army]] and [[Fringe Settlers]] [[factions]], [[Premium]] accounts and changed the mission system to offer daily jobs that increase loyalty bonuses.
+
+==Changelog==
+* Added support for groups of three players. The system balances the match selection based on the strongest player
+* Added gear for both the [[Renaissance Army]] and [[Fringe Settlers]]. ([[AKM]] and [[SKS]] respectively, as well as equipment)
+* Added ability to activate a premium account
+* Changed the mechanism for issuing assignments to players. Now each group offers only one daily task. Performing this task increases loyalty between you and the faction. Continuing to perform tasks will increase the loyalty bonus by up to 25 %. Failing to complete of task will result in a loyalty points reset. The player cans switch one task for another, so they are able to proceed through the list; when changing jobs loyalty bonus is reduced by 5%
+* Added two new starting weapons - [[PPSh 41]] and [[Mosin]] rifle
+* Added two new weapons for [[Scavengers]] - [[Cypress]] and [[MP-153 Baikal]]
+* Added one new weapon for [[Black Market]] - [[Winchester Model 1894]]
+* SMG [[Vityaz]] removed from the shop
+* Added new missions for all factions
+* Added notifications when a new rank-reputation is achieved with factions
+* Added dynamic lighting particles
+
+===UI changes===
+* Changed the position of the minimap, now it is located in the lower left-hand corner
+* Changed the crosshair and hit indicator. Now the size of the hit indicator depends on the damage done
+* Indicators changed over allies. Now their appearance depends on the type of equipment the player is using
+* Added an indicator for endurance
+* Added ability to inform allies about a spotted enemy
+* Changed statistics window after the match. Now it is possible to see details of all the players and their used weapons
+* Added different decals, particles and sounds for bullet penetration, no penetration and rebound
+* Added visualization zone in areas of radioactivity
+* Now you cannot procure [[artifacts]] with a battery in hand
+* Now you cannot disarm the [[trap]] with a battery in hand
+* Now if you kill a character at a time when he puts a battery into container the battery falls to the ground
+* Players of the international test now have their own chat channel in English
+* Amount of reputation required to gain ranks with the factions has been changed
+* Amount of money received after matched has been changed
+
+===Balance changes===
+* Made changes to the following locations: [[School]], [[Radar]] and [[Tarakanovsky Fort]]
+* Rebalanced the characteristics of weapons, ammunition and armour
+* A backpack with a container for artifacts is now available for newcomers
+* Reduced weight of the larkspur and rattle artifacts
+* Reduced weight of most ammunition
+
+===Bug fixes===
+* Fixed an opportunity to pick up the battery while sprinting
+* Fixed a bug with the use of aesthetic. Reducing its effectiveness
+* Fixed a bug with the influence of the weight on the speed of movement
+* Fixed a bug with the working of first-aid kits, now it treats critical damage as specified
+* Fixed crash when a player tried to change the piece of equipment, when a trap was added to their pocket
+* Fixed crash when completing the match with activated artifact
+* Fixed a crash in the lobby when frequent changes to equipment are being made
+* Fixed crash when completing the game, if one of the players left the match
+* Fixed bug in the formula for determining the best sniper
+* Fixed the shadow of the character in the form of the first person
+* Fixed several synchronization issues
+* Fixed incorrect incremental patch applying bug
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Major updates]]
+[[Category:Updates]]

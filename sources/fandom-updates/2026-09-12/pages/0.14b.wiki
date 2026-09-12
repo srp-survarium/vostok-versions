@@ -1,0 +1,18 @@
+{{Infobox version
+|date = September 26, 2013
+|stage = Teamplay Closed Alpha
+|prevparent = 0.14a
+|next = 0.14c
+|nextparent = 0.15a}}
+'''0.14b''' is a minor update for [[Survarium]] that fixed various connectivity and synchronization issues.
+
+==Changelog==
+* Fixed bug where a player could not climb through to some passages
+* Fixed a bug that prevented a client connecting to a server when a high percentage of packets were lost (got stuck at 0%)
+* Fixed a critical bug in the server when disconnecting a game client
+* Fixed a desync, caused by inverted kinematics
+* Fixed one of the reasons for a desync chain (where processing one desync causes a new one)
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

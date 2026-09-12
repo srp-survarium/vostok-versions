@@ -1,0 +1,26 @@
+{{Infobox version
+|date = February 6, 2014
+|stage = Teamplay Closed Beta
+|prevparent = 0.19a
+|next = 0.19c
+|nextparent = 0.20a}}
+'''0.19b''' is a minor update for [[Survarium]] that added purchase confirmations and decreased the effectiveness of the Onyx [[Artifacts|artifact]].
+
+==Changelog==
+* A message to confirm your purchase in store will now be displayed
+* When attempting to buy an item you already own, a pop-up window to confirm the purchase will be displayed
+* The active time of 'Onyx' [[Artifacts|artifact]] has been reduced to 3 seconds
+* The cooldown time for the 'Onyx' artifact increased to 60 seconds
+* The oxygen tank capacity reduced to 20 seconds. The protection provided by the oxygen tank has been increased
+* The respirator protection value has been increased
+* Anomaly damage on the [[Radar]] location has been lowered
+
+===Bug fixes===
+* Fixed a bug leading to sped-up reputation gain
+* Fixed a bug allowing the 'Deliver X batteries' quest to be accomplished by yourself
+* Fixed a bug with the ammo sold in shop being unusable with shotguns
+* Fixed a bug with the mouse-pointer movement making it impossible to open part of the interface windows at certain resolutions
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

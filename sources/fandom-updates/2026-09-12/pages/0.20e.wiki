@@ -1,0 +1,30 @@
+{{Infobox version
+|date = March 21, 2014
+|stage = Teamplay Closed Beta
+|prevparent = 0.20a
+|prev = 0.20d
+|next = 0.20f
+|nextparent = 0.21a}}
+'''0.20e''' is a minor update for [[Survarium]] that adjusted some item stats and fixed various bugs.
+
+==Changelog==
+* Modified markers above the players
+* Reduced weight of the Renaissance Army armored vest
+* [[AKM]] recoil tweaked
+* [[SKS]] recoil tweaked
+* [[Kiparis]] SMG reload time increased
+
+===Bug fixes===
+* Fixed a bug with falling through geometry on the [[Fort]] location
+* Fixed a critical bug when changing screen resolution
+* Fixed a critical bug when loading locations for users with 'bad' internet
+* Fixed a critical bug when leaving a match
+* Fixed a bug with displaying squads in the list of players
+* Fixed a bug with the message displayed on unlocking a faction level
+* Fixed a bug when choosing the player with the best accuracy
+* Fixed a bug when accomplishing the shooting accuracy task
+* Fixed a bug with drawing grass on the [[Radar]] location
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

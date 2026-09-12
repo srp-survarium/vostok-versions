@@ -1,0 +1,81 @@
+{{Infobox version
+|image = 0.26-preview2-en.jpg
+|date = December 12, 2014
+|stage = Teamplay Closed Beta
+|link = http://survarium.com/en/news/survarium-update-026a
+|prevparent = 0.25a
+|prev = 0.25d
+|next = 0.26b
+|nextparent = 0.27a}}
+'''0.26a''' is a major update for [[Survarium]] that added the [[Team Deathmatch]] [[Teamplay|game mode]] and updated versions of the Firearm and Physical Training [[Skills|skill trees]].
+
+==Changelog==
+===Gameplay===
+* Added a new game mode [[Team Deathmatch]] (TDM)
+* Added a new mechanic to the leveling of the game character. At the moment only shooting and physical training branches are available
+* Added support for multiple equipment profiles and the ability to change the sets of equipment in battle, while the character is dead
+* Added melee kill missions for all factions
+* Added weapon stopping power mechanics. The stopping power depends on type of weapon and ammunition
+* Maximum portable weight increased up to 30kg; speed penalty now begins from 20kg
+* Now when a leg is wounded, the player receives a penalty to movement speed - 10%, with the broken leg - 20%
+* [[Battery chargers]] are physical objects now. They react to shots and can be pushed
+* Added physical collision detection between players of different teams
+
+===Equipment and weapons===
+* Armor-piercing bonus for 7.32x39 increased to +20%
+* Reduced dispersion for all weapons
+* Prices for equipment upgrade now depends on the level of equipment
+
+===Independent traders===
+* [[Mosin Carbine]]: armor-piercing increased to 50
+* [[PPSh]], [[TT-33]]: armor-piercing increased to 25
+* [[VSS "Vintorez"]], [[SR-3M "Vikhr"]]: armor-piercing increased to 30
+* [[AK-74N]]: damage increased to 50, armor-piercing to 30
+* [[PP-19-01 "Vityaz"]]: damage increased to 40, armor-piercing to 20
+* After the battle players can find the [[SOCOM]] rifle (12 level equipment)
+
+===Scavengers===
+* [[OTs-02 "Kiparis"]], [[PM]]: armor-piercing increased to 20
+* [[TOZ-122]], [[Remington 700]]: armor-piercing increased to 45
+
+===Black Market===
+* [[AKS-74U]]: damage increased to 50, armor-piercing to 30
+* [[UZI]]: damage increased to 40, armor-piercing to 20
+* [[Winchester 1894]]: damage increased to 100, armor-piercing to 40
+
+===Fringe Settlers===
+* [[SKS]]: armor increased to 40
+* [[APS]]: damage reduced to 35, armor increased to 20
+* [[Vepr]], [[RPK]]: damage increased to 50, armor-piercing to 30
+* [[UMP-45]]: damage increased to 55, armor-piercing to 25
+* [[SV-98]]: damage reduced to 120, armor-piercing increased to 50, set the sight 1P69 "Hyperon"
+* Set "Keeper": armor is reduced to 70
+* [[9A-91]], [[VSK-94]]: armor-piercing increased to 30
+* Added to the Shop: [[PP-2000]] (9 level equipment), automatic [[ASh-12]] (15 level equipment), sniper rifle [[VSSK]] (15 level equipment)
+
+===Renaissance Army===
+* [[Fort 17]]: damage reduced to 35, armor-piercing increased to 20
+* [[AKM]], [[RPD]]: armor-piercing increased to 40
+* [[SR-2M]]: damage increased to 40, armor-piercing to 25
+* [[AK-74M]], [[A-545]]: damage increased to 50, armor-piercing to 30
+* Kit “Hammer-UM2”: armor reduced to 75
+* added to the Shop: [[AK-12]] (15 level equipment) and [[SVD]] sniper rifle (12 level equipment)
+
+===Locations===
+* Added a few extra passages/bypasses to [[Tarakanovsky Fort]]
+
+===User Interface===
+* Most of the elements of interface redesigned
+* In the description of a weapon we've added the display of the speed of transition into the aiming mode
+* Added display of empty containers for artifacts in battle
+* Changed the statistics screen at the end of the battle, added more detailed information about obtained experience, reputation, money
+
+===Bug Fixes===
+* Fixed installer, causing the inability to install the game client
+* Fixed a bug that caused spontaneous double shot
+* Performance optimization
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Major updates]]
+[[Category:Updates]]

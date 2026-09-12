@@ -1,0 +1,130 @@
+{{upcoming}}
+{{Infobox version
+|image = Survarium-update-30-new-skills-en.jpg
+|date = August 7, 2015
+|stage = Teamplay Open Beta
+|link = http://survarium.com/en/news/survarium-030-live-play-now
+|prevparent = 0.29a
+|prev = 0.29c}}
+'''0.30a''' is a major update for [[Survarium]] that added the [[Last Stand]] [[Teamplay]] mode, the anomalous [[skills]] tree and new equipment for all factions.
+
+==Major Features==
+===The Last Stand Game Mode===
+[[File:Survarium-update-30-last-man-standing.jpg|right|200px]]
+One of the most interesting new features will be an experimental game mode. It's going to be a king of the hill combat mode where weaker fighters are eliminated from the fight as the match progresses. The player with most points wins. An additional twist is that when you kill a player you steal a part of his or her score. Also in this mode the following rules apply:
+
+* Playing while in a squad is not allowed.
+* The number of awards and the possibility of ransacking a stash for loot depends on your battle performance.
+
+===Anomalous Skill Tree===
+[[Anomalies]] and [[artifacts]] are important elements of gameplay in Survarium. We are pleased to announce that anomalous skill tree is ready and will be released in 0.30 update. These skills focus on reducing damage from anomalies, as well as increasing the efficiency of artifacts. Please note that in order to activate artifacts players will have to learn a special skill from the new skill tree.
+
+===New Weapons and Equipment===
+[[File:Survarium-update-30-equipment.jpg|right|200px]]
+With update 0.30 all factions in Survarium will get new armor sets or weapons.
+
+[[Scavengers]] will rejoice at their heavy reinforcements. They'll get two bull-pup assault rifles: [[OTs-14]] (level 9) and [[VHS-2]] (level 10). The last but not least – the legendary [[Barrett M82]] sniper rifle (level 10).
+
+[[Black Market]] receives [[SCAR-H]] assault rifle and [[FN Minimi]] light machine gun. Both items are available at the 10th level of equipment.
+
+The soldiers of The [[Renaissance Army]] will now have two additional armor sets to choose from. Also the will get OZK-UV armor set with upgraded protection against anomalies at level three. Finally, there will be "sniper" armor set designed specifically for mobility. It is available at level 7.
+
+The [[Fringe Settlers]] will get Veles armor set available at the 7th level of equipment. This armor set has no distinct pros and cons, so it is suitable for players who prefer to change their playstyle on the go.
+
+===New In-game Tutorial===
+While this change is largely for new players, we hope that experienced fighters will also learn something new about the game. The changes affect not only the tutorial aspects of the game. We have completely reworked the beginning of the game to make immersion in the gameplay smoother, and also to give new players enough information to get started in Survarium.
+
+===Character Face Selection===
+[[File:Survarium-update-30-face-selection.jpg|right|200px]]
+For a long time Survarium characters have been an army of clones! We are pleased to announce that in update 0.30 you will be able to change the face of your character, choosing from one of the options available. This can be done when creating a new character or changing your character's name.
+
+==Changelog==
+===Gameplay===
+* Introduced "Knowledge of the Forest" [[skills|skill]] tree - These skills are focused on the interaction with artifacts and anomalies.
+* Damage of [[anomalies]] incresed by 30%.
+* Due to the introduction of the new skill tree all skill points will be reset and can be redistributed.
+* New game mode "[[Last Stand|The Last Stand]]", in which players are eliminated during the match
+* If you lose in "The Last Stand", you become a spectator. You can also leave the match at any moment.
+* You have to choose at least two modes on game mode selection screen.
+* When changing profile before a battle begins, correct equipment and weapon are displayed now.
+* Changed the mechanics of horizontal recoil when firing automatic weapons.
+* Now weapons are not reloaded automatically when a magazine is empty. You have to press reload button (R by default) or fire button (LMB by default).
+* New and improved animations for moving and firing weapons.
+* Updated and fixed footstep sounds. The sound now depends on the premises. Increased distance at which you hear enemy footsteps.
+* Added an option to choose appearance. Four faces are currently available.
+* Added [[factions|faction]] selection screen.
+* Changed tutorial before the first match. Now it's easier for newcomers to get by in the world of Survarium.
+* Survivor's Notes updated to be more informative.
+* Limb damage decreased to 80% of body damage (used to be 90%).
+* Minimum damage of bullets not penetrating armor descreased from 50% to 40%.
+* Vegetation changed on all locations except Vector Laboratory.
+
+===Equipment and weapons===
+* Increased effective range of assault rifles.
+* [[Items#Traps|PMN-3]] now occupies the entire slot for supplies (you can take only one mine).
+* Onyx [[artifacts|artifact]]: passive bonus decreases damage and armor-piercing of bullets fired into the character by 5%.
+* Onyx artifact: active bonus decreases damage and armor-piercing of bullets fired into the character by 60%.
+* Spring artifact: passive bonus to movement speed decreased to 2%.
+* Changed modifiers of premium equipment and weapons. Now each premium item has three random battle modifirs and one modifier increasing either experience, or reputation, or silver gain.<br>
+
+===Scavengers===
+* Added assault rifle [[OTs-14|OTs-14 "Groza"]] to level 9: damage 35, armor-piercing 45, rate of fire 700 .
+* Added assault rifle [[VHS-2]] to level 10: damage 32, armor-piercing 45, rate of fire 850.
+* Added sniper rifle [[Barrett M82]] to level 10: damage 180, armor-piercing 100, rate of fire 40 .
+* [[KRISS Vector]]: damage increased to 35, armor-piercing decreased to 20, now uses .45 ACP +P ammo.
+* [[TOZ-122]]: damage decreased to 100.
+* [[Remington 700]]: damage decreased to 100.
+* [[AKS-74U]]: damage increased to 32, moved to level 6.
+* [[Vz. 58 P]]: armor-piercing increased to 45, moved to level 7.
+
+===Black market===
+* Added a set of armored equipment (body armor, armored pants, boots, gloves, helmet, armored mask, backpack for ammo) to level 10.
+* Added assault rifle [[FN SCAR-H]] to level 10: damage 38, armor-piercing 65, rate of fire 625.
+* Added light machine gun [[FN Minimi]] to level 10: damage 32, armor-piercing 48, rate of fire 800.
+* [[Uzi]]: armor-piercing increased to 20.
+* [[H&K UMP45]]: damage increased to 35.
+* [[Valmet Rk.62]]: armor-piercing increased to 45.
+* [[FN FNC]]: damage increased to 32, armor-piercing increased to 45.
+* [[H&K 416A5]]: damage decreased to 32.
+
+===The Renaissance Army===
+* Added OZK-UV equipment set (vest, pants, boots, gloves) to level 3.
+* Added Sniper equipment set (vest, pants, boots, gloves, helmet) to level 7.
+* [[A-545]]: armor-piercing reduced to 40.
+* [[AKM]]: armor-piercing increased to 45.
+* [[AK-74M]], [[AK-74N]]: damage increased to 32.
+* [[RPD]], [[SOK-94]]: damage decreased to 30, armor-piercing increased to 45.
+* [[Vepr-12]]: rate of fire decreased to 300.
+* [[SVD]] (Dragunov sniper rifle): damage decreased to 100.
+
+===The Fringe Settlers===
+* Keeper Helmet Keeper: weight reduced to 2 kg.
+* Added Veles equipment set to level 7.
+* [[ASh-12]]: damage increased to 38.
+* [[Mosin Nagant]] rifle: damage decreased to 100.
+* [[SKS]]: damage decreased to 30, armor-piercing increased to 45.
+* [[RPK-74M]]: armor-piercing decreased to 42.
+* [[Vepr]]: damage increased to 32.
+* [[PP-2000]]: armor-piercing decreased to 20, rate of fire increased to 800.
+* [[Saiga-12]]: rate of fire decreased to 250.
+
+===User Interface===
+* Changed login screen.
+* Added "Remind password" button to the login screen.
+* Changed logic for selecting a stack of items for sale. When you double click on the input field, value is increased to the maximum, but no more than 100. When pressed again, the value returns to 1.
+* The Name of the seventh rank of The Fringe Settlers changed to "Sorcerer", the name of the eighth to "Master".
+
+===Bug fixes===
+* Fixed several critical bugs that caused the game client to crash.
+* Fixed lighting for evening and rainy weather.
+* Fixed issues with sound playback.
+* Fixed small localization bugs in all languages.
+* Fixed visual issues on several locations.
+* Fixed an issue with mode selection screen when the player was put into a game mode that was not selected.
+* Changed shot particles for assault rifles Valmet Rk. 62 and M4A1.
+* Changed explosion particles of MON-50 mine.
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Major updates]]
+[[Category:Updates]]

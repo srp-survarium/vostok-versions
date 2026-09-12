@@ -1,0 +1,28 @@
+{{Infobox version
+|date = March 17, 2015
+|stage = Teamplay Open Beta
+|prevparent = 0.27a
+|prev = 0.27b
+|next = 0.27d
+|nextparent = 0.28a}}
+'''0.27c''' is a minor update for [[Survarium]] that adjusted equipment damage and added the ability to choose an equipment profile before a match starts.
+
+==Changelog==
+===Gameplay===
+* Removed the dependency of the breakdown of weapons from the number of shots
+* Breaking items now depends on the time of the game and on the equipment profile in which they are located
+* Added the ability to choose the equipment profile before the match
+* Added message about critical bleeding
+* Added message about the player who killed you in the equipment profile selection screen
+
+===Bug Fixes===
+* Fixed synchronization errors when switching equipment profile
+* Fixed incorrect display of number of slots for additional items in the equipment profile selection screen
+* Fixed medals receiving "steel" and "retribution"
+* Fixed collision bugs that caused falling “under the level”
+* Fixed bugs in [[Team Deathmatch]] due to which players appeared “under the level”
+* Fixed lighting of particles system (incorrectly light dark rooms)
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

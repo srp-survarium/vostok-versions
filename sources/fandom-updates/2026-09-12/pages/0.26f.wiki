@@ -1,0 +1,18 @@
+{{Infobox version
+|date = December 30, 2014
+|stage = Teamplay Closed Beta
+|prevparent = 0.26a
+|prev = 0.26e
+|next = 0.26g
+|nextparent = 0.27a}}
+'''0.26g''' is a minor update for [[Survarium]] that added a brief tutorial and changed the [[PP-2000]] to be a primary weapon.
+
+==Changelog==
+* Added tutorial which offers rewards when completed
+* Fixed a visual bug in the displaying of decals
+* Fixed a bug allowing the player to take [[PP-2000]] as one-handed weapon
+* Optimization of the game interface giving boost to performance in battle
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

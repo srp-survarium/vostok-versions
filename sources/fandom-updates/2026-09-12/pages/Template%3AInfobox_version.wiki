@@ -1,0 +1,19 @@
+{{Infobox
+|title = {{#if: {{{title|}}} | {{{title}}} | {{BASEPAGENAME}} }}
+|imagearea = {{#if: {{{image|}}} | [[File:{{{image}}}|frameless|250px]] }}
+|rows = 
+{{Infobox row|label=Release date|field={{ #if: {{{date|}}} | {{{date}}} | ? }} }}
+{{Infobox row|label=Stage|field={{ #if: {{{stage|}}} | {{{stage}}} | ? }} }}
+{{ #if: {{{link|}}} | {{Infobox row|label=Official link|field=[{{{link}}} Survarium.com]}} }}
+|footer = {{#if: {{{prevparent|}}}{{{prev|}}}{{{next|}}}{{{nextparent|}}} |<center><small>{{#if: {{{prevparent|}}}{{{prev|}}} |
+<div style="display:inline-block">{{#if: {{{prevparent|}}} | <div style="display:inline-block;padding:0 .4em">[[{{{prevparentlink|{{{prevparent}}}}}}|<span style="margin-right:-0.35em">◄</span>◄ {{{prevparent}}}]]</div> }}{{#if: {{{prev|}}} | <div style="display:inline-block;padding:0 .4em">[[{{{prevlink|{{{prev}}}}}}|◄ {{{prev}}}]]</div> }}
+</div>
+}}{{#if: {{{next|}}}{{{nextparent|}}} |
+<div style="display:inline-block">{{#if: {{{next|}}} | <div style="display:inline-block;padding:0 .4em">[[{{{nextlink|{{{next}}}}}}|{{{next}}} ►]]</div> }}{{#if: {{{nextparent|}}} | <div style="display:inline-block;padding:0 .4em">[[{{{nextparentlink|{{{nextparent}}}}}}|{{{nextparent}}}<span style="margin-right:-0.35em">►</span>►]]</div> }}
+</div>}}</small></center>
+}}
+}}<noinclude>
+{{clear}}
+{{documentation}}
+[[Category:Infobox Templates]]
+</noinclude>

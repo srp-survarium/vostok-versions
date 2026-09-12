@@ -1,0 +1,19 @@
+{{Infobox version
+|date = May 15, 2013
+|stage = Teamplay Closed Alpha
+|prevparent = 0.11a
+|next = 0.11c
+|nextparent = 0.12a}}
+'''0.11b''' is a minor update for [[Survarium]] that added the [[Chemical Plant]] [[Locations|location]] and included a "God Rays" effect.
+
+==Changelog==
+* Added level [[Chemical Plant]]
+* Included "God Rays" effect
+* Disabled parallax mapping on low settings
+* Optimized for low shader settings
+* After the death the character reloads and does not change weapon
+* Prohibits the use of internal console commands
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

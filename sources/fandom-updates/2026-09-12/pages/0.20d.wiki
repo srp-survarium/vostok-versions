@@ -1,0 +1,15 @@
+{{Infobox version
+|date = March 19, 2014
+|stage = Teamplay Closed Beta
+|prevparent = 0.20a
+|prev = 0.20c
+|next = 0.20e
+|nextparent = 0.21a}}
+'''0.20d''' is a minor update for [[Survarium]] that fixed a bug that affected the availability of missions and items for all factions except the [[Scavengers]].
+
+==Changelog==
+* Fixed a bug with the availability of jobs and items for [[Black Market]], [[Renaissance Army]] and [[Fringe Settlers]]
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

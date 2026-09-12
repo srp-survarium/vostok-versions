@@ -28,28 +28,36 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import common as c  # noqa: E402
 
-REPORTS_DIR = c.REPO_DIR / "reports"
+REPORTS_DIR = c.REPORTS_DIR
 LIST_CAP = 400  # cap per-list output; note the remainder
 
 
 def ingested_ordered() -> list[dict]:
-    """Registry entries that are actually delinked, oldest build first."""
-    out = []
-    for v in c.registry():
-        label = v["label"]
-        if (c.VERSIONS_DIR / label / "objects").is_dir() and (c.VERSIONS_DIR / label / "meta.json").exists():
-            out.append(v)
-    return sorted(out, key=lambda v: v.get("build", 0))
+    """Require complete ingestion for the whole configured chain."""
+    versions = c.chain_versions()
+    missing = [v["label"] for v in versions
+               if not (c.VERSIONS_DIR / v["label"] / "meta.json").is_file()
+               or not any((c.VERSIONS_DIR / v["label"] / "objects").rglob("*.obj"))]
+    if missing:
+        sys.exit("error: configured chain is incomplete; ingest: " + ", ".join(missing))
+    return versions
 
 
 def ensure_report(base: str, target: str) -> Path:
     diff_dir = c.DIFFS_DIR / f"{base}__{target}"
-    if not (diff_dir / "report.json").exists():
+    report = diff_dir / "report.json"
+    inputs = c.comparison_inputs(base, target)
+    try:
+        saved = json.loads((diff_dir / "run.json").read_text())
+        valid = saved.get("inputs") == inputs and saved.get("report_sha256") == c.sha256_file(report)
+    except (OSError, ValueError):
+        valid = False
+    if not valid:
         subprocess.run(
             [sys.executable, str(c.SCRIPTS_DIR / "diff_versions.py"), base, target],
             check=True,
         )
-    return diff_dir / "report.json"
+    return report
 
 
 def reportable_funcs(report_path: Path, include_generated: bool) -> dict[str, float]:
@@ -98,7 +106,7 @@ def main() -> None:
     versions = ingested_ordered()
     if len(versions) < 2:
         sys.exit("chain_report: need >= 2 ingested versions")
-    REPORTS_DIR.mkdir(exist_ok=True)
+    REPORTS_DIR.mkdir(parents=True, exist_ok=True)
 
     steps = []
     for a, b in zip(versions, versions[1:]):

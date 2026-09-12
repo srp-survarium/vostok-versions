@@ -1,0 +1,19 @@
+{{Infobox version
+|date = October 1, 2013
+|stage = Teamplay Closed Alpha
+|prevparent = 0.14a
+|prev = 0.14e
+|next = 0.14g
+|nextparent = 0.15a}}
+'''0.14f''' is a minor update for [[Survarium]] that fixed various crashes and synchronization errors.
+
+==Changelog==
+* Fixed out of sync during a sudden FPS drop
+* Fixed several crashes when joining a match
+* Fixed a crash after a match
+* Fixed swallowing start sound when firing bursts
+* Fixed a bug in applying a penalty to the dispersion with broken arms
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

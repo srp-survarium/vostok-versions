@@ -1,0 +1,22 @@
+{{Infobox version
+|image = Survarium-screen-17.jpg
+|date = May 13, 2013
+|stage = Teamplay Closed Alpha
+|link = 
+|next = 0.100b
+|nextparent = 0.11a}}
+'''0.1''' is the first major release for [[Survarium]] that included the [[Teamplay]] mode, the [[Vostok Radar Station]] [[Locations|location]] and the [[Scavengers]] and [[Black Market]] factions.
+
+==Changelog==
+* [[Teamplay]] mode (PvP)
+* Two factions ([[Scavengers camp|Scavengers]] and [[Black market]])
+* One in-game [[locations|location]] ([[Vostok Radar Station]])
+* 11 types of [[weapons]]
+* 3 sets of [[equipment]] for Scavengers and Black Market
+* [[Hero#Damage_system|Location-based damage]]
+* Draft version of user interface
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Major updates]]
+[[Category:Updates]]

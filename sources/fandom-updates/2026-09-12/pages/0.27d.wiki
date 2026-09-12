@@ -1,0 +1,21 @@
+{{Infobox version
+|date = April 1, 2015
+|stage = Teamplay Open Beta
+|prevparent = 0.27a
+|prev = 0.27c
+|nextparent = 0.28a}}
+'''0.27d''' is a minor update for [[Survarium]] that added support for the upcoming Steam release.
+
+==Changelog==
+* Added Steam support
+* Fixed some sync issues
+
+==Hotfix 0.27d2==
+* Fixed bugs in clans functionality
+* Fixed errors in squads functionality
+* Fixed searching players by name
+* Changed rating calculation (restored the previous system)
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

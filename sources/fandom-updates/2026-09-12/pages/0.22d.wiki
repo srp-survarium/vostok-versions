@@ -1,0 +1,32 @@
+{{Infobox version
+|date = June 3, 2014
+|stage = Teamplay Closed Beta
+|prevparent = 0.22a
+|prev = 0.22c
+|next = 0.22e
+|nextparent = 0.23a}}
+'''0.22d''' is a minor update for [[Survarium]] that attempted to disable spotting and grenade markers along with various connectivity fixes.
+
+==Changelog==
+===Gameplay===
+* Enemy marks on spotting switched off
+* Enemy grenades marks switched off
+* Balance tweaked
+* New sounds of walking on wooden surfaces added
+* Camouflage textures arrangement procedure sped up
+* Lobby traffic decreased
+* Redundant information sent by client when in lobby, but not in queue has been removed
+* Extremely big character textures decreased. Smaller, but unique textures are used instead
+
+===Bug fixes===
+* Lobby server crash when loading squad fixed
+* Bug on the side of the client which led to deviation of other players' inputs has been fixed
+* Mouse controls disappearing in the game has been fixed
+* Message delivery guarantee mechanism which could lead to 'parallel realities' has been fixed
+* Double reconnection to lobby server has been fixed
+* Double reconnection to match bug has been fixed
+* Bug on creation/removal of firewall rules has been fixed
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

@@ -1,0 +1,32 @@
+{{Infobox version
+|date = June 24, 2015
+|stage = Teamplay Open Beta
+|prevparent = 0.29a
+|next = 0.29c
+|nextparent = 0.30a}}
+'''0.29b''' is a minor update for [[Survarium]] that added Spanish and French localizations as well as fixing various bugs.
+
+==Changelog==
+===Gameplay===
+* Increased number of parts required for equipment [[modifications]].
+
+===User Interface===
+* Added Spanish and French localizations.
+* Supplies color in the player's inventory changed to blue.
+
+===Bug Fixes===
+* Fixed several critical errors leading to game crashes.
+* Fixed a matchmaking bug that caused to start matches with fewer players more often than intended.
+* Matchmaking will now be restricted to appropriate players’ levels.
+* Fixed a bug with 'Keeper of the Sun' gear set. The modifiers have been added.
+* Fixed bugs with awarding incorrect achievements.
+* Fixed bugs with 'Solstice Days' event. Tokens should now drop correctly.
+* Fixed a bug with modification of the first-tier boots.
+* Fixed several bugs with sound system.
+* Fixed a number of Killcam bugs.
+* Corrected a number of localization mistakes.
+* Fixed a number of UI bugs.
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

@@ -1,0 +1,55 @@
+{{Infobox version
+|date = July 17, 2014
+|stage = Teamplay Closed Beta
+|prevparent = 0.23a
+|prev = 0.23g
+|nextparent = 0.24a}}
+'''0.23h''' is a minor update for [[Survarium]] that adjusted the bonuses of some equipment and added the "Scout" and "Explorer sets for the [[Renaissance Army]] and [[Fringe Settlers]].
+
+==Changelog==
+===Gameplay===
+* Added system of complaints and praises. Each player is allowed to file a complaint against another player, or to praise him. Praise is possible only in the results menu after a match
+* The quest reward now depends on the level of match, in which the quest was completed. The award in the lobby is displayed according to match level that corresponds to your current equipment. The real reward may be different in case a player joins a more difficult or easier match
+* Automatic tracking of "unfair" players
+* The price of sold items reduced by half
+* Improved search algorithm of obscene language
+
+===Item properties change===
+* A character without equipment now has one pocket
+* 7.62x39 7N23 ammunition with a 10% bonus to armor-piercing for [[AKM]] and [[SKS]] are now on sale at The Renaissance Army and The Fringe Settlers shops
+
+===Black Market===
+* Leather vest now gives additional space for bullets instead of pockets
+* Ropers now give speed bonus, instead of stamina bonus
+* Choppers now don’t give any bonuses
+* Leather pants now give speed bonus, instead of stamina bonus
+
+===Scavengers===
+* Quilted jacket now gives additional space for bullets instead of pockets
+* Military Boots now give stamina bonus instead of speed bonus
+
+===Renaissance Army===
+* Added new equipment: Scout’s armor set
+* [[RPD]] damage reduced from 48 to 46
+* Backpack now only gives bonus to the size of the pockets; its weight is reduced to 6 kg
+* Army pants now have additional cartridges instead of pockets
+* Pants "Storm" have no bonuses now
+* Bullet-proof vest "Storm" now has one pocket instead of two
+
+===Fringe Settlers===
+* Added new equipment: Explorer’s armor set
+* Hunter’s pants now have a pocket instead of speed bonus
+* Stalker’s pants have speed bonus instead of pockets
+
+===User Interface===
+* Now properties of items are displayed in tooltips
+* Buttons of modification, repair, purchase and sale were moved to the right side of the screen and integrated with the inventory
+* Added a button following a user to the Knowledge Base from the lobby
+* Now the chat messages of the administration and moderators are color highlighted
+
+===Bug Fixes===
+* Fixed issues with Survarium launcher’s "Play" button
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

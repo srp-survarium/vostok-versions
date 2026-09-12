@@ -1,0 +1,15 @@
+{{Infobox version
+|date = October 25, 2013
+|stage = Teamplay Closed Alpha
+|prevparent = 0.15a
+|prev = 0.15b
+|nextparent = 0.16a}}
+'''0.15c''' is a minor update for [[Survarium]] that fixed a few performance issues.
+
+==Changelog==
+* Fixed a desynchronisation of bullets
+* Disabled building of debug information during the game, which resulted in slower performance for the client and server
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

@@ -1,0 +1,23 @@
+{{Infobox version
+|date = December 30, 2013
+|stage = Teamplay Closed Beta
+|prevparent = 0.18a
+|prev = 0.18d
+|next = 0.18f
+|nextparent = 0.19a}}
+'''0.18e''' is a minor update for [[Survarium]] that improved optimization and fixed some issues with the updater.
+
+==Changelog==
+* RAM usage decreased by ~100MB
+* In windowed mode one can't change window size
+
+===Bug fixes===
+* Mouse movement error
+* Crash when one equips player with a gun without ammo
+* Crash in updater during decompression
+* Crash in updater during version checking
+* Folders content resync: versions [[0.18d]] and [[0.18c]]
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

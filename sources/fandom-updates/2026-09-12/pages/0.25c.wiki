@@ -1,0 +1,20 @@
+{{Infobox version
+|date = October 23, 2014
+|stage = Teamplay Closed Beta
+|prevparent = 0.25a
+|prev = 0.25b
+|next = 0.25d
+|nextparent = 0.26a}}
+'''0.25c''' is a minor update for [[Survarium]] that restored [[Radar]] to the map rotation and fixed various bugs.
+
+==Changelog==
+* Fixed crash on loading location "[[Vostok Radar Station]]", the map is back in rotation
+* Fixed display premium items in the starter bundles
+* Removed the command line "one_texture"
+* Fixed a bug which caused the waste of all existing player boosters (radio, drinks ... ) in one fight, all funds spent have been compensated
+* Fixed item modification bug that led to unexpected modifications. All the "extra" modifiers removed, funds spent have been compensated
+* Fixed the crouch animation, removed strong swinging when moving left/right
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

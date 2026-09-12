@@ -1,0 +1,155 @@
+{{Infobox version
+|image = Survarium-update-029-screenshot-london-street.jpg
+|date = June 19, 2015
+|stage = Teamplay Open Beta
+|link = http://survarium.com/en/news/survarium-update-029
+|prevparent = 0.28a
+|prev = 0.28c
+|next = 0.29b
+|nextparent = 0.30a}}
+'''0.29a''' is a major update for [[Survarium]] that added the [[London]] location, adjusted the balance of armor penetration and changed the [[Upgrades]] system.
+
+==Major Features==
+===New Location – London===
+[[File:Survarium-update-029-screenshot-london-parking.jpg|right|200px]]
+London differs from other Survarium locations both visually and gameplay wise. Tight corridors of the buildings are ideal for characters armed with shotguns or submachine guns. On the other hand, wide streets allow snipers to score quite a few frags. In the center of the area there is an office building serving as a perfect outpost. The team that takes over it will control the most part of the map.
+
+===Server Select and Faster Matchmaking===
+Now you can choose game server location at any time right from the game. Next to each server (RU, EU, US) you can see your ping to each server and a number of players looking for match queue on each server. The Matchmaking system has also been improved so you can find a suitable match faster.
+
+===Improved Graphics===
+A number of changes have been made to the lighting of objects and vegetation rendering. By reducing the contrast the image should be less tiring on the eyes. Moreover, these improvements will increase framerate on some maps.As seen in preview screenshots, the vegetation and lighting of the maps will be improved to provide a more polished and realistic look in order to improve the experience over longer times of playing the game. These tweaks are also said to slightly improve the performance on some setups, but will not provide a "100% FPS boost".
+
+===Balance Changes and New Weapons===
+In order to address the issues of misunderstanding some players had regarding the weapon damage, armor penetration and armor values, the update 0.29 will improve upon the system to provide a more clear solution. The following is a quote from Vostok Games' preview: "Weapon damage (with some rare exceptions) will depend on the weapon type with a slight increase as the level of the equipment grows. The weapon characteristics will display the highest possible damage. That is the damage which the weapon can inflict point blank and under full armor penetration capability.
+
+As the equipment level grows, the armor-piercing capability will increase significantly as well. If the weapon’s armor-piercing is greater than the vest’s armor, the bullet will fully pierce the armor to deliver total damage.  Please note, it depends on the target distance, i.e. the maximum damage is only possible when piercing the armor point blank.
+
+If the bullet has not pierced the armor, the damage is lowered in proportion to the difference between the vest’s armor and the bullet’s armor-piercing capability. This means that as the level grows the weapon effectiveness against the armor of its own or higher tiers will grow too, but will not change against the armor of lower tiers.
+
+For example, you shoot AS VAL (damage 35, armor-piercing 45) against a vest with the armor of 50. The resulting damage will be equal to 35*(1-(50-45)/100)=33. So you will need 4 shots to kill the enemy point blank.
+
+An additional rule was also introduced where the armor-vest will not be able to decrease the damage more than twice. That rule does not imply the Onyx artifact though. Damage and armor-piercing characteristics were also changed for all the weapons. The armor-vests parameters will remain unchanged."
+
+The damage calculation and equipment parameters  were changed to solve two problems. First of all, now high-level automatic weapons do not kill characters almost instantly. Secondly, low level weapons now inflict more damage against characters in top-tier body armor. High-level gear still offers the best performance though. Also introduced were five new weapons: submachine guns [[FN P90]] and the [[KRISS Vector]], assault rifles [[MSBS Radon]], [[Valmet Rk.62]] and [[vz. 58 P]].
+
+===Achievements===
+Achievements are personal players’ goals and grant performance awards. Most achievements give achievement points which allow you to compare your progress with that of other players. Some achievements reward the character with new items, for example camouflage and equipment. At the moment more than a hundred different achievements are available. If you have fulfilled the criteria of certain achievements already, you will get them as soon as you log into the game!
+
+===Workshop and Item Upgrades===
+[[File:Survarium-update-029-screenshot-crafting.jpg|right|200px]]
+[[Workshop]] window is available right from the main menu and allows you to upgrade weapons, modify equipment stats and appearance! The concept of donor item was also changed. From now on you only need a certain number of parts to improve an item. Parts can be obtained as battle trophies or salvaged by disassembling equipment you don’t need. These parts are universal and can be used to upgrade any item!
+
+===Changes to Leagues and New Rewards===
+You will now reach a League that best matches your skills faster. To do that you simply need to play a few qualifying matches. In addition,the  rewards for ranked matches have been improved. When entering a League for the first time, you will gain a reward containing several items. The quantity and quality of the items depends on the League. Upon qualifying for a high-tier League you will also receive rewards for all the previous Leagues!
+
+===Killcam===
+[[File:Survarium-update-029-screenshot-killcam.jpg|right|200px]]
+Many players don't understand how exactly their character was killed, and that might be quite frustrating. Killcam lets you see who and how killed your character. One of the drawbacks is that the position of the killer is revealed. This forces the players to move, which is especially inconvenient for snipers. This effect is being minimized the following. The camera doesn't show the enemy's actions after the kill, but the killer is shown from a third person perspective.
+
+===New Sound Effects===
+Now weapon sounds are fully consistent with the environment in which the shot is fired. Thus, determining where the shootout is going on and the distance to it will be much easier. The effects of the environment in which the shot is made are completely unique for each location. Weather sounds have also been added: you will hear howling wind, rain drops and other environmental effects.
+
+===New Battle Statistics Screen===
+[[File:Survarium-update-029-screenshot-match-summary.jpg|right|200px]]
+The screen with the match results now allows you to do more! Not only can you see the battle statistics, but also speak with the players in battle chat and take a look at their characters. The previous version of aftermatch statistics screen is available when viewing extended information about the battle from the lobby.
+
+==Changelog==
+===Gameplay===
+* Achievements added into the game
+* A new location – [[London]]
+* Added Killcam mode. It allows you to see the killer immediately after the death of your character
+* Changed battle statistics screen
+* Added spare parts to upgrade weapons
+* Items you don't need can be dismantled for spare parts
+* Reworked lighting system at [[Rudnya]], [[School]], [[Vostok Radar Station]]
+* Visual changes on all levels: changed the height and visualization of grass, softened shadows on the vegetation
+* All regions combined into a single global region. You can select the game server from the lobby
+* Changed the base cost of upgrade and modification of items
+* "Sponge" [[artifacts|artifact]] now works as a grenade
+* Added a restriction for Ranked battles: characters below level 5 are not able to participate
+
+===Equipment and Weapons===
+* Added flags of the following countries: New Zealand, Ireland, Scotland, England, South Korea, Japan, China
+* [[NeoStead 2000]] (premium) renamed to NeoStead 2000 M2
+* NeoStead 2000 can now be found after the battle
+* Added anti-personnel mines PMN-3 and MON-50
+
+===Scavengers===
+* Added [[vz. 58 P]] to rank 6
+* Added [[MSBS Radon]] to rank 8
+* Added [[KRISS Vector]] to rank 9
+* Added Combat armor set, level 8
+* Added Firefighter armor set, level 9
+* Added Nomad armor set, level 10
+* [[AKS-74U]], AKS-74U "Corsair": damage reduced to 30, armor-piercing increased to 40
+* [[OTs-02]], OTs-02 Kiparis: damage reduced to 25, armor-piercing increased to 10
+* KRISS Vector (new weapon): 32 damage, 45 armor-piercing
+* MSBS Radon (new weapon): 32 damage, 42 armor-piercing
+* [[PM]]: damage reduced to 25, armor-piercing increased to 10
+* [[TT-33]]: damage reduced to 20
+* [[PP-19-01]], PP-19-01 Vityaz: damage reduced to 28, armor-piercing increased to 20
+* vz. 58 P (new weapon): 30 damage, 30 armor-piercing
+
+===Black Market===
+* Added [[Valmet Rk.62]] to rank 5
+* Added [[FN P90]] to rank 9
+* Added Mercenary armor set, level 9
+* [[FN FNC]]: damage reduced to 32, armor-piercing increased to 40
+* FN P90 (new weapon): 28 damage, 55 armor-piercing
+* [[H&K 416A5]]: damage reduced to 35, armor-piercing increased to 45
+* [[M4A1]]: damage reduced to 32, armor-piercing increased to 42
+* [[Colt Python]]: damage increased to 65, armor-piercing increased to 20
+* [[H&K MP7]], H&K MP7A1, H&K MP7A1 Legend: damage reduced to 25, armor-piercing increased to 55
+* [[SOCOM 16]]: damage reduced to 60
+* [[H&K UMP45]]: damage reduced to 30, armor-piercing increased to 20
+* [[UZI]], UZI Hurricane, UZI Shadow: damage reduced to 28, armor-piercing increased to 10
+* Valmet Rk.62 (new weapon): 30 damage, 30 armor-piercing
+* [[Winchester 1894]]: damage increased to 60, armor reduced to 10
+
+===The Fringe Settlers===
+* [[9A-91]]: damage reduced to 35, armor-piercing increased to 45, recoil reduced
+* [[APS]]: damage reduced from 30 to 25, armor-piercing increased to 10
+* [[ASh-12]]: damage reduced to 36, armor-piercing increased to 65
+* [[PP-91 Kedr]]: damage reduced to 25, armor-piercing increased to 10
+* [[PP-2000]]: damage reduced to 35, armor-piercing increased to 35
+* [[RPK-74M]]: damage reduced to 32, armor-piercing increased to 45
+* [[SR-3M]]: damage reduced to 35, armor-piercing increased to 45, magazine capacity increased to 30 rounds
+* SR-3M Vikhr: damage reduced to 35, armor-piercing increased to 45
+* [[Vepr]], Vepr Wanderer: damage reduced to 30, armor-piercing increased to 40
+* [[VSK-94]], VSK-94 Guardian: damage reduced to 35, armor-piercing increased to 45
+
+===The Renaissance Army===
+* [[A-545]]: damage reduced to 32, armor-piercing increased to 45, rate of fire increased to 900 rounds per minute
+* [[AEK-919K Kashtan]]: damage reduced to 25, armor-piercing increased to 10
+* [[AK-12]]: damage reduced to 35, armor-piercing increased to 55
+* [[AKM]]: damage reduced to 30, armor-piercing increased to 50
+* [[AK-74M]]: damage reduced to 30, armor-piercing increased to 40
+* [[AK-74N]], AK-74n ’82: damage reduced to 30, armor-piercing increased to 40
+* AKM, AKM ‘65, AKM Avenger: damage reduced to 30
+* [[Fort 17]]: damage reduced to 25, armor-piercing increased to 10
+* [[PKP Pecheneg]]: damage reduced to 35, armor-piercing increased to 60, stopping power reduced
+* [[PPSH-41]]: damage reduced to 20
+* [[RPD]]: damage reduced to 35, armor-piercing increased to 35
+* [[SR-2M Veresk]]: damage reduced to 25, armor-piercing increased to 25
+* [[SVD]]: recoil increased
+* [[AS Val]]: damage reduced to 35, armor-piercing increased to 45, rate of fire increased to 800 rounds per minute
+* [[VSS]], VSS: damage reduced to 35, armor-piercing increased to 45
+
+===User Interface===
+* Added a tooltip that displays penalty to movement speed
+* Added an option to disable the display of medals earned in battle
+* Fixed old tips and added new ones for the loading screen
+
+===Fixed Bugs===
+* Fixed crash during map load
+* Fixed several critical errors that led to game crashes
+* Fixed several bugs in the sound system
+* Fixed reliability modifiers
+* Fixed errors in functioning of artifacts and grenades
+* Fixed several UI bugs
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Major updates]]
+[[Category:Updates]]

@@ -171,10 +171,12 @@ def main() -> None:
 
     c.require_tool(c.objdiff_cli())
     diff_dir = c.DIFFS_DIR / f"{base}__{target}"
+    inputs = c.comparison_inputs(base, target)
     c.log("diff", f"{base} -> {target}")
     write_objdiff_project(diff_dir, base, target)
 
     report = diff_dir / "report.json"
+    (diff_dir / "run.json").unlink(missing_ok=True)
     subprocess.run(
         [c.objdiff_cli(), "report", "generate", "-p", str(diff_dir), "-o", str(report)],
         check=True,
@@ -182,6 +184,9 @@ def main() -> None:
     s = summarize(diff_dir, base, target,
                   include_generated=args.with_generated or args.all,
                   include_thirdparty=args.all)
+    (diff_dir / "run.json").write_text(json.dumps(
+        {"inputs": inputs, "report_sha256": c.sha256_file(report), "generated_at": c.now_iso()},
+        indent=2) + "\n")
     cn = s["counts"]
     c.log("diff", "changed: engine {} | generated {} | third-party {}".format(
         cn["changed"]["engine"], cn["changed"]["generated"], cn["changed"]["third_party"]))

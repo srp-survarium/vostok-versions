@@ -1,0 +1,18 @@
+{{Infobox version
+|date = January 16, 2015
+|stage = Teamplay Open Beta
+|prevparent = 0.26a
+|prev = 0.26f
+|next = 0.26h
+|nextparent = 0.27a}}
+'''0.26g''' is a minor update for [[Survarium]] that added rewards and notifications for levelling up.
+
+==Changelog==
+* Added rewards for reaching certain character levels (all players will get the reward according to their current level)
+* In the notification window when reaching a faction level we have added a list of unlocked items
+* Added players notification mechanism (messages from the administrators)
+* Added the ability to purchase premium from the locked (3rd) equipment profile
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

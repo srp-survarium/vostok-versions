@@ -1,0 +1,14 @@
+{{Infobox version
+|date = May 30, 2013
+|stage = Teamplay Closed Alpha
+|prevparent = 0.11a
+|prev = 0.11d
+|nextparent = 0.12a}}
+'''0.11e''' is a minor update for [[Survarium]] that fixed an issue with the installer caused by [[0.11d]].
+
+==Changelog==
+* Installer issue hotfix
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

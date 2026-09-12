@@ -1,0 +1,27 @@
+{{Infobox version
+|date = January 20, 2014
+|stage = Teamplay Closed Beta
+|prevparent = 0.18a
+|prev = 0.18e
+|next = 0.18g
+|nextparent = 0.19a}}
+'''0.18f''' is a minor update for [[Survarium]] that fixed some issues on 32-bit systems and improved optimization.
+
+==Changelog==
+* Corrected problems running on 32-bit OS
+* A 32bit OS has a limit to the amount of video memory, 512MB. Also you can only install the game at the minimum screen resolution. In the future we will try to ease these restrictions. If the minimum resolution is unacceptable to you, you can use the phrase “-all_resolutions” when you start the game client. We will pay no attention to the error message “out of memory” from players using this start-up option
+* Slightly (by an average of 80 MB) reduced memory usage
+* The game is now able to use more than 1 GB of video memory
+* Partially fixed FPS drops during firing
+* Significantly reduced incoming network traffic
+* Fixed resynchronization chaining between the client and the server
+* Fixed a significant increase in outgoing traffic during disconnection
+* Match Server Disconnection no longer allows players to re-join the session
+* Added console command <nowiki>max_ping_time_in_ms = 200</nowiki> - players with great ping can set this value yourself. WARNING! Increasing this value increases the load on the CPU
+* The maximum ping increased from 200ms to 250ms
+* When starting the game it will be minimized, when no window is displayed
+* Fixed the display of the UI when the game starts at a resolution of less than the minimum
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

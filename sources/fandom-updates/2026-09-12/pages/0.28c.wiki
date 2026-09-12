@@ -1,0 +1,41 @@
+{{Infobox version
+|date = May 8, 2015
+|stage = Teamplay Open Beta
+|prevparent = 0.28a
+|prev = 0.28b
+|nextparent = 0.29a}}
+'''0.28c''' is a minor update for [[Survarium]] that fixed various ranked match issues and added several [[Premium]] [[equipment]] sets.
+
+==Changelog==
+* Fixed random changing of game mode from ranked matches to non-ranked ones
+* Fixed error when new level notification did not pop up
+* Added displaying protection from [[anomalies]] in the lobby
+* Added dynamic Leagues range detection in ranked matches
+* Added information about bonuses depending on match level to the post-match statstics screen
+* Changed the system of awards distribution in ranked matches with regard to equipment bonus and ranked match bonus
+* Quick commands are now highlighted in chat
+* Fixed bug causing crash when a player quickly dragged decals and camos in the item modification window
+* Item search attempts increased to 5
+* Added bonus items to in-game [[shop]]
+
+===Renaissance Army===
+* [[AK-12]] damage reduced to 45
+* Added Guards set
+* Added Sokol-M set
+* Added Molot UM2-A set
+
+===Fringe Settlers===
+* Added Follower set
+* Added Berserker set
+* Added Leshy set
+
+===Scavengers===
+* Added Guerilla set
+
+===Black market===
+* Added "Marauder MKII" set
+* Added "Omikron MKII" set
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

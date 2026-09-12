@@ -1,0 +1,19 @@
+{{Infobox version
+|date = August 20, 2013
+|stage = Teamplay Closed Alpha
+|prevparent = 0.12a
+|next = 0.12e
+|nextparent = 0.13a}}
+'''0.12d''' is a minor update for [[Survarium]] that fixed various issues that occurred during player spawning.
+
+==Changelog==
+* Fixed a crash that occurs immediately before a character spawns
+* Fixed a desync that occurs immediately before a character spawns
+* Added handling of situations when the client begins to send INPUT in the future
+* Server logs during a tick
+* The last INPUT is lost before a desync
+* Fixed an issue when determining video memory in launcher/installer
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

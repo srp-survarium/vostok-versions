@@ -1,0 +1,86 @@
+{{Infobox version
+|image = Kurgan2.jpg
+|date = April 22, 2014
+|stage = Teamplay Closed Beta
+|link = http://survarium.com/en/news/forthcoming-v021a-update
+|prevparent = 0.20a
+|prev = 0.20f
+|next = 0.21b
+|nextparent = 0.22a}}
+'''0.21a''' is a major update for [[Survarium]] that added the [[Mamayev Kurgan]] location and added the ability to find random items after a match.
+
+==Changelog==
+===Locations===
+* Added a new location “[[Mamayev Kurgan]]"
+
+===Scavengers===
+* Veteran reputation with the Scavengers now gives you 12x70 slugs
+* Scavengers no longer sell ammunition 9x19 Parabellum and 7N21
+
+===Black Market===
+* Jacket “Brute" now provides additional pouches for ammunition
+* Black Market now sell 9x19 7N21
+
+===Renaissance Army===
+* Now sell [[Fort 17]] pistol, shotgun Franchi [[SPAS-12]] and ammunition 9x18 PBM
+* Protection settings for army pants and army boots upgraded to army vest - 50/45 %
+* Parameter of insulation for the army vest increased to 10%
+* Army body armor now gives additional pouches for ammunition
+* Army body armor no longer protects hands 
+* Weight of army boots increased to 1.2kg
+
+===Fringe Settlers===
+* Now sell the respirator "Malachite" as well as [[APS]] pistol , shotgun [[Benelli M4 Super 90]], 9x18 ammunition PBM
+* Pants and hunter boots hunter now give a bonus of speed of movement
+* Weight of Hunter Boots reduced to 1.0kg
+
+===Gameplay===
+* Added the feature (depending on the player's match statistics) the possibility for them to be rewarded with a random unique item
+* Now players can only take one two-handed weapon into battle
+* Match-making algorithm improved: now teams should be more balanced 
+* Increased the amount of reputation required to improve relations with factions
+* Reduced the number of XP points gained from killing the enemy
+* Now the award for actions in combat will depend on the maximum level of equipment the players involved
+* Faster reloading for all shotguns 
+* The number of rounds of ammunition in a pack for 7N6M 5.45x39, 9x18 PM, 9x19 Parabellum is now 50
+* Reduced the number of cartridges in a pack 7.62x54R to 10
+* Changed the mechanics of recoil; automatic weapons with a strong impact can no longer be stabilized completely
+* Kickback now allows player movement to compensate the impact from bullets
+* Increased the chance of ricochet on all ammunition
+* Now the player begins to accelerate automatically when key is pressed and recovered energy spurt - Now, throwing grenades and switching weapons interrupts loading a cartridge
+* Now you can throw a grenade during a run
+* Fixed count of player's rating after the battle
+* Fixed the “Infinite breath hold” bug
+
+===User Interface===
+* Added squad chat in the game lobby and in the battle
+* In the options menu added the ability to change the position of the minimap as well as turn it off
+* Added filter swear words 
+* Added display of current tasks during the battle
+* Added a message on the completion and the failure of tasks
+* Now when killing an enemy , hit indicator will briefly be tinted red
+* Oxygen Tank now displayed in the non-lethal weapons 
+* In the game interface indicator added ammunition
+* Added the ability to copy and paste text using the clipboard
+* Fixed bugs in the display of objects on the minimap
+
+===Graphics===
+* Improved texture mapping on distant objects from the player
+
+===Sound===
+* Added a variety of sounds in the environment for school locations , Radar Station and "East"
+* Increased volume of the detector for radiation while in the radioactive zone at locations Tarakanovskiy School and Fort
+* Fixed hearing distance for shotguns
+* Optimization of the sound of automatic weapons, to reduce the load on the processor
+* Reduced the volume of enemy steps on some surfaces
+
+===Network===
+* Changed the algorithm for sending network messages about user : now the information about other users can only be sent at no more than 20 times per second. This change reduces the network traffic
+* Increased interval at which the server duplicates lost network messages, which led to a substantial decrease in traffic and load on the client and server. This change is not final
+* Added network statistics that allow us to get more detailed information about those users who are still experiencing problems with the network synchronization
+* Fixed a desync when picking up a battery
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Major updates]]
+[[Category:Updates]]

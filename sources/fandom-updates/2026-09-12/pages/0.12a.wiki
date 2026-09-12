@@ -1,0 +1,33 @@
+{{Infobox version
+|image = Alpha_04.jpg
+|date = August 14, 2013
+|stage = Teamplay Closed Alpha
+|link = 
+|prevparent = 0.11a
+|prev = 0.11e
+|next = 0.12d
+|nextparent = 0.13a}}
+'''0.12a''' is a major update for [[Survarium]] that added the [[School]] [[Locations|location]], activated [[anomalies]] and introduced an updated user interface.
+
+==Changelog==
+* Character synchronization with servers overhauled
+* Addition of new level "[[School]]"
+* Introduction of new user interface
+* Enabled [[anomalies]] in game. Now the "isolation" stat will be more beneficial
+* Added animations for carrying, lifting and throwing key items
+* Removed ability to shoot and sprint when carrying an objective
+* Improved weapon firing animations
+* Improved walking and running animations
+* Changed jumping animation
+* Improved visuals (particle effects) for gun shots
+* Added falling damage from great heights
+
+===Bug fixes===
+* Fixed an error in sound parameters
+* Fixed bug causing random delay before a jump starts
+* Adding friends now requires the consent of the player
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Major updates]]
+[[Category:Updates]]

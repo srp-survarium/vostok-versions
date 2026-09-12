@@ -1,0 +1,16 @@
+{{Infobox version
+|date = June 3, 2014
+|stage = Teamplay Closed Beta
+|prevparent = 0.22a
+|prev = 0.22d
+|next = 0.22f
+|nextparent = 0.23a}}
+'''0.23g''' is a minor update for [[Survarium]] that fixed a critical memory leak and bug with the packet sending system.
+
+==Changelog==
+* Fixed memory leak which could lead to crash during match loading.
+* Fixed packet sending mechanism, which could lead to 'parallel realities' and lobby and match servers hanging
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

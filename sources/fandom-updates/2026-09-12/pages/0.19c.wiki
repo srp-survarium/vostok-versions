@@ -1,0 +1,15 @@
+{{Infobox version
+|date = February 7, 2014
+|stage = Teamplay Closed Beta
+|prevparent = 0.19a
+|prev = 0.19b
+|nextparent = 0.20a}}
+'''0.19c''' is a minor update for [[Survarium]] that some connectivity issues.
+
+==Changelog==
+* Fixed a server hang
+* Fixed one of the causes of desynchronization in calculations between clients and the server
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

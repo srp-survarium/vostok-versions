@@ -1,0 +1,29 @@
+{{Infobox version
+|date = September 17, 2013
+|stage = Teamplay Closed Alpha
+|prevparent = 0.13a
+|next = 0.13c
+|nextparent = 0.14a}}
+'''0.13b''' is a minor update for [[Survarium]] that improved game logging and fixed various crashes and synchronization issues.
+
+==Changelog==
+* The client creates a new type of game log - event log. The event log contains enough information to reproduce the full history of the battle. The event log is added by default to submit the bug report
+* Fixed a bug where one player going out of sync led to having to resync all the players of the current game
+* Fixed formula of restricting standard distribution when shooting. Changed all weapons to use the new formula
+* Included a correction of finger positions on guns
+
+===Bug fixes===
+* Fixed out of sync computing in the physical controller players
+* Fixed out of sync at the spawn of a character
+* Fixed a bug that caused a chain of de-sync (for the time when there is a new resynchronization out of sync)
+* Fixed a crash when using the first aid kit
+* Fixed a server crash match after the final score
+* Fixed a crash when the game server destroys an anomaly
+* Fixed a rare crash when the game server destroys a player
+* Fixed a rare crash when the game server disconnects a player
+* Fixed a crash when stopping in torrent the loader client
+* Now loader checks for available disk space before downloading new updates
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

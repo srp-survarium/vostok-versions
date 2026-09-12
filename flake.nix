@@ -27,14 +27,14 @@
       forAll = nixpkgs.lib.genAttrs systems;
 
       # Single source of truth, shared with scripts/*.py (which read it as JSON).
-      versions = builtins.fromJSON (builtins.readFile ./versions.json);
+      versions = builtins.fromJSON (builtins.readFile ./catalog/versions.json);
 
       # Post-0.23 builds that are NOT in the delink registry (no PDB), but whose
       # survarium.exe can still be lifted from a game-tree dump on archive.org.
       # Each carries an `exe_url` (an archive.org `view_archive.php` member URL
       # that streams just the exe) + `exe_sha256`, so the flake fetches ~13 MB
       # instead of the multi-GB installer. Shared with scripts/deps_report.py.
-      extraBuilds = builtins.fromJSON (builtins.readFile ./extra_builds.json);
+      extraBuilds = builtins.fromJSON (builtins.readFile ./catalog/extra_builds.json);
 
       # All builds we can produce a survarium.exe for, keyed by bare version token
       # ("v0.26g0-build2777" -> "0.26g0") for the `nix build .#"0.26g0"` UX.

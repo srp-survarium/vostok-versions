@@ -1,0 +1,31 @@
+{{Infobox version
+|date = October 17, 2014
+|stage = Teamplay Closed Beta
+|prevparent = 0.25a
+|next = 0.25c
+|nextparent = 0.26a}}
+'''0.25b''' is a minor update for [[Survarium]] that narrowed the starting range of levels in matchmaking and fixed various bugs.
+
+==Changelog==
+===Gameplay===
+* Reduced starting level range in matchmaking
+
+===Equipment and weapons===
+* [[SR-3M]] clip size reduced to 20, range reduced to 60, dispersion increased to 1
+
+===User Interface===
+* Added the ability to view the contents of the bundle items in the store
+* Now match results window display a real chance of finding items after a match is shown; Previously the amount of bonuses were displayed
+
+===Bug Fixes===
+* Fixed several critical game server and client bugs
+* Fixed bug in creating clan positions resulting in a loss of privileges of clan commander
+* Fixed "safe zone" in “[[Cologne Bridge]]”
+* Fixed bug in "[[Tarakanovsky Fort]]" that lead to situation when the boxes couldn’t be picked up
+* Fixed installer bug including DirectX installation error
+* Fixed a bug in "Steal a battery" quest
+* Fixed bug causing blood stains to permanently be displayed on screen
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

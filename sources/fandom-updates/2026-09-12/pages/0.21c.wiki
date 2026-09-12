@@ -1,0 +1,24 @@
+{{Infobox version
+|date = April 24, 2014
+|stage = Teamplay Closed Beta
+|prevparent = 0.21a
+|prev = 0.21b
+|next = 0.21d
+|nextparent = 0.22a}}
+'''0.21c''' is a minor update for [[Survarium]] that attempted to make the matchmaking system more strict and increased the recoil of the [[AKS-74U]].
+
+==Changelog==
+===Black Market===
+* [[AKS-74U]] recoil increased
+
+===Gameplay===
+* Connection to consecutive battle bug fixed
+* Match-making rules enforced. Matching time may increase, especially for the players in high-profile outfit. This will reduce the number of cases when new players get to fight against fully-armed opponents
+
+===User interface===
+* Incorrect display of ammo packs in the gear window fixed;
+* Players list sorting bug fixed
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

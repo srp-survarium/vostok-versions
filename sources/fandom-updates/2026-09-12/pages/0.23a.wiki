@@ -1,0 +1,43 @@
+{{Infobox version
+|image = Survarium screenshot2.jpg
+|date = June 17, 2014
+|stage = Teamplay Closed Beta
+|link = http://survarium.com/en/news/version-023a-released
+|prevparent = 0.22a
+|prev = 0.22g
+|next = 0.23b
+|nextparent = 0.24a}}
+'''0.23a''' is a major update for [[Survarium]] that changed the system for finding items after a match and rebalanced several [[weapons]].
+
+==Changelog==
+===Gameplay===
+* The algorithm for “item finding” after the battle changed. Now the number of various items that could be found within a battle reduced to 1. In exchange, the result of the battle impacts the chance of finding the items with a greater number of modifiers.
+* A Premium account increases the chance to find higher-profile objects by 50% for its owner and by 20% for his teammates. This bonus is not accumulative
+* Bug leading to decreasing all the damage by 2% fixed
+* [[Mosin Carbine]] armor-piercing increased to 25
+* The starting number of ammo pouches set to 3
+* Now after the battle the player can have a small amount of [[gold]], [[rubles]], as well as a 1-day premium account ticket (to be activated)
+* The possibility to convert premium currency into game rubles added
+* Financial reward for task accomplishment lowered
+* Item breakdown for combat actions fixed
+
+===Locations===
+* The containers spawn place in the anomalous zone on [[Mamayev Kurgan]] location fixed
+
+===Scavengers===
+* Dispersion for [[OTs-02 Kiparis]] increased to 2.0
+* Sight swaying for [[TOZ-122]] decreased
+
+===Black Market===
+* [[Uzi]] dispersion increased to 1.8
+
+===Renaissance Army===
+* The [[RPD]] sight swaying decreased, damage increased to 48
+
+===Fringe Settlers===
+* [[APS]] recoil and dispersion increased to 2.0
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Major updates]]
+[[Category:Updates]]

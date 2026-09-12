@@ -1,0 +1,19 @@
+{{Infobox version
+|date = September 19, 2013
+|stage = Teamplay Closed Alpha
+|prevparent = 0.13a
+|prev = 0.13b
+|next = 0.13d
+|nextparent = 0.14a}}
+'''0.13c''' is a minor update for [[Survarium]] that was supposed to fixed various crashes and connectivity issues. Due to a problem with the installer though, these changes were not applied until the subsequent [[0.13d]] patch.
+
+==Changelog==
+* Fixed a bug that caused it to disconnect the player from the server. This error was shown as a single_size_buffer_allocator - out of memory! message
+* Fixed a server crash when calculating the rating for the player, resulting in 0 points
+* Fixed a crash that could occur when picking up a box of tools at the time of resynchronization
+* Fixed position of the mouse pointer when you open the options window
+* Fixed a bug that caused a player wearing no items to not be displayed in the game lobby
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

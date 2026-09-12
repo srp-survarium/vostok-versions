@@ -1,0 +1,105 @@
+{{Infobox version
+|image = Patch-0.25-preview-2.jpg
+|date = October 10, 2014
+|stage = Teamplay Closed Beta
+|link = http://survarium.com/en/news/survarium-update-025a
+|prevparent = 0.24a
+|prev = 0.24d
+|next = 0.25b
+|nextparent = 0.26a}}
+'''0.25a''' is a major update for [[Survarium]] that added the equipment [[upgrades]] system, support for clans and modified the layout of the [[Mamayev Kurgan]] level.
+
+==Changelog==
+===Gameplay===
+* Player clans were implemented into the game. The number of players in the clan depends on the level of clan available special mode clan battle, where the selection of opponents depends on clan rating
+* Now players can upgrade an item using an identical item as a donor
+* Added the ability to change random modifiers on a weapon
+* Added melee
+* Updated "[[Mamayev Kurgan]]"
+* Changed the algorithm for matchmaking. Extended the search range for opponents for high levels of equipment
+* When choosing a random map the history of players’ matches is taken into account now. The system selects the less played map
+* Rebalanced game’s economics to match the income and expenditure of in-game currency at different levels of equipment. Basically the prices of items
+* Reputation for actions in battle is now added to the faction with which a player cooperates
+* Increased chance of getting weapons and equipment after a match by 50%
+* Removed ammunition and special equipment from the list of items dropped after a match
+* Now there’s a chance of a zero drop after a match to balance the increased items drop
+* Now the result of a match and premium account increase the chance of finding items after a match, instead of a chance to obtain an item of superior quality
+* Only weapons, items, camouflage and decals are dropped after using a stash map
+* Changed the algorithm of ammunition auto refill; now available slots are automatically filled by the most simple ammunition
+* Now both variations of combat are available on all the maps: with batteries in random locations and with batteries in special charging devices
+
+===Equipment and weapons===
+* Now there are separate modifiers for damage and armor
+* Aiming speed modifier now works properly and affects the speed of transition in the aiming mode and not dispersion
+* [[MP-27M Lancaster|IZH-27 "Lancaster"]] can now use buck-shot
+* [[Vityaz|PP-19-01 "Vityaz"]] is transferred to the 4th level of equipment
+* Tornado energy drink was added to in-game shop; it increases movement speed during one match
+* Protein was added to in-game shop; it increases the maximum carried weight during one match
+* Ration was added to in-game shop; it increases health recovery speed during one match
+* Portable radio was added to in-game shop; it reduces the time of respawn during one match
+* “Motherwort Extract” was added to in-game shop; it increases aiming speed during one match
+* "Artifact-master”, was added to the in-game shop, it accelerates the collection of artifacts in the course of one fight
+* Reduced the rate of breakage of armor and weapons
+* Removed +3 and +4 modifiers for the size of pockets
+
+===Scavengers===
+* Light armor moved to the 4th level of equipment
+* Added a new set of armor at the 5th level of equipment
+
+===Black Market===
+* Thug’s jacket moved to the 3th level of equipment
+* Added a new set of armor at the 4th level of equipment
+* Corsair Jacket moved to the 5th level of equipment
+* Increased rate of fire of Winchester 1894
+* Increased recoil of AKS-74U
+
+===Fringe Settlers===
+* Explorer armor set moved to the 8th level of equipment
+* Stalker set moved to the 9th level of equipment
+* [[SV-98]] moved to the 9th level of equipment, aiming speed reduced
+* “[[Vepr]]” moved to the 12th level of equipment
+* [[RPK]] moved to the 11th level of equipment
+* “Leshy” set moved to the 12th level of equipment
+* “Keeper” moved to level 14 gear
+* Added new weapons: [[UMP-45|H&K UMP45]], [[9A-91]], [[VSK-94]], ammo: .45ACP PAB-9, SP-5, SP-6
+* Added new gear: "Pilgrim" armor set
+
+===Renaissance Army===
+* "Sokol" set moved to the 8th level of equipment
+* "Storm" set moved to the 9th level of equipment
+* [[RPD]] moved to the 9th level of equipment
+* [[AK-74M]] moved to the 10th level of equipment, fixed sight, recoil reduced
+* “Molot-UM" set moved to the 12th level of equipment
+* [[A-545]] set moved to the 12th level of equipment, added ammunition h N
+* "OZK-18KB" set moved to the 14th level of equipment
+* Added new weapons: [[SR-2M]], [[AS Val|AS “Val”]], ammo: SP-10, PAB-9, SP-5, SP-6
+* Added new gear: "Zubr-UM" armor set
+* Assault’s backpack moved to the 14th level of equipment
+
+===User Interface===
+* Game launcher appearance changed
+* Friendly team’s [[Trap|traps]] are now displayed
+* Fixed bug in displaying items dropped during a match
+* Store and inventory are now available through different buttons in the top menu
+
+===Bug Fixes===
+* Bug causing loss of performance during a match
+* Fixed bug in calculation of the main award of the daily bonus
+* Fixed bug causing the inability to use stash maps
+* Fixed bug in calculation of awards for quests completed in "x2" matches
+* Fixed bug in checking the validity of the profile before entering a match
+* Fixed common bug that led to crash before loading of level
+* Fixed bug in checking "steal a battery” quest
+* Fixed bugs “[[Cologne]]” location that allowed players to get outside of the game zone
+* Fixed graphical errors on "[[Mamayev Kurgan]]" location
+* Fixed collision of models on "[[Vector Laboratory]]"
+* Fixed lighting on all locations
+* Fixed bug that made network packets send for too long
+* Fixed synchronization errors
+* Fixed a bug in calculation of damage if a player leaves a match
+* Fixed crouch animation
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Major updates]]
+[[Category:Updates]]

@@ -1,0 +1,25 @@
+{{Infobox version
+|date = December 23, 2014
+|stage = Teamplay Closed Beta
+|prevparent = 0.26a
+|prev = 0.26c
+|next = 0.26e
+|nextparent = 0.27a}}
+'''0.26d''' is a minor update for [[Survarium]] that replaced random spawns with bases in [[Team Deathmatch]].
+
+==Changelog==
+===Gameplay===
+* Significantly revised [[TDM]] mode, players now appear in their bases when respawning
+
+===Equipment and weapons===
+* Significantly reduced the damage of all weapons at a distance
+* [[Mosin]] rifle, armour-piercing reduced from 50 to 35, and damage from 110 to 100
+
+===User Interface===
+* Added links in the game client to video tutorials for beginners
+
+===Bug Fixes===
+* Fixed many lighting bugs on all locations
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

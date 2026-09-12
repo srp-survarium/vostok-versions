@@ -1,0 +1,32 @@
+{{Infobox version
+|date = May 22, 2013
+|stage = Teamplay Closed Alpha
+|prevparent = 0.11a
+|prev = 0.11b
+|next = 0.11d
+|nextparent = 0.12a}}
+'''0.11c''' is a minor update for [[Survarium]] that allowed [[trap]]s to persist after death and adjusted character movement speed and regeneration.
+
+==Changelog==
+* The trap lifetime algorithm has been changed. Now traps don't get removed after the death of character who laid them. The character cannot set more traps than are equipped in their profile.
+* Character movement speed changed; when in standing position the movement speed is decreased by 13%, when crouching - slightly increased.
+* Character regeneration algorithm changed. Now body parts cannot automatically restore.
+* The display of hit detection changed (where from you were shot)
+* The small shot ([[TOZ-34]], [[TOZ-66]]) scatter mechanism modified. The "Corsair" is much less effective now.
+* The results window added to the end of a match.
+* HDR audio integrated. As of now not all the sounds have been readjusted to HDR. We plan to finish tweaking it with the next patch.
+* The HDAO mode added.
+* Graphics optimization done
+
+===Bug fixes===
+* Server crash under user name overfill fixed
+* Now the reloading can be interrupted by changing weapons, aiming or shooting
+* Bug related to incorrect sorting of objects by depth has been fixed
+* Colour grading effect on low settings has been added
+* Black screen bug fixed
+* Game server crash on player spawning fixed
+* A number of sound engine errors fixed (The direction of sound)
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

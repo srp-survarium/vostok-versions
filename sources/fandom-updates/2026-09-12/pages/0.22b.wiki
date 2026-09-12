@@ -1,0 +1,14 @@
+{{Infobox version
+|date = May 30, 2014
+|stage = Teamplay Closed Beta
+|prevparent = 0.22a
+|next = 0.22c
+|nextparent = 0.23a}}
+'''0.22b''' is a minor update for [[Survarium]] that fixed a memory crash with the [[0.22a]] release.
+
+==Changelog==
+* Fixed out of memory crash during match loading
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

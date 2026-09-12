@@ -1,0 +1,19 @@
+{{Infobox version
+|date = September 27, 2013
+|stage = Teamplay Closed Alpha
+|prevparent = 0.14a
+|prev = 0.14b
+|next = 0.14d
+|nextparent = 0.15a}}
+'''0.14c''' is a minor update for [[Survarium]] that addressed some slow connectivity issues.
+
+==Changelog==
+* Improved stability of the game with bad internet connections (a high percentage of packet loss)
+
+===Bug fixes===
+* Fixed bug where a player could not climb through some of the passages
+* Fixed an issue where players with a lost connection were considered in match selection
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

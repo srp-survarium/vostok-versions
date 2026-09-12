@@ -1,0 +1,21 @@
+{{Infobox version
+|date = June 4, 2014
+|stage = Teamplay Closed Beta
+|prevparent = 0.22a
+|prev = 0.22e
+|next = 0.22g
+|nextparent = 0.23a}}
+'''0.22f''' is a minor update for [[Survarium]] that disabled spotting and fixed various texturing issues.
+
+==Changelog==
+'''Bug fixes:'''</noinclude>
+* Fixed model LOD (Level of Detail) flickering
+* Texture streaming in lobby has been turned off
+* We switched enemy spotting off :)
+* [[SV-98]] reload time has been doubled
+* Fixed resources archive consistency check when game is installed to a path, which contains UNICODE characters
+* Fixed lobby server crashes
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

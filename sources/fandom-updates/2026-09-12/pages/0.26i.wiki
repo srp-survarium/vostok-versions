@@ -1,0 +1,16 @@
+{{Infobox version
+|date = January 23, 2015
+|stage = Teamplay Open Beta
+|prevparent = 0.26a
+|prev = 0.26h
+|nextparent = 0.27a}}
+'''0.26i''' is a minor update for [[Survarium]] that fixed some crashes and errors.
+
+==Changelog==
+* Fixed a bug which caused crashes on 32-bit systems
+* Fixed some synchronization errors
+* Fixed a bug which caused crashes of all clients in the game associated with sending "bad" input of one of the clients
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

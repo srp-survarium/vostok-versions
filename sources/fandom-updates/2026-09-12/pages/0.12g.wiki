@@ -1,0 +1,14 @@
+{{Infobox version
+|date = August 22, 2013
+|stage = Teamplay Closed Alpha
+|prevparent = 0.12a
+|prev = 0.12f
+|nextparent = 0.13a}}
+'''0.12g''' is a minor update for [[Survarium]] that fixed critical crashes caused by the [[0.12f]] patch.
+
+==Changelog==
+* Urgent correction (hot-fix) for the previous version - eliminated crashes associated with the sound
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

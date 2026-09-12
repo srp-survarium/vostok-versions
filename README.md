@@ -1,113 +1,131 @@
 # vostok-versions
 
-Cross-version analysis of **Survarium** (Vostok Engine / X-Ray 2.0) builds —
-from the first archived dev build (**0.100b**, May 2013) to the last Steam build
-(**0.69d0**, 2022). Two things, at two levels of depth:
+Build catalogs, published update notes, and cross-version binary research for
+Survarium / Vostok Engine. This repository keeps source material and historical
+findings alongside the tools used to investigate builds.
 
-1. **Function-level diffs** — for builds that shipped a **PDB**, delink each
-   `survarium.exe` into per-function COFF objects and diff version→version to see
-   exactly which functions are unchanged, churned, or new.
-2. **Dependency analysis** — for **any** `survarium.exe` (PDB or not), read which
-   third-party libraries are linked and at what version, straight from the binary.
+## Start here
 
-The committed reports record investigations from June 2026. Build availability,
-local holdings, and tool output may have changed since then. See
-[`reports/README.md`](reports/README.md) for their scope and how to reproduce them.
+- [Build catalog](catalog/README.md): download URLs, hashes, PDB availability, and
+  the configured comparison chain.
+- [Wiki update notes](sources/fandom-updates/2026-09-12/README.md): 91 update pages
+  captured from Survarium Wiki, with source revisions and attribution.
+- [June 2026 research](reports/2026-06/README.md): preserved function comparisons,
+  compiler flags, dependency findings, build metadata, and symbol alignment map.
+- [Recorded observations](observations/README.md): historical interpretation kept
+  separately from new scanner output.
+- [Finding builds](docs/finding-builds.md) and [extracting executables](docs/extracting-exes.md):
+  June 2026 research notes; availability claims describe that investigation.
 
-## Two tiers of builds
+The catalog contains nine installer builds (eight with PDBs, plus stripped
+0.23h) and four executable-only builds through 0.69d0. Function comparisons cover
+0.100b through 0.21d. The wiki collection covers the pages available through 0.30a;
+its linked `0.28d` page is missing. Published update names are retained as written
+and are not automatically equated to binary build IDs.
 
-| tier | registry | what you can do | how to get it |
-|---|---|---|---|
-| **installer** | `versions.json` | **function diff** when a PDB is present; deps for all builds | `nix build .#version-<label>` (extract `survarium.exe` and any PDB) |
-| **exe-only** | `extra_builds.json` | **deps only** | `nix build .#"<token>"` (just the exe, via an archive.org `view_archive.php` member URL) |
+## Structure and state
 
-Both registries are plain JSON, read by *both* `flake.nix` and the Python scripts.
-The installer registry contains eight PDB-bearing builds and the stripped
-`v0.23h-build2285` (`symbols: false`); that last build supports dependency analysis
-only. `config.json` records the eight-build function-diff chain.
-What exists, what we hold, and what's still missing/locked is catalogued in
-[`reports/MISSING_BUILDS.md`](reports/MISSING_BUILDS.md).
+| Path | Contents | State |
+| --- | --- | --- |
+| `catalog/` | Build identities, download hashes, chain selection, dependency marker definitions | Maintained inputs |
+| `sources/` | Captured external source text, revisions, licenses, and coverage records | Dated source collections |
+| `observations/` | Manually recorded findings and interpretations | Historical evidence; not regenerated |
+| `reports/2026-06/` | Original reports, input metadata, symbol map, and provenance | Frozen snapshot |
+| `scripts/` | Fetching, ingestion, comparison, scanning, and packaging | Runnable tools with regression tests |
+| `work/` | Downloads, objects, raw comparisons, new reports | Generated and ignored |
+| `flake.nix`, `flake.lock` | Pinned tool and download environment | Maintained environment |
 
-## Reports
+The root `versions.json` and `reports/builds` are links retained for existing
+research references. Their contents live in the catalog and June snapshot.
 
-| report | what it answers |
-|---|---|
-| [`reports/DEPENDENCY_VERSIONS.md`](reports/DEPENDENCY_VERSIONS.md) | **what each exe brings** — every third-party lib + version across builds (0.100b → 2022), incl. the 0.25–0.31 sweep. `scripts/deps_report.py` |
-| [`reports/CHANGES_NARRATIVE.md`](reports/CHANGES_NARRATIVE.md) | the engine's evolution, interpreted (gameplay + deps) |
-| [`reports/CHAIN_REPORT.md`](reports/CHAIN_REPORT.md) + [`reports/builds/`](reports/builds/) | **function-level diffs** per consecutive PDB build. `scripts/chain_report.py`, `build_report.py` |
-| [`reports/BUILD_FLAGS.md`](reports/BUILD_FLAGS.md) | per-project `cl.exe` flags / LTCG state from each PDB. `scripts/flags_report.py` |
-| [`reports/MISSING_BUILDS.md`](reports/MISSING_BUILDS.md) | **what we have / what's missing / what's `.sup`-locked** |
-| [`docs/extracting-exes.md`](docs/extracting-exes.md) | how to pull a `survarium.exe` out of any archive.org item (+ the full format classification) |
-| [`docs/finding-builds.md`](docs/finding-builds.md) | how to hunt the still-missing builds |
+## What the scripts do
 
-## Getting builds with the flake
+| Script | Inputs and action | Output |
+| --- | --- | --- |
+| `add_version.py` | Installer/directory or catalog build; delink EXE with PDB, optionally emit headers | `work/versions/<label>/` objects, maps, metadata |
+| `diff_versions.py` | Two ingested builds; run objdiff | `work/diffs/<base>__<target>/` configuration, raw report, summaries, input fingerprints |
+| `chain_report.py` | Every build in `catalog/chain.json`; compare both directions | `work/reports/CHAIN_REPORT.{json,md}` |
+| `build_report.py` | Same chain; group added/deleted names by class or scope | `work/reports/builds/` |
+| `flags_report.py` | PDBs for the configured chain; read compiler settings | `work/reports/BUILD_FLAGS.{json,md}` |
+| `deps_report.py` | Cataloged EXEs and adjacent BugTrap DLLs; scan string/RTTI markers | `work/reports/DEPENDENCY_MARKERS.{json,md}` |
+| `fetch_update_notes.py` | Wiki update categories and linked version pages | New dated collection under `sources/fandom-updates/` |
+| `package_builds.sh` | Local game-tree archive; name and ZIP each build | Local upload-ready ZIPs; does not upload |
+| `common.py` | Registry, hashing, tool resolution, symbol classification | Shared implementation |
 
-`nix develop` puts the toolchain on PATH (`vostok-delinker`, `pdb_parser`,
-`objdiff-cli`, `innoextract`, `p7zip`, `binutils`, `python3`). Then:
+Binary match scores and changed symbol names are evidence of differences, not
+proof of source-level feature changes. Dependency reports distinguish observed
+markers and candidate versions from declared source versions. DLL-name strings
+are labeled as markers, not parsed imports. Missing markers do not prove absence.
+The old reports retain their original wording; consult the snapshot's limitations.
 
-    # full build (PDB tier) — fetch installer, innoextract to survarium.{exe,pdb}
-    nix build .#version-v0_100b-build802
+## Fetch and compare
 
-    # just the exe, by bare version token (quote the dots!)
-    nix build '.#"0.26g0"'     # -> result/0.26g0.exe
-    nix build '.#"0.69d0"'     # -> result/0.69d0.exe   (2022 x64)
-    nix build .#all            # -> result/ with every <token>.exe
+Enter the pinned Linux development shell:
 
-    nix develop '.#"0.34a0"'   # shell with $SURV_EXE -> that exe
-    nix develop .#all          # shell with $SURV_EXES -> dir of all exes
+```sh
+nix develop
+nix build .#version-v0_100b-build802
+nix build '.#"0.26g0"'
+```
 
-Tokens: `0.100b 0.1.1a 0.1.1b 0.1.1c 0.1.1e 0.20e 0.20f 0.21d 0.23h` (PDB tier,
-extracted from their installer) + `0.26e0 0.26g0 0.34a0 0.69d0` (exe tier, ~13 MB
-member fetch). The `.sup`-locked 0.32–0.68 line can't be a target — see
-`MISSING_BUILDS.md` / `docs/extracting-exes.md`.
+The first package extracts the build's binaries from its installer. The second
+fetches an executable from a cataloged game-tree archive. `nix build .#all` fetches
+all cataloged executables; it can require large installer downloads for early builds.
 
-To add a build: append `url` + `sha256` (PDB tier, `nix-prefetch-url`) to
-`versions.json` and run `add_version.py`; or `exe_url` + `exe_sha256` (exe tier,
-`nix store prefetch-file '<member-url>'`) to `extra_builds.json`.
+Ingest the base and one later PDB build, then compare them:
 
-## Function-diff workflow (PDB tier)
+```sh
+python3 scripts/add_version.py v0.100b-build802
+python3 scripts/add_version.py v0.1.1a-build816 --align-to v0.100b-build802
+python3 scripts/diff_versions.py v0.100b-build802 v0.1.1a-build816
+python3 scripts/diff_versions.py v0.100b-build802 v0.100b-build802
+```
 
-    python3 scripts/add_version.py v0.100b-build802 --force
-    python3 scripts/add_version.py v0.1.1a-build816 --force --align-to v0.100b-build802
-    python3 scripts/diff_versions.py v0.100b-build802 v0.1.1a-build816
+The final command is an identity check: every function should score 100%.
+`--force` re-ingests a completed build with new inputs/options. Missing objects
+are rebuilt even if metadata remains. Metadata records requested and actual
+alignment, fallback status, input hashes, and the executable tool used.
 
-`--align-to <base>` reuses the base's folded-symbol names so diffs stay stable. A
-version diffed against itself must report 100% on every function — the end-to-end
-sanity check.
+For chain/build reports, first ingest **all eight** labels in `catalog/chain.json`,
+aligning later builds to the base. Missing builds cause an error instead of
+silently changing the comparison sequence. Cached comparisons are reused only
+when object contents, metadata, tool, lockfile, scripts, and raw report hash match.
 
-The examples use `--force` because this repository tracks `meta.json`, but ignores
-the delinked objects. Without it, `add_version.py` sees the existing metadata and
-skips ingestion even on a fresh clone. Diffing regenerates `objdiff.json` and the
-dummy object automatically; those files only describe the local object layout.
+```sh
+python3 scripts/chain_report.py
+python3 scripts/build_report.py
+python3 scripts/flags_report.py
+python3 scripts/deps_report.py
+```
 
-## Packaging builds for upload
+New outputs stay under `work/`; running analysis does not replace preserved reports.
+Review new results before publishing another dated snapshot, including the hashes,
+coverage, effective alignment, and tools that produced them.
 
-`scripts/package_builds.sh <archive.zip> [out-dir]` repackages every game-tree
-build inside a big local archive into upload-ready `vostok_engine_v<ver>_<date>.zip`
-files (version + date read from each exe; build#/internal-id come from the Steam
-depot, not the binary). Output lands in `survarium-uploads/` (gitignored).
+## Preserve another wiki snapshot
 
-## Layout
+```sh
+python3 scripts/fetch_update_notes.py --output sources/fandom-updates/NEW-SNAPSHOT
+```
 
-    versions.json          installer registry (label, url, sha256, base, engine_path, symbols)
-    extra_builds.json      exe-tier registry (label, exe_url, exe_sha256, date, arch)
-    config.json            { "base": <label>, "versions": [...] }  (diff chain)
-    flake.nix              version-<label> (full) + .#"<token>" / .#all (exes) + toolchain
-    scripts/
-      common.py            shared helpers + tool resolution
-      add_version.py       installer/dir -> delink -> objects + structure + meta.json
-      diff_versions.py     base,target -> objdiff -> summary.{md,json}
-      build_report.py      per-build function report
-      chain_report.py      consecutive-build diff chain
-      flags_report.py      cl.exe flags / LTCG from PDBs
-      deps_report.py       third-party dependency versions from each exe
-      package_builds.sh    repackage local game trees for archive.org upload
-    versions/<label>/      objects/ (gitignored), structure/ (gitignored), symbol-map.tsv, meta.json
-    diffs/<base>__<target>/  summary.{md,json} (objdiff.json, report.json, dummy.obj gitignored)
-    cache/                 extracted exe/pdb + hand-pulled exes (gitignored)
+Choose a new directory; existing snapshots are never overwritten. The collector
+recurses into update subcategories and follows version-number links. It stores
+unmodified wikitext and records missing pages, source dates, revision IDs,
+contributor-history links, checksums, and the wiki's reported license. It does not
+fetch game binaries or unrelated linked articles.
 
-## The base: v0.100b build 802 (May 2013)
+The captured wiki text retains the source's reported **CC BY-NC-SA** terms; it
+is not relicensed as project code. See each snapshot for attribution and scope.
 
-The oldest known PDB-bearing build, version #1 in `versions.json`. Bootstrap it:
+## Checks
 
-    python3 scripts/add_version.py v0.100b-build802 --force
+```sh
+python3 -m unittest discover -s tests -v
+ruff check scripts tests
+bash -n scripts/package_builds.sh
+```
+
+The regression suite uses temporary inputs and simulated external tools. It covers
+alignment fallback, chain selection, cache invalidation, flag aggregation, marker
+reporting, packaging paths, source collection, and snapshot integrity. A full
+installer download/delink cycle has not been repeated as part of this reorganization.

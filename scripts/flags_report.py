@@ -19,7 +19,8 @@ hard to match. Needs only nix + pdb_build_info (no devShell).
 
 from __future__ import annotations
 
-import glob
+import argparse
+import json
 import os
 import re
 import shutil
@@ -30,23 +31,19 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import common as c  # noqa: E402
 
-REPORTS_DIR = c.REPO_DIR / "reports"
+REPORTS_DIR = c.REPORTS_DIR
 
 
 def pdb_build_info() -> str:
     for cand in (os.environ.get("PDB_BUILD_INFO"), "pdb_build_info"):
         if cand and shutil.which(cand):
             return cand
-    hits = sorted(glob.glob("/nix/store/*vostok-pdb-parser*/bin/pdb_build_info"))
-    if hits:
-        return hits[-1]
     sys.exit("pdb_build_info not found (run in devShell or set PDB_BUILD_INFO)")
 
 
 def symbol_versions() -> list[dict]:
-    """Registry entries that carry a PDB (symbols != false), oldest build first."""
-    vs = [v for v in c.registry() if v.get("symbols", True)]
-    return sorted(vs, key=lambda v: v.get("build", 0))
+    """PDB-bearing entries in the explicitly configured order."""
+    return c.chain_versions()
 
 
 def project_configs(tool: str, pdb: Path) -> dict[str, str]:
@@ -70,7 +67,7 @@ def full_flag_projects(tool: str, pdb: Path, needle: str) -> set[str]:
         m = re.match(r"^project : (.+)$", line)
         if m:
             proj = m.group(1).strip()
-        elif proj and line.lstrip().startswith("cmd") and needle in line:
+        elif proj and line.lstrip().startswith("cmd") and (needle in line or needle.replace("-", "/", 1) in line):
             hits.add(proj)
     return hits
 
@@ -114,6 +111,7 @@ def runs(labels: list[str], builds: dict, norm: dict[str, str]) -> list[tuple[st
 
 
 def main() -> None:
+    argparse.ArgumentParser(description="Compare recorded compiler flags for catalog/chain.json.").parse_args()
     tool = pdb_build_info()
     versions = symbol_versions()
     if len(versions) < 2:
@@ -154,27 +152,24 @@ def main() -> None:
 
     md += section("Engine libs (vostok/*) with changed flags", eng_var)
     md += section("Other libs with changed flags", other_var)
-    md += [f"_All other {len(eng_const_ltcg)} engine libs are **LTCG in every build** "
-           "(game_core, network_core, logging, core, render, physics, …) — unchanged._", ""]
+    md += [f"Engine projects with unchanged configurations and an LTCG flag in every selected build: "
+           f"{len(eng_const_ltcg)}.", ""]
 
     # Optimization landscape + fp model, computed from the data.
     noltcg = [p for p in all_projs if p.startswith("vostok_")
               and any(configs[lab].get(p) and "LTCG" not in configs[lab][p] for lab in labels)]
-    fp = set()
-    for lab in labels:
-        fp |= full_flag_projects(tool, pdbs[lab], "-fp:fast")
-    fp = sorted(fp)
-    md += ["## Optimization & floating-point notes", "",
-           "- **Only these engine libs are non-LTCG** (so a per-TU opt level is recorded): "
-           + (", ".join(f"`{p}`" for p in noltcg) or "none")
-           + ". Every other engine lib (game_core, network_core, logging, …) is whole-program "
-           "**LTCG** — optimized at link, with no per-TU opt level recorded (so it is *not* "
-           "unoptimized; the level just isn't visible). The only genuinely unoptimized code is "
-           "the audio path: `vostok_sound` (`-Od`) until v0.20, and `vostok_vorbisfile` (no `-O`) throughout.",
-           "- **`/fp:fast` was not removed** — it appears in "
-           + (", ".join(f"`{p}`" for p in fp) or "no recorded cmdline")
-           + " in every build. (LTCG libs record no command line, so their fp model isn't visible "
-           "either way — we can't see whether game_core etc. use fp:fast.)", ""]
+    fp = {lab: full_flag_projects(tool, pdbs[lab], "-fp:fast") for lab in labels}
+    md += ["## Observed optimization flags", "",
+           "Projects with at least one recorded configuration without an LTCG label: "
+           + (", ".join(f"`{p}`" for p in noltcg) or "none") + ".", "",
+           "The absence of a command line does not establish an optimization level or floating-point mode.",
+           "", "### `/fp:fast` observations", "",
+           "Each row lists only builds whose recorded command lines contain the flag. "
+           "An unlisted build may have no recorded command line.", "",
+           "| Project | Builds with the flag observed |", "| --- | --- |"]
+    for project in sorted(set().union(*fp.values())):
+        md.append(f"| `{project}` | " + ", ".join(lab for lab in labels if project in fp[lab]) + " |")
+    md.append("")
 
     md += ["## Raw per-step tool labels (incl. file-count-only diffs)", "",
            "| step | projects flagged by `pdb_build_info --compare` |", "| --- | --- |"]
@@ -182,8 +177,15 @@ def main() -> None:
         cell = ", ".join(f"`{n}` ({lbl})" for n, lbl in ch) if ch else "_none_"
         md.append(f"| {builds[a]} → {builds[b]} | {cell} |")
 
-    REPORTS_DIR.mkdir(exist_ok=True)
+    REPORTS_DIR.mkdir(parents=True, exist_ok=True)
     (REPORTS_DIR / "BUILD_FLAGS.md").write_text("\n".join(md) + "\n")
+    (REPORTS_DIR / "BUILD_FLAGS.json").write_text(json.dumps({
+        "generated_at": c.now_iso(), "tool": c.tool_identity(tool),
+        "flake_lock_sha256": c.sha256_file(c.REPO_DIR / "flake.lock"),
+        "builds": {lab: {"pdb_sha256": c.sha256_file(pdbs[lab]),
+                         "configs": configs[lab], "fp_fast_projects": sorted(fp[lab])}
+                   for lab in labels},
+    }, indent=2) + "\n")
     c.log("flags", f"{len(varying)} libs with real flag changes "
                    f"({len(eng_var)} engine, {len(other_var)} other) -> reports/BUILD_FLAGS.md")
 

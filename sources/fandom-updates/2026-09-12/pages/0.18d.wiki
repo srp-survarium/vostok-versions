@@ -1,0 +1,25 @@
+{{Infobox version
+|date = December 27, 2013
+|stage = Teamplay Closed Beta
+|prevparent = 0.18a
+|prev = 0.18c
+|next = 0.18e
+|nextparent = 0.19a}}
+'''0.18d''' is a minor update for [[Survarium]] that completely changed the base locations in [[Tarakanovsky Fort]] and fixed various bugs.
+
+==Changelog==
+* Changed the location of team bases, key objects on [[Tarakanovsky Fort]] location
+
+===Bug fixes===
+* Fixed traps synchronization bug
+* Fixed invulnerability zones synchronization bug
+* Fixed double playback of grenades’ sound
+* Fixed the bug that caused inability to lift the box located below the water level
+* Fixed health regeneration of the characters with advanced survival and first aid skill
+* Fixed oxygen tank activation
+* Fixed some bugs in sounds of shots
+* Fixed the bug in calculating the weight of the character
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

@@ -1,0 +1,34 @@
+{{Infobox version
+|image = 
+|date = October 23, 2013
+|stage = Teamplay Closed Alpha
+|link = 
+|prevparent = 0.14a
+|prev = 0.14h
+|next = 0.15b
+|nextparent = 0.16a}}
+'''0.15a''' is a major update for [[Survarium]] that made item weight affect the player's movement speed and damage dropoff.
+
+==Changelog==
+* Added dependence of character's movement and drain of energy from the weight of their equipment
+* Added piercing to materials
+* Add a dependency on bullet damage from the distance to the target
+* Added ability to bring several types of ammunition for a weapon in combat
+* Added damage scale on the icon for your character in battle (yellow - great damage , red - critical)
+* Removed debug information (camera_position, crosshair_distance)
+* Removed a debug display of fire points for weapons
+
+===Bug fixes===
+* Fixed lighting bug on "[[Rudnya]]" location
+* Fixed game crash when pressing Alt
+* Fixed overflow error in the queue of playing sounds
+* Fixed multiple synchronization errors, including:
+* Fixed synchronization using first aid kits
+* Fixed synchronization when jumping
+* Fixed synchronization when shooting
+* Fixed ability to accelerate and jump with insufficient stamina
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Major updates]]
+[[Category:Updates]]

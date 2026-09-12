@@ -1,0 +1,276 @@
+{
+  "source_commit": "4621fd37df9db5d778be9cbf982d51b4ae252d7e",
+  "description": "Preserved June 2026 evidence. Input hashes and claimed alignment are historical records, not revalidated results. Generated objdiff configs remain recoverable from source_commit.",
+  "files": [
+    {
+      "original_path": "reports/BUILD_FLAGS.md",
+      "path": "BUILD_FLAGS.md",
+      "sha256": "583622d9fafd5a864540a1632001816ed372fc43a732de63d34feba9bb4ad15e"
+    },
+    {
+      "original_path": "reports/CHAIN_REPORT.md",
+      "path": "CHAIN_REPORT.md",
+      "sha256": "f545378daa7f95147c2f239f254153369e29d69083a35b5a9c9d8995d2be0b95"
+    },
+    {
+      "original_path": "reports/CHANGES_NARRATIVE.md",
+      "path": "CHANGES_NARRATIVE.md",
+      "sha256": "a9be3f16e5ded39efbec093b949f611bb8145c7e27b4d716419194113040886a"
+    },
+    {
+      "original_path": "reports/DEPENDENCY_VERSIONS.md",
+      "path": "DEPENDENCY_VERSIONS.md",
+      "sha256": "aac2ef44c85493e68130283fd43307325ac7e516d137cabee85d21bfb6392627"
+    },
+    {
+      "original_path": "reports/MISSING_BUILDS.md",
+      "path": "MISSING_BUILDS.md",
+      "sha256": "018c4a9621b5222969466e29cd7fd20fe8c0f4bb37032849ae28754adce3a3a2"
+    },
+    {
+      "original_path": "reports/CHAIN_REPORT.json",
+      "path": "CHAIN_REPORT.json",
+      "sha256": "a262806a53a64d8b19de55ab01637e0b17e38e72f5eb987a97cf0c09acc6b3bf"
+    },
+    {
+      "original_path": "diffs/v0.1.1a-build816__v0.1.1b-build826/summary.json",
+      "path": "diffs/v0.1.1a-build816__v0.1.1b-build826/summary.json",
+      "sha256": "74d4f1d20f4e2dc4bc5b84e4bdd08fcfc3bfa557e1bd6bccd12e1df6f5494576"
+    },
+    {
+      "original_path": "diffs/v0.1.1a-build816__v0.1.1b-build826/summary.md",
+      "path": "diffs/v0.1.1a-build816__v0.1.1b-build826/summary.md",
+      "sha256": "2d1a3306190a919b85c2790b777cc5f4f977883c17893ea782ab93a2f78ccc72"
+    },
+    {
+      "original_path": "diffs/v0.1.1a-build816__v0.100b-build802/summary.json",
+      "path": "diffs/v0.1.1a-build816__v0.100b-build802/summary.json",
+      "sha256": "ca2a54a4134552b546755485077b73ad3bb93373e6ee8302ab5f30c73131aa66"
+    },
+    {
+      "original_path": "diffs/v0.1.1a-build816__v0.100b-build802/summary.md",
+      "path": "diffs/v0.1.1a-build816__v0.100b-build802/summary.md",
+      "sha256": "1835ef6abbf9396c57604a381279aaa92a41235941700adc06eccf76f5d58d3c"
+    },
+    {
+      "original_path": "diffs/v0.1.1b-build826__v0.1.1a-build816/summary.json",
+      "path": "diffs/v0.1.1b-build826__v0.1.1a-build816/summary.json",
+      "sha256": "d8c2ab915a5b102ec690b7602fdc8431c24a6ac50d295538b403d602896179a6"
+    },
+    {
+      "original_path": "diffs/v0.1.1b-build826__v0.1.1a-build816/summary.md",
+      "path": "diffs/v0.1.1b-build826__v0.1.1a-build816/summary.md",
+      "sha256": "54af4a628579d6df32effb0793a3dbc75e2fcf7b5c7e46cbc85d90f213f192eb"
+    },
+    {
+      "original_path": "diffs/v0.1.1b-build826__v0.1.1c-build870/summary.json",
+      "path": "diffs/v0.1.1b-build826__v0.1.1c-build870/summary.json",
+      "sha256": "ce28d09f4384d8f38176e3f398ac428981022f516c42273dc2dde98f0f136f25"
+    },
+    {
+      "original_path": "diffs/v0.1.1b-build826__v0.1.1c-build870/summary.md",
+      "path": "diffs/v0.1.1b-build826__v0.1.1c-build870/summary.md",
+      "sha256": "b963137372671a2e46bc7aedc298c7eef3fc05a900a13649a961b8d3c59abbb2"
+    },
+    {
+      "original_path": "diffs/v0.1.1c-build870__v0.1.1b-build826/summary.json",
+      "path": "diffs/v0.1.1c-build870__v0.1.1b-build826/summary.json",
+      "sha256": "678b6466783360aac0ad7b70ce1528c2755121f3bcc9fd95e887df6b4daaf6b6"
+    },
+    {
+      "original_path": "diffs/v0.1.1c-build870__v0.1.1b-build826/summary.md",
+      "path": "diffs/v0.1.1c-build870__v0.1.1b-build826/summary.md",
+      "sha256": "0d81da01c3a6e5f09cd967e45f7cea5e5675838e6f7df6c8f34e938db9eeab10"
+    },
+    {
+      "original_path": "diffs/v0.1.1c-build870__v0.1.1e-build884/summary.json",
+      "path": "diffs/v0.1.1c-build870__v0.1.1e-build884/summary.json",
+      "sha256": "28e64f5bb8245bdc28096a5cada4c5815047c8f1bcf5bcad4c9721fecd4507c4"
+    },
+    {
+      "original_path": "diffs/v0.1.1c-build870__v0.1.1e-build884/summary.md",
+      "path": "diffs/v0.1.1c-build870__v0.1.1e-build884/summary.md",
+      "sha256": "9ab16fc9e6bdc4a02d8003e1e85f3224c8583c2468953a89227498b9bda6b1b2"
+    },
+    {
+      "original_path": "diffs/v0.1.1e-build884__v0.1.1c-build870/summary.json",
+      "path": "diffs/v0.1.1e-build884__v0.1.1c-build870/summary.json",
+      "sha256": "48e66b4ee9a18c5e617f51b5177c64b4d219f2fc8887b5319478abd93d0b3f1c"
+    },
+    {
+      "original_path": "diffs/v0.1.1e-build884__v0.1.1c-build870/summary.md",
+      "path": "diffs/v0.1.1e-build884__v0.1.1c-build870/summary.md",
+      "sha256": "d0a3546666d6416962d076d07d4b11348ae46317367f3c49bf9ad57af1f916d6"
+    },
+    {
+      "original_path": "diffs/v0.1.1e-build884__v0.20e-build1916/summary.json",
+      "path": "diffs/v0.1.1e-build884__v0.20e-build1916/summary.json",
+      "sha256": "f007de9a9fe731768e23b5b08b53e20eb757e4cafdbbae00314089ae84a7bf0c"
+    },
+    {
+      "original_path": "diffs/v0.1.1e-build884__v0.20e-build1916/summary.md",
+      "path": "diffs/v0.1.1e-build884__v0.20e-build1916/summary.md",
+      "sha256": "eee53d7fc4a87a60168d80c158246a4b2c9980ffe1acabd34367751b7694cfae"
+    },
+    {
+      "original_path": "diffs/v0.100b-build802__v0.1.1a-build816/summary.json",
+      "path": "diffs/v0.100b-build802__v0.1.1a-build816/summary.json",
+      "sha256": "42318b880c8b51fe6de0a839d68ed3e6d097db263ea51eaa7489c1fbe26710f2"
+    },
+    {
+      "original_path": "diffs/v0.100b-build802__v0.1.1a-build816/summary.md",
+      "path": "diffs/v0.100b-build802__v0.1.1a-build816/summary.md",
+      "sha256": "9c0923044842eeec3b6b12bddeded61d8fb11ed463f731c216999350dd63bc1e"
+    },
+    {
+      "original_path": "diffs/v0.20e-build1916__v0.1.1e-build884/summary.json",
+      "path": "diffs/v0.20e-build1916__v0.1.1e-build884/summary.json",
+      "sha256": "694e7182d668268c08aab23bc5a8b290dcc5820406d064f5918aaa69795098c9"
+    },
+    {
+      "original_path": "diffs/v0.20e-build1916__v0.1.1e-build884/summary.md",
+      "path": "diffs/v0.20e-build1916__v0.1.1e-build884/summary.md",
+      "sha256": "96e8fafca924056e5d7cad42bd23be21fe36492549597a3dc7a24f93335a7290"
+    },
+    {
+      "original_path": "diffs/v0.20e-build1916__v0.20f-build1923/summary.json",
+      "path": "diffs/v0.20e-build1916__v0.20f-build1923/summary.json",
+      "sha256": "da90b89689e35a26d6c73b4245f645a22b4a558ad994fedf28a379e1c09022a7"
+    },
+    {
+      "original_path": "diffs/v0.20e-build1916__v0.20f-build1923/summary.md",
+      "path": "diffs/v0.20e-build1916__v0.20f-build1923/summary.md",
+      "sha256": "17f32c4c36232b1e3288fa1065756df711a0e690aad755b973d3d06f2fc41630"
+    },
+    {
+      "original_path": "diffs/v0.20f-build1923__v0.20e-build1916/summary.json",
+      "path": "diffs/v0.20f-build1923__v0.20e-build1916/summary.json",
+      "sha256": "1df69704d3e97796f4e9866fde2b7318cac91c04165d612bba32ed7cfa61d67c"
+    },
+    {
+      "original_path": "diffs/v0.20f-build1923__v0.20e-build1916/summary.md",
+      "path": "diffs/v0.20f-build1923__v0.20e-build1916/summary.md",
+      "sha256": "11a4566379e973127ca3ec553f7e3206847b73614034b996a3152318af2a6afe"
+    },
+    {
+      "original_path": "diffs/v0.20f-build1923__v0.21d-build2010/summary.json",
+      "path": "diffs/v0.20f-build1923__v0.21d-build2010/summary.json",
+      "sha256": "dd71e81868856deae3533db2a14b861fc2b151706ae080ea468f242dc128c23d"
+    },
+    {
+      "original_path": "diffs/v0.20f-build1923__v0.21d-build2010/summary.md",
+      "path": "diffs/v0.20f-build1923__v0.21d-build2010/summary.md",
+      "sha256": "9aa180af580332fb1507f118df2cfd96819f3d8803fc3334d4c4be2b28e5e067"
+    },
+    {
+      "original_path": "diffs/v0.21d-build2010__v0.20f-build1923/summary.json",
+      "path": "diffs/v0.21d-build2010__v0.20f-build1923/summary.json",
+      "sha256": "7bd7be47f2fe56ef5608f22c1a7806db1b5895f5ab960d9cafd2c895c7a7cbc6"
+    },
+    {
+      "original_path": "diffs/v0.21d-build2010__v0.20f-build1923/summary.md",
+      "path": "diffs/v0.21d-build2010__v0.20f-build1923/summary.md",
+      "sha256": "ea44fc1bd896392eb105ea2556c7801b4b082dbe7970e35f3a9079eb6ee5f311"
+    },
+    {
+      "original_path": "versions/v0.1.1a-build816/meta.json",
+      "path": "versions/v0.1.1a-build816/meta.json",
+      "sha256": "048130c2002ad7c0351fc50ce962b3a51aadc8dd5b108d8eab092f87b0a3f34c"
+    },
+    {
+      "original_path": "versions/v0.1.1b-build826/meta.json",
+      "path": "versions/v0.1.1b-build826/meta.json",
+      "sha256": "c37b1217f79a94be74dc88f6fb783b97cb6f9d87ee445878e56564efc0e6239f"
+    },
+    {
+      "original_path": "versions/v0.1.1c-build870/meta.json",
+      "path": "versions/v0.1.1c-build870/meta.json",
+      "sha256": "1c1c5fff77ac3e1773042c69d8aa8f683af36247c438f4acbaeb9bf32283f4ec"
+    },
+    {
+      "original_path": "versions/v0.1.1e-build884/meta.json",
+      "path": "versions/v0.1.1e-build884/meta.json",
+      "sha256": "1a7cc9841a29bc20a083ada1083a2b8685d7a281af8d30a2b883dd4dfa493eb3"
+    },
+    {
+      "original_path": "versions/v0.100b-build802/meta.json",
+      "path": "versions/v0.100b-build802/meta.json",
+      "sha256": "ff1349ca018369b9826973f4ae53dd2fd10c872759b4fea362e78d85f8ee83f8"
+    },
+    {
+      "original_path": "versions/v0.100b-build802/symbol-map.tsv",
+      "path": "versions/v0.100b-build802/symbol-map.tsv",
+      "sha256": "248bb4f81985c3f4ace9752dc8699cfb73952f6a790238584fdcfbd9f875fe7f"
+    },
+    {
+      "original_path": "versions/v0.20e-build1916/meta.json",
+      "path": "versions/v0.20e-build1916/meta.json",
+      "sha256": "b8b5719d7e12e71f938aef90acfc01b398a33530064373aa3762729710b53f6e"
+    },
+    {
+      "original_path": "versions/v0.20f-build1923/meta.json",
+      "path": "versions/v0.20f-build1923/meta.json",
+      "sha256": "5ae650b86632e907211fd5a349b502e07de6f7a7734637c12b84534850fc71f0"
+    },
+    {
+      "original_path": "versions/v0.21d-build2010/meta.json",
+      "path": "versions/v0.21d-build2010/meta.json",
+      "sha256": "fc37ad45b58fdb780c48636bec8a7528f1f84e54b18aa1079b84034d679c151b"
+    },
+    {
+      "original_path": "reports/builds/v0.1.1a-build816.md",
+      "path": "builds/v0.1.1a-build816.md",
+      "sha256": "e9f8663c70a34b6d538598cd4dc0fc87672a84922eb490e0f87155c0f5c47b1a"
+    },
+    {
+      "original_path": "reports/builds/v0.1.1b-build826.md",
+      "path": "builds/v0.1.1b-build826.md",
+      "sha256": "7e1e873d284e93e7ef04a43923e7e3042c3c0db7ec0a3f6ea2fcbd04ee9fc770"
+    },
+    {
+      "original_path": "reports/builds/v0.1.1c-build870.md",
+      "path": "builds/v0.1.1c-build870.md",
+      "sha256": "1d77e0a8e1be48c666bc803d46b56a876dac6b42e23329975ca86fe5d8ac8baf"
+    },
+    {
+      "original_path": "reports/builds/v0.1.1e-build884.md",
+      "path": "builds/v0.1.1e-build884.md",
+      "sha256": "ea7442f0910ff86f14f69124c03256b27d34b2d3702a5cfbb1f6382c14778d0f"
+    },
+    {
+      "original_path": "reports/builds/v0.20e-build1916.md",
+      "path": "builds/v0.20e-build1916.md",
+      "sha256": "07c6cb06946d07fc634f9b29442a1bec74912a00510cd43813b36d285bcf0fff"
+    },
+    {
+      "original_path": "reports/builds/v0.20f-build1923.md",
+      "path": "builds/v0.20f-build1923.md",
+      "sha256": "334eb0fed2f017d6aa2ef01ae79379b43a7e4c5b0327c3c5e5dc736a840edeaf"
+    },
+    {
+      "original_path": "reports/builds/v0.21d-build2010.md",
+      "path": "builds/v0.21d-build2010.md",
+      "sha256": "ff287e56998104ec532feeda703ceaad9aff2cbe9776ae1dfe74dcc9998c6e40"
+    },
+    {
+      "original_path": "versions.json",
+      "path": "provenance/versions.json",
+      "sha256": "28d8ea048f9d018f221607939c70ec6dbc6b67ea797c592dc201b2757df90ce5"
+    },
+    {
+      "original_path": "extra_builds.json",
+      "path": "provenance/extra_builds.json",
+      "sha256": "b1e6516cc44786143d6e0fb6d843a85dad4667174e72fd2b43ae4b4eca37c199"
+    },
+    {
+      "original_path": "config.json",
+      "path": "provenance/config.json",
+      "sha256": "1802db7578f4228b11995158efb068bd7d331eb4807626dbc74d43352e119e70"
+    },
+    {
+      "original_path": "flake.lock",
+      "path": "provenance/flake.lock",
+      "sha256": "492727f3ad0fd2df3ca49cae034eb1d309d4b8658f638e79eacfb50cce74becb"
+    }
+  ]
+}

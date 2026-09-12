@@ -1,0 +1,30 @@
+{{Infobox version
+|date = August 9, 2014
+|stage = Teamplay Closed Beta
+|prevparent = 0.24a
+|next = 0.24c
+|nextparent = 0.25a}}
+'''0.24b''' is a minor update for [[Survarium]] that adjusted the economy for killing opponents and purchasing rifle ammo.
+
+==Changelog==
+===Gameplay===
+* Fixed camera tilt to the left and strafe left in aiming mode
+* Faster weapon change animation
+* Increased the amount of money and reputation earned for killing opponents
+
+===Equipment and armament===
+* Reduced cost of ammunition 7.62x39 7N23 from 400 to 150
+* Reduced cost of ammunition 5.45x39 7N10 from 500 to 200
+* Reduced cost of ammunition 7.62x54 7N1 from 500 to 200
+
+===User Interface===
+* Increased duration of displaying battery charge on screen
+* Fixed misalignment of a weapon’s sight and hit indicators in aiming mode
+
+===Bug Fixes===
+* Fixed bug occurring when running the game on Windows Vista
+* Fixed some bugs that affect stability of the servers
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

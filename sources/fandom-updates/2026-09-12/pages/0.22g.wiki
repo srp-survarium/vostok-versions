@@ -1,0 +1,19 @@
+{{Infobox version
+|date = June 6, 2014
+|stage = Teamplay Closed Beta
+|prevparent = 0.22a
+|prev = 0.22f
+|nextparent = 0.23a}}
+'''0.22g''' is a minor update for [[Survarium]] that removed the ability to take two two-handed weapons into a match and fixed various crashes and synchronization errors.
+
+==Changelog==
+* Client and server crash during playing the game, fixed
+* Fixed resynchronization on breath holding
+* Fixed resynchronization on got hit
+* Fixed reconnection to already connected match server
+* Removed possibility to enter a match with two double handed weapons
+* Fixed auto-repair of free items
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

@@ -1,0 +1,15 @@
+{{Infobox version
+|date = May 11, 2013
+|stage = Teamplay Closed Alpha
+|prevparent = 0.1
+|nextparent = 0.11a}}
+'''0.100b''' is a minor update for [[Survarium]] that fixed various crashes and improved network synchronization.
+
+==Changelog==
+* Fixed crash when loading sounds.
+* Improved synchronization over the network. Characters now take less to fall to the ground.
+* Fixed a server crash
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

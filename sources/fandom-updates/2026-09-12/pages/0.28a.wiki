@@ -1,0 +1,187 @@
+{{Infobox version
+|image = Preview-0.28-1-en.jpg
+|date = April 27, 2015
+|stage = Teamplay Open Beta
+|link = http://survarium.com/en/news/survarium-updated-version-028a
+|prevparent = 0.27a
+|prev = 0.27d
+|next = 0.28b
+|nextparent = 0.29a}}
+'''0.28a''' is a major update for [[Survarium]] that added a league system, rebalanced the [[Factions|faction]] ranks and replaced static anomalies with dynamic ones.
+
+==Major Features==
+===Leagues===
+The player rating system was removed and replaced with a system of leagues, beginning with the first season titled "May Thunder". Unlike regular matchmaking, leagues are not based on the equipment level but on the players' rating. The rewards for winning the battle are also based on the league being played in. This means that using expensive equipment in the lower leagues will typically end up losing money rather than gaining it.
+
+===New Faction Structure===
+In this update, the [[Scavengers]] and [[Black Market]] factions were given five additional ranks and the ranks of the [[Renaissance Army]] and [[Fringe Settlers]] were restructured to be equivalent to those of the Scavengers and Black Market. This meant that instead of having 15 ranks, where the first 5 were Scavengers and Black Market and the last 10 were Renaissance Army and Fringe Settlers; there were instead 10 where all factions were equal.
+
+Additionally, the average amount of reputation required per rank would be increased in order to keep athe total amount of reputation required to reach the top ranks the same. In order to accommodate these changes, several items were rebalanced and some weapons such as the [[AKS-74U]] and [[H&K UMP45]] were moved to different factions.
+
+<gallery mode="packed">
+File:Preview-0.28-scavengers-en.jpg|Scavengers ranks
+File:Preview-0.28-black-market-en.jpg|Black Market ranks
+File:Preview-0.28-renaissance-army-en.jpg|Renaissance Army ranks
+File:Preview-0.28-the-fringe-settlers-en.jpg|Fringe Settlers ranks
+</gallery>
+
+===Random Anomalies===
+[[File:Preview-0.28-2.jpg|right|200px]]
+Anomalies now appeared randomly, overlapping the passages and changing the topology of the level and dealing significantly more damage than in previous builds. Consequently, the static anomalies that formed features of the environment were removed to accommodate this new system.
+
+Random anomalies appear in stages. The first stage of the anomaly is the generation stage and is is not dangerous for the player, serving more as an indicator that the area would soon have an anomaly. The second stage is "maturing" of the anomaly, where it starts to deal damage. The third stage is the stage of maturation. An artifact appears in the center of the anomaly that can be picked up by the player. If someone manages to get the artifact the anomaly will lose its power and disappear.
+
+===New Items Search System===
+[[File:Preview-0.28-3-en.jpg|right|200px]]
+The previously random system of awarding players items and bonuses after matches was replaced with a more structured system involving choosing one of five locations on the map. In it, the player is told in advance what items are able to be found but not where they are hidden. Every player can choose one location to begin with but an additional two attempts require [[Stash map|stash maps]].
+
+===Quick Commands===
+[[File:Preview-0.28-4.jpg|right|200px]]
+A system of quick commands was added in this update to allow players inform teammates about their plans or dangers that lie ahead. Quick commands are gathered in three groups of four commands each: attack commands (F2), defense commands (F3) and general commands (F4).
+
+==Changelog==
+NOTE: In this massive update the faction’s structure was drastically changed. Now all four factions possess items of both beginner and maximum levels. The amount of reputation required to unlock a rank in specific faction has been increased, while the total amount of time required by the player to achieve maximum level will remain unchanged. Players will retain their current faction ranks.
+
+===Gameplay===
+* Added new game mode - ranking match. In this mode, players will compete for the opportunity to occupy high places in the players' leagues
+* Added random [[anomalies]] to all [[locations]]
+* Added quick commands
+* Changed the mechanics of finding items after match
+* The highest possible level of items was reduced from 15 to 10. In this regard, the parameters of almost all the items were rebalanced
+* Changed the quantity of reputation required to unlock [[factions]]' levels
+* Changed the quantity of reputation obtained for medals, events and tasks
+* Changed the quantity of [[silver]] and experience obtained for [[missions]] from all factions
+* Added penalty for causing [[damage]] to allies;
+* Changed the effect of weight on speed, a penalty -30% at maximum load is applied with a weight of 10 kg
+* Reduced the power of [[modifiers]] on the speed of movement, carried weight and regeneration
+* Changed the values of [[armor]] modifiers. Now this modifier can have values ranging from +2 to +10
+* Reduced the chance of bleeding
+* Changed conditions of the mission for accuracy. Removed the requirement to win, added the requirement for the minimum number of shots
+* Removed the restriction on the selection of game modes for new players
+* Added new type of consumable boosters that provide bonuses to experience, silver and reputation. They can be found after a match
+* The number of points per event "Killing the capturer" is reduced to 5
+* The number of points per event "Unit capture" reduced to 20
+* Reward for completing training in the first fight changed to a stash map
+* Added the ability to choose modifier when upgrading an item
+
+===Skills===
+* Due to changes in the Shooting and Physical Training branches, all [[skills]] were reset for all the players
+* "Packrat”: bonus per level reduced from 5% to 3%
+* "Athlete": Bonus per level reduced from 2 kg to 1 kg
+* "Bear Arms" was removed due to abolition of penalties and bonuses to movement speed on weapons
+* "Accuracy": the number of levels is reduced from 5 to 3. Bonus per level increased from 2% to 4%
+* "Strong grip": the number of levels is reduced from 5 to 3. Bonus per level increased from 2% to 4%
+* "Equanimity": moved from 4 to level 2
+* Added the "Recoil Dampening" skill to Rank 4
+
+===Equipment and Weapons===
+* Added [[Winchester 1894]] and 10 [[packs of bandages]] to the list of items for new players
+* Added the ability to change all of the random modifiers on an item
+* Changed item [[Upgrades|upgrade]] system - now with successful upgrade you can choose 3 random modifiers that will be added to the upgraded item
+* Added new [[flags]]: USA, Canada, Brazil, Argentina, Australia
+===Black Market===
+* [[TOZ-66]] moved from rank 1 to rank 2;
+* Biker Gloves moved from rank 1 to rank 2;
+* Mask "Corsair" moved from rank 5 to rank 2, the name changed to "Fearsome mask"
+* [[Winchester 1894]] moved from rank 3 to rank 0
+* Premium Bandit Jacket and Bandit Pants moved from a rank 3 to rank 2
+* Added analogues of premium bandit jacket and pants to rank 2;
+* Container "Marauder" moved from rank 5 to rank 2, the title was changed to "Bandit Container"
+* Ropers moved from rank 4 to rank 3
+* [[Remington 870]] postponed from rank 4 to rank 3
+* Jacket "Corsair" moved from rank 5 to rank 4, the name changed to "Biker jacket"
+* Studded gloves and Choppers moved from rank 5 to rank 4
+* Rank 5 SMG added, [[H&K UMP45]]
+* Jacket, pants and helmet "Marauder" moved from rank 4 to rank 5
+* [[AKS-74U]] and [[AKS-74U "Corsair"]] are now available to Scavengers on rank 7
+* Added Viper set to rank 6, consisting of a helmet, body armor, pants and boots
+* [[SOCOM 16]] is removed from the list of rare pieces and added to rank 6
+* Added the complete Watchman equipment to rank 7, which includes a jacket, pants, gloves and a backpack
+* Added [[FN FNC]] for rank 7
+* [[M4A1]] and [[H&K MP7]] are now available at rank 8
+* Added [[H&K 416A5]] to rank 9
+* Added level 8 Omikron set
+
+===Scavengers===
+* A backpack with a container and cropped gloves moved from rank 1 to rank 2
+* [[TOZ-34]] moved to rank 2 of The Fringe Settlers
+* Survivor Premium Jacket and Pants moved from rank 3 to rank 2;
+* Added "Shabby Jacket" and "Shabby Pants" to rank 2 - analogues of premium Survivor jacket and pants;
+* Respirator "Amber" moved from rank 3 to rank 2
+* [[MP-153 Baikal]] moved from rank 4 to rank 3
+* Added [[PP-19-01]] to 4 rank - analogue of premium [["Vityaz"]]
+* Rank 5: added Saboteur set, including jacket, pants and gloves
+* Mounting helmet moved from rank 4 to rank 6
+* Reinforced padded jacket, pants and rough gloves moved from 5th to 6th grade
+* Added [[AKS-74U]] and [[AKS-74U "Corsair"]]
+* Added level 8 Pathfinder set 
+
+===Fringe Settlers===
+* Equipment Rank 1: added animal skin vest, pants and moccasins
+* Added [[PP-91 "Kedr"]] and [[TOZ-34]] to rank 2
+* Respirator "Malachite", the hunter jacket and pants moved from rank 1 to rank 2; the titles were changed to the “Forester Jacket” and “Forester Pants"
+* “Breeze” respiratory system, the Explorer gloves moved from rank 3 to rank 2; gloves were renamed to the “Forester Gloves”. 
+* [[SKS]], [[SKS-MF]], hunter hood and boots hunter moved from rank 1 to rank 3 
+* Added hunter jacket and pants to rank 3
+* [[Benelli M4 Super 90]] and [[APS]] moved from rank 2 to rank 4
+* Container "Dar 2M" moved from rank 1 to rank 4
+* [[H&K UMP45]] moved from rank 3 to rank 5 of Black Market
+* The Explorer set and the mask "Smaragd" moved from rank 3 to rank 4
+* [[SV-98]] moved from the rank 4 to rank 6
+* The [[PP-2000]] is moved from rank 4 to rank 5
+* Rank 5: added the warrior kit, consisting of a helmet, jacket, pants and boots
+* Stalker Set moved from the rank 5 to rank 5. Stalker boots renamed to “Warrior Boots”.
+* [[Vepr]] and [[Vepr "Wanderer"]] were moved to rank 7
+* [[Saiga-12C]] moved from rank 5 to rank 8
+* [[RPK-74M]] moved from rank 6 to rank 8
+* [[Saiga-12K]], hood, gloves, boots master and "Leshy" vest and pants were moved from rank 7 to rank 8
+* [[SR-3M "Vikhr"]] moved from Rank 7 to Rank 9 
+* [[9A-91]] moved from rank 8 to rank 9
+
+===Renaissance Army===
+* Added Private jacket, pants and shoes to rank 1
+* [[SOK-94]] moved from rank 1 to rank 3
+* [[AKM]], [[AKM '65]], army body armor, pants and boots moved from rank 1 to rank 4
+* Paratrooper helmet moved from rank 1 to rank 2
+* Added [[AEK-919K Kashtan]], Paratrooper's vest, pants and satchel to rank 2
+* Assault gloves moved from Rank 5 to Rank 2
+* [[SR-2M Veresk]], bulletproof vest “Sokol” as well as Scout's helmet, pants and boots moved from rank 3 to rank 5
+* [[Franchi SPAS-12]] moved from Rank 2 to Rank 4
+* [[AK-74N '82]] moved from rank 3 to rank 7
+* [[RPD]] moved from rank 4 to rank 6
+* “Assault” Armour, “Assault” pants, “Assault” mask and the Vityaz-S helmet, moved from rank 5 to rank 6
+* [[SVD]] moved from rank 6 to rank 7
+* [[Vepr-12]] and "UM-2 Molot" set moved from rank 7 to rank 8
+* [[AK-74M]] moved from rank 5 to rank 7
+* [[VSS]] and [[VSS "Vintorez"]] moved from rank 7 to rank 9
+* [[AS Val]] was moved from rank 8 to rank 9
+* [[Vepr-12 Molot]] moved from rank 5 to rank 8
+
+===User Interface===
+* Changed loading screens
+* Added random hints and tips for game modes
+* Added "Survivor's note" titled 'Upgrades and modification"
+* In the window for changing item modifications we have added a display of the possible range of values for this modifier when hovering the mouse over it.
+* In the [[factions]]' inventory window rare items tab was added. It is a list of items of equipment, [[decals]] and camos that can be found after a match only
+* Added the ability to disable the equipment profile of the character. Disabled profile will not be considered in the selection of players and cannot be selected in battle.
+* Fixed the display of the weapon icons in parts of the HUD
+* Added UI element that indicates "bad" connection with the server
+* Added auto-respawn
+* Only for Steam users: added the ability to link an existing account from Survarium game lobby
+* Added a hint about the unavailability of the name entered in the menu to rename your account
+* Added "What's new" window that appears when you first start a new version of the game
+* Added a section about modifying items in "Survivor's Notes"
+
+===Bug fixes===
+* Fixed a bug in the modifier calculating the recoil of the weapon
+* Fixed bug preventing completion of accuracy missions
+* Fixed a bug which lowered the efficiency of the modifiers on the rate of regeneration and energy consumption
+* In the game launcher we fixed a message about insufficient disk space for installation
+* Fixed many synchronization errors
+* Fixed some bugs in the Ranking calculations
+* Fixed several critical bugs of the game client
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Major updates]]
+[[Category:Updates]]

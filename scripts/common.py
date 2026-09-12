@@ -27,10 +27,13 @@ from pathlib import Path
 
 SCRIPTS_DIR = Path(__file__).resolve().parent
 REPO_DIR = SCRIPTS_DIR.parent
-VERSIONS_DIR = REPO_DIR / "versions"
-DIFFS_DIR = REPO_DIR / "diffs"
-CACHE_DIR = REPO_DIR / "cache"        # extracted installers (exe/pdb) - gitignored
-CONFIG_PATH = REPO_DIR / "config.json"
+CATALOG_DIR = REPO_DIR / "catalog"
+WORK_DIR = REPO_DIR / "work"
+VERSIONS_DIR = WORK_DIR / "versions"
+DIFFS_DIR = WORK_DIR / "diffs"
+REPORTS_DIR = WORK_DIR / "reports"
+CACHE_DIR = WORK_DIR / "cache"
+CONFIG_PATH = CATALOG_DIR / "chain.json"
 
 # Real shipped Survarium PDBs record source paths under this prefix; the delinker
 # and pdb-parser strip it to recover engine-relative unit names. Override per
@@ -95,6 +98,34 @@ def sha256_file(path: Path) -> str:
         for chunk in iter(lambda: f.read(1 << 20), b""):
             h.update(chunk)
     return h.hexdigest()
+
+
+def tool_identity(binary: str) -> dict:
+    """Resolve the executable actually used, including overrides outside Nix."""
+    require_tool(binary)
+    path = Path(shutil.which(binary)).resolve()
+    return {"path": str(path), "sha256": sha256_file(path)}
+
+
+def object_fingerprint(label: str) -> dict:
+    root = VERSIONS_DIR / label
+    objects = sorted((root / "objects").rglob("*.obj"))
+    if not objects or not (root / "meta.json").is_file():
+        sys.exit(f"error: {label} has no complete local ingestion; run add_version.py {label}")
+    h = hashlib.sha256()
+    for path in objects:
+        h.update(path.relative_to(root).as_posix().encode() + b"\0")
+        h.update(bytes.fromhex(sha256_file(path)))
+    return {"label": label, "objects_sha256": h.hexdigest(), "n_objects": len(objects),
+            "metadata_sha256": sha256_file(root / "meta.json")}
+
+
+def comparison_inputs(base: str, target: str) -> dict:
+    return {"base": object_fingerprint(base), "target": object_fingerprint(target),
+            "objdiff": tool_identity(objdiff_cli()),
+            "flake_lock_sha256": sha256_file(REPO_DIR / "flake.lock"),
+            "scripts": {name: sha256_file(SCRIPTS_DIR / name)
+                        for name in ("common.py", "diff_versions.py")}}
 
 
 def find_exe_pdb(root: Path) -> tuple[Path, Path]:
@@ -265,7 +296,7 @@ def classify(unit: str, name: str) -> str:
 # `version-<label>` package: the archive.org installer, innoextracted to a dir
 # holding survarium.{exe,pdb}.
 
-REGISTRY_PATH = REPO_DIR / "versions.json"
+REGISTRY_PATH = CATALOG_DIR / "versions.json"
 
 
 def registry() -> list[dict]:
@@ -276,6 +307,18 @@ def registry() -> list[dict]:
 
 def registry_entry(label: str) -> dict | None:
     return next((v for v in registry() if v.get("label") == label), None)
+
+
+def chain_versions() -> list[dict]:
+    """Return exactly the configured sequence; never derive it from local caches."""
+    labels = load_config().get("versions", [])
+    if len(labels) != len(set(labels)):
+        sys.exit("error: duplicate labels in catalog/chain.json")
+    by_label = {v["label"]: v for v in registry()}
+    for label in labels:
+        if label not in by_label or not by_label[label].get("symbols", True):
+            sys.exit(f"error: {label} is not a PDB-bearing catalog entry")
+    return [by_label[label] for label in labels]
 
 
 def flake_attr(label: str) -> str:

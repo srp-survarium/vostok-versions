@@ -1,0 +1,16 @@
+{{Infobox version
+|date = December 15, 2014
+|stage = Teamplay Closed Beta
+|prevparent = 0.26a
+|next = 0.26c
+|nextparent = 0.27a}}
+'''0.26b''' is a minor update for [[Survarium]] that fixed various critical bugs with the [[0.26a]] release.
+
+==Changelog==
+* Fixed a critical bug that caused a crash in the lobby
+* Fixed a critical bug that caused a crash of game servers
+* Fixed a critical bug that caused crash on [[Vector Laboratory]] Location
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

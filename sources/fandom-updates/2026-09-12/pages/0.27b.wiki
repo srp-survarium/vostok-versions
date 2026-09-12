@@ -1,0 +1,32 @@
+{{Infobox version
+|date = March 6, 2015
+|stage = Teamplay Open Beta
+|prevparent = 0.27a
+|next = 0.27c
+|nextparent = 0.28a}}
+'''0.27b''' is a minor update for [[Survarium]] that adjusted mission difficulty and to require equipment of the player's current faction rank.
+
+==Changelog==
+===Gameplay===
+* The minimum level required for a [[missions|mission]] increased by 1. So now must use equipment of the current or previous level in order to perform mission from factions
+* The difficulty of some missions has been increased so that it could correspond to the difficulty of most other missions; changed missions requiring headshots (15 headshots per day for gold), enemy kills (75 kills per day for gold), rewards (50 rewards per day for gold)
+* Medkits stop working if while it’s increasing your health you sustain damage
+
+===Bug Fixes===
+* Fixed display of some weapons (no textures)
+* Icons of [[premium weapons]] replaced with up-to-date ones
+* Fixed bug which caused incorrect calculation of used up [[items]]
+* Fixed display of the aftermatch statistics
+* Text alerts associated with missions are fixed to something clearer ones
+* Fixed sync error when changing equipment profile
+
+==Hotfix 0.27b1==
+===Gameplay===
+* Reduced the cost of repairing items;
+
+===Bug Fixes===
+* Fixed some critical timing errors;
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

@@ -1,0 +1,81 @@
+{{Infobox version
+|image = Patch-0.24-preview-1.jpg
+|date = August 7, 2014
+|stage = Teamplay Closed Beta
+|link = http://survarium.com/en/news/024a-update-announcement
+|prevparent = 0.23a
+|prev = 0.23h
+|next = 0.24b
+|nextparent = 0.25a}}
+'''0.24a''' is a major update for [[Survarium]] that added the [[charging stations]] [[Teamplay]] mode, [[Vector Laboratory]] and [[Cologne Bridge]] locations and introduced the [[Camouflage & decals#Decals|decals]] system.
+
+==Changelog==
+===Gameplay===
+* Added [[Vector Laboratory|“Vector” Laboratory]] location
+* Added [[Cologne Bridge]] location
+* Changed the rules of the PVP mode for new locations. Now the batteries are not scattered throughout the level but appear after a random amount of time in special charging stations
+* Added decals that allows players to customize the appearance of their characters
+* Added new quest types from factions
+* Now the first three victories in a day will give you twice the experience and reputation. When running a series of seven days with three victories, you'll get [[Gold]]
+* Reduced the probability of finding items after a match the level of which is higher than your current level of battle
+* Now all the items found after a match will be in poor condition with critical malfunctions
+* Factions loyalty mechanics removed from the game
+* Increased the amount of money and reputation that a player receives for good performance in matches;
+* Significantly reduced efficiency of skills: characteristics growth at maximum level is +5-10%, high-level players do not have too big advantages over the low-level ones now
+* Reduced energy cost of sprint, characters can now run longer
+
+===Equipment and armament===
+* Increased cost of weapons by 20%
+* Increased cost of pants by 20%
+* Reduced cost of gloves and boots by 10%
+* Armor-piercing of [[TT-33]] and the [[PPSH-41]] was increased from 10 to 20
+* Reduced values of movement speed modifiers from 2/4/6/8/10 to 1/2/3/4/5
+* Reduced values of damage modifiers from 2/4/6/8/10 to 1/2/3/4/5
+* Reduced values of armor modifiers from 2/4/6/8/10 to 2/3/4/5/8
+* Reduced values of recoil modifiers from 5/10/15/20/25 to 2/4/6/8/10
+* Reduced values of stamina cost modifiers from 5/10/15/20/25 to 2/4/6/8/10
+* Reduced values of stamina regeneration modifiers from 5/10/15/20/25 to 2/4/6/8/10
+* Reduced values of dispersion modifiers from 5/10/15/20/25 to 2/4/6/8/10
+* Reduced values of fire rate modifiers from 5/10/12/15/20 to 2/4/6/8/10
+* Reduced values of reload speed, weight, aiming speed from 5/10/15/20/25 to 5/8/10/12/15
+* Added new ammo 5.45õ39 7N10, +10% to armor-piercing
+* Added smoke grenades [[RGD-M]]
+
+===Scavengers===
+* [[TOZ-34]]: damage increased from 80 to 100
+* [[MP-153]]: reduced rate of fire
+
+===Black Market===
+* [[TOZ-66]]: damage increased from 85 to 100
+* [[Remington 870]]: damage reduced from 115 to 110
+* [[AKS-74U]]: damage increased from 43 to 48
+
+===Fringe Settlers===
+* Added new armor sets: "Leshy" and "Keeper"
+* Added new weapons: “[[Vepr]]” and [[RPK-74M]]
+* [[Benelli M4 Super 90]]: moved to 7th level of equipment, damage reduced from 125 to 110, reduced rate of fire and shot distance
+* Stalker armor set, Explorer armor set and [[SV-98]] moved to 7th level of equipment
+* "Emerald" gas mask armor increased to 20
+* [[APS]] rate of fire reduced to 40
+* [[SKS]]: damage reduced to 65, dispersion reduced to 1
+
+===Renaissance Army===
+* Added new armor sets: “Molot UM-2", "OZK-18KB"
+* Added new weapons: [[AK-74M]], [[A-545]]
+* [[Franchi SPAS 12]]: moved to 7th level of equipment, damage decreased from 135 to 110, reduced rate of fire and shot distance
+* "Assault" armor set, Scout armor set and RPD moved to 7th level of equipment
+* Scout’s boots weight reduced to 1 kg
+
+===User Interface===
+* Expanded information that is displayed to the user when log in error occurs
+
+===Bug Fixes===
+* Optimized RAM use, improved stability on x86 systems or systems with small amount of RAM
+* Fixed error that led to a crash, when items were put in quick-slots in a certain way
+* Fixed synchronization error that under certain conditions lead to a crash
+* Limited maximum number of connections when distributing the game client to other players
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Major updates]]
+[[Category:Updates]]

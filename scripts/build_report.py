@@ -67,7 +67,8 @@ def render(prev: dict, build: dict, rows: list[dict], n_add: int, n_del: int) ->
           "",
           f"From **added/deleted hand-written engine functions only** "
           f"(+{n_add} / −{n_del}), grouped by owning class/namespace. "
-          "Added/deleted are clear non-drift signal; fuzzy `changed` is excluded.",
+          "Names can change through renaming, folding, or layout changes; these labels "
+          "describe observed scopes, not proven feature additions/removals. Fuzzy `changed` is excluded.",
           ""]
 
     def headline(title: str, rs: list[dict]) -> list[str]:
@@ -108,7 +109,7 @@ def main() -> None:
     versions = cr.ingested_ordered()
     if len(versions) < 2:
         sys.exit("build_report: need >= 2 ingested versions")
-    out_dir = c.REPO_DIR / "reports" / "builds"
+    out_dir = c.REPORTS_DIR / "builds"
     out_dir.mkdir(parents=True, exist_ok=True)
 
     for prev, build in zip(versions, versions[1:]):

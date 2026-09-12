@@ -1,0 +1,46 @@
+{{Infobox version
+|date = June 30, 2014
+|stage = Teamplay Closed Beta
+|prevparent = 0.23a
+|prev = 0.23c
+|next = 0.23g
+|nextparent = 0.24a}}
+'''0.23e''' is a minor update for [[Survarium]] that changed weapon drops to only have up to 3 random modifiers and increased the chance of finding weapons and equipment after battle.
+
+==Changelog==
+===Gameplay===
+* Chance to find ammo and consumables after battle has been lowered
+* Chance to find weapons and equipment after battle has been increased
+* Cannot find more than one Maps of stashes, rename vouchers, tool sets at a time
+
+===Item properties change===
+* The level of [[Vityaz]] SMG lowered to 5
+* Extra pockets, pocket size, pouches, artifact containers now cannot be obtained as random characteristics
+* The number of maximum possible random characteristics lowered to three. All the items obtained prior to this change have been preserved
+* A random characteristic increasing the equipment reliability has been added
+
+===Scavengers===
+* Added pocket size to the Backpack with container, Lightweight Bulletproof vest, and Chemical Protective pants
+
+===Fringe Settlers===
+* Added pocket size to the Stalker jacket
+
+===Renaissance Army===
+* Added pocket size to the Army Bulletproof vest
+
+===Black Market===
+* Added pockets size to the "Corsair" Leather pants
+
+===User Interface===
+* Changed game login screen
+* Changed location loading screen
+* Now the names of objects have different colors, depending on their rarity. Blue items have +1 random characteristic, green items +2, and gold items +3
+* Added option of setting the parameters of torrent seeding in the lobby
+* Temporarily removed red enemy kill indicator
+
+===Bug Fixes===
+* Fixed the bug that prevented a match from loading if the application was minimized
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

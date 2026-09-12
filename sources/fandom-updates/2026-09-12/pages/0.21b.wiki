@@ -1,0 +1,28 @@
+{{Infobox version
+|date = April 23, 2014
+|stage = Teamplay Closed Beta
+|prevparent = 0.21a
+|next = 0.21c
+|nextparent = 0.22a}}
+'''0.21b''' is a minor update for [[Survarium]] that decreased hipfire accuracy and fixed an error with armor modifiers.
+
+==Changelog==
+===Renaissance Army===
+* [[AKM]] Damage reduced to 45
+
+===Gameplay===
+* Fixed crash during selection of the matches
+* Fixed a bug with the work of modifiers to increase armour and damage reduction. Now they work not only on the body armour, but also on other subjects
+* Reinforced marksmanship skill. To compensate for the increased influence of the skill we increased spread when firing from the hip
+* Altered outcome of matches when both teams score 0. Now it is no longer a victory for both teams
+* Fixed a bug in the calculation of awards for the match
+
+===User Interface===
+* Fixed match statistics window
+* Reduced the number of false positives filter mat
+* Fixed incorrect match-making of players
+* Changed the identifier on the subject from having additional features
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]

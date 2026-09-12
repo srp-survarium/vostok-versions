@@ -8,19 +8,19 @@ add_version.py - ingest one Survarium build into the version database.
 contains survarium.exe + survarium.pdb. Steps:
 
   1. resolve source -> a dir holding survarium.{exe,pdb}
-     (installer: innoextract into cache/<label>/; directory: used as-is)
-  2. vostok-delinker  -> versions/<label>/objects/   (per-function COFF .obj)
-  3. pdb_parser       -> versions/<label>/structure/  (readable stubs; --no-structure to skip)
-  4. write versions/<label>/meta.json (build hashes, sizes, object count, ...)
+     (installer: innoextract into work/cache/<label>/; directory: used as-is)
+  2. vostok-delinker  -> work/versions/<label>/objects/   (per-function COFF .obj)
+  3. pdb_parser       -> work/versions/<label>/structure/  (readable stubs; --no-structure to skip)
+  4. write work/versions/<label>/meta.json (build hashes, sizes, object count, ...)
 
-The first version added (or one passed with --base) is recorded as the matching
-base in config.json; later versions diff against it.
+The comparison chain is maintained in catalog/chain.json. Passing --base updates
+its base label; ingestion does not append builds to the chain.
 
 Folded-symbol naming: each version writes its own symbol map. For stable diffs
 *against the base*, pass `--align-to <base-label>` so this build reuses the
 base's folded-group names instead of choosing its own.
 
-If <source> is omitted, the label is looked up in versions.json and the build is
+If <source> is omitted, the label is looked up in catalog/versions.json and the build is
 fetched + extracted from archive.org via the flake (`nix build .#version-<label>`).
 
 Run inside this repo's `nix develop` (provides the tools).
@@ -58,12 +58,13 @@ def resolve_source(label: str, source: Path, keep_cache: bool) -> tuple[Path, Pa
     return c.find_exe_pdb(dest)
 
 
-def delink(label: str, exe: Path, pdb: Path, engine_path: str, align_to: str | None) -> Path:
+def delink(label: str, exe: Path, pdb: Path, engine_path: str, align_to: str | None) -> tuple[Path, dict]:
     c.require_tool(c.delinker())
     out = c.VERSIONS_DIR / label / "objects"
     own_map = c.VERSIONS_DIR / label / "symbol-map.tsv"
 
     def run(flags: list[str]) -> None:
+        own_map.unlink(missing_ok=True)
         if out.exists():
             shutil.rmtree(out)
         out.mkdir(parents=True, exist_ok=True)
@@ -82,30 +83,35 @@ def delink(label: str, exe: Path, pdb: Path, engine_path: str, align_to: str | N
 
     # Prefer aligning this build's folded-group names to the base's (stable diffs).
     aligned: list[str] = []
+    alignment = {"requested": align_to, "actual": None, "status": "not-requested"}
     if align_to:
         base_map = c.VERSIONS_DIR / align_to / "symbol-map.tsv"
         if base_map.exists() and c.delinker_supports("--read-symbol-map"):
             aligned = ["--read-symbol-map", str(base_map)]
+            alignment["map_sha256"] = c.sha256_file(base_map)
         else:
+            alignment["status"] = "unavailable"
             c.log("add", f"--align-to {align_to!r}: base map or flag missing; writing own map")
 
     if aligned:
         c.log("add", f"aligning folded symbols to base {align_to!r}")
         try:
             run(aligned)
-            return out
+            alignment.update(actual=align_to, status="aligned")
+            return out, alignment
         except subprocess.CalledProcessError as e:
             # Best-effort alignment: a bad cross-version map shouldn't block the
             # ingest - fall back to an unaligned delink that writes its own map.
             c.log("add", f"aligned delink failed (exit {e.returncode}); retrying unaligned")
+            alignment.update(status="failed-fallback", exit_code=e.returncode)
     run(write_own)
-    return out
+    return out, alignment
 
 
-def make_structure(label: str, pdb: Path, engine_path: str) -> None:
+def make_structure(label: str, pdb: Path, engine_path: str) -> str:
     if shutil.which(c.pdb_parser()) is None:
         c.log("add", "pdb_parser absent; skipping structure stubs")
-        return
+        return "unavailable"
     out = c.VERSIONS_DIR / label / "structure"
     if out.exists():
         shutil.rmtree(out)
@@ -125,6 +131,8 @@ def make_structure(label: str, pdb: Path, engine_path: str) -> None:
     except subprocess.CalledProcessError as e:
         c.log("add", f"pdb_parser failed (exit {e.returncode}); skipping structure stubs")
         shutil.rmtree(out, ignore_errors=True)
+        return "failed"
+    return "generated"
 
 
 def main() -> None:
@@ -142,16 +150,20 @@ def main() -> None:
     ap.add_argument("--keep-cache", action="store_true", help="reuse an existing cache/<label> extract")
     ap.add_argument("--force", action="store_true", help="re-ingest even if meta.json already exists")
     args = ap.parse_args()
+    if args.align_to == args.label:
+        ap.error("--align-to must name a different build")
 
     entry = c.registry_entry(args.label) or {}
+    if not entry.get("symbols", True):
+        sys.exit(f"error: {args.label} has no PDB; use deps_report.py")
     engine_path = args.engine_path or entry.get("engine_path") or c.ENGINE_PATH_DEFAULT
-    is_base = args.base or entry.get("base", False)
 
     meta_path = c.VERSIONS_DIR / args.label / "meta.json"
-    if meta_path.exists() and not args.force:
-        c.log("add", f"{args.label} already ingested (meta.json present); --force to redo")
+    objects_path = meta_path.parent / "objects"
+    if meta_path.exists() and any(objects_path.rglob("*.obj")) and not args.force:
+        c.log("add", f"{args.label} already ingested; --force to redo with new inputs/options")
         cfg = c.load_config()
-        if is_base:
+        if args.base:
             cfg["base"] = args.label
             c.save_config(cfg)
         return
@@ -165,16 +177,27 @@ def main() -> None:
     else:
         sys.exit(f"error: no source given and {args.label!r} not in versions.json")
 
-    objects = delink(args.label, exe, pdb, engine_path, args.align_to)
+    meta_path.unlink(missing_ok=True)
+    tool = c.tool_identity(c.delinker())
+    objects, alignment = delink(args.label, exe, pdb, engine_path, args.align_to)
     n_objects = sum(1 for _ in objects.rglob("*.obj"))
+    if n_objects == 0:
+        sys.exit("error: delinker produced no objects; ingestion is incomplete")
+    structure_status = "skipped"
+    shutil.rmtree(meta_path.parent / "structure", ignore_errors=True)
     if not args.no_structure:
-        make_structure(args.label, pdb, engine_path)
+        structure_status = make_structure(args.label, pdb, engine_path)
 
     meta = {
         "label": args.label,
-        "source": args.source.name if args.source else (entry.get("url") or "flake"),
+        "source": str(args.source.resolve()) if args.source else (entry.get("url") or "flake"),
         "engine_path": engine_path,
-        "aligned_to": args.align_to,
+        "aligned_to": alignment["actual"],
+        "alignment": alignment,
+        "structure_status": structure_status,
+        "delinker": tool,
+        "flake_lock_sha256": c.sha256_file(c.REPO_DIR / "flake.lock"),
+        "script_sha256": c.sha256_file(Path(__file__)),
         "exe": {"name": exe.name, "size": exe.stat().st_size, "sha256": c.sha256_file(exe)},
         "pdb": {"name": pdb.name, "size": pdb.stat().st_size, "sha256": c.sha256_file(pdb)},
         "n_objects": n_objects,
@@ -183,15 +206,12 @@ def main() -> None:
     meta_path.write_text(json.dumps(meta, indent=2) + "\n")
 
     cfg = c.load_config()
-    cfg.setdefault("versions", [])
-    if args.label not in cfg["versions"]:
-        cfg["versions"].append(args.label)
-    if is_base or "base" not in cfg:
+    if args.base:
         cfg["base"] = args.label
         c.log("add", f"base version = {args.label!r}")
-    c.save_config(cfg)
+        c.save_config(cfg)
 
-    c.log("add", f"done: {args.label}  ({n_objects} objects)  base={cfg['base']}")
+    c.log("add", f"done: {args.label}  ({n_objects} objects); chain is configured in catalog/chain.json")
 
 
 if __name__ == "__main__":

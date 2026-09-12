@@ -1,0 +1,31 @@
+{{Infobox version
+|date = August 21, 2014
+|stage = Teamplay Closed Beta
+|prevparent = 0.24a
+|prev = 0.24b
+|next = 0.24d
+|nextparent = 0.25a}}
+'''0.24c''' is a minor update for [[Survarium]] that changed the seven day reward to not reset if a day is missed and increased the effectiveness of high-tier shotguns.
+
+==Changelog==
+===Gameplay===
+* Now the reward for three wins in a series of seven days is not reset if you missed a day or were not able to win three times
+* As a prize for performing three wins in a series of seven days, reward may not only be premium currency, but also rare decals, camo, premium account, etc.
+* Increased speed of aiming for the sniper weapon
+* Increased cost of stamina when wearing heavy equipment
+* Reduced time for dostavaniya / dump all weapons
+
+===Fringe Settlers===
+* [[RPK-74M]]: Moved from level 9 to 8;
+* [[Benelli M4 Super 90]]: Damage increased to 120, rate of fire increased to 280
+
+===Renaissance Army===
+* [[Franchi SPAS 12]]: Damage increased to 120, rate of fire increased to 240
+
+===Bug Fixes===
+* Fixed bug occurring when running the game on Windows Vista
+* Fixed some bugs that affect stability of the servers
+
+{{Navbox versions}}
+[[Category:Survarium]]
+[[Category:Updates]]
