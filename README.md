@@ -14,14 +14,22 @@ findings alongside the tools used to investigate builds.
   compiler flags, dependency findings, build metadata, and symbol alignment map.
 - [Recorded observations](observations/README.md): historical interpretation kept
   separately from new scanner output.
+- [Version coverage assessment](observations/2026-09-12-version-coverage.md):
+  cataloged builds, verified local binaries, historical holdings, and patch-note gaps.
+- [Source-file checksum comparison](reports/2026-09-12-source-files/README.md):
+  exact changed-file lists for the two currently verified local PDBs.
 - [Finding builds](docs/finding-builds.md) and [extracting executables](docs/extracting-exes.md):
   June 2026 research notes; availability claims describe that investigation.
 
 The catalog contains nine installer builds (eight with PDBs, plus stripped
 0.23h) and four executable-only builds through 0.69d0. Function comparisons cover
-0.100b through 0.21d. The wiki collection covers the pages available through 0.30a;
+0.10b through 0.21d. The wiki collection covers the pages available through 0.30a;
 its linked `0.28d` page is missing. Published update names are retained as written
 and are not automatically equated to binary build IDs.
+
+Build 802 is named **`v0.10b-build802`** here. The preserved June research and wiki
+use its historical spelling `v0.100b` / `0.100b`; their original records remain
+unchanged. Both names refer to the same cataloged build, not two versions.
 
 ## Structure and state
 
@@ -47,6 +55,7 @@ research references. Their contents live in the catalog and June snapshot.
 | `chain_report.py` | Every build in `catalog/chain.json`; compare both directions | `work/reports/CHAIN_REPORT.{json,md}` |
 | `build_report.py` | Same chain; group added/deleted names by class or scope | `work/reports/builds/` |
 | `flags_report.py` | PDBs for the configured chain; read compiler settings | `work/reports/BUILD_FLAGS.{json,md}` |
+| `source_files_report.py` | PDB source-file checksums, including headers; compare every configured step | `work/reports/source-files/` checksum tables, counts, exact file lists, provenance |
 | `deps_report.py` | Cataloged EXEs and adjacent BugTrap DLLs; scan string/RTTI markers | `work/reports/DEPENDENCY_MARKERS.{json,md}` |
 | `fetch_update_notes.py` | Wiki update categories and linked version pages | New dated collection under `sources/fandom-updates/` |
 | `package_builds.sh` | Local game-tree archive; name and ZIP each build | Local upload-ready ZIPs; does not upload |
@@ -64,7 +73,7 @@ Enter the pinned Linux development shell:
 
 ```sh
 nix develop
-nix build .#version-v0_100b-build802
+nix build .#version-v0_10b-build802
 nix build '.#"0.26g0"'
 ```
 
@@ -75,10 +84,10 @@ all cataloged executables; it can require large installer downloads for early bu
 Ingest the base and one later PDB build, then compare them:
 
 ```sh
-python3 scripts/add_version.py v0.100b-build802
-python3 scripts/add_version.py v0.1.1a-build816 --align-to v0.100b-build802
-python3 scripts/diff_versions.py v0.100b-build802 v0.1.1a-build816
-python3 scripts/diff_versions.py v0.100b-build802 v0.100b-build802
+python3 scripts/add_version.py v0.10b-build802
+python3 scripts/add_version.py v0.1.1a-build816 --align-to v0.10b-build802
+python3 scripts/diff_versions.py v0.10b-build802 v0.1.1a-build816
+python3 scripts/diff_versions.py v0.10b-build802 v0.10b-build802
 ```
 
 The final command is an identity check: every function should score 100%.
@@ -96,11 +105,22 @@ python3 scripts/chain_report.py
 python3 scripts/build_report.py
 python3 scripts/flags_report.py
 python3 scripts/deps_report.py
+python3 scripts/source_files_report.py
 ```
 
 New outputs stay under `work/`; running analysis does not replace preserved reports.
 Review new results before publishing another dated snapshot, including the hashes,
 coverage, effective alignment, and tools that produced them.
+
+Source-file comparisons require PDBs but no delinking. The Nix environment includes
+an upstream patch enabling `pdb_diff --all-files --list-checksums`. By default,
+`source_files_report.py` fetches every configured PDB through the flake. Override a
+local input with `--pdb LABEL=/path/to/survarium.pdb`; use `--labels A B` for an
+explicit subset and `--output NEW-DIRECTORY` for another non-overwriting run.
+Changed files have different recorded hashes at the same normalized path;
+added/removed files occur in only one PDB's records. Missing checksums and different
+checksum algorithms are reported as unknown. Complete file lists and both hashes
+are retained, with engine sources, headers, and third-party counts separated.
 
 ## Preserve another wiki snapshot
 
@@ -128,4 +148,6 @@ bash -n scripts/package_builds.sh
 The regression suite uses temporary inputs and simulated external tools. It covers
 alignment fallback, chain selection, cache invalidation, flag aggregation, marker
 reporting, packaging paths, source collection, and snapshot integrity. A full
+PDB checksum comparison is covered by source/header, missing-hash, conflicting-hash,
+file-list, and provenance checks. The patched PDB parser was built with Nix. A full
 installer download/delink cycle has not been repeated as part of this reorganization.

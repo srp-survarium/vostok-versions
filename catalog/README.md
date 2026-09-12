@@ -10,6 +10,12 @@
   source-snapshot version declarations. A declared version is not a measurement
   of every binary.
 
+Build 802 uses the canonical label **`v0.10b-build802`**, consistent with the
+reconstruction project's naming. The June snapshot and source wiki call it
+`v0.100b-build802` / `0.100b`; those are historical names for the same cataloged
+build. Download URLs, hashes, archived paths, and original source text retain
+their recorded values. New commands and generated outputs use `v0.10b-build802`.
+
 Keep labels stable: metadata, reports, and external research refer to them. Add
 new builds here after identifying their source and hash. PDB capability is
 independent of installer format; an executable-only build can still be scanned.

@@ -1,6 +1,6 @@
 {
   "versions": [
-    "v0.100b-build802",
+    "v0.10b-build802",
     "v0.1.1a-build816",
     "v0.1.1b-build826",
     "v0.1.1c-build870",
@@ -9,5 +9,5 @@
     "v0.20f-build1923",
     "v0.21d-build2010"
   ],
-  "base": "v0.100b-build802"
+  "base": "v0.10b-build802"
 }

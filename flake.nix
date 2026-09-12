@@ -84,6 +84,9 @@
             pname = "vostok-pdb-parser";
             version = "0.1.0";
             src = vostok-pdb-parser-src;
+            # Backport upstream 2151189477de0b08eb6152cabdd77e092892add8:
+            # expose all PDB source checksums (including headers) as TSV.
+            patches = [ ./patches/pdb-diff-all-files.patch ];
             cargoHash = "sha256-XUF9ca0D1k5NhR6tZth2/yactZ1NyWc8W9voWNRXcDI=";
           };
 

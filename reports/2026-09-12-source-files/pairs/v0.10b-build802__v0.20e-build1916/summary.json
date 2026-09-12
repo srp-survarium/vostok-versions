@@ -1,0 +1,46 @@
+{
+  "base": "v0.10b-build802",
+  "target": "v0.20e-build1916",
+  "all": {
+    "changed": 1469,
+    "unchanged": 3156,
+    "added": 1286,
+    "removed": 298,
+    "unknown": 0
+  },
+  "engine": {
+    "changed": 1444,
+    "unchanged": 1298,
+    "added": 553,
+    "removed": 260,
+    "unknown": 0
+  },
+  "third_party": {
+    "changed": 25,
+    "unchanged": 1858,
+    "added": 733,
+    "removed": 38,
+    "unknown": 0
+  },
+  "engine_source": {
+    "changed": 639,
+    "unchanged": 355,
+    "added": 216,
+    "removed": 120,
+    "unknown": 0
+  },
+  "engine_header": {
+    "changed": 805,
+    "unchanged": 943,
+    "added": 337,
+    "removed": 140,
+    "unknown": 0
+  },
+  "engine_other": {
+    "changed": 0,
+    "unchanged": 0,
+    "added": 0,
+    "removed": 0,
+    "unknown": 0
+  }
+}

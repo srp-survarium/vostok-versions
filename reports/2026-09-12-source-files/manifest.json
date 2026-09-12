@@ -1,0 +1,146 @@
+{
+  "generated_at": "2026-09-12T10:31:34",
+  "method": "PDB file checksums; all files including headers",
+  "normalization": "Case-insensitive Windows paths, each catalog source root stripped, slash separators. No suffix/version/path-move inference.",
+  "scope": "Files under each catalog source root; engine = vostok/, third_party = remaining paths. PDB-omitted files are outside coverage.",
+  "configured_chain": [
+    "v0.10b-build802",
+    "v0.1.1a-build816",
+    "v0.1.1b-build826",
+    "v0.1.1c-build870",
+    "v0.1.1e-build884",
+    "v0.20e-build1916",
+    "v0.20f-build1923",
+    "v0.21d-build2010"
+  ],
+  "selected_chain": [
+    "v0.10b-build802",
+    "v0.20e-build1916"
+  ],
+  "unselected_builds": [
+    "v0.1.1a-build816",
+    "v0.1.1b-build826",
+    "v0.1.1c-build870",
+    "v0.1.1e-build884",
+    "v0.20f-build1923",
+    "v0.21d-build2010"
+  ],
+  "coverage_note": "BLOCKED for the other six configured builds: Archive.org returned connection failures and HTTP 503 on 2026-09-12. Searches of the project, home directory, Nix store, and mounted local archives found no matching game PDBs for those six builds. Local 0.26e0/0.26g0 archives contain no PDB files; 017a.7z contains no EXE/PDB files. SDK/reconstruction PDBs do not match the eight preserved game-PDB identities. Resume the full chain when the cataloged distributions are accessible.",
+  "complete_chain": false,
+  "tool": {
+    "path": "/nix/store/3ybq7gzfrdp0kja5316azrhdzm8grn4y-vostok-pdb-parser-0.1.0/bin/pdb_diff",
+    "sha256": "e7908fbe4c8088152c91ae65eed11c71205a343194789d48fbd940dd3a1532a7"
+  },
+  "script_sha256": "337339aad8dc6450610c712b39fc983adddaee9e09f83ac224ece56c9afbf99e",
+  "flake_lock_sha256": "492727f3ad0fd2df3ca49cae034eb1d309d4b8658f638e79eacfb50cce74becb",
+  "flake_sha256": "832ec098f3d4f40adad8dda8c5ca6d33d69145fc6928fc09746664fffa31b6d5",
+  "tool_patch_sha256": "89cf4b00c3b14f960d20209016f0eade831b2979666095dab80ca9f56beb9443",
+  "builds": {
+    "v0.10b-build802": {
+      "pdb_path": "/nix/store/vjxddzw2jm0agicpwyxq3rz0i7pxank7-survarium/survarium.pdb",
+      "pdb_sha256": "0ffe85c27f8b95f23a65d91866af3384ab24ca343b3865a57f71a08902d5a238",
+      "matches_preserved_pdb": true,
+      "catalog_entry": {
+        "label": "v0.10b-build802",
+        "build": 802,
+        "date": "2013-05-09",
+        "url": "https://archive.org/download/vostok_engine_v0.1_build_802_internal_id_489_may_9_2013/survarium_setup_v0100b.exe",
+        "sha256": "16aassxvbbhqx9czfvsl3zynl41n2xa7xf9n0l1aip07qgfz2l24",
+        "base": true,
+        "engine_path": "c:/survarium/sources"
+      },
+      "source_root": "c:/survarium/sources",
+      "records": 4923,
+      "algorithms": {
+        "md5": 4923
+      },
+      "engine_records": 3002,
+      "table": "builds/v0.10b-build802.tsv",
+      "table_sha256": "6a175ddec5c3516643c1aba27fcf6c2d53ad405d1f8b05d4f374748ff8733664",
+      "tool_warnings": ""
+    },
+    "v0.20e-build1916": {
+      "pdb_path": "/nix/store/4n8ff1vlnvk0rx689kh5k6v192gp1xml-survarium-v0.20e/survarium.pdb",
+      "pdb_sha256": "eab7c2ac31c4b8ad56cbc2381c25bc954f30df6a367b05d59cf9f350633cf186",
+      "matches_preserved_pdb": true,
+      "catalog_entry": {
+        "label": "v0.20e-build1916",
+        "build": 1916,
+        "date": "2014-03-20",
+        "url": "https://archive.org/download/vostok_engine_v0.20e_build_1916_internal_id_804_mar_20_2014/survarium_full_020e.7z",
+        "sha256": "0gz7mdr7b8gxdr44l6lqsli9rinjcqzll1d42sknwpl8sg7ymi1q",
+        "engine_path": "c:/survarium.deploy/sources"
+      },
+      "source_root": "c:/survarium.deploy/sources",
+      "records": 5911,
+      "algorithms": {
+        "md5": 5911
+      },
+      "engine_records": 3295,
+      "table": "builds/v0.20e-build1916.tsv",
+      "table_sha256": "10e292cb0195b0d68bae514ba294092f896343a74ba159fe105b813c83b88d62",
+      "tool_warnings": ""
+    }
+  },
+  "pairs": [
+    {
+      "base": "v0.10b-build802",
+      "target": "v0.20e-build1916",
+      "all": {
+        "changed": 1469,
+        "unchanged": 3156,
+        "added": 1286,
+        "removed": 298,
+        "unknown": 0
+      },
+      "engine": {
+        "changed": 1444,
+        "unchanged": 1298,
+        "added": 553,
+        "removed": 260,
+        "unknown": 0
+      },
+      "third_party": {
+        "changed": 25,
+        "unchanged": 1858,
+        "added": 733,
+        "removed": 38,
+        "unknown": 0
+      },
+      "engine_source": {
+        "changed": 639,
+        "unchanged": 355,
+        "added": 216,
+        "removed": 120,
+        "unknown": 0
+      },
+      "engine_header": {
+        "changed": 805,
+        "unchanged": 943,
+        "added": 337,
+        "removed": 140,
+        "unknown": 0
+      },
+      "engine_other": {
+        "changed": 0,
+        "unchanged": 0,
+        "added": 0,
+        "removed": 0,
+        "unknown": 0
+      }
+    }
+  ],
+  "files": {
+    "README.md": "315ac43611e5e8ef8bf33102d2ece17acab278b3915257f0ef147b9eafd70244",
+    "builds/v0.10b-build802.tsv": "6a175ddec5c3516643c1aba27fcf6c2d53ad405d1f8b05d4f374748ff8733664",
+    "builds/v0.20e-build1916.tsv": "10e292cb0195b0d68bae514ba294092f896343a74ba159fe105b813c83b88d62",
+    "pairs/v0.10b-build802__v0.20e-build1916/README.md": "d9d5f46ffed989220900e21c0aa94f8ee9a5105b17ccdf6e9f888d68424f9b51",
+    "pairs/v0.10b-build802__v0.20e-build1916/added.txt": "15f98c6322841103f1dbbc95ac88c069df50d1631e2cd8717f5ea281c17a981e",
+    "pairs/v0.10b-build802__v0.20e-build1916/changed.txt": "97b581a04f0dc91099479305adbb043d9979fd240232123eaa177dd6cac2d2ef",
+    "pairs/v0.10b-build802__v0.20e-build1916/files.tsv": "5242529f5e9df6f7769c9038464efb3ddc51b05c13fbb4239cc42bccab626ec3",
+    "pairs/v0.10b-build802__v0.20e-build1916/removed.txt": "f1519bf6cb15335406d1c1fa1f61e6f596cc354d8dc493c9da20c910a437cc92",
+    "pairs/v0.10b-build802__v0.20e-build1916/summary.json": "d0e5ccf5493ffdc9e05b65efb4a302f609c63f316f58f30bd450f495128066d8",
+    "pairs/v0.10b-build802__v0.20e-build1916/unchanged.txt": "de8eb7ff15658a8794a042e77bfee1089a9ce5d859972d5a6137ed6943728914",
+    "pairs/v0.10b-build802__v0.20e-build1916/unknown.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

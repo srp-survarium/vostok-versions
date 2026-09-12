@@ -6,6 +6,10 @@ The manifest maps original paths to snapshot files and records SHA-256 hashes.
 All listed file contents are unchanged. Generated objdiff configurations can be
 recovered from that source commit; they are not needed to read these results.
 
+Build 802 is now named `v0.10b-build802` in the maintained catalog. This snapshot
+retains its original `v0.100b-build802` spelling in paths and contents so its
+provenance and checksums remain intact.
+
 | Material | Contents |
 | --- | --- |
 | [CHAIN_REPORT.md](CHAIN_REPORT.md), [CHAIN_REPORT.json](CHAIN_REPORT.json) | Consecutive-build function changes, eight builds / seven steps |

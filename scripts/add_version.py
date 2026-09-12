@@ -137,7 +137,7 @@ def make_structure(label: str, pdb: Path, engine_path: str) -> str:
 
 def main() -> None:
     ap = argparse.ArgumentParser(description="Ingest one Survarium build into the version DB.")
-    ap.add_argument("label", help="short version label, e.g. v0.100b-build802")
+    ap.add_argument("label", help="short version label, e.g. v0.10b-build802")
     ap.add_argument("source", type=Path, nargs="?",
                     help="installer .exe OR a dir with survarium.{exe,pdb}; "
                          "omit to fetch from versions.json via the flake")
