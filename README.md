@@ -6,8 +6,8 @@ findings alongside the tools used to investigate builds.
 
 ## Start here
 
-- [Build catalog](catalog/README.md): download URLs, hashes, PDB availability, and
-  the configured comparison chain.
+- [Build catalog](catalog/README.md): download URLs, release mirrors, hashes, PDB
+  availability, and the configured comparison chain.
 - [Wiki update notes](sources/fandom-updates/2026-09-12/README.md): 91 update pages
   captured from Survarium Wiki, with source revisions and attribution.
 - [June 2026 research](reports/2026-06/README.md): preserved function comparisons,
@@ -16,6 +16,8 @@ findings alongside the tools used to investigate builds.
   separately from new scanner output.
 - [Version coverage assessment](observations/2026-09-12-version-coverage.md):
   cataloged builds, verified local binaries, historical holdings, and patch-note gaps.
+- [Every consecutive version diff explained](observations/2026-09-12-version-diff-explanations.md):
+  evidence-based accounts derived from changed, added, and deleted functions.
 - [Source-file checksum comparisons](reports/2026-09-12-source-files-expanded/README.md):
   exact changed-file lists for five verified PDB builds; three archive downloads
   remain unavailable.
@@ -78,9 +80,11 @@ nix build .#version-v0_10b-build802
 nix build '.#"0.26g0"'
 ```
 
-The first package extracts the build's binaries from its installer. The second
-fetches an executable from a cataloged game-tree archive. `nix build .#all` fetches
-all cataloged executables; it can require large installer downloads for early builds.
+The first package downloads the compact, verified EXE/PDB release bundle when one
+is cataloged; append `-archive` to its package name to extract the original
+installer instead. The second command fetches an executable from a cataloged
+game-tree archive. `nix build .#all` fetches all cataloged executables; builds
+without release bundles can still require large installer downloads.
 
 Ingest the base and one later PDB build, then compare them:
 

@@ -5,6 +5,8 @@
     "date": "2013-05-09",
     "url": "https://archive.org/download/vostok_engine_v0.1_build_802_internal_id_489_may_9_2013/survarium_setup_v0100b.exe",
     "sha256": "16aassxvbbhqx9czfvsl3zynl41n2xa7xf9n0l1aip07qgfz2l24",
+    "bundle_url": "https://github.com/srp-survarium/vostok-versions/releases/download/binary-evidence-2026-09-12/v0.10b-build802-exe-pdb.zip",
+    "bundle_sha256": "sha256-qmbrBmtbi3Jmd3Gm4tVWH+z63Bpsg/u1woOjf31ZFyM=",
     "base": true,
     "engine_path": "c:/survarium/sources"
   },
@@ -14,6 +16,8 @@
     "date": "2013-05-14",
     "url": "https://archive.org/download/vostok_engine_v0.1_build_816_internal_id_494_may_14_2013/survarium_alpha_setup_v0.1.1a.exe",
     "sha256": "1a26qavgqs4fx4n3wwhfm4fb95a84m2mdg81gnifakj3yz1r9648",
+    "bundle_url": "https://github.com/srp-survarium/vostok-versions/releases/download/binary-evidence-2026-09-12/v0.1.1a-build816-exe-pdb.zip",
+    "bundle_sha256": "sha256-xrXzBTHlrNhOqrUi68HqZNiSDk5mXOD+zH8L1S5+7ig=",
     "engine_path": "c:/survarium/sources"
   },
   {
@@ -30,6 +34,8 @@
     "date": "2013-05-24",
     "url": "https://archive.org/download/vostok_engine_v0.1_build_870_internal_id_504_may_24_2013/survarium_alpha_setup_v0.1.1c.exe",
     "sha256": "0az8zskg6l0gg14v6hl3idl817rjrk0w99k0749q2ahn5mz5cm5p",
+    "bundle_url": "https://github.com/srp-survarium/vostok-versions/releases/download/binary-evidence-2026-09-12/v0.1.1c-build870-exe-pdb.zip",
+    "bundle_sha256": "sha256-35lZQ02F1lROzJZdpwrQJDc/QQg4tcYSPFRKzaHaIsI=",
     "engine_path": "c:/survarium/sources"
   },
   {
@@ -46,6 +52,8 @@
     "date": "2014-03-20",
     "url": "https://archive.org/download/vostok_engine_v0.20e_build_1916_internal_id_804_mar_20_2014/survarium_full_020e.7z",
     "sha256": "0gz7mdr7b8gxdr44l6lqsli9rinjcqzll1d42sknwpl8sg7ymi1q",
+    "bundle_url": "https://github.com/srp-survarium/vostok-versions/releases/download/binary-evidence-2026-09-12/v0.20e-build1916-exe-pdb.zip",
+    "bundle_sha256": "sha256-cqfgiU0zhJ9Jh7/rZoALo6/CBbkRyUL0Ss0PHMwElAY=",
     "engine_path": "c:/survarium.deploy/sources"
   },
   {
@@ -62,6 +70,8 @@
     "date": "2014-04-24",
     "url": "https://archive.org/download/vostok_engine_v0.21d_build_2010_internal_id_839_apr_24_2014/survarium_full_021d.7z",
     "sha256": "0xarrs6ncb49kajhny4726n0y8fly0g7607vyqlf5jpy1qzmiyr5",
+    "bundle_url": "https://github.com/srp-survarium/vostok-versions/releases/download/binary-evidence-2026-09-12/v0.21d-build2010-exe-pdb.zip",
+    "bundle_sha256": "sha256-PHq6eOB3jdnVyVNZ0yokLelBtGQZecpyhEmfhZUrbMg=",
     "engine_path": "c:/survarium.deploy/sources"
   },
   {

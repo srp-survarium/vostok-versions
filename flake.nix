@@ -1,5 +1,5 @@
 {
-  description = "Survarium cross-version sources + toolchain: archive.org installers innoextracted to survarium.{exe,pdb}, plus the delink/diff tools on a devShell";
+  description = "Survarium cross-version EXE/PDB evidence, original installers, and binary-analysis toolchain";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -111,13 +111,14 @@
           };
 
           # ---------------------------------------------------------------------
-          # One `version-<label>` package per registry entry: fetch the installer
-          # from archive.org and innoextract it to a dir holding survarium.{exe,pdb}
-          # (largest non-uninstaller survarium.exe, sibling files copied alongside).
+          # One `version-<label>` package per registry entry. Where a small,
+          # hash-verified EXE/PDB release bundle is cataloged, that is the default.
+          # The original archive.org installer remains available through the
+          # corresponding `version-<label>-archive` package.
           # ---------------------------------------------------------------------
           # Two packaging formats seen on archive.org: InnoSetup .exe installers
           # (2013 builds) and plain .7z trees (2014 builds, "survarium_full_*").
-          extract = v:
+          extractOriginal = v:
             let
               installer = pkgs.fetchurl {
                 name = builtins.baseNameOf v.url;
@@ -153,13 +154,49 @@
               cp -r "$dir"/. "$out"/
             '';
 
+          extractBundle = v:
+            let
+              bundle = pkgs.fetchurl {
+                name = builtins.baseNameOf v.bundle_url;
+                url = v.bundle_url;
+                hash = v.bundle_sha256;
+              };
+            in
+            pkgs.runCommand "survarium-${v.label}" {
+              nativeBuildInputs = [ pkgs.p7zip ];
+            } ''
+              mkdir extract
+              7z x -y -oextract "${bundle}" >/dev/null
+              if [ ! -f extract/survarium.exe ] || [ ! -f extract/survarium.pdb ]; then
+                echo "ERROR: release bundle for ${v.label} lacks survarium.exe or survarium.pdb"
+                exit 1
+              fi
+              if [ "$(find extract -type f | wc -l)" -ne 2 ]; then
+                echo "ERROR: release bundle for ${v.label} contains unexpected files"
+                exit 1
+              fi
+              install -Dm755 extract/survarium.exe "$out/survarium.exe"
+              install -Dm644 extract/survarium.pdb "$out/survarium.pdb"
+            '';
+
+          extract = v:
+            if v ? bundle_url then extractBundle v else extractOriginal v;
+
+          versionAttr = v:
+            "version-${builtins.replaceStrings [ "." ] [ "_" ] v.label}";
+
           # Dots in a label would split the `nix build .#attr` CLI path, so the
           # package attribute uses an underscore-sanitized label (scripts/common.py
           # applies the same transform). The human label keeps its dots.
           versionPkgs = builtins.listToAttrs (map (v: {
-            name = "version-${builtins.replaceStrings [ "." ] [ "_" ] v.label}";
+            name = versionAttr v;
             value = extract v;
           }) versions);
+
+          archiveVersionPkgs = builtins.listToAttrs (map (v: {
+            name = "${versionAttr v}-archive";
+            value = extractOriginal v;
+          }) (builtins.filter (v: v ? bundle_url) versions));
 
           # ---------------------------------------------------------------------
           # Exe-only packages, addressed by bare version token:
@@ -195,7 +232,7 @@
             paths = map exeDir allExeBuilds;
           };
         in
-        versionPkgs // exePkgs // {
+        versionPkgs // archiveVersionPkgs // exePkgs // {
           inherit vostok-delinker vostok-pdb-parser objdiff-cli;
           all = allExes;
         }

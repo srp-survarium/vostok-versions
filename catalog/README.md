@@ -1,7 +1,11 @@
 # Build catalog
 
 - `versions.json`: nine installer builds with download URLs and hashes. Eight
-  carry PDBs; `v0.23h-build2285` explicitly has `symbols: false`.
+  carry PDBs; `v0.23h-build2285` explicitly has `symbols: false`. Five entries
+  also point to small, verified GitHub release bundles containing the exact
+  EXE/PDB pairs used by the reports.
+- `binary-release.json`: release tag, asset URLs, compressed hashes and sizes,
+  and hashes and sizes for both files inside every published bundle.
 - `extra_builds.json`: four executable-only builds, with archive member URLs,
   executable SHA-256 hashes, architecture, and optional local paths under `work/`.
 - `chain.json`: the exact ordered sequence and base for function/flag comparisons.
@@ -23,3 +27,9 @@ independent of installer format; an executable-only build can still be scanned.
 The root `versions.json` links here for existing consumers. The Nix flake and
 Python scripts read this directory directly. Published wiki update names are
 kept separately in `sources/`; no automatic version-name equivalence is assumed.
+
+For a catalog entry with `bundle_url`, `nix build .#version-<label>` downloads
+the compact evidence bundle. `nix build .#version-<label>-archive` uses the
+original installer URL instead. Entries without a bundle continue to use their
+original archives. Both inputs are fixed-output downloads, and the release
+manifest ties each compressed asset back to the original EXE and PDB hashes.
