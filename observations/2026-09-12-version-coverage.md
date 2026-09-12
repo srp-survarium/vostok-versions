@@ -7,10 +7,10 @@ the neighboring shader project covers the first five builds. The wiki archive
 contains 91 update pages through 0.30a. These datasets overlap, but describe
 different things: binary builds, public updates, and historical observations.
 
-This assessment reads the local catalogs, preserved reports, archived wiki text,
-and neighboring shader research. It does not repeat external availability
-searches, download installers, or rerun delinking. Counts of cataloged builds are
-not counts of currently downloaded or playable installations.
+The initial assessment read the local catalogs, preserved reports, archived wiki
+text, and neighboring shader research. Follow-up work fetched available cataloged
+installers through the pinned flake and compared their PDB file checksums; it did
+not rerun delinking. Counts of cataloged builds are not counts of playable installations.
 
 ## Cataloged builds
 
@@ -69,10 +69,15 @@ reconstruction PDBs were hash-checked and do not match those cataloged identitie
 The local `survarium_v026e0.7z` and `survarium_v026g0.7z` archives contain no PDB
 files, and `017a.7z` contains no EXE/PDB files. Archive.org returned HTTP 503 and
 connection failures when the flake tried to fetch the missing distributions.
-Further consecutive-build checksum comparisons are **blocked pending access to
-the remaining PDBs**; the user requested waiting if no local copies were found.
+After archive availability improved, the flake successfully fetched builds **816,
+870, and 2010**, bringing the verified total to **five EXE/PDB pairs**. Builds
+**826, 884, and 1923** still failed with archive connection errors and HTTP
+502/503/504 responses on retry. The
+[expanded report](../reports/2026-09-12-source-files-expanded/README.md) records
+the five-build coverage and these three remaining gaps. Each included game EXE
+and PDB was verified against its preserved SHA-256 identity.
 
-## Newly measured source-file changes
+## Source-file comparison at the initial two endpoints
 
 The [September checksum report](../reports/2026-09-12-source-files/README.md)
 compares all recorded source files and headers under the two available PDBs'
@@ -94,6 +99,36 @@ number or meaning of changed lines. Target-only/base-only records describe PDB
 coverage rather than proving source-tree creation/deletion. The endpoints span
 the missing intermediate builds; this result does not replace the seven intended
 consecutive-build comparisons.
+
+## Additional version comparisons
+
+The [expanded report](../reports/2026-09-12-source-files-expanded/README.md) adds
+intermediate builds as their distributions become available. It includes complete
+file lists and both checksums for every measured interval; explicitly selected
+endpoints across a missing build are not presented as a consecutive release step.
+
+| Measured interval (build IDs) | Changed sources | Changed headers/inlines | Total changed engine files | Missing configured build within interval |
+| --- | ---: | ---: | ---: | --- |
+| 802 → 816 | 44 | 29 | 73 | None |
+| 816 → 870 | 157 | 101 | 258 | 826 |
+| 870 → 1916 | 644 | 801 | 1,445 | 884 |
+| 1916 → 2010 | 295 | 243 | 538 | 1923 |
+
+All compared records have usable MD5 checksums; unknown counts are zero. The
+third-party changed-file counts for these four intervals are 0, 0, 25, and 2.
+The full report also lists unchanged and PDB-only paths, including their hashes.
+
+Build **802 → 816** (`v0.10b` → the catalog's `v0.1.1a`, commonly written `v0.11a`)
+has **73 changed engine files: 44 sources and 29 headers**, with 2,927 unchanged,
+two target-only, two base-only, and zero unknown records. No recorded third-party
+file changed in this interval. The two target-only paths are
+`vostok/game_core/character_dispersion_skill_influence.h` and its source `.cpp`;
+the two base-only paths are `vostok/sound/sources/sound_rms.cpp` and
+`vostok/sound/sources/sound_rms_cook.cpp`.
+
+This gives file-content evidence supporting the earlier weapon-dispersion and
+sound-system findings, while retaining the distinction between PDB coverage
+changes and proven source-tree additions/deletions.
 
 ## The additional historical holdings
 

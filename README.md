@@ -16,8 +16,9 @@ findings alongside the tools used to investigate builds.
   separately from new scanner output.
 - [Version coverage assessment](observations/2026-09-12-version-coverage.md):
   cataloged builds, verified local binaries, historical holdings, and patch-note gaps.
-- [Source-file checksum comparison](reports/2026-09-12-source-files/README.md):
-  exact changed-file lists for the two currently verified local PDBs.
+- [Source-file checksum comparisons](reports/2026-09-12-source-files-expanded/README.md):
+  exact changed-file lists for five verified PDB builds; three archive downloads
+  remain unavailable.
 - [Finding builds](docs/finding-builds.md) and [extracting executables](docs/extracting-exes.md):
   June 2026 research notes; availability claims describe that investigation.
 

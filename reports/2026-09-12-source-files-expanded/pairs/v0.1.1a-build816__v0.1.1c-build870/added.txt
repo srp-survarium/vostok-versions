@@ -1,0 +1,7 @@
+vostok/render/engine/sources/effect_environment_probe_lighting.cpp
+vostok/sound/sources/sound_scene_cross_fade.cpp
+vostok/sound/sources/sound_scene_hdr.cpp
+vostok/sound/sources/sound_scene_initialize.cpp
+vostok/sound/sources/sound_scene_path_computation.cpp
+vostok/sound/sources/sound_scene_receivers.cpp
+vostok/sound/sources/sound_scene_statistic.cpp

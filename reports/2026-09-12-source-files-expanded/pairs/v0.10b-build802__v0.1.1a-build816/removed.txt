@@ -1,0 +1,2 @@
+vostok/sound/sources/sound_rms.cpp
+vostok/sound/sources/sound_rms_cook.cpp

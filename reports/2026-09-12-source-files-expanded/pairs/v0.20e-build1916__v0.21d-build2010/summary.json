@@ -1,0 +1,46 @@
+{
+  "base": "v0.20e-build1916",
+  "target": "v0.21d-build2010",
+  "all": {
+    "changed": 540,
+    "unchanged": 5353,
+    "added": 126,
+    "removed": 18,
+    "unknown": 0
+  },
+  "engine": {
+    "changed": 538,
+    "unchanged": 2739,
+    "added": 68,
+    "removed": 18,
+    "unknown": 0
+  },
+  "third_party": {
+    "changed": 2,
+    "unchanged": 2614,
+    "added": 58,
+    "removed": 0,
+    "unknown": 0
+  },
+  "engine_source": {
+    "changed": 295,
+    "unchanged": 906,
+    "added": 35,
+    "removed": 9,
+    "unknown": 0
+  },
+  "engine_header": {
+    "changed": 243,
+    "unchanged": 1833,
+    "added": 33,
+    "removed": 9,
+    "unknown": 0
+  },
+  "engine_other": {
+    "changed": 0,
+    "unchanged": 0,
+    "added": 0,
+    "removed": 0,
+    "unknown": 0
+  }
+}
